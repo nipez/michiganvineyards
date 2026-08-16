@@ -11,6 +11,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <title>Mari Vineyards — Old Mission Peninsula | MichiganVineyards.com</title>
 <meta content="Visit Mari Vineyards on Old Mission Peninsula. Known for Cabernet Franc, Nebbiolo, Sangiovese & Riesling. Underground cellar, estate wines, and panoramic Grand Traverse Bay views." name="description"/>
 <link rel="canonical" href="https://michiganvineyards.com/wineries/mari-vineyards/"/>
@@ -708,6 +709,27 @@ const WINERIES = [{"name":"Chateau Grand Traverse","region":"Old Mission","type"
 
     // Title
     document.title = w.name + ' — ' + w.region + ' | MichiganVineyards.com';
+
+    // SEO: point canonical + social meta at this winery's pre-rendered page
+    // (slug strips apostrophes to match the /wineries/<slug>/ filenames)
+    const seoSlug = w.name.toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[\u2019\u02BC'"]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+    const wineryUrl = 'https://michiganvineyards.com/wineries/' + seoSlug + '/';
+    const seoDesc = 'Visit ' + w.name + ' in ' + w.region + ', Michigan.' +
+      (w.known && w.known.length ? ' Known for ' + w.known.slice(0, 4).join(', ') + '.' : '') +
+      ' Hours, directions, wines, and more.';
+    const setMeta = (sel, val) => { const el = document.querySelector(sel); if (el) el.setAttribute('content', val); };
+    const canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.setAttribute('href', wineryUrl);
+    setMeta('meta[name="description"]', seoDesc);
+    setMeta('meta[property="og:url"]', wineryUrl);
+    setMeta('meta[property="og:title"]', document.title);
+    setMeta('meta[property="og:description"]', seoDesc);
+    setMeta('meta[name="twitter:title"]', document.title);
+    setMeta('meta[name="twitter:description"]', seoDesc);
 
     // Hero
     document.querySelector('.winery-hero-content h1').textContent = w.name;

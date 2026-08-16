@@ -151,7 +151,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://michiganvineyards.com/wineries/black-star-farms-leelanau/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wineries/black-star-farms-old-mission/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://michiganvineyards.com/wineries/blakes-hard-cider/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wineries/bl-m-meadworks/</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -613,6 +631,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://michiganvineyards.com/wineries/l-mawby-mawby-sparkling/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://michiganvineyards.com/wineries/lehmans-orchard/</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -662,6 +686,18 @@
   </url>
   <url>
     <loc>https://michiganvineyards.com/wineries/mackinaw-trail-winery/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wineries/mackinac-trail-winery-manistique/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wineries/mackinac-trail-winery-st-ignace/</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

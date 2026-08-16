@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGRE0QBWPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JGRE0QBWPF');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plan Your Visit — Michigan Wine Country Trip Planner | MichiganVineyards.com</title>
+<meta content="Plan your Michigan wine country trip. Curated itineraries for day trips, weekends, and week-long tours across 7 wine trails and 192 wineries. Seasonal guides, logistics, and booking." name="description"/>
+<link rel="canonical" href="https://michiganvineyards.com/plan-your-visit/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --forest:#1B3A2D;--forest-deep:#0F2419;--forest-light:#2A5040;
+  --burgundy:#6B2D3E;--burgundy-deep:#4A0E1B;--wine:#8B3A4A;
+  --gold:#C9A96E;--gold-light:#D4BC8B;--gold-warm:#B8943F;
+  --cream:#F5F0E8;--cream-dark:#EDE6D8;
+  --sage:#8FA68F;--sage-light:#B8CCB0;
+  --charcoal:#2C2420;--text:#3A3330;--text-light:#7A7068;--white:#FEFCF9;
+}
+html{scroll-behavior:smooth;font-size:18px;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+
+/* TOP BAR */
+.top-bar{background:var(--forest-deep);color:var(--sage-light);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:9px 0;text-align:center;}
+.top-bar a{color:var(--gold-light);text-decoration:none;}.top-bar a:hover{text-decoration:underline;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(254,252,249,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,58,45,0.06);transition:box-shadow 0.3s;}
+nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
+.nav-inner{max-width:1340px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:36px;height:36px;background:var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.logo-icon::after{content:'🍇';font-size:17px;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-main{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--forest);letter-spacing:-0.01em;}
+.logo-sub{font-family:'Outfit',sans-serif;font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-warm);margin-top:2px;}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);position:relative;padding:4px 0;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover{color:var(--forest);}.nav-links a:hover::after{width:100%;}
+.nav-links a.active{color:var(--forest);}.nav-links a.active::after{width:100%;}
+.nav-cta{background:var(--forest)!important;color:var(--cream)!important;padding:10px 22px!important;border-radius:4px;font-size:0.74rem!important;letter-spacing:0.06em!important;transition:background 0.3s!important;}
+.nav-cta:hover{background:var(--forest-light)!important;}.nav-cta::after{display:none!important;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+
+/* HERO */
+.page-hero{position:relative;min-height:44vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
+.page-hero-bg{position:absolute;inset:0;background:url('winery-detail-images/8.jpg') center/cover no-repeat;}
+.page-hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,36,25,0.82) 0%,rgba(27,58,45,0.7) 40%,rgba(44,36,32,0.8) 100%);}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100Q75 70 150 100T300 100' fill='none' stroke='%23C9A96E' stroke-opacity='.04'/%3E%3Cpath d='M0 140Q75 110 150 140T300 140' fill='none' stroke='%23C9A96E' stroke-opacity='.03'/%3E%3C/svg%3E");}
+.page-hero-content{position:relative;z-index:2;max-width:820px;padding:70px 40px 55px;}
+.page-hero-tag{display:inline-flex;align-items:center;gap:12px;font-size:0.66rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;opacity:0;animation:fadeUp .7s .15s forwards;}
+.page-hero-tag::before,.page-hero-tag::after{content:'';width:36px;height:1px;background:var(--gold);opacity:.5;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4.5vw,3.2rem);font-weight:500;line-height:1.12;color:var(--cream);opacity:0;animation:fadeUp .7s .3s forwards;}
+.page-hero h1 em{font-style:italic;color:var(--gold-light);}
+.page-hero-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.6vw,1.15rem);line-height:1.7;color:rgba(245,240,232,0.6);margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;opacity:0;animation:fadeUp .7s .45s forwards;}
+
+/* BREADCRUMBS */
+.breadcrumbs{max-width:1340px;margin:0 auto;padding:14px 40px;display:flex;gap:8px;align-items:center;font-size:0.76rem;color:var(--text-light);}
+.breadcrumbs a{color:var(--text-light);text-decoration:none;transition:color .3s;}.breadcrumbs a:hover{color:var(--forest);}
+.breadcrumbs .sep{opacity:.4;}.breadcrumbs .current{color:var(--forest);font-weight:500;}
+
+/* SECTION STYLES */
+.section{max-width:1340px;margin:0 auto;padding:60px 40px;}
+.section-tag{font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-warm);margin-bottom:10px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:500;color:var(--forest);line-height:1.2;margin-bottom:8px;}
+.section-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--text-light);line-height:1.6;max-width:600px;}
+.section-header{margin-bottom:36px;}
+
+/* QUICK START - 3 columns */
+.quickstart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.qs-card{background:var(--white);border:1px solid rgba(27,58,45,0.06);border-radius:12px;overflow:hidden;position:relative;transition:all .3s;}
+.qs-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(27,58,45,0.12);}
+.qs-header{padding:28px 28px 0;display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+.qs-num-circle{width:48px;height:48px;border-radius:50%;background:var(--forest);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.qs-num-circle span{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--gold-light);}
+.qs-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--forest);}
+.qs-body{padding:0 28px 28px;}
+.qs-text{font-size:.92rem;color:var(--text-light);line-height:1.7;}
+.qs-text a{color:var(--forest);font-weight:600;text-decoration:none;}.qs-text a:hover{text-decoration:underline;}
+.qs-img{height:140px;overflow:hidden;margin:0 28px 18px;border-radius:8px;}
+.qs-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.qs-card:hover .qs-img img{transform:scale(1.04);}
+
+/* ITINERARIES */
+.itin-section{background:var(--cream);padding:70px 0;}
+.itin-inner{max-width:1340px;margin:0 auto;padding:0 40px;}
+.itin-tabs{display:flex;gap:6px;margin-bottom:36px;flex-wrap:wrap;}
+.itin-tab{padding:10px 22px;border-radius:30px;font-size:.84rem;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:all .25s;border:1.5px solid rgba(27,58,45,0.1);background:var(--white);color:var(--text);}
+.itin-tab:hover{border-color:var(--forest);}
+.itin-tab.active{background:var(--forest);color:var(--cream);border-color:var(--forest);}
+.itin-panel{display:none;}.itin-panel.active{display:block;}
+
+.itin-card{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:start;background:var(--white);border-radius:12px;overflow:hidden;border:1px solid rgba(27,58,45,0.04);}
+.itin-img{height:100%;min-height:380px;position:relative;overflow:hidden;}
+.itin-img-inner{width:100%;height:100%;background-size:cover;background-position:center;}
+.itin-img-badge{position:absolute;top:16px;left:16px;padding:6px 14px;background:rgba(255,255,255,0.92);backdrop-filter:blur(4px);border-radius:4px;font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);}
+.itin-content{padding:34px 34px 34px 0;}
+.itin-label{font-size:.64rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-warm);margin-bottom:6px;}
+.itin-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;color:var(--forest);line-height:1.25;margin-bottom:10px;}
+.itin-desc{font-size:.94rem;line-height:1.75;color:var(--text);margin-bottom:22px;}
+
+.itin-stops{margin-bottom:24px;}
+.itin-stop{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(27,58,45,0.06);}.itin-stop:last-child{border-bottom:none;}
+.itin-stop-time{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-light);min-width:80px;padding-top:2px;}
+.itin-stop-detail{}
+.itin-stop-name{font-weight:600;color:var(--forest);font-size:.94rem;margin-bottom:2px;}
+.itin-stop-note{font-size:.86rem;color:var(--text-light);line-height:1.55;}
+
+.itin-meta{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:20px;}
+.itin-meta-item{display:flex;align-items:center;gap:6px;font-size:.86rem;color:var(--text-light);}
+.itin-meta-item svg{flex-shrink:0;color:var(--sage);}
+
+.itin-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.itin-btn{padding:12px 24px;border-radius:5px;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:6px;}
+.itin-btn.primary{background:var(--forest);color:var(--cream);}.itin-btn.primary:hover{background:var(--forest-light);}
+.itin-btn.secondary{border:1.5px solid rgba(27,58,45,0.15);color:var(--forest);background:transparent;}.itin-btn.secondary:hover{border-color:var(--forest);}
+
+/* SEASONS */
+.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.season-card{border-radius:12px;overflow:hidden;position:relative;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;transition:transform .3s;}
+.season-card:hover{transform:translateY(-3px);}
+.season-bg{position:absolute;inset:0;transition:transform .5s;}.season-card:hover .season-bg{transform:scale(1.04);}
+.season-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,36,25,0.85) 0%,rgba(15,36,25,0.2) 50%,transparent 100%);}
+.season-content{position:relative;z-index:2;padding:22px 20px;}
+.season-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--cream);margin-bottom:4px;}
+.season-months{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.season-text{font-size:.86rem;color:rgba(245,240,232,0.6);line-height:1.6;}
+.season-tag{position:absolute;top:14px;right:14px;padding:4px 10px;background:rgba(201,169,110,0.2);border:1px solid rgba(201,169,110,0.25);border-radius:3px;font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-light);z-index:2;}
+
+/* LOGISTICS */
+.logistics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.log-card{padding:28px 24px;background:var(--cream);border-radius:10px;transition:transform .25s;}
+.log-card:hover{transform:translateY(-2px);}
+.log-icon{font-size:1.5rem;margin-bottom:14px;}
+.log-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--forest);margin-bottom:6px;}
+.log-text{font-size:.9rem;color:var(--text-light);line-height:1.7;}
+.log-text a{color:var(--forest);font-weight:600;text-decoration:none;}.log-text a:hover{text-decoration:underline;}
+
+/* TIPS */
+.tips-section{background:var(--forest);padding:70px 0;}
+.tips-inner{max-width:1340px;margin:0 auto;padding:0 40px;}
+.tips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.tip-card{padding:24px 26px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:10px;transition:background .25s;}
+.tip-card:hover{background:rgba(255,255,255,0.07);}
+.tip-title{font-size:.94rem;font-weight:600;color:var(--cream);margin-bottom:5px;display:flex;align-items:center;gap:8px;}
+.tip-title span{font-size:1rem;}
+.tip-text{font-size:.88rem;color:rgba(245,240,232,0.5);line-height:1.7;}
+
+/* BOOK CTA - Regional Partner */
+.book-cta{background:linear-gradient(135deg,var(--burgundy-deep) 0%,var(--burgundy) 40%,var(--wine) 100%);padding:80px 40px;position:relative;overflow:hidden;}
+.book-cta::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100Q75 70 150 100T300 100' fill='none' stroke='%23C9A96E' stroke-opacity='.06'/%3E%3Cpath d='M0 140Q75 110 150 140T300 140' fill='none' stroke='%23C9A96E' stroke-opacity='.04'/%3E%3C/svg%3E");}
+.book-cta-inner{position:relative;z-index:2;max-width:960px;margin:0 auto;}
+.book-cta-header{text-align:center;margin-bottom:40px;}
+.book-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;color:var(--cream);margin-bottom:10px;}
+.book-cta h2 em{color:var(--gold-light);font-style:italic;}
+.book-cta-header p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(245,240,232,0.55);line-height:1.7;max-width:600px;margin:0 auto;}
+
+.tour-partners{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.tour-partner{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:26px 24px;transition:all .3s;text-decoration:none;display:block;}
+.tour-partner:hover{background:rgba(255,255,255,0.1);transform:translateY(-2px);}
+.tour-partner.featured{background:rgba(201,169,110,0.1);border-color:rgba(201,169,110,0.2);}
+.tour-partner-tag{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.tour-partner.featured .tour-partner-tag{color:var(--gold);}
+.tour-partner:not(.featured) .tour-partner-tag{color:rgba(245,240,232,0.35);}
+.tour-partner-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--cream);margin-bottom:6px;}
+.tour-partner-region{font-size:.84rem;color:rgba(245,240,232,0.5);line-height:1.55;margin-bottom:16px;}
+.tour-partner-link{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:gap .3s;}
+.tour-partner.featured .tour-partner-link{color:var(--gold);}.tour-partner.featured:hover .tour-partner-link{gap:10px;}
+.tour-partner:not(.featured) .tour-partner-link{color:rgba(245,240,232,0.3);}
+.tour-partner-coming{font-size:.82rem;color:rgba(245,240,232,0.25);font-style:italic;margin-top:auto;}
+
+.book-cta-footer{text-align:center;margin-top:30px;padding-top:24px;border-top:1px solid rgba(245,240,232,0.08);}
+.book-cta-footer p{font-size:.86rem;color:rgba(245,240,232,0.35);line-height:1.6;}
+.book-cta-footer a{color:var(--gold-light);text-decoration:none;font-weight:600;}.book-cta-footer a:hover{text-decoration:underline;}
+
+/* NEWSLETTER */
+.newsletter{background:var(--cream-dark);padding:60px 40px;text-align:center;}
+.newsletter-inner{max-width:560px;margin:0 auto;}
+.newsletter h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:500;color:var(--forest);margin-bottom:10px;}
+.newsletter p{font-size:.94rem;color:var(--text-light);margin-bottom:22px;line-height:1.6;}
+.newsletter-form{display:flex;gap:10px;max-width:460px;margin:0 auto;}
+.newsletter-form input{flex:1;padding:13px 18px;border:1px solid rgba(27,58,45,0.15);background:var(--white);color:var(--text);font-family:'Outfit',sans-serif;font-size:.92rem;border-radius:4px;outline:none;}
+.newsletter-form input::placeholder{color:var(--text-light);}.newsletter-form input:focus{border-color:var(--gold);}
+.newsletter-form button{padding:13px 24px;background:var(--forest);color:var(--cream);font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;transition:background .3s;white-space:nowrap;}
+.newsletter-form button:hover{background:var(--forest-light);}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,0.6);}
+.footer-inner{max-width:1340px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+.footer-brand p{font-size:.92rem;line-height:1.7;margin-top:14px;color:rgba(245,240,232,0.4);}
+.footer-col h4{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.footer-col ul{list-style:none;}.footer-col li{margin-bottom:9px;}
+.footer-col a{font-size:.92rem;color:rgba(245,240,232,0.4);text-decoration:none;transition:color .3s;}.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{border-top:1px solid rgba(245,240,232,0.07);padding-top:28px;display:flex;justify-content:space-between;align-items:center;font-size:.76rem;}
+.footer-bottom a{color:rgba(245,240,232,0.35);text-decoration:none;transition:color .3s;}.footer-bottom a:hover{color:var(--gold-light);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:1024px){
+  .quickstart-grid{grid-template-columns:1fr;}
+  .qs-img{height:180px;}
+  .itin-card{grid-template-columns:1fr;}.itin-img{min-height:240px;}.itin-content{padding:28px;}
+  .season-grid{grid-template-columns:repeat(2,1fr);}
+  .logistics-grid{grid-template-columns:1fr 1fr;}
+  .tips-grid{grid-template-columns:1fr;}
+  .tour-partners{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px 40px;gap:14px;border-bottom:1px solid rgba(27,58,45,0.08);box-shadow:0 8px 30px rgba(27,58,45,0.08);}.nav-links.show{display:flex;}.nav-toggle{display:block;}
+  .section{padding:40px 20px;}
+  .page-hero-content{padding:50px 20px 40px;}.breadcrumbs{padding:10px 20px;}
+  .itin-section{padding:50px 0;}.itin-inner{padding:0 20px;}.itin-content{padding:20px;}
+  .season-grid{grid-template-columns:1fr;}.season-card{min-height:200px;}
+  .logistics-grid{grid-template-columns:1fr;}
+  .tips-section{padding:50px 0;}.tips-inner{padding:0 20px;}
+  .book-cta{padding:50px 20px;}.tour-partners{grid-template-columns:1fr;}
+  .newsletter{padding:40px 20px;}.newsletter-form{flex-direction:column;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}.footer-bottom{flex-direction:column;gap:10px;text-align:center;}
+}
+</style>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="MichiganVineyards.com"/>
+<meta property="og:title" content="Plan Your Michigan Wine Country Visit — Trip Planner | MichiganVineyards.com"/>
+<meta property="og:description" content="Plan your Michigan wine country trip. Curated itineraries for day trips, weekends, and week-long tours across 7 wine trails and 192 wineries."/>
+<meta property="og:url" content="https://michiganvineyards.com/plan-your-visit/"/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Plan Your Michigan Wine Country Visit — Trip Planner | MichiganVineyards.com"/>
+<meta name="twitter:description" content="Plan your Michigan wine country trip. Curated itineraries for day trips, weekends, and week-long tours across 7 wine trails and 192 wineries."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Plan Your Visit",
+  "description": "Michigan wine country trip planner with curated itineraries",
+  "url": "https://michiganvineyards.com/plan-your-visit/",
+  "isPartOf": {
+    "@id": "https://michiganvineyards.com/#website"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://michiganvineyards.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Plan Your Visit"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="top-bar">7 Wine Trails · 192 Wineries · <a href="directory.html">Explore the Full Directory →</a></div>
+
+<nav id="mainNav"><div class="nav-inner">
+<a class="logo" href="/"><div class="logo-icon"></div><div class="logo-text"><span class="logo-main">Michigan Vineyards</span><span class="logo-sub">Wine Country Guide</span></div></a>
+<ul class="nav-links"><li><a href="regions.html">Regions</a></li><li><a href="directory.html">Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="the-vine.html">The Vine</a></li><li><a href="events.html">Events</a></li><li><a class="nav-cta active" href="plan-your-visit.html">Plan Your Visit</a></li></ul>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<section class="page-hero"><div class="page-hero-bg"></div>
+<div class="page-hero-content">
+<div class="page-hero-tag">Plan Your Visit</div>
+<h1>Your Michigan <em>Wine Country</em> Trip Starts Here</h1>
+<p class="page-hero-desc">From a quick afternoon tasting to a week-long wine trail road trip — we'll help you build the perfect itinerary.</p>
+</div></section>
+
+<div class="breadcrumbs"><a href="/">Home</a><span class="sep">›</span><span class="current">Plan Your Visit</span></div>
+
+<!-- QUICK START -->
+<div class="section">
+<div class="section-header">
+<div class="section-tag">Where to Begin</div>
+<div class="section-title">Three Steps to Your Perfect Wine Trip</div>
+</div>
+<div class="quickstart-grid">
+<div class="qs-card">
+<div class="qs-header"><div class="qs-num-circle"><span>1</span></div><div class="qs-title">Pick a Region</div></div>
+<div class="qs-img"><img src="winery-detail-images/1.jpg" alt="Michigan vineyard rows" loading="lazy"/></div>
+<div class="qs-body"><div class="qs-text">Michigan's wine country stretches from the southwest shore to the Upper Peninsula. Each region has its own character, grape varieties, and vibe. Start with our <a href="regions.html">Regions Guide</a> to find your fit.</div></div>
+</div>
+<div class="qs-card">
+<div class="qs-header"><div class="qs-num-circle"><span>2</span></div><div class="qs-title">Choose Your Wineries</div></div>
+<div class="qs-img"><img src="winery-detail-images/3.jpg" alt="Wine and cheese tasting" loading="lazy"/></div>
+<div class="qs-body"><div class="qs-text">Browse our <a href="directory.html">directory of 192 wineries</a> — filter by region, type, or grape variety. We recommend 3–5 wineries per day with 45–60 minutes at each stop.</div></div>
+</div>
+<div class="qs-card">
+<div class="qs-header"><div class="qs-num-circle"><span>3</span></div><div class="qs-title">Book Your Experience</div></div>
+<div class="qs-img"><img src="winery-detail-images/2.jpg" alt="Friends toasting red wine" loading="lazy"/></div>
+<div class="qs-body"><div class="qs-text">Going with a group? Skip the designated driver debate. Several regions offer guided wine tours with pickup and transport. In Traverse City, <a href="https://traversecitywinetour.com" target="_blank" rel="noopener">Traverse City Wine Tours</a> covers both peninsulas.</div></div>
+</div>
+</div>
+</div>
+
+<!-- CURATED ITINERARIES -->
+<div class="itin-section">
+<div class="itin-inner">
+<div class="section-header">
+<div class="section-tag">Curated Itineraries</div>
+<div class="section-title">Ready-Made Routes for Every Kind of Trip</div>
+<div class="section-subtitle">Pick a trip length and we'll map out the rest — including where to taste, eat, and stay.</div>
+</div>
+<div class="itin-tabs">
+<div class="itin-tab active" onclick="showItin('afternoon')">Afternoon Escape</div>
+<div class="itin-tab" onclick="showItin('weekend')">Weekend Getaway</div>
+<div class="itin-tab" onclick="showItin('weeklong')">Week-Long Tour</div>
+<div class="itin-tab" onclick="showItin('chicago')">Chicago Day Trip</div>
+</div>
+
+<!-- Afternoon -->
+<div class="itin-panel active" id="itin-afternoon">
+<div class="itin-card">
+<div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/7.jpg');"></div><div class="itin-img-badge">Half Day</div></div>
+<div class="itin-content">
+<div class="itin-label">Old Mission Peninsula</div>
+<div class="itin-name">The Classic Afternoon Tasting</div>
+<div class="itin-desc">The quintessential Traverse City wine experience. Four wineries along M-37, each with bay views and world-class cool-climate wines. Perfect for visitors already in the TC area who have a free afternoon.</div>
+<div class="itin-meta">
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> 4–5 hours</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> 19 miles</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 4 wineries</div>
+</div>
+<div class="itin-stops">
+<div class="itin-stop"><div class="itin-stop-time">12:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Left Foot Charley (downtown TC)</div><div class="itin-stop-note">Urban winery in The Village. Casual vibe, excellent Riesling and pétillant naturel.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Brys Estate</div><div class="itin-stop-note">Hilltop tasting room with panoramic bay views. Try the Naked Chardonnay and Signature Red.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">3:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Mari Vineyards</div><div class="itin-stop-note">Underground cellar tour if time allows. Nebbiolo and Cab Franc are the stars.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">5:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Chateau Grand Traverse</div><div class="itin-stop-note">End at the granddaddy of Michigan wine. Grab a bottle of their Ice Wine as a souvenir.</div></div></div>
+</div>
+<div class="itin-actions">
+<a href="https://traversecitywinetour.com" class="itin-btn primary" target="_blank" rel="noopener">Book This Tour in TC</a>
+<a href="winery-detail.html?w=?region=old-mission" class="itin-btn secondary">View All Old Mission Wineries</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Weekend -->
+<div class="itin-panel" id="itin-weekend">
+<div class="itin-card">
+<div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/1.jpg');"></div><div class="itin-img-badge">2 Days</div></div>
+<div class="itin-content">
+<div class="itin-label">Old Mission + Leelanau</div>
+<div class="itin-name">The Traverse City Weekend</div>
+<div class="itin-desc">Two full days exploring both peninsulas — Michigan's two premier wine regions. Stay in Traverse City and take a different direction each morning. Covers 8–10 wineries, plus dining and Sleeping Bear Dunes.</div>
+<div class="itin-meta">
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> 2 days</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> ~80 miles total</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 8–10 wineries</div>
+</div>
+<div class="itin-stops">
+<div class="itin-stop"><div class="itin-stop-time">Day 1 AM</div><div class="itin-stop-detail"><div class="itin-stop-name">Old Mission Peninsula</div><div class="itin-stop-note">Drive M-37 north — Brys Estate, Mari Vineyards, 2 Lads, Chateau Chantal. Lunch at the Jolly Pumpkin.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Day 1 PM</div><div class="itin-stop-detail"><div class="itin-stop-name">Downtown Traverse City</div><div class="itin-stop-note">Walk Front Street. Dinner at The Cook's House or Trattoria Stella.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Day 2 AM</div><div class="itin-stop-detail"><div class="itin-stop-name">Leelanau Peninsula (south)</div><div class="itin-stop-note">Black Star Farms, Shady Lane Cellars, Left Foot Charley's Leelanau tasting room.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Day 2 PM</div><div class="itin-stop-detail"><div class="itin-stop-name">Leelanau Peninsula (north)</div><div class="itin-stop-note">L. Mawby for sparkling, Good Harbor Vineyards. Detour to Sleeping Bear Dunes if time allows.</div></div></div>
+</div>
+<div class="itin-actions">
+<a href="https://traversecitywinetour.com" class="itin-btn primary" target="_blank" rel="noopener">Book This Tour in TC</a>
+<a href="wine-trails.html#leelanau" class="itin-btn secondary">View Leelanau Trail</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Week-Long -->
+<div class="itin-panel" id="itin-weeklong">
+<div class="itin-card">
+<div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/3.jpg');"></div><div class="itin-img-badge">5–7 Days</div></div>
+<div class="itin-content">
+<div class="itin-label">Multi-Region Road Trip</div>
+<div class="itin-name">The Grand Michigan Wine Tour</div>
+<div class="itin-desc">The ultimate Michigan wine road trip. Start in the southwest, work your way north through Fennville and Lake Michigan Shore, spend two days in Traverse City, then push up to Petoskey. Ambitious but unforgettable.</div>
+<div class="itin-meta">
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> 5–7 days</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> ~450 miles</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 20–25 wineries</div>
+</div>
+<div class="itin-stops">
+<div class="itin-stop"><div class="itin-stop-time">Days 1–2</div><div class="itin-stop-detail"><div class="itin-stop-name">Lake Michigan Shore & Fennville</div><div class="itin-stop-note">St. Julian, Round Barn, Tabor Hill, Hickory Creek, then north to Fenn Valley and Virtue Cider. Stay in St. Joseph or Saugatuck.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Days 3–4</div><div class="itin-stop-detail"><div class="itin-stop-name">Traverse City — Both Peninsulas</div><div class="itin-stop-note">Old Mission one day, Leelanau the next. This is the heart of Michigan wine country. Stay in TC.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Day 5</div><div class="itin-stop-detail"><div class="itin-stop-name">Sleeping Bear Dunes + Northport</div><div class="itin-stop-note">Morning at the dunes, afternoon tastings at Tandem Ciders and the northern Leelanau wineries.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Days 6–7</div><div class="itin-stop-detail"><div class="itin-stop-name">Petoskey Wine Region</div><div class="itin-stop-note">Drive the Tunnel of Trees. Hit Mackinaw Trail, Petoskey Farms, Pond Hill Farm. Finish in Harbor Springs.</div></div></div>
+</div>
+<div class="itin-actions">
+<a href="wine-trails.html" class="itin-btn primary">Explore All 7 Trails</a>
+<a href="directory.html" class="itin-btn secondary">Browse All 192 Wineries</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Chicago Day Trip -->
+<div class="itin-panel" id="itin-chicago">
+<div class="itin-card">
+<div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/2.jpg');"></div><div class="itin-img-badge">Day Trip</div></div>
+<div class="itin-content">
+<div class="itin-label">Lake Michigan Shore</div>
+<div class="itin-name">The Chicago Escape</div>
+<div class="itin-desc">Southwest Michigan's wine country is just 90 minutes from downtown Chicago — making it the closest wine region to the Windy City. This route hits the highlights of the Lake Michigan Shore trail with time for a beach stop in St. Joseph.</div>
+<div class="itin-meta">
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> Full day</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> 90 min from Chicago</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 4–5 wineries</div>
+</div>
+<div class="itin-stops">
+<div class="itin-stop"><div class="itin-stop-time">10:30 am</div><div class="itin-stop-detail"><div class="itin-stop-name">Round Barn Winery</div><div class="itin-stop-note">Arrive after the drive. Iconic round barn, wine + spirits + brewery under one roof.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">12:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Tabor Hill</div><div class="itin-stop-note">Lunch at the restaurant with vineyard views. Try the Grand Mark Brut sparkling.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Hickory Creek Winery</div><div class="itin-stop-note">Small-batch, estate wines. Award-winning Cab Franc and Pinot Noir.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">3:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Domaine Berrien Cellars</div><div class="itin-stop-note">Intimate tasting room with a focus on dry reds. Great Cabernet Franc.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">5:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Silver Beach, St. Joseph</div><div class="itin-stop-note">Sunset on the beach before the drive back. Grab dinner at Clementine's.</div></div></div>
+</div>
+<div class="itin-actions">
+<a href="wine-trails.html#lake-michigan-shore" class="itin-btn primary">View Lake Michigan Shore Trail</a>
+<a href="winery-detail.html?w=?region=lake-michigan-shore" class="itin-btn secondary">All Southwest Wineries</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- SEASONS -->
+<div class="section">
+<div class="section-header">
+<div class="section-tag">Seasonal Guide</div>
+<div class="section-title">When to Visit</div>
+<div class="section-subtitle">Michigan wine country transforms with the seasons. Each one offers a different experience.</div>
+</div>
+<div class="season-grid">
+<div class="season-card">
+<div class="season-bg" style="background:url('winery-detail-images/4.jpg') center/cover;"></div>
+<div class="season-overlay"></div>
+<div class="season-content">
+<div class="season-name">Spring</div>
+<div class="season-months">April – May</div>
+<div class="season-text">Bud break in the vineyards, fewer crowds, and spring release events. Wildflowers along M-22. Many wineries debut new vintages.</div>
+</div>
+</div>
+<div class="season-card">
+<div class="season-bg" style="background:url('winery-detail-images/7.jpg') center/cover;"></div>
+<div class="season-overlay"></div>
+<div class="season-tag">Peak Season</div>
+<div class="season-content">
+<div class="season-name">Summer</div>
+<div class="season-months">June – August</div>
+<div class="season-text">Long days, outdoor patios, live music at wineries, and Lake Michigan beaches between tastings. Book ahead — this is prime time.</div>
+</div>
+</div>
+<div class="season-card">
+<div class="season-bg" style="background:url('winery-detail-images/8.jpg') center/cover;"></div>
+<div class="season-overlay"></div>
+<div class="season-tag">Harvest</div>
+<div class="season-content">
+<div class="season-name">Fall</div>
+<div class="season-months">September – November</div>
+<div class="season-text">Harvest season — the most exciting time in wine country. Stunning fall color, grape stomps, harvest dinners, and the energy of the crush.</div>
+</div>
+</div>
+<div class="season-card">
+<div class="season-bg" style="background:url('winery-detail-images/5.jpg') center/cover;"></div>
+<div class="season-overlay"></div>
+<div class="season-content">
+<div class="season-name">Winter</div>
+<div class="season-months">December – March</div>
+<div class="season-text">Cozy tasting rooms, holiday events, and zero crowds. Many wineries stay open year-round. The Leelanau and Old Mission winter wine tours are local favorites.</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- LOGISTICS -->
+<div class="section" style="padding-top:20px;">
+<div class="section-header">
+<div class="section-tag">Logistics</div>
+<div class="section-title">Know Before You Go</div>
+</div>
+<div class="logistics-grid">
+<div class="log-card">
+<div class="log-icon">✈️</div>
+<div class="log-title">Getting There</div>
+<div class="log-text">Fly into Cherry Capital Airport (TVC) for northern regions, or Kalamazoo (AZO) / Chicago (ORD/MDW) for southwest Michigan. Detroit Metro (DTW) works for southeast wineries.</div>
+</div>
+<div class="log-card">
+<div class="log-icon">🚗</div>
+<div class="log-title">Getting Around</div>
+<div class="log-text">A car is essential — wine country is rural. For safe tasting, book a guided wine tour with transport (available in the <a href="#tours">Traverse City</a> area), use ride-share (limited in rural areas), or designate a driver.</div>
+</div>
+<div class="log-card">
+<div class="log-icon">🏨</div>
+<div class="log-title">Where to Stay</div>
+<div class="log-text">Traverse City is the hub for northern wine country, with hotels, B&Bs, and vacation rentals. Chateau Chantal and Black Star Farms offer on-site winery lodging. St. Joseph for southwest.</div>
+</div>
+<div class="log-card">
+<div class="log-icon">🍽️</div>
+<div class="log-title">Food & Dining</div>
+<div class="log-text">Many wineries offer food pairings, charcuterie, or full restaurants. In TC, The Cook's House, Trattoria Stella, and Farm Club are standouts. Pack a picnic for vineyard stops.</div>
+</div>
+<div class="log-card">
+<div class="log-icon">💰</div>
+<div class="log-title">Tasting Fees</div>
+<div class="log-text">Expect $10–$25 per tasting, often waived with a bottle purchase. Some wineries require reservations, especially for groups of 6+. Wine club members usually taste free.</div>
+</div>
+<div class="log-card">
+<div class="log-icon">📦</div>
+<div class="log-title">Shipping Wine Home</div>
+<div class="log-text">Most wineries ship to many US states. Michigan allows direct shipping to 47 states. Buy a case and have it waiting at home — saves your luggage space.</div>
+</div>
+</div>
+</div>
+
+<!-- INSIDER TIPS -->
+<div class="tips-section">
+<div class="tips-inner">
+<div class="section-header">
+<div class="section-tag" style="color:var(--gold);">Insider Tips</div>
+<div class="section-title" style="color:var(--cream);">What the Locals Know</div>
+</div>
+<div class="tips-grid">
+<div class="tip-card">
+<div class="tip-title"><span>🕐</span> Start early, head north</div>
+<div class="tip-text">Tasting rooms fill up by 2pm in summer. Starting at 11am means shorter waits and more personal attention from staff.</div>
+</div>
+<div class="tip-card">
+<div class="tip-title"><span>💧</span> Hydrate between stops</div>
+<div class="tip-text">Bring water and snacks. Even "sip and spit" visits add up over 4–5 wineries. Pace yourself — this isn't a race.</div>
+</div>
+<div class="tip-card">
+<div class="tip-title"><span>📅</span> Midweek is magic</div>
+<div class="tip-text">Tuesday through Thursday offers the best experience — no crowds, more time with winemakers, and easier reservations.</div>
+</div>
+<div class="tip-card">
+<div class="tip-title"><span>🗣️</span> Talk to the staff</div>
+<div class="tip-text">Tasting room staff know things the website doesn't. Ask about limited releases, back-vintage bottles, and off-menu pours.</div>
+</div>
+<div class="tip-card">
+<div class="tip-title"><span>🍇</span> Go beyond Riesling</div>
+<div class="tip-text">Riesling is Michigan's calling card, but Cab Franc, Pinot Noir, and sparkling wines are where the real surprises hide.</div>
+</div>
+<div class="tip-card">
+<div class="tip-title"><span>🌅</span> Save the best view for last</div>
+<div class="tip-text">End your day at a winery with a sunset patio — Chateau Chantal, Brys Estate, and Black Star Farms are all legendary for golden hour.</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- GUIDED TOURS -->
+<section class="book-cta" id="tours">
+<div class="book-cta-inner">
+<div class="book-cta-header">
+<h2>Don't Want to Drive? <em>Book a Guided Tour.</em></h2>
+<p>We partner with local tour operators across Michigan wine country so you can taste without worrying about the road.</p>
+</div>
+
+<div class="tour-partners">
+<a class="tour-partner featured" href="https://traversecitywinetour.com" target="_blank" rel="noopener">
+<div class="tour-partner-tag">✦ Featured Partner</div>
+<div class="tour-partner-name">Traverse City Wine Tours</div>
+<div class="tour-partner-region">Old Mission & Leelanau Peninsulas. Fully guided tastings with hotel pickup, expert guides, and behind-the-scenes cellar access. Private tours available.</div>
+<div class="tour-partner-link">Book a Tour →</div>
+</a>
+<div class="tour-partner">
+<div class="tour-partner-tag">Southwest Michigan</div>
+<div class="tour-partner-name">Partner Coming Soon</div>
+<div class="tour-partner-region">Lake Michigan Shore & Fennville regions. We're working with local operators to bring guided tours to southwest Michigan wine country.</div>
+<div class="tour-partner-coming">Interested in partnering? <a href="advertise.html" style="color:var(--gold-light);text-decoration:none;">Get in touch →</a></div>
+</div>
+<div class="tour-partner">
+<div class="tour-partner-tag">Northern Michigan</div>
+<div class="tour-partner-name">Partner Coming Soon</div>
+<div class="tour-partner-region">Petoskey Wine Region & Tip of the Mitt. Guided experiences through Michigan's newest and most adventurous wine region.</div>
+<div class="tour-partner-coming">Interested in partnering? <a href="advertise.html" style="color:var(--gold-light);text-decoration:none;">Get in touch →</a></div>
+</div>
+</div>
+
+<div class="book-cta-footer">
+<p>Are you a tour operator in Michigan wine country? <a href="advertise.html">Become a partner →</a></p>
+</div>
+</div>
+</section>
+
+<section class="newsletter"><div class="newsletter-inner">
+<h2>Trip Planning Made Easy</h2>
+<p>Seasonal guides, new winery openings, and curated itineraries delivered to your inbox.</p>
+<form class="newsletter-form" onsubmit="return false;"><input type="email" placeholder="Enter your email address"/><button type="submit">Subscribe</button></form>
+</div></section>
+
+<footer><div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand"><div style="display:flex;flex-direction:column;"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--cream);">Michigan Vineyards</span><span style="font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:2px;">Wine Country Guide</span></div><p>Your complete guide to Michigan wine country. Discover 192 wineries across 7 wine trails, plan vineyard tours, and explore the Great Lakes State.</p></div>
+<div class="footer-col"><h4>Explore</h4><ul><li><a href="regions.html">Regions</a></li><li><a href="directory.html">All Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="plan-your-visit.html">Plan Your Visit</a></li></ul></div>
+<div class="footer-col"><h4>Itineraries</h4><ul><li><a href="#" onclick="showItin('afternoon');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Afternoon Escape</a></li><li><a href="#" onclick="showItin('weekend');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Weekend Getaway</a></li><li><a href="#" onclick="showItin('weeklong');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Week-Long Tour</a></li><li><a href="#" onclick="showItin('chicago');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Chicago Day Trip</a></li></ul></div>
+<div class="footer-col"><h4>Resources</h4><ul><li><a href="about.html">About</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="contact.html">Contact</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© 2026 MichiganVineyards.com · All Rights Reserved</span><div style="display:flex;gap:20px;"><a href="sitemap.html">Sitemap</a><a href="https://traversecitywinetour.com">Traverse City Wine Tours</a></div></div>
+</div></footer>
+
+<script>
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>10);});
+
+/* Itinerary tabs */
+function showItin(id) {
+  document.querySelectorAll('.itin-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.itin-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('itin-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+/* Scroll animations */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.qs-card, .season-card, .log-card, .tip-card').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity 0.4s ease ${(i % 4) * 0.08}s, transform 0.4s ease ${(i % 4) * 0.08}s`;
+  observer.observe(el);
+});
+</script>
+</body>
+</html>

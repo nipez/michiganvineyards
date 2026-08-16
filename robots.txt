@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://michiganvineyards.com/sitemap.xml
+
+# Michigan Vineyards — Wine Country Guide
+# 192 wineries across 11 regions

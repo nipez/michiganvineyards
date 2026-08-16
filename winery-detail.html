@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGRE0QBWPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JGRE0QBWPF');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mari Vineyards — Old Mission Peninsula | MichiganVineyards.com</title>
+<meta content="Visit Mari Vineyards on Old Mission Peninsula. Known for Cabernet Franc, Nebbiolo, Sangiovese & Riesling. Underground cellar, estate wines, and panoramic Grand Traverse Bay views." name="description"/>
+<link rel="canonical" href="https://michiganvineyards.com/wineries/mari-vineyards/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --forest:#1B3A2D;--forest-deep:#0F2419;--forest-light:#2A5040;
+  --burgundy:#6B2D3E;--burgundy-deep:#4A0E1B;--wine:#8B3A4A;
+  --gold:#C9A96E;--gold-light:#D4BC8B;--gold-warm:#B8943F;
+  --cream:#F5F0E8;--cream-dark:#EDE6D8;
+  --sage:#8FA68F;--sage-light:#B8CCB0;
+  --charcoal:#2C2420;--text:#3A3330;--text-light:#7A7068;--white:#FEFCF9;
+  --region-color:#8B5E3C;
+}
+html{scroll-behavior:smooth;font-size:18px;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+
+/* TOP BAR */
+.top-bar{background:var(--forest-deep);color:var(--sage-light);font-size:1rem;letter-spacing:0.1em;text-transform:uppercase;padding:9px 0;text-align:center;}
+.top-bar a{color:var(--gold-light);text-decoration:none;}.top-bar a:hover{text-decoration:underline;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(254,252,249,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,58,45,0.06);transition:box-shadow 0.3s;}
+nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
+.nav-inner{max-width:1340px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:36px;height:36px;background:var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.logo-icon::after{content:'🍇';font-size:18px;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-main{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--forest);letter-spacing:-0.01em;}
+.logo-sub{font-family:'Outfit',sans-serif;font-size:1rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-warm);margin-top:2px;}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;font-size:1rem;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);position:relative;padding:4px 0;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover{color:var(--forest);}.nav-links a:hover::after{width:100%;}
+.nav-links a.active{color:var(--forest);}.nav-links a.active::after{width:100%;}
+.nav-cta{background:var(--forest)!important;color:var(--cream)!important;padding:10px 22px!important;border-radius:4px;font-size:1rem!important;letter-spacing:0.06em!important;transition:background 0.3s!important;}
+.nav-cta:hover{background:var(--forest-light)!important;}.nav-cta::after{display:none!important;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+
+/* HERO */
+.winery-hero{position:relative;min-height:48vh;display:flex;align-items:flex-end;overflow:hidden;}
+.winery-hero-bg{position:absolute;inset:0;background:url('winery-detail-images/1.jpg') center/cover no-repeat;}
+.winery-hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 30%,rgba(139,94,60,0.2) 0%,transparent 55%),radial-gradient(ellipse 50% 50% at 20% 70%,rgba(107,45,62,0.12) 0%,transparent 50%);}
+.winery-hero-bg::after{content:'';position:absolute;inset:0;background:rgba(15,36,25,0.15);}
+.winery-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,36,25,0.85) 0%,rgba(15,36,25,0.4) 40%,rgba(15,36,25,0.2) 70%);}
+.winery-hero-content{position:relative;z-index:2;max-width:1340px;width:100%;margin:0 auto;padding:0 40px 50px;}
+.hero-badges{display:flex;gap:8px;margin-bottom:14px;opacity:0;animation:fadeUp .6s .15s forwards;}
+.hero-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:4px;font-size:1rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.hero-badge.region{background:rgba(139,94,60,0.25);color:#D4BC8B;border:1px solid rgba(139,94,60,0.3);}
+.hero-badge.pick{background:rgba(201,169,110,0.2);color:var(--gold-light);border:1px solid rgba(201,169,110,0.25);}
+.winery-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;line-height:1.08;color:var(--cream);margin-bottom:6px;opacity:0;animation:fadeUp .6s .3s forwards;}
+.winery-hero-type{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,1.8vw,1.25rem);color:rgba(245,240,232,0.5);font-style:italic;opacity:0;animation:fadeUp .6s .4s forwards;}
+
+/* BREADCRUMBS */
+.breadcrumbs{max-width:1340px;margin:0 auto;padding:14px 40px;display:flex;gap:8px;align-items:center;font-size:1rem;color:var(--text-light);flex-wrap:wrap;}
+.breadcrumbs a{color:var(--text-light);text-decoration:none;transition:color .3s;}.breadcrumbs a:hover{color:var(--forest);}
+.breadcrumbs .sep{opacity:.4;}.breadcrumbs .current{color:var(--forest);font-weight:500;}
+
+/* QUICK BAR */
+.quick-bar{background:var(--cream-dark);border-bottom:1px solid rgba(27,58,45,0.06);}
+.quick-bar-inner{max-width:1340px;margin:0 auto;padding:16px 40px;display:flex;gap:32px;align-items:center;flex-wrap:wrap;}
+.qb-item{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--text);}
+.qb-item svg{flex-shrink:0;color:var(--text-light);}
+.qb-item a{color:var(--forest);text-decoration:none;font-weight:500;}.qb-item a:hover{text-decoration:underline;}
+.qb-divider{width:1px;height:20px;background:rgba(27,58,45,0.1);flex-shrink:0;}
+.qb-item.has-tooltip{position:relative;cursor:pointer;border-bottom:1px dashed rgba(27,58,45,0.2);padding-bottom:2px;}
+.qb-item.has-tooltip:hover{border-bottom-color:var(--forest);}
+.qb-tooltip{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:300px;background:var(--white);border-radius:10px;box-shadow:0 12px 40px rgba(27,58,45,0.18),0 2px 8px rgba(27,58,45,0.08);overflow:hidden;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s,transform .25s;transform:translateX(-50%) translateY(4px);z-index:200;pointer-events:none;}
+.qb-item.has-tooltip:hover .qb-tooltip{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto;}
+.qb-tooltip::before{content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:12px;height:12px;background:var(--white);border-radius:2px;rotate:45deg;z-index:1;}
+.qb-tooltip iframe{display:block;width:100%;height:180px;border:0;}
+.qb-tooltip-info{padding:10px 14px;font-size:.76rem;color:var(--text);display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(27,58,45,0.06);}
+.qb-tooltip-info a{font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--forest);text-decoration:none;}.qb-tooltip-info a:hover{color:var(--region-color);}
+
+/* MAIN LAYOUT */
+.detail-wrap{max-width:1340px;margin:0 auto;padding:40px 40px 80px;display:grid;grid-template-columns:1fr 380px;gap:50px;align-items:start;}
+
+/* LEFT COLUMN - CONTENT */
+.detail-main{}
+
+/* About */
+.about-section{margin-bottom:44px;}
+.section-label{font-size:1rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--region-color);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(139,94,60,0.15);}
+.about-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:500;color:var(--forest);margin-bottom:16px;line-height:1.3;}
+.about-text{font-size:1rem;line-height:1.8;color:var(--text);}
+.about-text p{margin-bottom:14px;}
+
+/* Known For */
+.known-section{margin-bottom:44px;}
+.grape-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.grape-card{padding:18px 20px;background:var(--cream);border-radius:8px;border:1px solid rgba(27,58,45,0.04);transition:all .25s;}
+.grape-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(27,58,45,0.06);}
+.grape-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--forest);margin-bottom:3px;}
+.grape-note{font-size:1rem;color:var(--text-light);line-height:1.5;}
+.grape-card.signature{border-left:3px solid var(--gold);background:linear-gradient(135deg,rgba(201,169,110,0.06) 0%,var(--cream) 100%);}
+.grape-card.signature .grape-name::after{content:' ★';color:var(--gold);font-size:.7em;}
+
+/* Visit Info */
+.visit-section{margin-bottom:44px;}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.visit-card{padding:20px;background:var(--white);border:1px solid rgba(27,58,45,0.08);border-radius:8px;}
+.visit-card-label{font-size:1rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;}
+.visit-card-value{font-size:1.05rem;color:var(--text);line-height:1.6;}
+.visit-card-value strong{color:var(--forest);font-weight:600;}
+.visit-card.highlight{background:var(--forest);border-color:transparent;}
+.visit-card.highlight .visit-card-label{color:var(--sage);}
+.visit-card.highlight .visit-card-value{color:var(--cream);}
+.visit-card.highlight .visit-card-value strong{color:var(--gold-light);font-weight:600;}
+
+/* Gallery Placeholder */
+.gallery-section{margin-bottom:44px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.gallery-item{aspect-ratio:4/3;border-radius:8px;overflow:hidden;position:relative;cursor:pointer;}
+.gallery-item-inner{width:100%;height:100%;transition:transform .5s;}
+.gallery-item:hover .gallery-item-inner{transform:scale(1.05);}
+.gallery-item.large{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;}
+.gi-1{background:url('winery-detail-images/5.jpg') center/cover;}
+.gi-2{background:url('winery-detail-images/3.jpg') center/cover;}
+.gi-3{background:url('winery-detail-images/2.jpg') center/cover;}
+.gi-4{background:url('winery-detail-images/4.jpg') center/cover;}
+.gi-5{background:url('winery-detail-images/7.jpg') center/cover;}
+.gallery-placeholder{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-start;padding:12px 14px;color:rgba(255,255,255,0);font-size:1rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;background:linear-gradient(to top,rgba(0,0,0,0) 0%,transparent 100%);transition:all .3s;}
+.gallery-item:hover .gallery-placeholder{color:rgba(255,255,255,0.9);background:linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 60%);}
+
+/* RIGHT COLUMN - SIDEBAR */
+.detail-sidebar{position:sticky;top:90px;}
+
+/* Action Card */
+.action-card{background:var(--forest);border-radius:12px;padding:30px 26px;margin-bottom:20px;}
+.action-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:500;color:var(--cream);margin-bottom:6px;}
+.action-card p{font-size:1rem;color:rgba(245,240,232,0.5);margin-bottom:20px;line-height:1.5;}
+.action-btn{display:block;width:100%;padding:14px;text-align:center;border-radius:5px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .3s;margin-bottom:10px;}
+.action-btn.gold{background:var(--gold);color:var(--forest-deep);}.action-btn.gold:hover{background:var(--gold-light);}
+.action-btn.outline{border:1.5px solid rgba(201,169,110,0.3);color:var(--gold-light);background:transparent;}.action-btn.outline:hover{border-color:var(--gold);}
+
+/* Map Card */
+.map-card{border-radius:12px;overflow:hidden;border:1px solid rgba(27,58,45,0.08);margin-bottom:20px;}
+.map-placeholder{height:220px;background:linear-gradient(135deg,#D8E8D8 0%,#C8D8C8 50%,#B8C8B8 100%);position:relative;display:flex;align-items:center;justify-content:center;}
+.map-placeholder-text{font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(27,58,45,0.3);display:flex;flex-direction:column;align-items:center;gap:8px;}
+.map-placeholder-text svg{opacity:.3;}
+.map-info{padding:16px 18px;background:var(--white);}
+.map-address{font-size:1.05rem;color:var(--text);line-height:1.6;}
+.map-link{display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--forest);text-decoration:none;}.map-link:hover{color:var(--region-color);}
+
+/* Hours Card */
+.hours-card{background:var(--cream);border-radius:12px;padding:22px 24px;margin-bottom:20px;}
+.hours-card h4{font-size:1rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:14px;}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;font-size:1rem;border-bottom:1px solid rgba(27,58,45,0.05);}
+.hours-row:last-child{border-bottom:none;}
+.hours-day{color:var(--text);font-weight:500;}
+.hours-time{color:var(--text-light);}
+.hours-row.today{background:rgba(201,169,110,0.08);margin:0 -10px;padding:7px 10px;border-radius:4px;}
+.hours-row.today .hours-day{color:var(--forest);font-weight:600;}
+.hours-row.today .hours-time{color:var(--forest);}
+
+/* Contact Card */
+.contact-card{border:1px solid rgba(27,58,45,0.08);border-radius:12px;padding:22px 24px;}
+.contact-card h4{font-size:1rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:14px;}
+.contact-row{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:1rem;}
+.contact-row:not(:last-child){border-bottom:1px solid rgba(27,58,45,0.05);}
+.contact-row svg{flex-shrink:0;color:var(--text-light);}
+.contact-row a{color:var(--forest);text-decoration:none;font-weight:500;}.contact-row a:hover{text-decoration:underline;}
+
+/* Claim Listing */
+.claim-banner{margin-top:36px;padding:22px 24px;background:var(--cream);border-radius:8px;border:1px dashed rgba(27,58,45,0.15);display:flex;align-items:flex-start;gap:14px;}
+.claim-banner-icon{width:36px;height:36px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(27,58,45,0.08);}
+.claim-banner-icon svg{color:var(--forest);}
+.claim-banner-content{flex:1;}
+.claim-banner-title{font-size:.84rem;font-weight:600;color:var(--forest);margin-bottom:3px;}
+.claim-banner-text{font-size:.78rem;color:var(--text-light);line-height:1.55;}
+.claim-banner-text a{color:var(--forest);font-weight:600;text-decoration:none;}.claim-banner-text a:hover{text-decoration:underline;}
+.claim-sidebar{margin-top:16px;text-align:center;padding:14px;background:var(--cream);border-radius:8px;border:1px dashed rgba(27,58,45,0.12);}
+.claim-sidebar a{font-size:.74rem;color:var(--forest);text-decoration:none;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px;}.claim-sidebar a:hover{text-decoration:underline;}
+.claim-sidebar p{font-size:.68rem;color:var(--text-light);margin-top:4px;line-height:1.4;}
+
+/* Disclaimer tooltip */
+.disclaimer-tip{position:relative;display:inline-flex;align-items:center;gap:4px;cursor:help;}
+.disclaimer-tip .tip-icon{width:15px;height:15px;border-radius:50%;background:rgba(27,58,45,0.07);display:inline-flex;align-items:center;justify-content:center;font-size:.58rem;color:var(--text-light);font-weight:700;flex-shrink:0;transition:background .2s;}
+.disclaimer-tip:hover .tip-icon{background:rgba(27,58,45,0.14);}
+.disclaimer-tip .tip-body{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(4px);width:280px;padding:14px 16px;background:var(--charcoal);color:rgba(245,240,232,0.85);font-size:.74rem;line-height:1.55;border-radius:8px;opacity:0;visibility:hidden;transition:all .2s;z-index:200;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+.disclaimer-tip:hover .tip-body{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.disclaimer-tip .tip-body::after{content:'';position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);width:10px;height:10px;background:var(--charcoal);rotate:45deg;}
+
+/* Claim Modal */
+.claim-overlay{position:fixed;inset:0;background:rgba(15,36,25,0.6);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .3s;}
+.claim-overlay.active{opacity:1;visibility:visible;}
+.claim-modal{background:var(--white);border-radius:14px;width:90%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(15,36,25,0.25);transform:translateY(16px);transition:transform .3s;}
+.claim-overlay.active .claim-modal{transform:translateY(0);}
+.claim-modal-header{padding:28px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;}
+.claim-modal-header h2{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;color:var(--forest);}
+.claim-modal-header p{font-size:.84rem;color:var(--text-light);margin-top:4px;line-height:1.5;}
+.claim-close{background:none;border:none;cursor:pointer;padding:6px;color:var(--text-light);transition:color .2s;}.claim-close:hover{color:var(--forest);}
+.claim-modal-body{padding:24px 30px 30px;}
+.claim-winery-name{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:var(--cream);border-radius:6px;font-size:.82rem;font-weight:600;color:var(--forest);margin-bottom:20px;}
+.claim-winery-name svg{color:var(--gold-warm);}
+.claim-field{margin-bottom:16px;}
+.claim-field label{display:block;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:6px;}
+.claim-field input,.claim-field select,.claim-field textarea{width:100%;padding:12px 14px;border:1px solid rgba(27,58,45,0.12);background:var(--white);color:var(--text);font-family:'Outfit',sans-serif;font-size:.86rem;border-radius:6px;outline:none;transition:border-color .2s;}
+.claim-field input:focus,.claim-field select:focus,.claim-field textarea:focus{border-color:var(--gold);}
+.claim-field textarea{resize:vertical;min-height:80px;}
+.claim-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%237A7068' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;}
+.claim-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.claim-submit{width:100%;padding:14px;background:var(--forest);color:var(--cream);font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;transition:background .3s;margin-top:4px;}
+.claim-submit:hover{background:var(--forest-light);}
+.claim-note{font-size:.72rem;color:var(--text-light);text-align:center;margin-top:12px;line-height:1.5;}
+.claim-success{text-align:center;padding:40px 30px;}
+.claim-success-icon{width:56px;height:56px;background:rgba(27,58,45,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+.claim-success-icon svg{color:var(--forest);}
+.claim-success h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--forest);margin-bottom:8px;}
+.claim-success p{font-size:.86rem;color:var(--text-light);line-height:1.6;}
+
+/* NEARBY WINERIES */
+.nearby-section{max-width:1340px;margin:0 auto;padding:0 40px 80px;}
+.nearby-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+.nearby-header h2{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;color:var(--forest);}
+.nearby-header a{font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--forest);text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .3s;}.nearby-header a:hover{gap:9px;}
+.nearby-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.nearby-card{background:var(--white);border-radius:8px;overflow:hidden;border:1px solid rgba(27,58,45,0.06);text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s;}
+.nearby-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(27,58,45,0.1);}
+.nearby-img{height:130px;position:relative;overflow:hidden;}
+.nearby-img-inner{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .5s;}
+.nearby-card:hover .nearby-img-inner{transform:scale(1.04);}
+.nearby-tag{position:absolute;top:8px;right:8px;font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:3px;background:rgba(255,255,255,0.92);backdrop-filter:blur(4px);}
+.nearby-info{padding:14px 16px;}
+.nearby-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--forest);margin-bottom:2px;line-height:1.3;}
+.nearby-type{font-size:1rem;color:var(--text-light);margin-bottom:6px;}
+.nearby-known{font-size:1.05rem;color:var(--text);}.nearby-known strong{color:var(--forest);font-weight:600;}
+
+/* NEWSLETTER */
+.newsletter{background:var(--forest);padding:70px 40px;text-align:center;}
+.newsletter-inner{max-width:560px;margin:0 auto;}
+.newsletter h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:500;color:var(--cream);margin-bottom:10px;}
+.newsletter p{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:rgba(245,240,232,0.55);margin-bottom:28px;line-height:1.6;}
+.newsletter-form{display:flex;gap:10px;max-width:460px;margin:0 auto;}
+.newsletter-form input{flex:1;padding:14px 18px;border:1px solid rgba(201,169,110,0.2);background:rgba(255,255,255,0.06);color:var(--cream);font-family:'Outfit',sans-serif;font-size:1.05rem;border-radius:4px;outline:none;}
+.newsletter-form input::placeholder{color:rgba(245,240,232,0.3);}.newsletter-form input:focus{border-color:var(--gold);}
+.newsletter-form button{padding:14px 24px;background:var(--gold);color:var(--forest-deep);font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;transition:background .3s;white-space:nowrap;}
+.newsletter-form button:hover{background:var(--gold-light);}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,0.6);}
+.footer-inner{max-width:1340px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+.footer-brand p{font-size:1.05rem;line-height:1.7;margin-top:14px;color:rgba(245,240,232,0.4);}
+.footer-col h4{font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.footer-col ul{list-style:none;}.footer-col li{margin-bottom:9px;}
+.footer-col a{font-size:1.05rem;color:rgba(245,240,232,0.4);text-decoration:none;transition:color .3s;}.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{border-top:1px solid rgba(245,240,232,0.07);padding-top:28px;display:flex;justify-content:space-between;align-items:center;font-size:1rem;}
+.footer-bottom a{color:rgba(245,240,232,0.35);text-decoration:none;transition:color .3s;}.footer-bottom a:hover{color:var(--gold-light);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .detail-wrap{grid-template-columns:1fr;gap:36px;}
+  .detail-sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .action-card{grid-column:span 2;}
+  .nearby-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-item.large{grid-column:span 2;grid-row:span 1;aspect-ratio:2/1;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px 40px;gap:14px;border-bottom:1px solid rgba(27,58,45,0.08);box-shadow:0 8px 30px rgba(27,58,45,0.08);}.nav-links.show{display:flex;}.nav-toggle{display:block;}
+  .winery-hero{min-height:36vh;}
+  .winery-hero-content{padding:0 20px 36px;}
+  .breadcrumbs{padding:10px 20px;}
+  .quick-bar-inner{padding:14px 20px;gap:16px;}
+  .qb-divider{display:none;}
+  .qb-tooltip{display:none;}
+  .detail-wrap{padding:24px 20px 50px;gap:28px;}
+  .grape-grid{grid-template-columns:1fr;}
+  .visit-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .gallery-item.large{grid-column:span 2;}
+  .detail-sidebar{grid-template-columns:1fr;}
+  .action-card{grid-column:span 1;}
+  .nearby-section{padding:0 20px 50px;}
+  .nearby-grid{grid-template-columns:1fr;}
+  .nearby-header{flex-direction:column;align-items:flex-start;gap:8px;}
+  .newsletter{padding:50px 20px;}.newsletter-form{flex-direction:column;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}.footer-bottom{flex-direction:column;gap:10px;text-align:center;}
+  .claim-row{grid-template-columns:1fr;}
+  .claim-modal{width:95%;max-height:85vh;}
+  .claim-modal-header{padding:20px 20px 0;}.claim-modal-body{padding:18px 20px 24px;}
+  .disclaimer-tip .tip-body{width:220px;}
+}
+</style>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="MichiganVineyards.com"/>
+<meta property="og:title" content="Mari Vineyards — Old Mission Peninsula | MichiganVineyards.com"/>
+<meta property="og:description" content="Visit Mari Vineyards on Old Mission Peninsula. Known for Cabernet Franc, Nebbiolo, Sangiovese & Riesling. Hours, directions, wines, and more."/>
+<meta property="og:url" content="https://michiganvineyards.com/wineries/mari-vineyards/"/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Mari Vineyards — Old Mission Peninsula | MichiganVineyards.com"/>
+<meta name="twitter:description" content="Visit Mari Vineyards on Old Mission Peninsula. Underground cellar, estate wines, and panoramic bay views."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Winery",
+  "name": "Mari Vineyards",
+  "description": "Estate vineyard and winery on Old Mission Peninsula, Traverse City, Michigan",
+  "url": "https://michiganvineyards.com/wineries/mari-vineyards/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Traverse City",
+    "addressRegion": "MI",
+    "addressCountry": "US"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="top-bar">7 Wine Trails · 192 Wineries · <a href="directory.html">Explore the Full Directory →</a></div>
+
+<nav id="mainNav"><div class="nav-inner">
+<a class="logo" href="/"><div class="logo-icon"></div><div class="logo-text"><span class="logo-main">Michigan Vineyards</span><span class="logo-sub">Wine Country Guide</span></div></a>
+<ul class="nav-links"><li><a href="regions.html">Regions</a></li><li><a href="directory.html" class="active">Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="the-vine.html">The Vine</a></li><li><a href="events.html">Events</a></li><li><a class="nav-cta" href="plan-your-visit.html">Plan Your Visit</a></li></ul>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<!-- HERO -->
+<section class="winery-hero">
+<div class="winery-hero-bg"></div>
+<div class="winery-hero-overlay"></div>
+<div class="winery-hero-content">
+<div class="hero-badges">
+<span class="hero-badge region">Old Mission Peninsula</span>
+<span class="hero-badge pick">✦ Editors' Pick</span>
+</div>
+<h1>Mari Vineyards</h1>
+<div class="winery-hero-type">Estate Winery & Underground Cellar · Traverse City</div>
+</div>
+</section>
+
+<div class="breadcrumbs">
+<a href="/">Home</a><span class="sep">›</span>
+<a href="directory.html">Wineries</a><span class="sep">›</span>
+<a href="winery-detail.html?w=?region=old-mission">Old Mission</a><span class="sep">›</span>
+<span class="current">Mari Vineyards</span>
+</div>
+
+<!-- QUICK BAR -->
+<div class="quick-bar"><div class="quick-bar-inner">
+<div class="qb-item">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+Open today · 11am–6pm
+</div>
+<div class="qb-divider"></div>
+<div class="qb-item has-tooltip">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+8175 Center Rd, Traverse City, MI 49686
+<div class="qb-tooltip">
+<iframe src="https://maps.google.com/maps?q=Mari+Vineyards+8175+Center+Rd+Traverse+City+MI+49686&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+<div class="qb-tooltip-info"><span>Mari Vineyards</span><a href="https://maps.google.com/maps?q=Mari+Vineyards+Traverse+City" target="_blank" rel="noopener">Directions →</a></div>
+</div>
+</div>
+<div class="qb-divider"></div>
+<div class="qb-item">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+<a href="https://marivineyards.com" target="_blank" rel="noopener">marivineyards.com</a>
+</div>
+<div class="qb-divider"></div>
+<div class="qb-item">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<a href="tel:+12319297033">(231) 929-7033</a>
+</div>
+</div></div>
+
+<!-- MAIN CONTENT -->
+<div class="detail-wrap">
+
+<!-- LEFT: CONTENT -->
+<div class="detail-main">
+
+<!-- About -->
+<div class="about-section">
+<div class="section-label">About the Winery</div>
+<h2>Where Italian Winemaking Meets Northern Michigan</h2>
+<div class="about-text">
+<p>Mari Vineyards brings Old World ambition to Old Mission Peninsula. Founded by Marty Lagina — yes, the treasure hunter from History Channel's <em>The Curse of Oak Island</em> — the winery's vision was never small. A 37,000-square-foot underground cellar carved into the peninsula's glacial hills houses barrel rooms, a production facility, and a cave tasting gallery that feels transplanted from Tuscany.</p>
+<p>The wines match the ambition. Winemaker Sean O'Keefe works with Italian varietals that most Michigan winemakers wouldn't dare attempt: Nebbiolo, Sangiovese, and Dolcetto alongside more expected regional stars like Cabernet Franc and Riesling. The maritime influence of Grand Traverse Bay on both sides of the narrow peninsula creates a microclimate that extends the growing season just enough to ripen these Mediterranean grapes.</p>
+<p>The tasting room sits atop a hill with sweeping views of East Grand Traverse Bay and the surrounding vineyard blocks. It's easily one of the most striking winery settings in the state — and a must-visit for anyone exploring Old Mission.</p>
+</div>
+</div>
+
+<!-- Known For -->
+<div class="known-section">
+<div class="section-label">Known For</div>
+<div class="grape-grid">
+<div class="grape-card signature">
+<div class="grape-name">Cabernet Franc</div>
+<div class="grape-note">The flagship. Rich, herbaceous, and distinctly Michigan — often the best in the state.</div>
+</div>
+<div class="grape-card signature">
+<div class="grape-name">Nebbiolo</div>
+<div class="grape-note">A rare Michigan Nebbiolo. Lighter than Piedmont but unmistakable — tar, roses, red cherry.</div>
+</div>
+<div class="grape-card">
+<div class="grape-name">Sangiovese</div>
+<div class="grape-note">Italian-inspired red with bright acidity and cherry character, aged in the underground cellar.</div>
+</div>
+<div class="grape-card">
+<div class="grape-name">Riesling</div>
+<div class="grape-note">Dry to off-dry expressions showcasing Old Mission's signature grape at its best.</div>
+</div>
+<div class="grape-card">
+<div class="grape-name">Dry Rosé</div>
+<div class="grape-note">A seasonal favorite made from estate-grown red grapes. Fresh, crisp, and dry.</div>
+</div>
+<div class="grape-card">
+<div class="grape-name">Sparkling Wine</div>
+<div class="grape-note">Traditional method sparkling made from estate fruit — one of northern Michigan's best.</div>
+</div>
+</div>
+</div>
+
+<!-- Visit Info -->
+<div class="visit-section">
+<div class="section-label">Plan Your Visit</div>
+<div class="visit-grid">
+<div class="visit-card highlight">
+<div class="visit-card-label">Tasting Experience</div>
+<div class="visit-card-value">Seated tastings with 5 wines, paired with the underground cellar's atmosphere. Walk-ins welcome, reservations recommended for groups of 6+.</div>
+</div>
+<div class="visit-card highlight">
+<div class="visit-card-label">Tasting Fee</div>
+<div class="visit-card-value"><strong>$15 per person</strong> · Waived with bottle purchase. Cellar tours available by reservation.</div>
+</div>
+<div class="visit-card">
+<div class="visit-card-label">Food & Events</div>
+<div class="visit-card-value">Seasonal small plates and charcuterie boards available. Frequent live music events on the terrace during summer months.</div>
+</div>
+<div class="visit-card">
+<div class="visit-card-label">Good to Know</div>
+<div class="visit-card-value">The underground cellar stays cool year-round — bring a light layer. Dogs welcome on the outdoor patio. Wine club members receive complimentary tastings.</div>
+</div>
+</div>
+</div>
+
+<!-- Gallery -->
+<div class="gallery-section">
+<div class="section-label">Gallery</div>
+<div class="gallery-grid">
+<div class="gallery-item large"><div class="gallery-item-inner gi-1"></div><div class="gallery-placeholder">Barrel Room</div></div>
+<div class="gallery-item"><div class="gallery-item-inner gi-2"></div><div class="gallery-placeholder">Wine & Cheese Pairing</div></div>
+<div class="gallery-item"><div class="gallery-item-inner gi-3"></div><div class="gallery-placeholder">Tasting Experience</div></div>
+<div class="gallery-item"><div class="gallery-item-inner gi-4"></div><div class="gallery-placeholder">Estate Grapes</div></div>
+<div class="gallery-item"><div class="gallery-item-inner gi-5"></div><div class="gallery-placeholder">Vineyard Views</div></div>
+</div>
+</div>
+
+<!-- Claim Listing Banner -->
+<div class="claim-banner">
+<div class="claim-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+<div class="claim-banner-content">
+<div class="claim-banner-title">Is this your winery? <span class="disclaimer-tip"><span class="tip-icon">i</span><span class="tip-body">We do our best to represent each winery's information accurately using publicly available data. If anything is incorrect or outdated, the winery owner can claim this listing to update it at no cost.</span></span></div>
+<div class="claim-banner-text">Claim this listing to update your hours, photos, description, and contact info — free of charge. <a href="#" onclick="openClaimModal();return false;">Claim This Listing →</a></div>
+</div>
+</div>
+
+</div><!-- end detail-main -->
+
+<!-- RIGHT: SIDEBAR -->
+<div class="detail-sidebar">
+
+<!-- CTA -->
+<div class="action-card">
+<h3>Visit Mari Vineyards</h3>
+<p>Experience the underground cellar and estate wines on Old Mission Peninsula.</p>
+<a href="https://marivineyards.com/visit" class="action-btn gold" target="_blank" rel="noopener">Book a Tasting</a>
+<a href="https://marivineyards.com" class="action-btn outline" target="_blank" rel="noopener">Visit Website</a>
+</div>
+
+<!-- Map -->
+<div class="map-card">
+<iframe src="https://maps.google.com/maps?q=Mari+Vineyards+8175+Center+Rd+Traverse+City+MI+49686&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;display:block;border-radius:12px 12px 0 0;" allowfullscreen="" loading="lazy"></iframe>
+<div class="map-info">
+<div class="map-address">8175 Center Rd<br/>Traverse City, MI 49686</div>
+<a href="https://maps.google.com/maps?q=Mari+Vineyards+Traverse+City" class="map-link" target="_blank" rel="noopener">Get Directions <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h5M5.5 2.5l3 2.5-3 2.5"/></svg></a>
+</div>
+</div>
+
+<!-- Hours -->
+<div class="hours-card">
+<h4>Hours</h4>
+<div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">11am – 6pm</span></div>
+<div class="hours-row today"><span class="hours-day">Tuesday ✦ Today</span><span class="hours-time">11am – 6pm</span></div>
+<div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">11am – 6pm</span></div>
+<div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">11am – 6pm</span></div>
+<div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">11am – 6pm</span></div>
+<div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">11am – 6pm</span></div>
+<div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">12pm – 5pm</span></div>
+</div>
+
+<!-- Contact -->
+<div class="contact-card">
+<h4>Contact</h4>
+<div class="contact-row">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<a href="tel:+12319297033">(231) 929-7033</a>
+</div>
+<div class="contact-row">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+<a href="mailto:info@marivineyards.com">info@marivineyards.com</a>
+</div>
+<div class="contact-row">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+<a href="https://marivineyards.com" target="_blank" rel="noopener">marivineyards.com</a>
+</div>
+<div class="contact-row">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+<a href="https://instagram.com/marivineyards" target="_blank" rel="noopener">@marivineyards</a>
+</div>
+</div>
+
+<!-- Claim Sidebar -->
+<div class="claim-sidebar">
+<a href="#" onclick="openClaimModal();return false;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg> Claim This Listing</a>
+<p>Own this winery? Update your info for free. <span class="disclaimer-tip"><span class="tip-icon">i</span><span class="tip-body">We do our best to represent each winery's information accurately using publicly available data. If anything is incorrect or outdated, the winery owner can claim this listing to update it at no cost.</span></span></p>
+</div>
+
+</div><!-- end sidebar -->
+
+</div><!-- end detail-wrap -->
+
+<!-- NEARBY WINERIES -->
+<div class="nearby-section">
+<div class="nearby-header">
+<h2>More on Old Mission Peninsula</h2>
+<a href="winery-detail.html?w=?region=old-mission">View All 11 → <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h5M5.5 2.5l3 2.5-3 2.5"/></svg></a>
+</div>
+<div class="nearby-grid">
+<a class="nearby-card" href="winery-detail.html?w=chateau-grand-traverse">
+<div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/8.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
+<div class="nearby-info"><h3 class="nearby-name">Chateau Grand Traverse</h3><div class="nearby-type">Estate Winery & Tasting Room</div><div class="nearby-known">Known for: <strong>Riesling, Ice Wine</strong></div></div>
+</a>
+<a class="nearby-card" href="winery-detail.html?w=brys-estate-vineyard-and-winery">
+<div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/6.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
+<div class="nearby-info"><h3 class="nearby-name">Brys Estate</h3><div class="nearby-type">Estate Vineyard & Winery</div><div class="nearby-known">Known for: <strong>Red Blend, Chardonnay</strong></div></div>
+</a>
+<a class="nearby-card" href="winery-detail.html?w=chateau-chantal">
+<div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/1.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
+<div class="nearby-info"><h3 class="nearby-name">Chateau Chantal</h3><div class="nearby-type">Winery & B&B Inn</div><div class="nearby-known">Known for: <strong>Sparkling, Cerise</strong></div></div>
+</a>
+<a class="nearby-card" href="winery-detail.html?w=2-lads-winery">
+<div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/3.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
+<div class="nearby-info"><h3 class="nearby-name">2 Lads Winery</h3><div class="nearby-type">Modern Estate Winery</div><div class="nearby-known">Known for: <strong>Cab Franc, Pinot Noir</strong></div></div>
+</a>
+</div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter"><div class="newsletter-inner">
+<h2>Michigan Wine Country Updates</h2>
+<p>Seasonal guides, new winery openings, events, and curated itineraries.</p>
+<form class="newsletter-form" onsubmit="return false;"><input type="email" placeholder="Enter your email address"/><button type="submit">Subscribe</button></form>
+</div></section>
+
+<footer><div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand"><div style="display:flex;flex-direction:column;"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--cream);">Michigan Vineyards</span><span style="font-size:1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:2px;">Wine Country Guide</span></div><p>Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the Great Lakes State.</p></div>
+<div class="footer-col"><h4>Regions</h4><ul><li><a href="regions.html#old-mission">Old Mission Peninsula</a></li><li><a href="regions.html#leelanau">Leelanau Peninsula</a></li><li><a href="regions.html#lake-michigan-shore">Lake Michigan Shore</a></li><li><a href="regions.html#fennville">Fennville</a></li><li><a href="regions.html#tip-of-the-mitt">Tip of the Mitt</a></li></ul></div>
+<div class="footer-col"><h4>Explore</h4><ul><li><a href="directory.html">All Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="the-vine.html">The Vine</a></li><li><a href="events.html">Events</a></li><li><a href="plan-your-visit.html">Plan Your Visit</a></li></ul></div>
+<div class="footer-col"><h4>Resources</h4><ul><li><a href="about.html">About</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="contact.html">Contact</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© 2026 MichiganVineyards.com · All Rights Reserved</span><div style="display:flex;gap:20px;"><a href="sitemap.html">Sitemap</a><a href="https://traversecitywinetour.com">Traverse City Wine Tours</a></div></div>
+</div></footer>
+
+<!-- Claim Modal -->
+<div class="claim-overlay" id="claimOverlay" onclick="if(event.target===this)closeClaimModal();">
+<div class="claim-modal">
+<div id="claimForm">
+<div class="claim-modal-header">
+<div>
+<h2>Claim Your Listing</h2>
+<p>Verify your ownership to update your winery's information.</p>
+</div>
+<button class="claim-close" onclick="closeClaimModal();" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="claim-modal-body">
+<div class="claim-winery-name">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+Mari Vineyards — Old Mission Peninsula
+</div>
+<div class="claim-row">
+<div class="claim-field">
+<label>Your Name</label>
+<input type="text" placeholder="Full name" required/>
+</div>
+<div class="claim-field">
+<label>Your Role</label>
+<select>
+<option value="" disabled selected>Select your role</option>
+<option>Owner</option>
+<option>General Manager</option>
+<option>Marketing / PR</option>
+<option>Tasting Room Manager</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="claim-field">
+<label>Email Address</label>
+<input type="email" placeholder="you@wineryname.com" required/>
+</div>
+<div class="claim-field">
+<label>Phone Number</label>
+<input type="tel" placeholder="(231) 555-0000"/>
+</div>
+<div class="claim-field">
+<label>What would you like to update?</label>
+<textarea placeholder="Let us know what information needs correcting — hours, description, photos, contact info, etc."></textarea>
+</div>
+<button class="claim-submit" onclick="submitClaim();">Submit Claim Request</button>
+<div class="claim-note">We'll verify your identity and get back to you within 1–2 business days. No cost, no obligation.</div>
+</div>
+</div>
+<div id="claimSuccess" class="claim-success" style="display:none;">
+<div class="claim-success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+<h3>Claim Request Submitted</h3>
+<p>Thanks! We'll review your request and reach out within 1–2 business days to verify your ownership and help you update your listing.</p>
+<button class="claim-submit" onclick="closeClaimModal();" style="max-width:200px;margin:20px auto 0;">Done</button>
+</div>
+</div>
+</div>
+
+<script>
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>10);});
+
+/* Scroll animations */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.about-section, .known-section, .visit-section, .gallery-section, .nearby-section').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+/* Grape card stagger */
+document.querySelectorAll('.grape-card').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(12px)';
+  el.style.transition = `opacity 0.4s ease ${i * 0.08}s, transform 0.4s ease ${i * 0.08}s`;
+  const go = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { el.style.opacity='1'; el.style.transform='translateY(0)'; }
+  }, { threshold: 0.2 });
+  go.observe(el);
+});
+
+/* Claim Modal */
+function openClaimModal() {
+  document.getElementById('claimOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('claimForm').style.display = '';
+  document.getElementById('claimSuccess').style.display = 'none';
+}
+function closeClaimModal() {
+  document.getElementById('claimOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function submitClaim() {
+  document.getElementById('claimForm').style.display = 'none';
+  document.getElementById('claimSuccess').style.display = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeClaimModal(); });
+
+const WINERIES = [{"name":"Chateau Grand Traverse","region":"Old Mission","type":"Estate Winery & Tasting Room","featured":true,"known":["Riesling","Ice Wine","Late Harvest Riesling","Pinot Grigio","Merlot"],"hours":"Mon\u2013Sat 10am\u20136pm \u00b7 Sun 12\u20135pm","city":"Traverse City","badge":"Pioneer \u00b7 Est. 1974"},{"name":"Chateau Chantal","region":"Old Mission","type":"Winery & B&B Inn","featured":true,"known":["Sparkling Wine","Cerise","Chardonnay","Pinot Noir","Late Harvest Riesling"],"hours":"Mon\u2013Sat 11am\u20137pm \u00b7 Sun 12\u20136pm","city":"Traverse City","badge":"Featured"},{"name":"Peninsula Cellars","region":"Old Mission","type":"Family Owned Winery","featured":false,"known":["Gew\u00fcrztraminer","Pinot Grigio","Cherry Wine","Riesling","Manigold Red"],"hours":"Mon\u2013Sat 10am\u20136pm \u00b7 Sun 12\u20136pm","city":"Traverse City","badge":""},{"name":"Brys Estate Vineyard & Winery","region":"Old Mission","type":"Estate Vineyard & Winery","featured":true,"known":["Signature Red Blend","Naked Chardonnay","Pinot Blanc","Gew\u00fcrztraminer"],"hours":"Mon\u2013Sat 11am\u20136pm \u00b7 Sun 12\u20136pm","city":"Traverse City","badge":""},{"name":"Bowers Harbor Vineyards","region":"Old Mission","type":"Vineyard & Tasting Room","featured":false,"known":["Langley Chardonnay","Pinot Grigio","Ros\u00e9","Shipwreck White"],"hours":"Mon\u2013Sat 10:30am\u20136pm \u00b7 Sun 12\u20136pm","city":"Traverse City","badge":""},{"name":"2 Lads Winery","region":"Old Mission","type":"Modern Estate Winery","featured":false,"known":["Cabernet Franc","Pinot Noir","Gr\u00fcner Veltliner","Ros\u00e9"],"hours":"Daily 12\u20136pm","city":"Traverse City","badge":""},{"name":"Mari Vineyards","region":"Old Mission","type":"Estate Winery & Underground Cellar","featured":true,"known":["Cabernet Franc","Nebbiolo","Sangiovese","Riesling"],"hours":"Mon\u2013Sat 11am\u20136pm \u00b7 Sun 12\u20135pm","city":"Traverse City","badge":"Editors' Pick"},{"name":"Bonobo Winery","region":"Old Mission","type":"Boutique Hillside Winery","featured":false,"known":["Pinot Noir","Chardonnay","Pinot Gris","Ros\u00e9"],"hours":"Daily 12\u20136pm","city":"Traverse City","badge":""},{"name":"Black Star Farms \u2014 Old Mission","region":"Old Mission","type":"Tasting Room & Winemaking Facility","featured":false,"known":["Arcturos","Pinot Noir","Riesling","Brandy"],"hours":"Daily 11am\u20136pm","city":"Traverse City","badge":""},{"name":"Ciccone Vineyard & Winery","region":"Old Mission","type":"Family Estate Winery","featured":false,"known":["Dolcetto","Pinot Grigio","Cabernet Franc","Gew\u00fcrztraminer"],"hours":"Mon\u2013Sat 12\u20135pm \u00b7 Sun 12\u20135pm","city":"Suttons Bay","badge":""},{"name":"Verterra Winery","region":"Old Mission","type":"Artisan Winery","featured":false,"known":["Pinot Noir","Riesling","Cabernet Franc","Orange Wine"],"hours":"Fri\u2013Sun 12\u20136pm","city":"Traverse City","badge":""},{"name":"Black Star Farms \u2014 Leelanau","region":"Leelanau","type":"Winery, Inn & Culinary Destination","featured":true,"known":["Arcturos","A Capella Ice Wine","Pinot Noir","Brandy"],"hours":"Daily 11am\u20136pm","city":"Suttons Bay","badge":"Editors' Pick"},{"name":"L. Mawby | Mawby Sparkling","region":"Leelanau","type":"Sparkling Wine House","featured":true,"known":["Sparkling Wine","M\u00e9thode Champenoise","Blanc de Blancs","Sex"],"hours":"Daily 12\u20136pm","city":"Suttons Bay","badge":"Featured"},{"name":"Leelanau Cellars","region":"Leelanau","type":"Pioneer Estate Winery","featured":true,"known":["Witchcraft Red","Tall Ship Chardonnay","Winter White"],"hours":"Mon\u2013Sat 10am\u20136pm \u00b7 Sun 12\u20135pm","city":"Omena","badge":""},{"name":"Good Harbor Vineyards","region":"Leelanau","type":"Waterfront Vineyard & Winery","featured":false,"known":["Pinot Grigio","Riesling","Fishtown White","Cherry Wine"],"hours":"Mon\u2013Sat 11am\u20135pm \u00b7 Sun 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Shady Lane Cellars","region":"Leelanau","type":"Winery in Historic Fieldstone Farm","featured":true,"known":["Sparkling Riesling","Pinot Noir","Cabernet Franc","Blue Franc"],"hours":"Daily 11am\u20136pm","city":"Suttons Bay","badge":""},{"name":"45 North Vineyard & Winery","region":"Leelanau","type":"Estate Winery","featured":false,"known":["Estate Riesling","Pinot Blanc","Hard Cider","Cherry Wine"],"hours":"Mon\u2013Sat 10am\u20136pm \u00b7 Sun 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Bel Lago Vineyards & Winery","region":"Leelanau","type":"Estate Vineyard & Winery","featured":false,"known":["Pinot Noir","Tempranillo","Gew\u00fcrztraminer","Auxerrois"],"hours":"Daily 12\u20135pm","city":"Cedar","badge":""},{"name":"Left Foot Charley","region":"Leelanau","type":"Urban Winery","featured":true,"known":["Blaufr\u00e4nkisch","Island View Riesling","Pinot Blanc","Cider"],"hours":"Daily 12\u20136pm","city":"Traverse City","badge":""},{"name":"Aurora Cellars","region":"Leelanau","type":"Boutique Estate Winery","featured":false,"known":["Sol Ros\u00e9","Pinot Noir","Chardonnay","Riesling"],"hours":"Mon\u2013Sat 11am\u20136pm \u00b7 Sun 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Gill's Pier Vineyard & Winery","region":"Leelanau","type":"Small-Batch Estate Winery","featured":false,"known":["Riesling","Pinot Noir","Pinot Blanc","Cabernet Franc"],"hours":"Thu\u2013Mon 12\u20135pm","city":"Northport","badge":""},{"name":"Rove Estate","region":"Leelanau","type":"Boutique Winery & Tasting Room","featured":false,"known":["Skin-Fermented White","P\u00e9tillant Naturel","Pinot Noir"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Traverse City","badge":""},{"name":"Raftshol Vineyards","region":"Leelanau","type":"Boutique Winery","featured":false,"known":["Cherry Wine","Pinot Noir","Riesling","Apple Wine"],"hours":"Daily 11am\u20135pm","city":"Suttons Bay","badge":""},{"name":"Blustone Vineyards","region":"Leelanau","type":"Boutique Winery","featured":false,"known":["Pinot Noir","Pinot Grigio","Gew\u00fcrztraminer","Hard Cider"],"hours":"Daily 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Chateau Fontaine","region":"Leelanau","type":"Estate Winery","featured":false,"known":["Woodland White","Pinot Noir","Chardonnay"],"hours":"Mon\u2013Sat 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Chateau de Leelanau","region":"Leelanau","type":"Boutique Winery","featured":false,"known":["Pinot Grigio","Merlot","Fruit Wines"],"hours":"Mon\u2013Sat 12\u20135pm","city":"Suttons Bay","badge":""},{"name":"Good Neighbor Organic Vineyard","region":"Leelanau","type":"Certified Organic Vineyard & Winery","featured":false,"known":["Organic Riesling","Pinot Blanc","Natural Wine"],"hours":"Sat\u2013Sun 12\u20135pm","city":"Northport","badge":"Organic"},{"name":"Boathouse Vineyards","region":"Leelanau","type":"Vineyard & Winery","featured":false,"known":["Pinot Gris","Riesling","Pinot Noir","Cabernet Franc"],"hours":"Daily 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Laurentide Winery","region":"Leelanau","type":"Modern Boutique Winery","featured":false,"known":["Gr\u00fcner Veltliner","Pinot Noir","Riesling"],"hours":"Daily 12\u20136pm","city":"Lake Leelanau","badge":""},{"name":"Tandem Ciders","region":"Leelanau","type":"Artisan Cidery & Winery","featured":false,"known":["Farmhouse Cider","Smackintosh","Perry","Apple Wine"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Suttons Bay","badge":""},{"name":"Brengman Family Wines","region":"Leelanau","type":"Estate Winery & Tasting Room","featured":false,"known":["Pinot Grigio","Cabernet Franc","Riesling","Merlot"],"hours":"Mon\u2013Sat 11am\u20136pm \u00b7 Sun 12\u20135pm","city":"Traverse City","badge":""},{"name":"Amoritas Vineyards","region":"Leelanau","type":"Estate Vineyard & Winery","featured":false,"known":["Pinot Noir","Chardonnay","Cabernet Franc","Riesling"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Bos Farmhouse","region":"Leelanau","type":"Winery & Tasting Room","featured":false,"known":["Napa & Michigan Wines","Cabernet Sauvignon","Pinot Noir"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Elk Rapids","badge":""},{"name":"Tabone Vineyards","region":"Leelanau","type":"Boutique Winery","featured":false,"known":["Cabernet Franc","Pinot Noir","Riesling"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Suttons Bay","badge":""},{"name":"Willow Vineyard","region":"Leelanau","type":"Boutique Winery","featured":false,"known":["Riesling","Chardonnay","Pinot Noir"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Suttons Bay","badge":""},{"name":"Silver Leaf Vineyard & Winery","region":"Leelanau","type":"Small-Batch Winery","featured":false,"known":["Pinot Noir","Riesling","Chardonnay"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Suttons Bay","badge":""},{"name":"Hawthorne Vineyards","region":"Leelanau","type":"Boutique Winery","featured":false,"known":["Riesling","Pinot Noir","Sparkling Wine"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Lake Leelanau","badge":""},{"name":"Gilchrist Farm Winery","region":"Leelanau","type":"Farm Winery","featured":false,"known":["Estate Wines","Hard Cider","Fruit Wine"],"hours":"Seasonal","city":"Suttons Bay","badge":"New"},{"name":"St. Julian Winery","region":"Lake Michigan Shore","type":"Michigan's Oldest Winery","featured":true,"known":["Braganini Reserve Cab Franc","Solera Cream Sherry","Blue Heron"],"hours":"Mon\u2013Sat 10am\u20136pm \u00b7 Sun 12\u20135pm","city":"Paw Paw","badge":"Est. 1921"},{"name":"Round Barn Winery","region":"Lake Michigan Shore","type":"Winery, Brewery & Distillery","featured":true,"known":["DiVine Vodka","Red Blend","Moersch Pinot Grigio"],"hours":"Daily 11am\u20136pm","city":"Baroda","badge":"Featured"},{"name":"Tabor Hill Winery & Restaurant","region":"Lake Michigan Shore","type":"Pioneer Estate Winery & Restaurant","featured":true,"known":["Classic Demi-Sec","Grand Mark","Lake Michigan Shore Red"],"hours":"Daily 11am\u20135pm","city":"Buchanan","badge":"Pioneer \u00b7 1971"},{"name":"Domaine Berrien Cellars","region":"Lake Michigan Shore","type":"Estate Vineyard & Winery","featured":true,"known":["Cabernet Franc","Lemberger","Traminette","Pinot Gris"],"hours":"Wed\u2013Sun 12\u20135pm","city":"Berrien Springs","badge":"Editors' Pick"},{"name":"Hickory Creek Winery","region":"Lake Michigan Shore","type":"Estate Winery & Tasting Room","featured":false,"known":["Pinot Noir","Cabernet Franc","Dry Ros\u00e9","Chardonnay"],"hours":"Wed\u2013Sun 12\u20136pm","city":"Buchanan","badge":""},{"name":"12 Corners Vineyards","region":"Lake Michigan Shore","type":"Estate Vineyard & Winery","featured":false,"known":["Vidal Blanc Ice Wine","Riesling","Cabernet Franc","Merlot"],"hours":"Thu\u2013Mon 12\u20135pm","city":"Benton Harbor","badge":""},{"name":"White Pine Winery","region":"Lake Michigan Shore","type":"Boutique Winery","featured":false,"known":["Pinot Noir","Seyval Blanc","Cherry Wine","Riesling"],"hours":"Daily 11am\u20135pm","city":"St. Joseph","badge":""},{"name":"Contessa Wine Cellars","region":"Lake Michigan Shore","type":"Italian-Inspired Winery","featured":false,"known":["Sangiovese","Pinot Grigio","Dolcetto","Barbera"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Coloma","badge":""},{"name":"Lemon Creek Winery","region":"Lake Michigan Shore","type":"Historic Family Estate","featured":false,"known":["Chambourcin","Vidal Blanc","Traminette","Fruit Wines"],"hours":"Mon\u2013Sat 10am\u20136pm \u00b7 Sun 12\u20135pm","city":"Berrien Springs","badge":""},{"name":"Baroda Founders Wine Cellar","region":"Lake Michigan Shore","type":"Estate Winery & Tasting Room","featured":false,"known":["Lake Michigan Shore Varietals","Antique Series","Dessert Wines"],"hours":"Daily 11am\u20135pm","city":"Baroda","badge":""},{"name":"Cody Kresta Vineyard & Winery","region":"Lake Michigan Shore","type":"Estate Vineyard & Winery","featured":false,"known":["Estate Reds","Cabernet Franc","Riesling"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Mattawan","badge":""},{"name":"Filkins Vineyards","region":"Lake Michigan Shore","type":"Family Estate Winery","featured":false,"known":["Small-Batch Reds","Estate Whites","Ros\u00e9"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Mattawan","badge":""},{"name":"Golden Muse Winery","region":"Lake Michigan Shore","type":"Boutique Art Winery","featured":false,"known":["Michigan Varietals","Art Pairings","Sparkling"],"hours":"Thu\u2013Sun 12\u20136pm","city":"Baroda","badge":""},{"name":"Lake Michigan Vintners","region":"Lake Michigan Shore","type":"College Winery & Tasting Room","featured":false,"known":["Student-Crafted Wines","Cabernet Franc","Riesling"],"hours":"Wed\u2013Sun 12\u20135pm","city":"Benton Harbor","badge":""},{"name":"Lawton Ridge Winery","region":"Lake Michigan Shore","type":"Estate Winery","featured":false,"known":["Michigan Estate Wines","Fruit Wines"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Lawton","badge":""},{"name":"Solasta Winery","region":"Lake Michigan Shore","type":"Boutique Winery & Tasting Room","featured":false,"known":["Estate Wines","Small-Batch Reds","Whites"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Baroda","badge":""},{"name":"Dablon Vineyards & Winery","region":"Lake Michigan Shore","type":"Estate Vineyard & Winery","featured":false,"known":["Red Varietals","Cabernet Franc","Merlot","Syrah"],"hours":"Wed\u2013Sun 12\u20135pm","city":"Baroda","badge":""},{"name":"Karma Vista Vineyards","region":"Lake Michigan Shore","type":"Vineyard & Winery","featured":false,"known":["Cabernet Franc","Riesling","Pinot Gris","Fruit Wines"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Coloma","badge":""},{"name":"Free Run Cellars","region":"Lake Michigan Shore","type":"Estate Winery","featured":false,"known":["Cabernet Sauvignon","Merlot","Syrah","Viognier"],"hours":"Wed\u2013Sun 12\u20135pm","city":"Berrien Springs","badge":""},{"name":"Lazy Ballerina Winery","region":"Lake Michigan Shore","type":"Boutique Tasting Room","featured":false,"known":["Fruit Wines","Sweet Reds","Ros\u00e9"],"hours":"Thu\u2013Mon 12\u20136pm","city":"St. Joseph","badge":""},{"name":"Stranger Wine Company","region":"Lake Michigan Shore","type":"Boutique Winery","featured":false,"known":["Small-Batch Wines","Michigan Varietals"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Niles","badge":""},{"name":"Fenn Valley Vineyards","region":"Fennville","type":"Pioneer Estate Winery","featured":true,"known":["Meritage","Pinot Grigio","Riesling","Capriccio Sparkling"],"hours":"Mon\u2013Sat 10am\u20135pm \u00b7 Sun 12\u20135pm","city":"Fennville","badge":"Est. 1973"},{"name":"Virtue Cider","region":"Fennville","type":"Farm Cidery & Taproom","featured":true,"known":["Michigan Brut","Lapinette","Percheron"],"hours":"Wed\u2013Sun 12\u20138pm","city":"Fennville","badge":"Featured"},{"name":"Modales Wines","region":"Fennville","type":"Boutique Winery & Tasting Room","featured":false,"known":["Cabernet Franc","Pinot Noir","Chardonnay","P\u00e9tillant Naturel"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Fennville","badge":""},{"name":"Crane's Winery","region":"Fennville","type":"Orchard Winery & Pie Pantry","featured":false,"known":["Apple Wine","Cherry Wine","Hard Cider","Sangria"],"hours":"Daily 10am\u20135pm","city":"Fennville","badge":""},{"name":"Cogdal Vineyards","region":"Fennville","type":"Boutique Vineyard & Winery","featured":false,"known":["Vignoles","Chambourcin","Estate Reds"],"hours":"Sat\u2013Sun 12\u20135pm","city":"Fennville","badge":""},{"name":"Fox and Hen Winery","region":"Fennville","type":"Small-Batch Estate Winery","featured":false,"known":["Estate Wines","Michigan Varietals"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Grand Haven","badge":"New"},{"name":"J. Petter Wine Gallery","region":"Fennville","type":"Gallery & Tasting Room","featured":false,"known":["Curated Michigan Wines","Art Pairings"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Douglas","badge":""},{"name":"468 Urban Winery","region":"Fennville","type":"Urban Winery & Event Space","featured":false,"known":["Customizable Wines","Michigan Varietals"],"hours":"Thu\u2013Sun 12\u20137pm","city":"Portage","badge":"New"},{"name":"Blu Dot Farm & Vineyard","region":"Fennville","type":"Farm Vineyard & Winery","featured":false,"known":["Estate Wines","Cold-Hardy Varietals"],"hours":"Seasonal","city":"Fennville","badge":"New"},{"name":"Red Barn Market & Winery","region":"Fennville","type":"Farm Market & Winery","featured":false,"known":["Fruit Wines","Hard Cider","Apple Wine"],"hours":"Daily 9am\u20136pm","city":"Fennville","badge":""},{"name":"Mackinaw Trail Winery","region":"Tip of the Mitt","type":"Estate Winery","featured":true,"known":["Marquette","La Crescent","Frontenac Gris","Ice Wine"],"hours":"Daily 10am\u20136pm","city":"Petoskey","badge":"Featured"},{"name":"Petoskey Farms Vineyard & Winery","region":"Tip of the Mitt","type":"Estate Vineyard & Winery","featured":true,"known":["Marquette","La Crescent","Frontenac Gris","P\u00e9tillant Naturel"],"hours":"Wed\u2013Sun 12\u20136pm","city":"Petoskey","badge":""},{"name":"Walloon Lake Winery","region":"Tip of the Mitt","type":"Lakeside Winery","featured":false,"known":["Windemere White","Wildwood White","Frontenac"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Walloon Lake","badge":""},{"name":"Maple Moon Sugarbush & Winery","region":"Tip of the Mitt","type":"Maple Winery","featured":false,"known":["Maple Gold Port","Fruit Wines","Maple Wine"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Petoskey","badge":""},{"name":"Pond Hill Farm","region":"Tip of the Mitt","type":"Farm Winery, Brewery & Market","featured":false,"known":["Pinot Gris","Northern Lights Peach Sparkler","Hard Cider"],"hours":"Daily 10am\u20136pm","city":"Harbor Springs","badge":""},{"name":"Crooked Vine Winery","region":"Tip of the Mitt","type":"Micro-Winery & Tasting Room","featured":false,"known":["Frontenac","Marquette","Cherry Melomel"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Alanson","badge":""},{"name":"Royal Farms","region":"Tip of the Mitt","type":"Farm Winery & Cidery","featured":false,"known":["Hard Cider","Cherry Wine","Marquette"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Ellsworth","badge":""},{"name":"Rudbeckia Winery","region":"Tip of the Mitt","type":"Winery & Brewstillery","featured":false,"known":["Michigan Wines","Craft Spirits","Small-Batch"],"hours":"Thu\u2013Sun 12\u20137pm","city":"Petoskey","badge":""},{"name":"Seasons of the North","region":"Tip of the Mitt","type":"Boutique Winery","featured":false,"known":["Cold-Hardy Wines","Marquette","Fruit Wines"],"hours":"Seasonal","city":"Petoskey","badge":""},{"name":"Bee Well Meadery","region":"Tip of the Mitt","type":"Meadery & Cidery","featured":false,"known":["Award-Winning Mead","Michigan Hard Cider","Honey Wine"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Bellaire","badge":""},{"name":"Nicholas Black River Vineyard","region":"Tip of the Mitt","type":"Estate Vineyard & Winery","featured":false,"known":["Estate Wines","Cold-Hardy Varietals"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Cheboygan","badge":""},{"name":"Boyne Valley Vineyards","region":"Tip of the Mitt","type":"Family Estate Winery","featured":false,"known":["Cold-Hardy Wines","Marquette","Frontenac"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Boyne City","badge":""},{"name":"End of the Road Winery","region":"Tip of the Mitt","type":"Winery & Tasting Room","featured":false,"known":["Michigan Wines","Award-Winning Reds"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Petoskey","badge":""},{"name":"Burrone Family Vineyards","region":"Tip of the Mitt","type":"Estate Vineyard & Winery","featured":false,"known":["Estate Wines","Cold-Hardy Varietals"],"hours":"Seasonal","city":"Lachine","badge":"New"},{"name":"Detroit Vineyards","region":"Southeast Michigan","type":"Urban Winery","featured":true,"known":["Michigan Estate Wines","Urban Tastings"],"hours":"Wed\u2013Sun 12\u20137pm","city":"Detroit","badge":""},{"name":"B. Nektar Meadery","region":"Southeast Michigan","type":"Craft Meadery","featured":false,"known":["Mead","Hard Cider","Craft Beer"],"hours":"Wed\u2013Sun 12\u20138pm","city":"Ferndale","badge":""},{"name":"Bl\u00f8m Meadworks","region":"Southeast Michigan","type":"Session Mead & Cider","featured":false,"known":["Session Mead","Dry Cider","Sparkling Mead"],"hours":"Wed\u2013Sun 12\u20138pm","city":"Ann Arbor","badge":""},{"name":"Black Fire Winery","region":"Southeast Michigan","type":"Vineyard & Winery","featured":false,"known":["Estate Wines","Michigan Varietals"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Tecumseh","badge":""},{"name":"Cherry Creek Cellars","region":"Southeast Michigan","type":"Winery & Tasting Room","featured":false,"known":["Cherry Wine","Award-Winning Whites"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Brooklyn","badge":""},{"name":"Chateau Aeronautique Winery","region":"Southeast Michigan","type":"Aviation-Themed Winery","featured":false,"known":["Estate Wines","Michigan Varietals"],"hours":"Sat\u2013Sun 12\u20135pm","city":"Onsted","badge":""},{"name":"Pentamere Winery","region":"Southeast Michigan","type":"Downtown Winery","featured":false,"known":["Michigan Wines","Fruit Wines"],"hours":"Thu\u2013Sun 12\u20137pm","city":"Tecumseh","badge":""},{"name":"Flying Otter Winery","region":"Southeast Michigan","type":"Winery & Tasting Room","featured":false,"known":["Michigan Wines","Small-Batch"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Adrian","badge":""},{"name":"Blake's Hard Cider","region":"Southeast Michigan","type":"Craft Cidery & Taproom","featured":false,"known":["Hard Cider","Apple Wine","Seasonal Ciders"],"hours":"Daily 10am\u20136pm","city":"Armada","badge":""},{"name":"Superior Lakes Winery","region":"Southeast Michigan","type":"Winery, Mead & Cider","featured":false,"known":["Mead","Wine","Cider"],"hours":"Wed\u2013Sun 12\u20136pm","city":"Harrison Township","badge":""},{"name":"Michigan by the Bottle","region":"Southeast Michigan","type":"Michigan Wine Tasting Room","featured":false,"known":["Curated Michigan Wines","Flights"],"hours":"Tue\u2013Sun 12\u20138pm","city":"Royal Oak","badge":""},{"name":"3 North Vines","region":"Southeast Michigan","type":"Vineyard & Winery","featured":false,"known":["Lake Huron Terroir","Estate Wines"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Croswell","badge":""},{"name":"B&B Wines","region":"Southeast Michigan","type":"Small-Batch Winery","featured":false,"known":["Dry Wines","Semisweet","Fruit Wines"],"hours":"Sat\u2013Sun 12\u20135pm","city":"Sanilac County","badge":""},{"name":"Dizzy Daisy Winery & Vineyard","region":"Southeast Michigan","type":"Winery & Vineyard","featured":false,"known":["Michigan Wines","Fruit Wines"],"hours":"Seasonal","city":"Bad Axe","badge":""},{"name":"Green Barn Winery","region":"Southeast Michigan","type":"Sulfite-Free Winery","featured":false,"known":["Sulfite-Free Wines","Natural Wine"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Smith's Creek","badge":""},{"name":"The Winery North of 12","region":"Southeast Michigan","type":"Boutique Winery","featured":false,"known":["Michigan Wines","Small-Batch"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Brooklyn","badge":""},{"name":"Sandhill Crane Vineyards","region":"Southeast Michigan","type":"Vineyard & Winery","featured":false,"known":["Estate Wines","Michigan Varietals","Hard Cider"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Jackson","badge":""},{"name":"1668 Winery & Soo Brewing","region":"Upper Peninsula","type":"Winery & Brewery","featured":false,"known":["Wine","Craft Beer","Brick Oven Pizza"],"hours":"Daily 11am\u20139pm","city":"Sault Ste. Marie","badge":""},{"name":"Yooper Winery","region":"Upper Peninsula","type":"Cold-Climate Winery","featured":false,"known":["Cold-Climate Wines","Fruit Wines"],"hours":"Thu\u2013Sun 12\u20135pm","city":"Menominee","badge":""},{"name":"Northern Sun Winery","region":"Upper Peninsula","type":"Vineyard & Winery","featured":false,"known":["Estate Wines","Cold-Hardy Varietals"],"hours":"Seasonal","city":"Bark River","badge":""},{"name":"Leigh's Garden Winery","region":"Upper Peninsula","type":"Garden Winery","featured":false,"known":["Fruit Wines","Rhubarb Wine"],"hours":"Seasonal","city":"Escanaba","badge":""},{"name":"Threefold Vine Winery","region":"Upper Peninsula","type":"Winery & Tasting Room","featured":false,"known":["Michigan Wines","Fruit Wines"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Garden","badge":""},{"name":"Mackinac Trail Winery \u2014 St. Ignace","region":"Upper Peninsula","type":"Tasting Room","featured":false,"known":["Marquette","Fruit Wines","Cherry Wine"],"hours":"Daily 10am\u20136pm","city":"St. Ignace","badge":""},{"name":"Lume Cannabis & Pere Marquette Winery","region":"Upper Peninsula","type":"Winery","featured":false,"known":["Small-Batch Wines","Estate Wines"],"hours":"Seasonal","city":"Ludington","badge":""},{"name":"Nathaniel Rose Wines","region":"Central Michigan","type":"Multi-Region Winery","featured":false,"known":["Merlot","Cabernet Sauvignon","Ice Wine","Riesling"],"hours":"Mon\u2013Sat 10am\u20135pm","city":"Frankenmuth","badge":""},{"name":"Country Corner Winery","region":"Northeast Michigan","type":"Country Winery","featured":false,"known":["Maple Wine","Rhubarb Wine","Fruit Wines"],"hours":"Seasonal","city":"Rose City","badge":""},{"name":"Rose Valley Winery","region":"Northeast Michigan","type":"Boutique Winery","featured":false,"known":["Maple Wine","Rhubarb Wine","Fruit Wines"],"hours":"Seasonal","city":"Rose City","badge":""},{"name":"Northern Natural Winery","region":"Northeast Michigan","type":"Organic Winery & Cidery","featured":false,"known":["Natural Wine","Organic Hard Cider"],"hours":"Seasonal","city":"Omena","badge":""},{"name":"Verterra Cellars","region":"Central Michigan","type":"Artisan Winery","featured":false,"known":["Pinot Noir","Riesling","Orange Wine"],"hours":"Fri\u2013Sun 12\u20135pm","city":"Leland","badge":""},{"name":"Pink Barrel Cellars","region":"Central Michigan","type":"Farm Market Winery","featured":false,"known":["Michigan Fruit Wines","Hard Cider"],"hours":"Daily 9am\u20135pm","city":"Grand Rapids","badge":""},{"name":"Peat's Cider Social","region":"Central Michigan","type":"Craft Cidery","featured":false,"known":["Craft Hard Cider","Michigan Apples"],"hours":"Wed\u2013Sun 12\u20138pm","city":"Grand Rapids","badge":""},{"name":"Robinette's Apple Haus & Winery","region":"Central Michigan","type":"Farm Winery","featured":false,"known":["Apple Wine","Fruit Wines","Hard Cider"],"hours":"Daily 9am\u20135pm","city":"Grand Rapids","badge":""},{"name":"Wyncroft","region":"Lake Michigan Shore","type":"Premium Estate Winery","featured":false,"known":["Premium Wines","Estate Reds"],"hours":"By appointment","city":"Buchanan","badge":""},{"name":"Vertical Detroit","region":"Southeast Michigan","type":"Wine Bar & Tasting Room","featured":false,"known":["Michigan Wines","Global Selections"],"hours":"Tue\u2013Sun 4pm\u201311pm","city":"Detroit","badge":""}];
+
+/* Dynamic winery loading from URL param */
+(function loadWinery() {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('w');
+  if (!slug) return;
+
+  const toSlug = (n) => n.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  const w = WINERIES.find(x => toSlug(x.name) === slug);
+  if (!w) return;
+
+    // Title
+    document.title = w.name + ' — ' + w.region + ' | MichiganVineyards.com';
+
+    // Hero
+    document.querySelector('.winery-hero-content h1').textContent = w.name;
+    document.querySelector('.winery-hero-type').textContent = w.type + ' · ' + w.city;
+    document.querySelector('.hero-badge.region').textContent = w.region;
+
+    // Remove Editors' Pick badge unless it has one
+    const pickBadge = document.querySelector('.hero-badge.pick');
+    if (pickBadge && !w.badge) pickBadge.remove();
+
+    // Breadcrumbs
+    document.querySelector('.breadcrumbs .current').textContent = w.name;
+
+    // Quick bar hours
+    const qbItems = document.querySelectorAll('.qb-item');
+    if (qbItems[0]) qbItems[0].innerHTML = qbItems[0].querySelector('svg').outerHTML + ' Open today · ' + w.hours;
+
+    // Grape cards
+    const grapeGrid = document.querySelector('.grape-grid');
+    if (grapeGrid && w.known && w.known.length) {
+      grapeGrid.innerHTML = w.known.map((g, i) =>
+        '<div class="grape-card' + (i < 2 ? ' signature' : '') + '">' +
+        '<div class="grape-name">' + g + '</div>' +
+        '<div class="grape-note">A featured wine at ' + w.name + '.</div></div>'
+      ).join('');
+    }
+
+    // Sidebar heading
+    const sideH3 = document.querySelector('.action-card h3');
+    if (sideH3) sideH3.textContent = 'Visit ' + w.name;
+
+    // Map - update to search for this winery
+    const mapQuery = encodeURIComponent(w.name + ' ' + w.city + ' Michigan');
+    const mapIframe = document.querySelector('.map-card iframe');
+    if (mapIframe) mapIframe.src = 'https://maps.google.com/maps?q=' + mapQuery + '&t=&z=14&ie=UTF8&iwloc=&output=embed';
+    const mapAddr = document.querySelector('.map-address');
+    if (mapAddr) mapAddr.innerHTML = w.city + ', Michigan';
+    const mapLink = document.querySelector('.map-link');
+    if (mapLink) mapLink.href = 'https://maps.google.com/maps?q=' + mapQuery;
+
+    // Claim modal winery name
+    const claimName = document.querySelector('.claim-winery-name');
+    if (claimName) claimName.innerHTML = claimName.querySelector('svg').outerHTML + ' ' + w.name + ' — ' + w.region;
+
+    // About section note
+    const aboutSection = document.querySelector('.about-section');
+    if (aboutSection) {
+      const existingNote = aboutSection.querySelector('.placeholder-note');
+      if (!existingNote) {
+        const note = document.createElement('div');
+        note.className = 'placeholder-note';
+        note.style.cssText = 'margin-top:16px;padding:14px 18px;background:var(--cream);border-radius:6px;font-size:.84rem;color:var(--text-light);line-height:1.55;border-left:3px solid var(--gold);';
+        note.innerHTML = '<strong style="color:var(--forest);">This is a preview listing.</strong> Detailed description, photos, and tasting notes are coming soon. <a href="#" onclick="openClaimModal();return false;" style="color:var(--forest);font-weight:600;">Own this winery? Claim your listing</a> to add your story.';
+        aboutSection.appendChild(note);
+      }
+    }
+
+    // Nearby section title
+    const nearbyTitle = document.querySelector('.nearby-section .section-label');
+    if (nearbyTitle) nearbyTitle.textContent = 'More in ' + w.region;
+
+    // Hours - update sidebar
+    const hoursCard = document.querySelector('.hours-card');
+    if (hoursCard && w.hours) {
+      const rows = hoursCard.querySelectorAll('.hours-time');
+      rows.forEach(r => r.textContent = w.hours.includes('\u00b7') ? w.hours.split('\u00b7')[0].replace(/Mon.Sat|Daily/,'').trim() : w.hours);
+    }
+
+})();
+</script>
+</body>
+</html>

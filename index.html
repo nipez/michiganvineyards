@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGRE0QBWPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JGRE0QBWPF');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Michigan Vineyards — Explore Michigan Wine Country</title>
+<link rel="canonical" href="https://michiganvineyards.com/"/>
+<meta content="Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the best of Michigan's wine trails." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --forest: #1B3A2D;
+  --forest-deep: #0F2419;
+  --forest-light: #2A5040;
+  --burgundy: #6B2D3E;
+  --burgundy-deep: #4A0E1B;
+  --wine: #8B3A4A;
+  --gold: #C9A96E;
+  --gold-light: #D4BC8B;
+  --gold-warm: #B8943F;
+  --amber: #D4A843;
+  --cream: #F5F0E8;
+  --cream-dark: #EDE6D8;
+  --sage: #8FA68F;
+  --sage-light: #B8CCB0;
+  --charcoal: #2C2420;
+  --text: #3A3330;
+  --text-light: #7A7068;
+  --white: #FEFCF9;
+}
+
+html { scroll-behavior: smooth; font-size: 17px; }
+body { font-family: 'Outfit', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+svg { flex-shrink: 0; }
+
+/* ===================== TOP BAR ===================== */
+.top-bar {
+  background: var(--forest-deep);
+  color: var(--sage-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 0;
+  text-align: center;
+}
+.top-bar a { color: var(--gold-light); text-decoration: none; }
+.top-bar a:hover { text-decoration: underline; }
+
+/* ===================== NAV ===================== */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(254,252,249,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(27,58,45,0.06);
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 2px 30px rgba(27,58,45,0.08); }
+.nav-inner {
+  max-width: 1340px; margin: 0 auto; padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between; height: 76px;
+}
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon {
+  width: 38px; height: 38px;
+  background: var(--forest);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.logo-icon::after {
+  content: '🍇';
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 600;
+  color: var(--forest);
+  letter-spacing: -0.01em;
+}
+.logo-sub {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-warm);
+  margin-top: 2px;
+}
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a {
+  text-decoration: none; font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text); position: relative; padding: 4px 0;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 1.5px; background: var(--gold); transition: width 0.3s;
+}
+.nav-links a:hover { color: var(--forest); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: var(--forest) !important; color: var(--cream) !important;
+  padding: 10px 24px !important; border-radius: 4px;
+  font-size: 0.76rem !important; letter-spacing: 0.06em !important;
+  transition: background 0.3s !important;
+}
+.nav-cta:hover { background: var(--forest-light) !important; }
+.nav-cta::after { display: none !important; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+
+/* ===================== HERO ===================== */
+.hero {
+  position: relative; min-height: 94vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(15,36,25,0.82) 0%, rgba(27,58,45,0.75) 25%, rgba(42,59,45,0.7) 45%, rgba(61,42,26,0.75) 70%, rgba(44,36,32,0.85) 100%), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1600&h=900&fit=crop&q=80') center/cover no-repeat;
+}
+.hero-bg::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 90% 60% at 15% 85%, rgba(107,45,62,0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(201,169,110,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 80% at 50% 50%, rgba(27,58,45,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 70% 70%, rgba(139,58,74,0.15) 0%, transparent 50%);
+}
+/* Topo-map texture */
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 80 Q50 60 100 80 T200 80' fill='none' stroke='%23C9A96E' stroke-opacity='0.04' stroke-width='1'/%3E%3Cpath d='M0 120 Q50 100 100 120 T200 120' fill='none' stroke='%23C9A96E' stroke-opacity='0.03' stroke-width='1'/%3E%3Cpath d='M0 40 Q50 20 100 40 T200 40' fill='none' stroke='%23C9A96E' stroke-opacity='0.025' stroke-width='1'/%3E%3Cpath d='M0 160 Q50 140 100 160 T200 160' fill='none' stroke='%23C9A96E' stroke-opacity='0.035' stroke-width='1'/%3E%3C/svg%3E");
+  opacity: 0.8;
+}
+
+/* Decorative vine border elements */
+.hero-vine-left, .hero-vine-right {
+  position: absolute; z-index: 1; opacity: 0.04; pointer-events: none;
+}
+.hero-vine-left {
+  left: 40px; top: 15%;
+  width: 1px; height: 70%;
+  background: var(--gold);
+}
+.hero-vine-left::before, .hero-vine-left::after {
+  content: ''; position: absolute; width: 40px; height: 1px;
+  background: var(--gold); left: 0;
+}
+.hero-vine-left::before { top: 20%; }
+.hero-vine-left::after { top: 60%; }
+.hero-vine-right {
+  right: 40px; top: 15%;
+  width: 1px; height: 70%;
+  background: var(--gold);
+}
+.hero-vine-right::before, .hero-vine-right::after {
+  content: ''; position: absolute; width: 40px; height: 1px;
+  background: var(--gold); right: 0;
+}
+.hero-vine-right::before { top: 35%; }
+.hero-vine-right::after { top: 75%; }
+
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 920px; padding: 0 40px;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 16px;
+  font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 32px;
+  opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+}
+.hero-tag::before, .hero-tag::after {
+  content: ''; width: 55px; height: 1px;
+  background: var(--gold); opacity: 0.5;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  font-weight: 500; line-height: 1.1;
+  color: var(--cream);
+  opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+}
+.hero h1 em { font-style: italic; color: var(--gold-light); }
+.hero-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.7; color: rgba(245,240,232,0.65);
+  margin-top: 24px; max-width: 640px;
+  margin-left: auto; margin-right: auto;
+  opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+}
+.hero-buttons {
+  display: flex; gap: 16px; justify-content: center;
+  margin-top: 40px; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
+}
+.hero-scroll {
+  position: absolute; bottom: 36px; left: 0; right: 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  text-decoration: none;
+  opacity: 0; animation: fadeUp 0.8s 1.2s forwards;
+}
+.hero-scroll span {
+  font-size: 0.66rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); opacity: 0.6;
+}
+.hero-scroll svg { animation: scrollBounce 2s infinite; color: var(--gold); opacity: 0.5; }
+
+/* ===================== BUTTONS ===================== */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--forest-deep);
+  padding: 16px 36px; font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: all 0.3s; border-radius: 4px;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--cream);
+  padding: 16px 36px; font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; border: 1px solid rgba(245,240,232,0.25);
+  cursor: pointer; transition: all 0.3s; border-radius: 4px;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-forest {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--forest); color: var(--cream);
+  padding: 16px 36px; font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-forest:hover { background: var(--forest-light); }
+.btn-outline-dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--forest);
+  padding: 14px 32px; font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; border: 1px solid var(--forest);
+  cursor: pointer; transition: all 0.3s; border-radius: 4px;
+}
+.btn-outline-dark:hover { background: var(--forest); color: var(--cream); }
+
+/* ===================== SECTION HEADERS ===================== */
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-tag {
+  font-size: 0.7rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold-warm); margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  font-weight: 500; color: var(--forest); line-height: 1.15;
+}
+.section-divider {
+  width: 60px; height: 1.5px;
+  background: linear-gradient(90deg, var(--gold), var(--forest-light));
+  margin: 20px auto 0;
+}
+.section-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.12rem; line-height: 1.65; color: var(--text-light);
+  margin-top: 16px; max-width: 560px;
+  margin-left: auto; margin-right: auto;
+}
+
+/* ===================== STATS BAR ===================== */
+.stats-bar {
+  background: var(--cream);
+  padding: 52px 40px;
+  border-bottom: 1px solid rgba(27,58,45,0.05);
+}
+.stats-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 40px; text-align: center;
+}
+.stat-item { position: relative; }
+.stat-item:not(:last-child)::after {
+  content: ''; position: absolute; right: -20px; top: 50%;
+  transform: translateY(-50%); height: 40px; width: 1px;
+  background: rgba(27,58,45,0.1);
+}
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem; font-weight: 500;
+  color: var(--forest); line-height: 1;
+}
+.stat-label {
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-light); margin-top: 8px;
+}
+
+/* ===================== REGIONS ===================== */
+.regions { padding: 100px 40px; background: var(--white); }
+.regions-inner { max-width: 1340px; margin: 0 auto; }
+.regions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.region-card {
+  position: relative; border-radius: 10px; overflow: hidden;
+  height: 340px; display: flex; align-items: flex-end;
+  text-decoration: none; color: inherit;
+  transition: transform 0.4s;
+}
+.region-card:hover { transform: translateY(-3px); }
+.region-card.featured { grid-column: span 2; height: 380px; }
+.region-card-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: transform 0.6s;
+}
+.region-card:hover .region-card-bg { transform: scale(1.04); }
+.region-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.15) 50%, transparent 70%);
+  z-index: 1;
+}
+.region-content { position: relative; z-index: 2; padding: 32px; width: 100%; }
+.region-label {
+  font-size: 0.66rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+}
+.region-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem; font-weight: 500;
+  color: var(--cream); margin-bottom: 8px;
+}
+.region-card.featured .region-name { font-size: 2rem; }
+.region-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem; line-height: 1.6;
+  color: rgba(245,240,232,0.6); margin-bottom: 16px;
+  max-width: 400px;
+}
+.region-stats { display: flex; gap: 20px; margin-bottom: 16px; }
+.region-stat {
+  font-size: 0.76rem; color: rgba(245,240,232,0.5);
+  display: flex; align-items: center; gap: 6px;
+}
+.region-stat svg { color: var(--gold); opacity: 0.7; }
+.region-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.76rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  transition: gap 0.3s;
+}
+.region-link:hover { gap: 12px; }
+
+/* Region-specific overlays */
+.region-old-mission .region-card-bg {
+  background: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&h=500&fit=crop&q=80') center/cover no-repeat;
+}
+.region-old-mission::before {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: radial-gradient(ellipse at 30% 30%, rgba(201,169,110,0.12) 0%, transparent 60%);
+}
+.region-leelanau .region-card-bg {
+  background: url('https://images.unsplash.com/photo-1464638681273-0962e9b53566?w=800&h=500&fit=crop&q=80') center/cover no-repeat;
+}
+.region-lake-mi .region-card-bg {
+  background: url('https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?w=800&h=500&fit=crop&q=80') center/cover no-repeat;
+}
+.region-fennville .region-card-bg {
+  background: url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=800&h=500&fit=crop&q=80') center/cover no-repeat;
+}
+.region-southeast .region-card-bg {
+  background: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&h=500&fit=crop&q=80') center/cover no-repeat;
+}
+
+/* ===================== FEATURED WINERIES ===================== */
+.featured-wineries { padding: 100px 40px; background: var(--cream); }
+.featured-inner { max-width: 1340px; margin: 0 auto; }
+.winery-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.winery-card {
+  background: var(--white); border-radius: 8px; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(27,58,45,0.06);
+  text-decoration: none; color: inherit; display: block;
+}
+.winery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(27,58,45,0.1);
+}
+.winery-img { height: 220px; position: relative; overflow: hidden; }
+.winery-img-inner {
+  width: 100%; height: 100%;
+  background-size: cover; background-position: center;
+  transition: transform 0.5s;
+}
+.winery-card:hover .winery-img-inner { transform: scale(1.05); }
+.winery-badge {
+  position: absolute; top: 16px; left: 16px;
+  background: var(--forest); color: var(--gold-light);
+  font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 3px; z-index: 2;
+}
+.winery-region-tag {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(255,255,255,0.92); color: var(--forest);
+  font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 3px; z-index: 2;
+  backdrop-filter: blur(6px);
+}
+.winery-info { padding: 28px; }
+.winery-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--forest); margin-bottom: 6px;
+}
+.winery-type {
+  font-size: 0.75rem; color: var(--text-light);
+  letter-spacing: 0.04em; margin-bottom: 16px;
+}
+.winery-details {
+  display: flex; flex-direction: column; gap: 8px;
+  padding-top: 16px; border-top: 1px solid rgba(27,58,45,0.06);
+}
+.winery-detail {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.82rem; color: var(--text-light);
+}
+.winery-detail svg { color: var(--gold-warm); }
+.winery-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 16px; font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--forest); text-decoration: none;
+  transition: gap 0.3s;
+}
+.winery-link:hover { gap: 10px; }
+.winery-grid-cta { text-align: center; margin-top: 48px; }
+
+/* ===================== MICHIGAN MAP SECTION ===================== */
+.map-section {
+  padding: 100px 40px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.map-section::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 80 Q50 60 100 80 T200 80' fill='none' stroke='%231B3A2D' stroke-opacity='0.03' stroke-width='1'/%3E%3Cpath d='M0 120 Q50 100 100 120 T200 120' fill='none' stroke='%231B3A2D' stroke-opacity='0.02' stroke-width='1'/%3E%3Cpath d='M0 40 Q50 20 100 40 T200 40' fill='none' stroke='%231B3A2D' stroke-opacity='0.015' stroke-width='1'/%3E%3C/svg%3E");
+}
+.map-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+  position: relative; z-index: 2;
+}
+.map-content {}
+.map-content .section-tag { text-align: left; }
+.map-content .section-title { text-align: left; margin-bottom: 20px; }
+.map-text {
+  font-size: 0.95rem; line-height: 1.75; color: var(--text-light);
+  margin-bottom: 32px;
+}
+.map-regions-list { list-style: none; margin-bottom: 36px; }
+.map-regions-list li {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(27,58,45,0.06);
+  font-size: 0.9rem; color: var(--text);
+  transition: padding-left 0.3s;
+  cursor: pointer;
+}
+.map-regions-list li:hover { padding-left: 8px; color: var(--forest); }
+.map-regions-list li .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  flex-shrink: 0;
+}
+.map-regions-list li .count {
+  margin-left: auto; font-size: 0.78rem;
+  color: var(--text-light); font-weight: 500;
+}
+
+/* Michigan Map SVG Illustration */
+.map-illustration {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.michigan-map-wrap {
+  width: 100%; max-width: 440px;
+  position: relative;
+}
+.michigan-map-wrap svg {
+  width: 100%; height: auto;
+  filter: drop-shadow(0 8px 30px rgba(27,58,45,0.15));
+}
+
+/* ===================== EXPERIENCE SECTION ===================== */
+.experience { padding: 100px 40px; background: var(--cream); }
+.exp-inner { max-width: 1340px; margin: 0 auto; }
+.exp-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 28px; margin-top: 60px;
+}
+.exp-card {
+  text-align: center; padding: 36px 24px;
+  border-radius: 8px; transition: transform 0.3s;
+  background: var(--white);
+  border: 1px solid rgba(27,58,45,0.04);
+}
+.exp-card:hover { transform: translateY(-4px); }
+.exp-icon {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--forest), var(--forest-light));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.exp-icon svg { color: var(--gold-light); }
+.exp-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 500;
+  color: var(--forest); margin-bottom: 10px;
+}
+.exp-card p {
+  font-size: 0.88rem; line-height: 1.7; color: var(--text-light);
+}
+
+/* ===================== QUOTE SECTION ===================== */
+.quote-section {
+  position: relative; padding: 110px 40px; text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 40%, #2A3A2A 60%, var(--charcoal) 100%);
+}
+.quote-section::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23C9A96E' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+.quote-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem; color: var(--gold); opacity: 0.3;
+  line-height: 0.5; margin-bottom: 16px;
+}
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+  font-style: italic; line-height: 1.7; color: var(--cream);
+}
+.quote-attr {
+  margin-top: 28px; font-size: 0.82rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+}
+
+/* ===================== SEASONAL CTA ===================== */
+.seasonal {
+  padding: 80px 40px;
+  background: var(--white);
+}
+.seasonal-inner {
+  max-width: 1100px; margin: 0 auto;
+  background: linear-gradient(135deg, var(--burgundy-deep) 0%, var(--burgundy) 50%, #5A2030 100%);
+  border-radius: 14px;
+  padding: 60px 70px;
+  display: grid; grid-template-columns: 1.3fr 1fr;
+  gap: 50px; align-items: center;
+  position: relative; overflow: hidden;
+}
+.seasonal-inner::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(201,169,110,0.1) 0%, transparent 60%);
+}
+.seasonal-content { position: relative; z-index: 2; }
+.seasonal-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,169,110,0.15);
+  padding: 6px 16px; border-radius: 20px;
+  font-size: 0.72rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gold-light);
+  margin-bottom: 20px;
+}
+.seasonal-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 500; color: var(--cream);
+  line-height: 1.2; margin-bottom: 16px;
+}
+.seasonal-content p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; line-height: 1.65;
+  color: rgba(245,240,232,0.65);
+  margin-bottom: 28px;
+}
+.seasonal-features { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.seasonal-features li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.88rem; color: rgba(245,240,232,0.6);
+}
+.seasonal-features li svg { color: var(--gold); flex-shrink: 0; }
+
+.seasonal-visual {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.seasonal-stat-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,169,110,0.12);
+  border-radius: 10px; padding: 20px 24px;
+  backdrop-filter: blur(8px);
+}
+.seasonal-stat-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; color: var(--cream);
+  margin-bottom: 4px;
+}
+.seasonal-stat-card p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem; color: rgba(245,240,232,0.5);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* ===================== JOURNAL ===================== */
+.journal { padding: 100px 40px; background: var(--white); }
+.journal-inner { max-width: 1340px; margin: 0 auto; }
+.journal-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 28px;
+}
+.journal-card {
+  border-radius: 8px; overflow: hidden;
+  text-decoration: none; color: inherit; display: block;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--white); border: 1px solid rgba(27,58,45,0.06);
+}
+.journal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(27,58,45,0.08);
+}
+.journal-card-img { height: 220px; overflow: hidden; position: relative; }
+.journal-card:first-child .journal-card-img { height: 300px; }
+.journal-card-img-inner {
+  width: 100%; height: 100%;
+  background-size: cover; background-position: center;
+  transition: transform 0.5s;
+}
+.journal-card:hover .journal-card-img-inner { transform: scale(1.05); }
+.journal-card-body { padding: 28px; }
+.journal-card-cat {
+  font-size: 0.68rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold-warm); margin-bottom: 10px;
+}
+.journal-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--forest); margin-bottom: 10px; line-height: 1.35;
+}
+.journal-card p {
+  font-size: 0.88rem; line-height: 1.6; color: var(--text-light);
+}
+.journal-card-meta {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: 14px; font-size: 0.75rem; color: var(--text-light);
+}
+.journal-cta { text-align: center; margin-top: 48px; }
+
+/* ===================== NEWSLETTER ===================== */
+.newsletter {
+  background: var(--forest);
+  padding: 80px 40px; text-align: center;
+}
+.newsletter-inner { max-width: 600px; margin: 0 auto; }
+.newsletter h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem; font-weight: 500;
+  color: var(--cream); margin-bottom: 12px;
+}
+.newsletter p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.12rem; color: rgba(245,240,232,0.6);
+  margin-bottom: 32px; line-height: 1.6;
+}
+.newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+.newsletter-form input {
+  flex: 1; padding: 15px 20px;
+  border: 1px solid rgba(201,169,110,0.2);
+  background: rgba(255,255,255,0.06);
+  color: var(--cream); font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem; border-radius: 4px; outline: none;
+  transition: border-color 0.3s;
+}
+.newsletter-form input::placeholder { color: rgba(245,240,232,0.35); }
+.newsletter-form input:focus { border-color: var(--gold); }
+.newsletter-form button {
+  padding: 15px 28px; background: var(--gold);
+  color: var(--forest-deep); font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border: none; border-radius: 4px; cursor: pointer;
+  transition: background 0.3s; white-space: nowrap;
+}
+.newsletter-form button:hover { background: var(--gold-light); }
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: var(--charcoal);
+  padding: 80px 40px 40px;
+  color: rgba(245,240,232,0.6);
+}
+.footer-inner { max-width: 1340px; margin: 0 auto; }
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 60px; margin-bottom: 60px;
+}
+.footer-brand .logo-main { color: var(--cream); font-size: 1.35rem; }
+.footer-brand .logo-sub { color: var(--gold); }
+.footer-brand p {
+  font-size: 0.88rem; line-height: 1.7;
+  margin-top: 16px; color: rgba(245,240,232,0.45);
+}
+.footer-col h4 {
+  font-size: 0.72rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 20px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  font-size: 0.88rem; color: rgba(245,240,232,0.45);
+  text-decoration: none; transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--gold-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(245,240,232,0.08);
+  padding-top: 32px;
+  display: flex; justify-content: space-between;
+  align-items: center; font-size: 0.78rem;
+}
+.footer-bottom a {
+  color: rgba(245,240,232,0.4);
+  text-decoration: none; transition: color 0.3s;
+}
+.footer-bottom a:hover { color: var(--gold-light); }
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Placeholder image backgrounds */
+.img-vineyard-1 {
+  background: url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&h=400&fit=crop&q=80') center/cover no-repeat;
+}
+.img-vineyard-2 {
+  background: url('https://images.unsplash.com/photo-1528823872057-9c018a7a7553?w=600&h=400&fit=crop&q=80') center/cover no-repeat;
+}
+.img-vineyard-3 {
+  background: url('https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop&q=80') center/cover no-repeat;
+}
+.img-vineyard-4 {
+  background: url('https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=600&h=400&fit=crop&q=80') center/cover no-repeat;
+}
+.img-vineyard-5 {
+  background: url('https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?w=600&h=400&fit=crop&q=80') center/cover no-repeat;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .stat-item:nth-child(2)::after { display: none; }
+  .regions-grid { grid-template-columns: 1fr 1fr; }
+  .region-card.featured { grid-column: span 2; }
+  .winery-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-grid { grid-template-columns: repeat(2, 1fr); }
+  .map-inner { grid-template-columns: 1fr; gap: 48px; }
+  .map-illustration { order: -1; }
+  .journal-grid { grid-template-columns: 1fr 1fr; }
+  .journal-card:first-child { grid-column: span 2; }
+  .seasonal-inner { grid-template-columns: 1fr; padding: 48px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: absolute; top: 76px; left: 0; right: 0;
+    background: var(--white); flex-direction: column;
+    padding: 24px 40px; gap: 16px;
+    border-bottom: 1px solid rgba(27,58,45,0.08);
+    box-shadow: 0 8px 30px rgba(27,58,45,0.08);
+  }
+  .nav-links.show { display: flex; }
+  .nav-toggle { display: block; }
+  .hero { min-height: 80vh; }
+  .stats-inner { grid-template-columns: 1fr 1fr; }
+  .stat-item::after { display: none !important; }
+  .regions-grid { grid-template-columns: 1fr; }
+  .region-card.featured { grid-column: span 1; height: 340px; }
+  .region-card { height: 300px; }
+  .winery-grid { grid-template-columns: 1fr; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .journal-grid { grid-template-columns: 1fr; }
+  .journal-card:first-child { grid-column: span 1; }
+  .newsletter-form { flex-direction: column; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .seasonal-inner { padding: 36px 28px; }
+  .map-content .section-tag,
+  .map-content .section-title { text-align: center; }
+  .map-text { text-align: center; }
+}
+</style>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="MichiganVineyards.com"/>
+<meta property="og:title" content="Michigan Vineyards — Explore Michigan Wine Country"/>
+<meta property="og:description" content="Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the best of Michigan's wine trails."/>
+<meta property="og:url" content="https://michiganvineyards.com/"/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Michigan Vineyards — Explore Michigan Wine Country"/>
+<meta name="twitter:description" content="Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the best of Michigan's wine trails."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://michiganvineyards.com/#website",
+      "url": "https://michiganvineyards.com",
+      "name": "Michigan Vineyards",
+      "description": "Your complete guide to Michigan wine country. 192 wineries, 11 regions, 7 wine trails.",
+      "publisher": {
+        "@id": "https://michiganvineyards.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://michiganvineyards.com/wineries/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://michiganvineyards.com/#organization",
+      "name": "Michigan Vineyards",
+      "url": "https://michiganvineyards.com",
+      "description": "The most comprehensive guide to Michigan wine country \u2014 192 wineries, 11 regions, 7 wine trails.",
+      "sameAs": [
+        "https://traversecitywinetour.com"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  7 Wine Trails · 192 Wineries · <a href="directory.html">Explore the Full Directory →</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+<div class="nav-inner">
+  <a class="logo" href="/">
+    <div class="logo-icon"></div>
+    <div class="logo-text">
+      <span class="logo-main">Michigan Vineyards</span>
+      <span class="logo-sub">Wine Country Guide</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="regions.html">Regions</a></li>
+    <li><a href="directory.html">Wineries</a></li>
+    <li><a href="wine-trails.html">Wine Trails</a></li>
+    <li><a href="the-vine.html">The Vine</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a class="nav-cta" href="plan-your-visit.html">Plan Your Visit</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-bg">
+  <div class="hero-vine-left"></div>
+  <div class="hero-vine-right"></div>
+</div>
+<div class="hero-content">
+  <div class="hero-tag">Michigan Wine Country</div>
+  <h1>Discover the Vineyards<br/>of the <em>Great Lakes State</em></h1>
+  <p class="hero-desc">From the sun-drenched peninsulas of Traverse City to the rolling shores of Southwest Michigan — your guide to every winery, trail, and tasting room across the state.</p>
+  <div class="hero-buttons">
+    <a class="btn-primary" href="regions.html">
+      Explore Regions
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a class="btn-outline" href="directory.html">Browse All Wineries</a>
+  </div>
+</div>
+<a class="hero-scroll" href="#regions">
+  <span>Scroll to Explore</span>
+  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+</a>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar">
+<div class="stats-inner">
+  <div class="stat-item">
+    <div class="stat-number">100+</div>
+    <div class="stat-label">Wineries Statewide</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">7</div>
+    <div class="stat-label">Wine Regions</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">5</div>
+    <div class="stat-label">Official Wine Trails</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">4</div>
+    <div class="stat-label">AVA Designations</div>
+  </div>
+</div>
+</section>
+
+<!-- REGIONS -->
+<section class="regions" id="regions">
+<div class="regions-inner">
+  <div class="section-header">
+    <div class="section-tag">Wine Regions</div>
+    <h2 class="section-title">Seven Distinct Wine Regions</h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">Each region offers a unique terroir shaped by the Great Lakes, producing wines with distinct character and personality.</p>
+  </div>
+  <div class="regions-grid">
+    <!-- Old Mission -->
+    <a class="region-card featured region-old-mission" href="regions.html#old-mission">
+      <div class="region-card-bg"></div>
+      <div class="region-content">
+        <div class="region-label">Traverse City</div>
+        <div class="region-name">Old Mission Peninsula</div>
+        <p class="region-desc">The birthplace of Michigan wine. A narrow 18-mile peninsula on the 45th parallel, producing world-class Rieslings and Pinot Grigio.</p>
+        <div class="region-stats">
+          <span class="region-stat"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/></svg> 12 Wineries</span>
+          <span class="region-stat"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 2v10M2 7h10"/></svg> Est. 1974</span>
+        </div>
+        <span class="region-link">Explore Old Mission <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+    <!-- Leelanau -->
+    <a class="region-card region-leelanau" href="regions.html#leelanau">
+      <div class="region-card-bg"></div>
+      <div class="region-content">
+        <div class="region-label">Traverse City</div>
+        <div class="region-name">Leelanau Peninsula</div>
+        <div class="region-stats">
+          <span class="region-stat"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/></svg> 27 Wineries</span>
+        </div>
+        <span class="region-link">Explore Leelanau <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+    <!-- Lake Michigan Shore -->
+    <a class="region-card featured region-lake-mi" href="regions.html#lake-michigan-shore">
+      <div class="region-card-bg"></div>
+      <div class="region-content">
+        <div class="region-label">Southwest Michigan</div>
+        <div class="region-name">Lake Michigan Shore</div>
+        <p class="region-desc">Michigan's largest AVA stretching along the southwest coast. Known for bold reds, hybrid varieties, and a thriving craft beverage scene.</p>
+        <div class="region-stats">
+          <span class="region-stat"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/></svg> 25+ Wineries</span>
+          <span class="region-stat"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 2v10M2 7h10"/></svg> Official AVA</span>
+        </div>
+        <span class="region-link">Explore Lake Michigan Shore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+    <!-- Fennville -->
+    <a class="region-card region-fennville" href="regions.html#fennville">
+      <div class="region-card-bg"></div>
+      <div class="region-content">
+        <div class="region-label">Allegan County</div>
+        <div class="region-name">Fennville</div>
+        <div class="region-stats">
+          <span class="region-stat"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/></svg> 8 Wineries</span>
+        </div>
+        <span class="region-link">Explore Fennville <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+    <!-- Southeast -->
+    <a class="region-card region-southeast" href="regions.html#southeast-michigan">
+      <div class="region-card-bg"></div>
+      <div class="region-content">
+        <div class="region-label">Ann Arbor Area</div>
+        <div class="region-name">Southeast Michigan</div>
+        <div class="region-stats">
+          <span class="region-stat"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/></svg> 10+ Wineries</span>
+        </div>
+        <span class="region-link">Explore Southeast <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- FEATURED WINERIES -->
+<section class="featured-wineries">
+<div class="featured-inner">
+  <div class="section-header">
+    <div class="section-tag">Featured Wineries</div>
+    <h2 class="section-title">Iconic Michigan Vineyards</h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">From pioneering estates to hidden gems, these wineries define Michigan wine country.</p>
+  </div>
+  <div class="winery-grid">
+    <!-- Winery 1 -->
+    <a class="winery-card" href="winery-detail.html?w=chateau-grand-traverse">
+      <div class="winery-img">
+        <div class="winery-img-inner img-vineyard-1"></div>
+        <span class="winery-badge">Pioneer</span>
+        <span class="winery-region-tag">Old Mission</span>
+      </div>
+      <div class="winery-info">
+        <h3 class="winery-name">Chateau Grand Traverse</h3>
+        <div class="winery-type">Estate Winery & Tasting Room</div>
+        <div class="winery-details">
+          <div class="winery-detail">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 13V7M8 13V3M4 13V9"/></svg>
+            Known for: Riesling, Ice Wine
+          </div>
+          <div class="winery-detail">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l3 2"/></svg>
+            Mon–Sat 10am–6pm
+          </div>
+        </div>
+        <span class="winery-link">Visit Winery <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+    <!-- Winery 2 -->
+    <a class="winery-card" href="winery-detail.html?w=black-star-farms">
+      <div class="winery-img">
+        <div class="winery-img-inner img-vineyard-2"></div>
+        <span class="winery-badge">Editors' Pick</span>
+        <span class="winery-region-tag">Leelanau</span>
+      </div>
+      <div class="winery-info">
+        <h3 class="winery-name">Black Star Farms</h3>
+        <div class="winery-type">Winery, Inn & Culinary Destination</div>
+        <div class="winery-details">
+          <div class="winery-detail">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 13V7M8 13V3M4 13V9"/></svg>
+            Known for: Pinot Noir, Brandy
+          </div>
+          <div class="winery-detail">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l3 2"/></svg>
+            Daily 11am–6pm
+          </div>
+        </div>
+        <span class="winery-link">Visit Winery <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+    <!-- Winery 3 -->
+    <a class="winery-card" href="winery-detail.html?w=round-barn-winery">
+      <div class="winery-img">
+        <div class="winery-img-inner img-vineyard-3"></div>
+        <span class="winery-badge">SW Michigan</span>
+        <span class="winery-region-tag">Lake MI Shore</span>
+      </div>
+      <div class="winery-info">
+        <h3 class="winery-name">Round Barn Winery</h3>
+        <div class="winery-type">Winery, Brewery & Distillery</div>
+        <div class="winery-details">
+          <div class="winery-detail">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 13V7M8 13V3M4 13V9"/></svg>
+            Known for: DiVine Vodka, Red Blends
+          </div>
+          <div class="winery-detail">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l3 2"/></svg>
+            Daily 11am–6pm
+          </div>
+        </div>
+        <span class="winery-link">Visit Winery <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+  </div>
+  <div class="winery-grid-cta">
+    <a class="btn-outline-dark" href="directory.html">
+      View All 100+ Wineries
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience">
+<div class="exp-inner">
+  <div class="section-header">
+    <div class="section-tag">Your Wine Country Guide</div>
+    <h2 class="section-title">Everything You Need to Plan</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card">
+      <div class="exp-icon">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M9 17V9a4 4 0 118 0v8M5 21v-4h14v4"/></svg>
+      </div>
+      <h3>Wine Trails</h3>
+      <p>Follow Michigan's official wine trails through rolling vineyard country and lakeside tasting rooms.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z"/></svg>
+      </div>
+      <h3>Guided Tours</h3>
+      <p>Book curated wine tours with local experts who know the hidden gems and best routes.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="20" height="18" rx="3"/><path d="M3 10h20M8 2v4M16 2v4"/></svg>
+      </div>
+      <h3>Events & Festivals</h3>
+      <p>Harvest festivals, wine dinners, barrel tastings, and seasonal celebrations across the state.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a2 2 0 002 2h10a2 2 0 002-2V10"/></svg>
+      </div>
+      <h3>Where to Stay</h3>
+      <p>Wine-country inns, lakeside B&Bs, and charming stays near Michigan's best vineyards.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+<div class="quote-content">
+  <div class="quote-mark">"</div>
+  <p class="quote-text">Michigan sits at the same latitude as some of Europe's most celebrated wine regions. The Great Lakes create a microclimate that extends our growing season and gives our wines a complexity that surprises even the most seasoned oenophiles.</p>
+  <div class="quote-attr">— Michigan Wine Collaborative</div>
+</div>
+</section>
+
+<!-- SEASONAL CTA -->
+<section class="seasonal">
+<div class="seasonal-inner">
+  <div class="seasonal-content">
+    <div class="seasonal-badge">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3a6 6 0 00-8.49 8.49L12 20.01l8.49-8.49A6 6 0 0012 3z"/></svg>
+      Winter 2026
+    </div>
+    <h2>Ice Wine Season Has Arrived</h2>
+    <p>Michigan is one of the few places in the world that produces true ice wine — grapes harvested frozen on the vine in the depths of winter, creating a rare and exquisite dessert wine.</p>
+    <ul class="seasonal-features">
+      <li>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
+        Chateau Grand Traverse · 2024 Riesling Ice Wine
+      </li>
+      <li>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
+        Black Star Farms · A Capella Ice Wine
+      </li>
+      <li>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
+        Chateau Chantal · Entice Ice Wine
+      </li>
+    </ul>
+  </div>
+  <div class="seasonal-visual">
+    <div class="seasonal-stat-card">
+      <h4>🍷 What Makes Michigan Ice Wine Special</h4>
+      <p>Grapes are left on the vine until temperatures drop below 17°F (-8°C), concentrating sugars and flavors into an intensely sweet, balanced dessert wine.</p>
+    </div>
+    <div class="seasonal-stat-card">
+      <h4>📍 Where to Taste</h4>
+      <p>Old Mission and Leelanau Peninsula wineries offer limited-release ice wines each winter. Many sell out within weeks of bottling.</p>
+    </div>
+    <div class="seasonal-stat-card">
+      <h4>🗓️ Best Time to Visit</h4>
+      <p>January through March for ice wine harvest events. Many wineries host special tastings and vineyard tours during this season.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- JOURNAL -->
+<section class="journal">
+<div class="journal-inner">
+  <div class="section-header">
+    <div class="section-tag">The Vine</div>
+    <h2 class="section-title">Stories from Wine Country</h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">Guides, itineraries, and insider tips for exploring Michigan's vineyards.</p>
+  </div>
+  <div class="journal-grid">
+    <a class="journal-card" href="the-vine.html?a=best-michigan-rieslings">
+      <div class="journal-card-img">
+        <div class="journal-card-img-inner img-vineyard-5"></div>
+      </div>
+      <div class="journal-card-body">
+        <div class="journal-card-cat">Wine Guide</div>
+        <h3>Why Michigan Riesling Is Having Its Moment</h3>
+        <p>How the 45th parallel, lake-effect climate, and passionate winemakers are putting Michigan Riesling on the world stage.</p>
+        <div class="journal-card-meta">
+          <span>8 min read</span>
+          <span>·</span>
+          <span>Feb 2026</span>
+        </div>
+      </div>
+    </a>
+    <a class="journal-card" href="the-vine.html?a=lake-michigan-shore-weekend">
+      <div class="journal-card-img">
+        <div class="journal-card-img-inner img-vineyard-4"></div>
+      </div>
+      <div class="journal-card-body">
+        <div class="journal-card-cat">Itinerary</div>
+        <h3>A Perfect Weekend on the Lake Michigan Shore Wine Trail</h3>
+        <p>Route, timing, and must-stop wineries for Southwest Michigan.</p>
+        <div class="journal-card-meta">
+          <span>6 min read</span>
+          <span>·</span>
+          <span>Jan 2026</span>
+        </div>
+      </div>
+    </a>
+    <a class="journal-card" href="the-vine.html?a=old-mission-vs-leelanau">
+      <div class="journal-card-img">
+        <div class="journal-card-img-inner img-vineyard-1"></div>
+      </div>
+      <div class="journal-card-body">
+        <div class="journal-card-cat">Comparison</div>
+        <h3>Old Mission vs. Leelanau: Which Peninsula Should You Visit?</h3>
+        <p>A side-by-side guide to Traverse City's two wine peninsulas.</p>
+        <div class="journal-card-meta">
+          <span>7 min read</span>
+          <span>·</span>
+          <span>Jan 2026</span>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="journal-cta">
+    <a class="btn-outline-dark" href="the-vine.html">
+      Read The Vine
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+<div class="newsletter-inner">
+  <h2>Stay Connected to Michigan Wine Country</h2>
+  <p>Weekly updates on new wines, seasonal events, winery openings, and curated guides from every corner of the state.</p>
+  <form class="newsletter-form" onsubmit="return false;">
+    <input type="email" placeholder="Enter your email address"/>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="display:flex;flex-direction:column;">
+        <span class="logo-main">Michigan Vineyards</span>
+        <span class="logo-sub" style="color:var(--gold);">Wine Country Guide</span>
+      </div>
+      <p>Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the best of the Great Lakes State.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Regions</h4>
+      <ul>
+        <li><a href="regions.html#old-mission">Old Mission Peninsula</a></li>
+        <li><a href="regions.html#leelanau">Leelanau Peninsula</a></li>
+        <li><a href="regions.html#lake-michigan-shore">Lake Michigan Shore</a></li>
+        <li><a href="regions.html#fennville">Fennville</a></li>
+        <li><a href="regions.html#southeast-michigan">Southeast Michigan</a></li>
+        <li><a href="regions.html#tip-of-the-mitt">Tip of the Mitt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="directory.html">All Wineries</a></li>
+        <li><a href="wine-trails.html">Wine Trails</a></li>
+        <li><a href="the-vine.html">The Vine</a></li>
+        <li><a href="events.html">Events Calendar</a></li>
+        <li><a href="plan-your-visit.html">Plan Your Visit</a></li>
+        <li><a href="plan-your-visit.html#tours">Wine Tours</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="advertise.html">Advertise</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MichiganVineyards.com · All Rights Reserved</span>
+    <div style="display: flex; gap: 24px;">
+      <a href="sitemap.html">Sitemap</a>
+      <a href="https://traversecitywinetour.com">Traverse City Wine Tours</a>
+    </div>
+  </div>
+</div>
+</footer>
+
+<script>
+// Sticky nav shadow
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 10); });
+
+// Scroll-triggered animations
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(x => {
+    if (x.isIntersecting) {
+      x.target.style.opacity = '1';
+      x.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.winery-card, .region-card, .exp-card, .journal-card, .stat-item, .seasonal-stat-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  obs.observe(el);
+});
+
+// Stagger stat items
+document.querySelectorAll('.stat-item').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.1}s`;
+});
+
+// Stagger region cards
+document.querySelectorAll('.region-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.08}s`;
+});
+
+// Stagger seasonal cards
+document.querySelectorAll('.seasonal-stat-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.12}s`;
+});
+</script>
+</body>
+</html>

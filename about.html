@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGRE0QBWPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JGRE0QBWPF');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us — MichiganVineyards.com | Michigan Wine Country Guide</title>
+<meta content="MichiganVineyards.com is the most comprehensive guide to Michigan wine country — 192 wineries, 11 regions, 7 wine trails. Learn about our mission and the team behind the directory." name="description"/>
+<link rel="canonical" href="https://michiganvineyards.com/about/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--forest:#1B3A2D;--forest-deep:#0F2419;--forest-light:#2A5040;--burgundy:#6B2D3E;--wine:#8B3A4A;--gold:#C9A96E;--gold-light:#D4BC8B;--gold-warm:#B8943F;--cream:#F5F0E8;--cream-dark:#EDE6D8;--sage:#8FA68F;--sage-light:#B8CCB0;--charcoal:#2C2420;--text:#3A3330;--text-light:#7A7068;--white:#FEFCF9;}
+html{scroll-behavior:smooth;font-size:17px;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+
+.top-bar{background:var(--forest-deep);color:var(--sage-light);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:9px 0;text-align:center;}
+.top-bar a{color:var(--gold-light);text-decoration:none;}.top-bar a:hover{text-decoration:underline;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(254,252,249,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,58,45,0.06);transition:box-shadow 0.3s;}
+nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
+.nav-inner{max-width:1340px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:76px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;background:var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.logo-icon::after{content:'🍇';font-size:18px;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-main{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:600;color:var(--forest);}
+.logo-sub{font-family:'Outfit',sans-serif;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-warm);margin-top:2px;}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center;}
+.nav-links a{font-size:0.82rem;font-weight:500;color:var(--text-light);text-decoration:none;letter-spacing:0.02em;position:relative;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover{color:var(--forest);}.nav-links a:hover::after{width:100%;}
+.nav-cta{background:var(--forest)!important;color:var(--cream)!important;padding:10px 24px!important;border-radius:4px;font-size:0.76rem!important;letter-spacing:0.06em!important;transition:background 0.3s!important;}
+.nav-cta:hover{background:var(--forest-light)!important;}.nav-cta::after{display:none!important;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+
+.page-hero{position:relative;min-height:38vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
+.page-hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--forest-deep) 0%,var(--forest) 60%,var(--charcoal) 100%);}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100Q75 70 150 100T300 100' fill='none' stroke='%23C9A96E' stroke-opacity='.04'/%3E%3Cpath d='M0 140Q75 110 150 140T300 140' fill='none' stroke='%23C9A96E' stroke-opacity='.03'/%3E%3C/svg%3E");}
+.page-hero-content{position:relative;z-index:2;max-width:820px;padding:70px 40px 55px;}
+.page-hero-tag{display:inline-flex;align-items:center;gap:12px;font-size:0.66rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;opacity:0;animation:fadeUp .7s .15s forwards;}
+.page-hero-tag::before,.page-hero-tag::after{content:'';width:36px;height:1px;background:var(--gold);opacity:.5;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4.5vw,3.2rem);font-weight:500;line-height:1.12;color:var(--cream);opacity:0;animation:fadeUp .7s .3s forwards;}
+.page-hero h1 em{font-style:italic;color:var(--gold-light);}
+.page-hero-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.6vw,1.15rem);line-height:1.7;color:rgba(245,240,232,0.6);margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;opacity:0;animation:fadeUp .7s .45s forwards;}
+
+.breadcrumbs{max-width:1340px;margin:0 auto;padding:14px 40px;display:flex;gap:8px;align-items:center;font-size:0.76rem;color:var(--text-light);}
+.breadcrumbs a{color:var(--text-light);text-decoration:none;transition:color .3s;}.breadcrumbs a:hover{color:var(--forest);}
+.breadcrumbs .sep{opacity:.4;}.breadcrumbs .current{color:var(--forest);font-weight:500;}
+
+.section{max-width:1340px;margin:0 auto;padding:60px 40px;}
+.content-section{max-width:780px;margin:0 auto;padding:48px 40px;}
+
+.content-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;color:var(--forest);line-height:1.25;margin-top:40px;margin-bottom:14px;}
+.content-section h2:first-child{margin-top:0;}
+.content-section p{font-size:0.94rem;line-height:1.8;color:var(--text);margin-bottom:16px;}
+.content-section a{color:var(--gold-warm);text-decoration:none;font-weight:500;transition:color .3s;}
+.content-section a:hover{color:var(--forest);text-decoration:underline;}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--forest);border-radius:16px;overflow:hidden;margin:40px 0;max-width:780px;margin-left:auto;margin-right:auto;position:relative;}
+.stats-row::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,169,110,0.08) 0%,transparent 50%);pointer-events:none;}
+.stat-item{padding:36px 24px;text-align:center;position:relative;z-index:1;border-right:1px solid rgba(245,240,232,0.08);}
+.stat-item:last-child{border-right:none;}
+.stat-number{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:600;color:var(--gold-light);margin-bottom:6px;}
+.stat-label{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.5);}
+
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:780px;margin:32px auto 0;}
+.value-card{text-align:center;padding:28px 20px;}
+.value-icon{font-size:1.6rem;margin-bottom:12px;}
+.value-card h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;color:var(--forest);margin-bottom:8px;}
+.value-card p{font-size:0.84rem;color:var(--text-light);line-height:1.65;}
+
+.cta-block{background:var(--cream);border-radius:16px;padding:48px;text-align:center;max-width:780px;margin:40px auto 0;}
+.cta-block h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--forest);margin-bottom:10px;}
+.cta-block p{font-size:0.9rem;color:var(--text-light);line-height:1.7;margin-bottom:24px;}
+.cta-block .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:4px;font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .3s;}
+.cta-block .btn-forest{background:var(--forest);color:var(--cream);}.cta-block .btn-forest:hover{background:var(--forest-light);}
+.cta-block .btn-outline{border:1.5px solid rgba(27,58,45,0.2);color:var(--forest);background:transparent;margin-left:12px;}
+.cta-block .btn-outline:hover{border-color:var(--forest);}
+
+footer{background:var(--charcoal);padding:80px 40px 40px;color:rgba(245,240,232,0.6);}
+.footer-inner{max-width:1340px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+.footer-brand .logo-main{color:var(--cream);font-size:1.35rem;}.footer-brand .logo-sub{color:var(--gold);}
+.footer-brand p{font-size:0.88rem;line-height:1.7;margin-top:16px;color:rgba(245,240,232,0.45);}
+.footer-col h4{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.footer-col ul{list-style:none;}.footer-col li{margin-bottom:10px;}
+.footer-col a{font-size:0.88rem;color:rgba(245,240,232,0.45);text-decoration:none;transition:color 0.3s;}.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{border-top:1px solid rgba(245,240,232,0.08);padding-top:32px;display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;}
+.footer-bottom a{color:rgba(245,240,232,0.4);text-decoration:none;transition:color 0.3s;}.footer-bottom a:hover{color:var(--gold-light);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:1024px){.stats-row{grid-template-columns:repeat(2,1fr);}.stat-item:nth-child(2){border-right:none;}.footer-grid{grid-template-columns:1fr 1fr;gap:40px;}.values-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--white);padding:20px 40px;gap:16px;border-bottom:1px solid rgba(27,58,45,0.08);}
+  .nav-links.show{display:flex;}.nav-toggle{display:block;}
+  .page-hero-content{padding:50px 20px 40px;}.content-section{padding:36px 20px;}
+  .stats-row{grid-template-columns:1fr 1fr;margin:32px 20px;}.cta-block{margin:32px 20px;padding:36px 24px;}
+  .cta-block .btn-outline{margin-left:0;margin-top:10px;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}.footer-bottom{flex-direction:column;gap:10px;text-align:center;}
+}
+</style>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="MichiganVineyards.com"/>
+<meta property="og:title" content="About MichiganVineyards.com — Michigan Wine Country Guide"/>
+<meta property="og:description" content="The most comprehensive guide to Michigan wine country — 192 wineries, 11 regions, 7 wine trails. Learn about our mission."/>
+<meta property="og:url" content="https://michiganvineyards.com/about/"/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="About MichiganVineyards.com — Michigan Wine Country Guide"/>
+<meta name="twitter:description" content="The most comprehensive guide to Michigan wine country — 192 wineries, 11 regions, 7 wine trails. Learn about our mission."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+</head>
+<body>
+
+<div class="top-bar">7 Wine Trails · 192 Wineries · <a href="directory.html">Explore the Full Directory →</a></div>
+
+<nav id="mainNav"><div class="nav-inner">
+  <a class="logo" href="/"><div class="logo-icon"></div><div class="logo-text"><span class="logo-main">Michigan Vineyards</span><span class="logo-sub">Wine Country Guide</span></div></a>
+  <ul class="nav-links">
+    <li><a href="regions.html">Regions</a></li>
+    <li><a href="directory.html">Wineries</a></li>
+    <li><a href="wine-trails.html">Wine Trails</a></li>
+    <li><a href="the-vine.html">The Vine</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a class="nav-cta" href="plan-your-visit.html">Plan Your Visit</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-tag">About Us</div>
+    <h1>Michigan's <em>Wine Country</em>, One Guide</h1>
+    <p class="page-hero-desc">We built the directory we wished existed when we started exploring Michigan wine.</p>
+  </div>
+</section>
+
+<div class="breadcrumbs"><a href="/">Home</a><span class="sep">›</span><span class="current">About Us</span></div>
+
+<div class="content-section">
+  <h2>Why We Built This</h2>
+  <p>Michigan is home to nearly 200 wineries spread across 11 distinct wine regions — from the steep slopes of Old Mission Peninsula to the rolling hills of the Lake Michigan Shore AVA. It's one of the most exciting and underappreciated wine scenes in the country.</p>
+  <p>The problem? There was no single place that cataloged all of it. Region pages lived on tourism board sites, individual wineries had their own websites, and trail maps were scattered across brochures and PDFs. Planning a wine trip to Michigan meant opening dozens of tabs and still missing half the story.</p>
+  <p>We built MichiganVineyards.com to fix that. One comprehensive, beautifully designed guide that covers every winery, every region, every trail — and makes it easy to plan the kind of trip where you discover a new favorite wine at a tasting room you almost drove past.</p>
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-number">192</div><div class="stat-label">Wineries</div></div>
+    <div class="stat-item"><div class="stat-number">11</div><div class="stat-label">Regions</div></div>
+    <div class="stat-item"><div class="stat-number">7</div><div class="stat-label">Wine Trails</div></div>
+    <div class="stat-item"><div class="stat-number">1</div><div class="stat-label">Mission</div></div>
+  </div>
+
+  <h2>What We Do</h2>
+  <p>MichiganVineyards.com is the most comprehensive guide to Michigan wine country. We maintain detailed profiles for every winery in the state, organize them by region and trail, and create content — from seasonal event calendars to trip-planning itineraries — that helps visitors get the most out of their wine-country experience.</p>
+  <p>Our sister site, <a href="https://traversecitywinetour.com">TraverseCityWineTour.com</a>, provides the in-depth local guide to the Traverse City wine scene, including wine tours, where-to-stay guides, and TC-specific itineraries.</p>
+
+  <h2>Our Values</h2>
+</div>
+
+<div class="values-grid">
+  <div class="value-card">
+    <div class="value-icon">🗺️</div>
+    <h3>Comprehensive</h3>
+    <p>Every winery in Michigan — not just the big names. We believe the hidden gems deserve the same visibility.</p>
+  </div>
+  <div class="value-card">
+    <div class="value-icon">🤝</div>
+    <h3>Independent</h3>
+    <p>We're not run by a tourism board or a winery association. Our recommendations come from genuine experience.</p>
+  </div>
+  <div class="value-card">
+    <div class="value-icon">🍷</div>
+    <h3>Passionate</h3>
+    <p>We live in Michigan wine country. We visit these tasting rooms, drive these trails, and attend these festivals ourselves.</p>
+  </div>
+</div>
+
+<div class="content-section">
+  <h2>For Wineries &amp; Partners</h2>
+  <p>We work with wineries, tour operators, lodging providers, and event organizers across the state. If you'd like to enhance your listing, sponsor a region page, or promote an event, we'd love to hear from you.</p>
+
+  <div class="cta-block">
+    <h2>Get Involved</h2>
+    <p>Whether you're planning a visit or promoting your business, we're here to help you connect with Michigan wine country.</p>
+    <a class="btn btn-forest" href="plan-your-visit.html">Plan Your Visit</a>
+    <a class="btn btn-outline" href="advertise.html">Partner With Us</a>
+  </div>
+</div>
+
+<footer>
+<div class="footer-inner">
+  <div class="footer-grid">
+    <div class="footer-brand"><div style="display:flex;flex-direction:column;"><span class="logo-main">Michigan Vineyards</span><span class="logo-sub" style="color:var(--gold);">Wine Country Guide</span></div><p>Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the best of the Great Lakes State.</p></div>
+    <div class="footer-col"><h4>Regions</h4><ul><li><a href="regions.html#old-mission">Old Mission Peninsula</a></li><li><a href="regions.html#leelanau">Leelanau Peninsula</a></li><li><a href="regions.html#lake-michigan-shore">Lake Michigan Shore</a></li><li><a href="regions.html#fennville">Fennville</a></li><li><a href="regions.html#southeast-michigan">Southeast Michigan</a></li><li><a href="regions.html#tip-of-the-mitt">Tip of the Mitt</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="directory.html">All Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="the-vine.html">The Vine</a></li><li><a href="events.html">Events Calendar</a></li><li><a href="plan-your-visit.html">Plan Your Visit</a></li><li><a href="plan-your-visit.html#tours">Wine Tours</a></li></ul></div>
+    <div class="footer-col"><h4>Resources</h4><ul><li><a href="about.html">About Us</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="contact.html">Contact</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 MichiganVineyards.com · All Rights Reserved</span><div style="display:flex;gap:24px;"><a href="sitemap.html">Sitemap</a><a href="https://traversecitywinetour.com">Traverse City Wine Tours</a></div></div>
+</div>
+</footer>
+<script>const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));</script>
+</body>
+</html>

@@ -1,0 +1,2283 @@
+[
+  {
+    "name": "Chateau Grand Traverse",
+    "region": "Old Mission",
+    "type": "Estate Winery & Tasting Room",
+    "featured": true,
+    "known": [
+      "Riesling",
+      "Ice Wine",
+      "Late Harvest Riesling",
+      "Pinot Grigio",
+      "Merlot"
+    ],
+    "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
+    "city": "Traverse City",
+    "badge": "Pioneer · Est. 1974"
+  },
+  {
+    "name": "Chateau Chantal",
+    "region": "Old Mission",
+    "type": "Winery & B&B Inn",
+    "featured": true,
+    "known": [
+      "Sparkling Wine",
+      "Cerise",
+      "Chardonnay",
+      "Pinot Noir",
+      "Late Harvest Riesling"
+    ],
+    "hours": "Mon–Sat 11am–7pm · Sun 12–6pm",
+    "city": "Traverse City",
+    "badge": "Featured"
+  },
+  {
+    "name": "Peninsula Cellars",
+    "region": "Old Mission",
+    "type": "Family Owned Winery",
+    "featured": false,
+    "known": [
+      "Gewürztraminer",
+      "Pinot Grigio",
+      "Cherry Wine",
+      "Riesling",
+      "Manigold Red"
+    ],
+    "hours": "Mon–Sat 10am–6pm · Sun 12–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Brys Estate Vineyard & Winery",
+    "region": "Old Mission",
+    "type": "Estate Vineyard & Winery",
+    "featured": true,
+    "known": [
+      "Signature Red Blend",
+      "Naked Chardonnay",
+      "Pinot Blanc",
+      "Gewürztraminer"
+    ],
+    "hours": "Mon–Sat 11am–6pm · Sun 12–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Bowers Harbor Vineyards",
+    "region": "Old Mission",
+    "type": "Vineyard & Tasting Room",
+    "featured": false,
+    "known": [
+      "Langley Chardonnay",
+      "Pinot Grigio",
+      "Rosé",
+      "Shipwreck White"
+    ],
+    "hours": "Mon–Sat 10:30am–6pm · Sun 12–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "2 Lads Winery",
+    "region": "Old Mission",
+    "type": "Modern Estate Winery",
+    "featured": false,
+    "known": [
+      "Cabernet Franc",
+      "Pinot Noir",
+      "Grüner Veltliner",
+      "Rosé"
+    ],
+    "hours": "Daily 12–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Mari Vineyards",
+    "region": "Old Mission",
+    "type": "Estate Winery & Underground Cellar",
+    "featured": true,
+    "known": [
+      "Cabernet Franc",
+      "Nebbiolo",
+      "Sangiovese",
+      "Riesling"
+    ],
+    "hours": "Mon–Sat 11am–6pm · Sun 12–5pm",
+    "city": "Traverse City",
+    "badge": "Editors' Pick"
+  },
+  {
+    "name": "Bonobo Winery",
+    "region": "Old Mission",
+    "type": "Boutique Hillside Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Chardonnay",
+      "Pinot Gris",
+      "Rosé"
+    ],
+    "hours": "Daily 12–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Black Star Farms — Old Mission",
+    "region": "Old Mission",
+    "type": "Tasting Room & Winemaking Facility",
+    "featured": false,
+    "known": [
+      "Arcturos",
+      "Pinot Noir",
+      "Riesling",
+      "Brandy"
+    ],
+    "hours": "Daily 11am–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Ciccone Vineyard & Winery",
+    "region": "Old Mission",
+    "type": "Family Estate Winery",
+    "featured": false,
+    "known": [
+      "Dolcetto",
+      "Pinot Grigio",
+      "Cabernet Franc",
+      "Gewürztraminer"
+    ],
+    "hours": "Mon–Sat 12–5pm · Sun 12–5pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "Verterra Winery",
+    "region": "Old Mission",
+    "type": "Artisan Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Riesling",
+      "Cabernet Franc",
+      "Orange Wine"
+    ],
+    "hours": "Fri–Sun 12–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Black Star Farms — Leelanau",
+    "region": "Leelanau",
+    "type": "Winery, Inn & Culinary Destination",
+    "featured": true,
+    "known": [
+      "Arcturos",
+      "A Capella Ice Wine",
+      "Pinot Noir",
+      "Brandy"
+    ],
+    "hours": "Daily 11am–6pm",
+    "city": "Suttons Bay",
+    "badge": "Editors' Pick"
+  },
+  {
+    "name": "L. Mawby | Mawby Sparkling",
+    "region": "Leelanau",
+    "type": "Sparkling Wine House",
+    "featured": true,
+    "known": [
+      "Sparkling Wine",
+      "Méthode Champenoise",
+      "Blanc de Blancs",
+      "Sex"
+    ],
+    "hours": "Daily 12–6pm",
+    "city": "Suttons Bay",
+    "badge": "Featured"
+  },
+  {
+    "name": "Leelanau Cellars",
+    "region": "Leelanau",
+    "type": "Pioneer Estate Winery",
+    "featured": true,
+    "known": [
+      "Witchcraft Red",
+      "Tall Ship Chardonnay",
+      "Winter White"
+    ],
+    "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
+    "city": "Omena",
+    "badge": ""
+  },
+  {
+    "name": "Good Harbor Vineyards",
+    "region": "Leelanau",
+    "type": "Waterfront Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Pinot Grigio",
+      "Riesling",
+      "Fishtown White",
+      "Cherry Wine"
+    ],
+    "hours": "Mon–Sat 11am–5pm · Sun 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Shady Lane Cellars",
+    "region": "Leelanau",
+    "type": "Winery in Historic Fieldstone Farm",
+    "featured": true,
+    "known": [
+      "Sparkling Riesling",
+      "Pinot Noir",
+      "Cabernet Franc",
+      "Blue Franc"
+    ],
+    "hours": "Daily 11am–6pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "45 North Vineyard & Winery",
+    "region": "Leelanau",
+    "type": "Estate Winery",
+    "featured": false,
+    "known": [
+      "Estate Riesling",
+      "Pinot Blanc",
+      "Hard Cider",
+      "Cherry Wine"
+    ],
+    "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Bel Lago Vineyards & Winery",
+    "region": "Leelanau",
+    "type": "Estate Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Tempranillo",
+      "Gewürztraminer",
+      "Auxerrois"
+    ],
+    "hours": "Daily 12–5pm",
+    "city": "Cedar",
+    "badge": ""
+  },
+  {
+    "name": "Left Foot Charley",
+    "region": "Leelanau",
+    "type": "Urban Winery",
+    "featured": true,
+    "known": [
+      "Blaufränkisch",
+      "Island View Riesling",
+      "Pinot Blanc",
+      "Cider"
+    ],
+    "hours": "Daily 12–6pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Aurora Cellars",
+    "region": "Leelanau",
+    "type": "Boutique Estate Winery",
+    "featured": false,
+    "known": [
+      "Sol Rosé",
+      "Pinot Noir",
+      "Chardonnay",
+      "Riesling"
+    ],
+    "hours": "Mon–Sat 11am–6pm · Sun 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Gill's Pier Vineyard & Winery",
+    "region": "Leelanau",
+    "type": "Small-Batch Estate Winery",
+    "featured": false,
+    "known": [
+      "Riesling",
+      "Pinot Noir",
+      "Pinot Blanc",
+      "Cabernet Franc"
+    ],
+    "hours": "Thu–Mon 12–5pm",
+    "city": "Northport",
+    "badge": ""
+  },
+  {
+    "name": "Rove Estate",
+    "region": "Leelanau",
+    "type": "Boutique Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Skin-Fermented White",
+      "Pétillant Naturel",
+      "Pinot Noir"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Raftshol Vineyards",
+    "region": "Leelanau",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Cherry Wine",
+      "Pinot Noir",
+      "Riesling",
+      "Apple Wine"
+    ],
+    "hours": "Daily 11am–5pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "Blustone Vineyards",
+    "region": "Leelanau",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Pinot Grigio",
+      "Gewürztraminer",
+      "Hard Cider"
+    ],
+    "hours": "Daily 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Chateau Fontaine",
+    "region": "Leelanau",
+    "type": "Estate Winery",
+    "featured": false,
+    "known": [
+      "Woodland White",
+      "Pinot Noir",
+      "Chardonnay"
+    ],
+    "hours": "Mon–Sat 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Chateau de Leelanau",
+    "region": "Leelanau",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Pinot Grigio",
+      "Merlot",
+      "Fruit Wines"
+    ],
+    "hours": "Mon–Sat 12–5pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "Good Neighbor Organic Vineyard",
+    "region": "Leelanau",
+    "type": "Certified Organic Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Organic Riesling",
+      "Pinot Blanc",
+      "Natural Wine"
+    ],
+    "hours": "Sat–Sun 12–5pm",
+    "city": "Northport",
+    "badge": "Organic"
+  },
+  {
+    "name": "Boathouse Vineyards",
+    "region": "Leelanau",
+    "type": "Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Pinot Gris",
+      "Riesling",
+      "Pinot Noir",
+      "Cabernet Franc"
+    ],
+    "hours": "Daily 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Laurentide Winery",
+    "region": "Leelanau",
+    "type": "Modern Boutique Winery",
+    "featured": false,
+    "known": [
+      "Grüner Veltliner",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "hours": "Daily 12–6pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Tandem Ciders",
+    "region": "Leelanau",
+    "type": "Artisan Cidery & Winery",
+    "featured": false,
+    "known": [
+      "Farmhouse Cider",
+      "Smackintosh",
+      "Perry",
+      "Apple Wine"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "Brengman Family Wines",
+    "region": "Leelanau",
+    "type": "Estate Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Pinot Grigio",
+      "Cabernet Franc",
+      "Riesling",
+      "Merlot"
+    ],
+    "hours": "Mon–Sat 11am–6pm · Sun 12–5pm",
+    "city": "Traverse City",
+    "badge": ""
+  },
+  {
+    "name": "Amoritas Vineyards",
+    "region": "Leelanau",
+    "type": "Estate Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Chardonnay",
+      "Cabernet Franc",
+      "Riesling"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Bos Farmhouse",
+    "region": "Leelanau",
+    "type": "Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Napa & Michigan Wines",
+      "Cabernet Sauvignon",
+      "Pinot Noir"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Elk Rapids",
+    "badge": ""
+  },
+  {
+    "name": "Tabone Vineyards",
+    "region": "Leelanau",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Cabernet Franc",
+      "Pinot Noir",
+      "Riesling"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "Willow Vineyard",
+    "region": "Leelanau",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Riesling",
+      "Chardonnay",
+      "Pinot Noir"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "Silver Leaf Vineyard & Winery",
+    "region": "Leelanau",
+    "type": "Small-Batch Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Riesling",
+      "Chardonnay"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Suttons Bay",
+    "badge": ""
+  },
+  {
+    "name": "Hawthorne Vineyards",
+    "region": "Leelanau",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Riesling",
+      "Pinot Noir",
+      "Sparkling Wine"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Lake Leelanau",
+    "badge": ""
+  },
+  {
+    "name": "Gilchrist Farm Winery",
+    "region": "Leelanau",
+    "type": "Farm Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Hard Cider",
+      "Fruit Wine"
+    ],
+    "hours": "Seasonal",
+    "city": "Suttons Bay",
+    "badge": "New"
+  },
+  {
+    "name": "St. Julian Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Michigan's Oldest Winery",
+    "featured": true,
+    "known": [
+      "Braganini Reserve Cab Franc",
+      "Solera Cream Sherry",
+      "Blue Heron"
+    ],
+    "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
+    "city": "Paw Paw",
+    "badge": "Est. 1921"
+  },
+  {
+    "name": "Round Barn Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Winery, Brewery & Distillery",
+    "featured": true,
+    "known": [
+      "DiVine Vodka",
+      "Red Blend",
+      "Moersch Pinot Grigio"
+    ],
+    "hours": "Daily 11am–6pm",
+    "city": "Baroda",
+    "badge": "Featured"
+  },
+  {
+    "name": "Tabor Hill Winery & Restaurant",
+    "region": "Lake Michigan Shore",
+    "type": "Pioneer Estate Winery & Restaurant",
+    "featured": true,
+    "known": [
+      "Classic Demi-Sec",
+      "Grand Mark",
+      "Lake Michigan Shore Red"
+    ],
+    "hours": "Daily 11am–5pm",
+    "city": "Buchanan",
+    "badge": "Pioneer · 1971"
+  },
+  {
+    "name": "Domaine Berrien Cellars",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Vineyard & Winery",
+    "featured": true,
+    "known": [
+      "Cabernet Franc",
+      "Lemberger",
+      "Traminette",
+      "Pinot Gris"
+    ],
+    "hours": "Wed–Sun 12–5pm",
+    "city": "Berrien Springs",
+    "badge": "Editors' Pick"
+  },
+  {
+    "name": "Hickory Creek Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Cabernet Franc",
+      "Dry Rosé",
+      "Chardonnay"
+    ],
+    "hours": "Wed–Sun 12–6pm",
+    "city": "Buchanan",
+    "badge": ""
+  },
+  {
+    "name": "12 Corners Vineyards",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Vidal Blanc Ice Wine",
+      "Riesling",
+      "Cabernet Franc",
+      "Merlot"
+    ],
+    "hours": "Thu–Mon 12–5pm",
+    "city": "Benton Harbor",
+    "badge": ""
+  },
+  {
+    "name": "White Pine Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Seyval Blanc",
+      "Cherry Wine",
+      "Riesling"
+    ],
+    "hours": "Daily 11am–5pm",
+    "city": "St. Joseph",
+    "badge": ""
+  },
+  {
+    "name": "Contessa Wine Cellars",
+    "region": "Lake Michigan Shore",
+    "type": "Italian-Inspired Winery",
+    "featured": false,
+    "known": [
+      "Sangiovese",
+      "Pinot Grigio",
+      "Dolcetto",
+      "Barbera"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Coloma",
+    "badge": ""
+  },
+  {
+    "name": "Lemon Creek Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Historic Family Estate",
+    "featured": false,
+    "known": [
+      "Chambourcin",
+      "Vidal Blanc",
+      "Traminette",
+      "Fruit Wines"
+    ],
+    "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
+    "city": "Berrien Springs",
+    "badge": ""
+  },
+  {
+    "name": "Baroda Founders Wine Cellar",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Lake Michigan Shore Varietals",
+      "Antique Series",
+      "Dessert Wines"
+    ],
+    "hours": "Daily 11am–5pm",
+    "city": "Baroda",
+    "badge": ""
+  },
+  {
+    "name": "Cody Kresta Vineyard & Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Estate Reds",
+      "Cabernet Franc",
+      "Riesling"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Mattawan",
+    "badge": ""
+  },
+  {
+    "name": "Filkins Vineyards",
+    "region": "Lake Michigan Shore",
+    "type": "Family Estate Winery",
+    "featured": false,
+    "known": [
+      "Small-Batch Reds",
+      "Estate Whites",
+      "Rosé"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Mattawan",
+    "badge": ""
+  },
+  {
+    "name": "Golden Muse Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Boutique Art Winery",
+    "featured": false,
+    "known": [
+      "Michigan Varietals",
+      "Art Pairings",
+      "Sparkling"
+    ],
+    "hours": "Thu–Sun 12–6pm",
+    "city": "Baroda",
+    "badge": ""
+  },
+  {
+    "name": "Lake Michigan Vintners",
+    "region": "Lake Michigan Shore",
+    "type": "College Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Student-Crafted Wines",
+      "Cabernet Franc",
+      "Riesling"
+    ],
+    "hours": "Wed–Sun 12–5pm",
+    "city": "Benton Harbor",
+    "badge": ""
+  },
+  {
+    "name": "Lawton Ridge Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Winery",
+    "featured": false,
+    "known": [
+      "Michigan Estate Wines",
+      "Fruit Wines"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Lawton",
+    "badge": ""
+  },
+  {
+    "name": "Solasta Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Boutique Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Small-Batch Reds",
+      "Whites"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Baroda",
+    "badge": ""
+  },
+  {
+    "name": "Dablon Vineyards & Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Red Varietals",
+      "Cabernet Franc",
+      "Merlot",
+      "Syrah"
+    ],
+    "hours": "Wed–Sun 12–5pm",
+    "city": "Baroda",
+    "badge": ""
+  },
+  {
+    "name": "Karma Vista Vineyards",
+    "region": "Lake Michigan Shore",
+    "type": "Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Cabernet Franc",
+      "Riesling",
+      "Pinot Gris",
+      "Fruit Wines"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Coloma",
+    "badge": ""
+  },
+  {
+    "name": "Free Run Cellars",
+    "region": "Lake Michigan Shore",
+    "type": "Estate Winery",
+    "featured": false,
+    "known": [
+      "Cabernet Sauvignon",
+      "Merlot",
+      "Syrah",
+      "Viognier"
+    ],
+    "hours": "Wed–Sun 12–5pm",
+    "city": "Berrien Springs",
+    "badge": ""
+  },
+  {
+    "name": "Lazy Ballerina Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Boutique Tasting Room",
+    "featured": false,
+    "known": [
+      "Fruit Wines",
+      "Sweet Reds",
+      "Rosé"
+    ],
+    "hours": "Thu–Mon 12–6pm",
+    "city": "St. Joseph",
+    "badge": ""
+  },
+  {
+    "name": "Stranger Wine Company",
+    "region": "Lake Michigan Shore",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Small-Batch Wines",
+      "Michigan Varietals"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Niles",
+    "badge": ""
+  },
+  {
+    "name": "Fenn Valley Vineyards",
+    "region": "Fennville",
+    "type": "Pioneer Estate Winery",
+    "featured": true,
+    "known": [
+      "Meritage",
+      "Pinot Grigio",
+      "Riesling",
+      "Capriccio Sparkling"
+    ],
+    "hours": "Mon–Sat 10am–5pm · Sun 12–5pm",
+    "city": "Fennville",
+    "badge": "Est. 1973"
+  },
+  {
+    "name": "Virtue Cider",
+    "region": "Fennville",
+    "type": "Farm Cidery & Taproom",
+    "featured": true,
+    "known": [
+      "Michigan Brut",
+      "Lapinette",
+      "Percheron"
+    ],
+    "hours": "Wed–Sun 12–8pm",
+    "city": "Fennville",
+    "badge": "Featured"
+  },
+  {
+    "name": "Modales Wines",
+    "region": "Fennville",
+    "type": "Boutique Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Cabernet Franc",
+      "Pinot Noir",
+      "Chardonnay",
+      "Pétillant Naturel"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Fennville",
+    "badge": ""
+  },
+  {
+    "name": "Crane's Winery",
+    "region": "Fennville",
+    "type": "Orchard Winery & Pie Pantry",
+    "featured": false,
+    "known": [
+      "Apple Wine",
+      "Cherry Wine",
+      "Hard Cider",
+      "Sangria"
+    ],
+    "hours": "Daily 10am–5pm",
+    "city": "Fennville",
+    "badge": ""
+  },
+  {
+    "name": "Cogdal Vineyards",
+    "region": "Fennville",
+    "type": "Boutique Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Vignoles",
+      "Chambourcin",
+      "Estate Reds"
+    ],
+    "hours": "Sat–Sun 12–5pm",
+    "city": "Fennville",
+    "badge": ""
+  },
+  {
+    "name": "Fox and Hen Winery",
+    "region": "Fennville",
+    "type": "Small-Batch Estate Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Michigan Varietals"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Grand Haven",
+    "badge": "New"
+  },
+  {
+    "name": "J. Petter Wine Gallery",
+    "region": "Fennville",
+    "type": "Gallery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Curated Michigan Wines",
+      "Art Pairings"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Douglas",
+    "badge": ""
+  },
+  {
+    "name": "468 Urban Winery",
+    "region": "Fennville",
+    "type": "Urban Winery & Event Space",
+    "featured": false,
+    "known": [
+      "Customizable Wines",
+      "Michigan Varietals"
+    ],
+    "hours": "Thu–Sun 12–7pm",
+    "city": "Portage",
+    "badge": "New"
+  },
+  {
+    "name": "Blu Dot Farm & Vineyard",
+    "region": "Fennville",
+    "type": "Farm Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Cold-Hardy Varietals"
+    ],
+    "hours": "Seasonal",
+    "city": "Fennville",
+    "badge": "New"
+  },
+  {
+    "name": "Red Barn Market & Winery",
+    "region": "Fennville",
+    "type": "Farm Market & Winery",
+    "featured": false,
+    "known": [
+      "Fruit Wines",
+      "Hard Cider",
+      "Apple Wine"
+    ],
+    "hours": "Daily 9am–6pm",
+    "city": "Fennville",
+    "badge": ""
+  },
+  {
+    "name": "Mackinaw Trail Winery",
+    "region": "Tip of the Mitt",
+    "type": "Estate Winery",
+    "featured": true,
+    "known": [
+      "Marquette",
+      "La Crescent",
+      "Frontenac Gris",
+      "Ice Wine"
+    ],
+    "hours": "Daily 10am–6pm",
+    "city": "Petoskey",
+    "badge": "Featured"
+  },
+  {
+    "name": "Petoskey Farms Vineyard & Winery",
+    "region": "Tip of the Mitt",
+    "type": "Estate Vineyard & Winery",
+    "featured": true,
+    "known": [
+      "Marquette",
+      "La Crescent",
+      "Frontenac Gris",
+      "Pétillant Naturel"
+    ],
+    "hours": "Wed–Sun 12–6pm",
+    "city": "Petoskey",
+    "badge": ""
+  },
+  {
+    "name": "Walloon Lake Winery",
+    "region": "Tip of the Mitt",
+    "type": "Lakeside Winery",
+    "featured": false,
+    "known": [
+      "Windemere White",
+      "Wildwood White",
+      "Frontenac"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Walloon Lake",
+    "badge": ""
+  },
+  {
+    "name": "Maple Moon Sugarbush & Winery",
+    "region": "Tip of the Mitt",
+    "type": "Maple Winery",
+    "featured": false,
+    "known": [
+      "Maple Gold Port",
+      "Fruit Wines",
+      "Maple Wine"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Petoskey",
+    "badge": ""
+  },
+  {
+    "name": "Pond Hill Farm",
+    "region": "Tip of the Mitt",
+    "type": "Farm Winery, Brewery & Market",
+    "featured": false,
+    "known": [
+      "Pinot Gris",
+      "Northern Lights Peach Sparkler",
+      "Hard Cider"
+    ],
+    "hours": "Daily 10am–6pm",
+    "city": "Harbor Springs",
+    "badge": ""
+  },
+  {
+    "name": "Crooked Vine Winery",
+    "region": "Tip of the Mitt",
+    "type": "Micro-Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Frontenac",
+      "Marquette",
+      "Cherry Melomel"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Alanson",
+    "badge": ""
+  },
+  {
+    "name": "Royal Farms",
+    "region": "Tip of the Mitt",
+    "type": "Farm Winery & Cidery",
+    "featured": false,
+    "known": [
+      "Hard Cider",
+      "Cherry Wine",
+      "Marquette"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Ellsworth",
+    "badge": ""
+  },
+  {
+    "name": "Rudbeckia Winery",
+    "region": "Tip of the Mitt",
+    "type": "Winery & Brewstillery",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Craft Spirits",
+      "Small-Batch"
+    ],
+    "hours": "Thu–Sun 12–7pm",
+    "city": "Petoskey",
+    "badge": ""
+  },
+  {
+    "name": "Seasons of the North",
+    "region": "Tip of the Mitt",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Cold-Hardy Wines",
+      "Marquette",
+      "Fruit Wines"
+    ],
+    "hours": "Seasonal",
+    "city": "Petoskey",
+    "badge": ""
+  },
+  {
+    "name": "Bee Well Meadery",
+    "region": "Tip of the Mitt",
+    "type": "Meadery & Cidery",
+    "featured": false,
+    "known": [
+      "Award-Winning Mead",
+      "Michigan Hard Cider",
+      "Honey Wine"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Bellaire",
+    "badge": ""
+  },
+  {
+    "name": "Nicholas Black River Vineyard",
+    "region": "Tip of the Mitt",
+    "type": "Estate Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Cold-Hardy Varietals"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Cheboygan",
+    "badge": ""
+  },
+  {
+    "name": "Boyne Valley Vineyards",
+    "region": "Tip of the Mitt",
+    "type": "Family Estate Winery",
+    "featured": false,
+    "known": [
+      "Cold-Hardy Wines",
+      "Marquette",
+      "Frontenac"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Boyne City",
+    "badge": ""
+  },
+  {
+    "name": "End of the Road Winery",
+    "region": "Tip of the Mitt",
+    "type": "Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Award-Winning Reds"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Petoskey",
+    "badge": ""
+  },
+  {
+    "name": "Burrone Family Vineyards",
+    "region": "Tip of the Mitt",
+    "type": "Estate Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Cold-Hardy Varietals"
+    ],
+    "hours": "Seasonal",
+    "city": "Lachine",
+    "badge": "New"
+  },
+  {
+    "name": "Detroit Vineyards",
+    "region": "Southeast Michigan",
+    "type": "Urban Winery",
+    "featured": true,
+    "known": [
+      "Michigan Estate Wines",
+      "Urban Tastings"
+    ],
+    "hours": "Wed–Sun 12–7pm",
+    "city": "Detroit",
+    "badge": ""
+  },
+  {
+    "name": "B. Nektar Meadery",
+    "region": "Southeast Michigan",
+    "type": "Craft Meadery",
+    "featured": false,
+    "known": [
+      "Mead",
+      "Hard Cider",
+      "Craft Beer"
+    ],
+    "hours": "Wed–Sun 12–8pm",
+    "city": "Ferndale",
+    "badge": ""
+  },
+  {
+    "name": "Bløm Meadworks",
+    "region": "Southeast Michigan",
+    "type": "Session Mead & Cider",
+    "featured": false,
+    "known": [
+      "Session Mead",
+      "Dry Cider",
+      "Sparkling Mead"
+    ],
+    "hours": "Wed–Sun 12–8pm",
+    "city": "Ann Arbor",
+    "badge": ""
+  },
+  {
+    "name": "Black Fire Winery",
+    "region": "Southeast Michigan",
+    "type": "Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Michigan Varietals"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Tecumseh",
+    "badge": ""
+  },
+  {
+    "name": "Cherry Creek Cellars",
+    "region": "Southeast Michigan",
+    "type": "Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Cherry Wine",
+      "Award-Winning Whites"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Brooklyn",
+    "badge": ""
+  },
+  {
+    "name": "Chateau Aeronautique Winery",
+    "region": "Southeast Michigan",
+    "type": "Aviation-Themed Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Michigan Varietals"
+    ],
+    "hours": "Sat–Sun 12–5pm",
+    "city": "Onsted",
+    "badge": ""
+  },
+  {
+    "name": "Pentamere Winery",
+    "region": "Southeast Michigan",
+    "type": "Downtown Winery",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Fruit Wines"
+    ],
+    "hours": "Thu–Sun 12–7pm",
+    "city": "Tecumseh",
+    "badge": ""
+  },
+  {
+    "name": "Flying Otter Winery",
+    "region": "Southeast Michigan",
+    "type": "Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Small-Batch"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Adrian",
+    "badge": ""
+  },
+  {
+    "name": "Blake's Hard Cider",
+    "region": "Southeast Michigan",
+    "type": "Craft Cidery & Taproom",
+    "featured": false,
+    "known": [
+      "Hard Cider",
+      "Apple Wine",
+      "Seasonal Ciders"
+    ],
+    "hours": "Daily 10am–6pm",
+    "city": "Armada",
+    "badge": ""
+  },
+  {
+    "name": "Superior Lakes Winery",
+    "region": "Southeast Michigan",
+    "type": "Winery, Mead & Cider",
+    "featured": false,
+    "known": [
+      "Mead",
+      "Wine",
+      "Cider"
+    ],
+    "hours": "Wed–Sun 12–6pm",
+    "city": "Harrison Township",
+    "badge": ""
+  },
+  {
+    "name": "Michigan by the Bottle",
+    "region": "Southeast Michigan",
+    "type": "Michigan Wine Tasting Room",
+    "featured": false,
+    "known": [
+      "Curated Michigan Wines",
+      "Flights"
+    ],
+    "hours": "Tue–Sun 12–8pm",
+    "city": "Royal Oak",
+    "badge": ""
+  },
+  {
+    "name": "3 North Vines",
+    "region": "Southeast Michigan",
+    "type": "Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Lake Huron Terroir",
+      "Estate Wines"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Croswell",
+    "badge": ""
+  },
+  {
+    "name": "B&B Wines",
+    "region": "Southeast Michigan",
+    "type": "Small-Batch Winery",
+    "featured": false,
+    "known": [
+      "Dry Wines",
+      "Semisweet",
+      "Fruit Wines"
+    ],
+    "hours": "Sat–Sun 12–5pm",
+    "city": "Sanilac County",
+    "badge": ""
+  },
+  {
+    "name": "Dizzy Daisy Winery & Vineyard",
+    "region": "Southeast Michigan",
+    "type": "Winery & Vineyard",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Fruit Wines"
+    ],
+    "hours": "Seasonal",
+    "city": "Bad Axe",
+    "badge": ""
+  },
+  {
+    "name": "Green Barn Winery",
+    "region": "Southeast Michigan",
+    "type": "Sulfite-Free Winery",
+    "featured": false,
+    "known": [
+      "Sulfite-Free Wines",
+      "Natural Wine"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Smith's Creek",
+    "badge": ""
+  },
+  {
+    "name": "The Winery North of 12",
+    "region": "Southeast Michigan",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Small-Batch"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Brooklyn",
+    "badge": ""
+  },
+  {
+    "name": "Sandhill Crane Vineyards",
+    "region": "Southeast Michigan",
+    "type": "Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Michigan Varietals",
+      "Hard Cider"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Jackson",
+    "badge": ""
+  },
+  {
+    "name": "1668 Winery & Soo Brewing",
+    "region": "Upper Peninsula",
+    "type": "Winery & Brewery",
+    "featured": false,
+    "known": [
+      "Wine",
+      "Craft Beer",
+      "Brick Oven Pizza"
+    ],
+    "hours": "Daily 11am–9pm",
+    "city": "Sault Ste. Marie",
+    "badge": ""
+  },
+  {
+    "name": "Yooper Winery",
+    "region": "Upper Peninsula",
+    "type": "Cold-Climate Winery",
+    "featured": false,
+    "known": [
+      "Cold-Climate Wines",
+      "Fruit Wines"
+    ],
+    "hours": "Thu–Sun 12–5pm",
+    "city": "Menominee",
+    "badge": ""
+  },
+  {
+    "name": "Northern Sun Winery",
+    "region": "Upper Peninsula",
+    "type": "Vineyard & Winery",
+    "featured": false,
+    "known": [
+      "Estate Wines",
+      "Cold-Hardy Varietals"
+    ],
+    "hours": "Seasonal",
+    "city": "Bark River",
+    "badge": ""
+  },
+  {
+    "name": "Leigh's Garden Winery",
+    "region": "Upper Peninsula",
+    "type": "Garden Winery",
+    "featured": false,
+    "known": [
+      "Fruit Wines",
+      "Rhubarb Wine"
+    ],
+    "hours": "Seasonal",
+    "city": "Escanaba",
+    "badge": ""
+  },
+  {
+    "name": "Threefold Vine Winery",
+    "region": "Upper Peninsula",
+    "type": "Winery & Tasting Room",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Fruit Wines"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Garden",
+    "badge": ""
+  },
+  {
+    "name": "Mackinac Trail Winery — St. Ignace",
+    "region": "Upper Peninsula",
+    "type": "Tasting Room",
+    "featured": false,
+    "known": [
+      "Marquette",
+      "Fruit Wines",
+      "Cherry Wine"
+    ],
+    "hours": "Daily 10am–6pm",
+    "city": "St. Ignace",
+    "badge": ""
+  },
+  {
+    "name": "Lume Cannabis & Pere Marquette Winery",
+    "region": "Upper Peninsula",
+    "type": "Winery",
+    "featured": false,
+    "known": [
+      "Small-Batch Wines",
+      "Estate Wines"
+    ],
+    "hours": "Seasonal",
+    "city": "Ludington",
+    "badge": ""
+  },
+  {
+    "name": "Nathaniel Rose Wines",
+    "region": "Central Michigan",
+    "type": "Multi-Region Winery",
+    "featured": false,
+    "known": [
+      "Merlot",
+      "Cabernet Sauvignon",
+      "Ice Wine",
+      "Riesling"
+    ],
+    "hours": "Mon–Sat 10am–5pm",
+    "city": "Frankenmuth",
+    "badge": ""
+  },
+  {
+    "name": "Country Corner Winery",
+    "region": "Northeast Michigan",
+    "type": "Country Winery",
+    "featured": false,
+    "known": [
+      "Maple Wine",
+      "Rhubarb Wine",
+      "Fruit Wines"
+    ],
+    "hours": "Seasonal",
+    "city": "Rose City",
+    "badge": ""
+  },
+  {
+    "name": "Rose Valley Winery",
+    "region": "Northeast Michigan",
+    "type": "Boutique Winery",
+    "featured": false,
+    "known": [
+      "Maple Wine",
+      "Rhubarb Wine",
+      "Fruit Wines"
+    ],
+    "hours": "Seasonal",
+    "city": "Rose City",
+    "badge": ""
+  },
+  {
+    "name": "Northern Natural Winery",
+    "region": "Northeast Michigan",
+    "type": "Organic Winery & Cidery",
+    "featured": false,
+    "known": [
+      "Natural Wine",
+      "Organic Hard Cider"
+    ],
+    "hours": "Seasonal",
+    "city": "Omena",
+    "badge": ""
+  },
+  {
+    "name": "Verterra Cellars",
+    "region": "Central Michigan",
+    "type": "Artisan Winery",
+    "featured": false,
+    "known": [
+      "Pinot Noir",
+      "Riesling",
+      "Orange Wine"
+    ],
+    "hours": "Fri–Sun 12–5pm",
+    "city": "Leland",
+    "badge": ""
+  },
+  {
+    "name": "Pink Barrel Cellars",
+    "region": "Central Michigan",
+    "type": "Farm Market Winery",
+    "featured": false,
+    "known": [
+      "Michigan Fruit Wines",
+      "Hard Cider"
+    ],
+    "hours": "Daily 9am–5pm",
+    "city": "Grand Rapids",
+    "badge": ""
+  },
+  {
+    "name": "Peat's Cider Social",
+    "region": "Central Michigan",
+    "type": "Craft Cidery",
+    "featured": false,
+    "known": [
+      "Craft Hard Cider",
+      "Michigan Apples"
+    ],
+    "hours": "Wed–Sun 12–8pm",
+    "city": "Grand Rapids",
+    "badge": ""
+  },
+  {
+    "name": "Robinette's Apple Haus & Winery",
+    "region": "Central Michigan",
+    "type": "Farm Winery",
+    "featured": false,
+    "known": [
+      "Apple Wine",
+      "Fruit Wines",
+      "Hard Cider"
+    ],
+    "hours": "Daily 9am–5pm",
+    "city": "Grand Rapids",
+    "badge": ""
+  },
+  {
+    "name": "Wyncroft",
+    "region": "Lake Michigan Shore",
+    "type": "Premium Estate Winery",
+    "featured": false,
+    "known": [
+      "Premium Wines",
+      "Estate Reds"
+    ],
+    "hours": "By appointment",
+    "city": "Buchanan",
+    "badge": ""
+  },
+  {
+    "name": "Vertical Detroit",
+    "region": "Southeast Michigan",
+    "type": "Wine Bar & Tasting Room",
+    "featured": false,
+    "known": [
+      "Michigan Wines",
+      "Global Selections"
+    ],
+    "hours": "Tue–Sun 4pm–11pm",
+    "city": "Detroit",
+    "badge": ""
+  },
+  {
+    "name": "Burgdorf's Winery",
+    "region": "Central Michigan",
+    "type": "Garagiste Winery & Tasting Room",
+    "city": "Webberville",
+    "hours": "Wed–Sat 12–6pm · Sun 12–5pm",
+    "known": [
+      "Cabernet Franc",
+      "Marquette",
+      "Vidal Blanc",
+      "Pinot Gris",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Graham Vineyard and Winery",
+    "region": "Central Michigan",
+    "type": "Vineyard & Winery",
+    "city": "Laingsburg",
+    "hours": "Fri–Sat 12–6pm · Sun 12–5pm",
+    "known": [
+      "Marquette",
+      "Frontenac",
+      "La Crescent",
+      "Cold-Hardy Hybrids"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Country Mill Orchard & Cider Mill",
+    "region": "Central Michigan",
+    "type": "Orchard Winery & Cider Mill",
+    "city": "Charlotte",
+    "hours": "Sat–Sun 11am–6pm (seasonal)",
+    "known": [
+      "Apple Wine",
+      "Hard Cider",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Boss Cider Company",
+    "region": "Central Michigan",
+    "type": "Cidery & Tasting Room",
+    "city": "Leslie",
+    "hours": "Thu–Sat 12–8pm",
+    "known": [
+      "Hard Cider",
+      "Apple Wine",
+      "Fruit Ciders"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Currant Mist Winery",
+    "region": "Central Michigan",
+    "type": "Winery & Restaurant",
+    "city": "Shepherd",
+    "hours": "Wed–Sun 11am–7pm",
+    "known": [
+      "Currant Wine",
+      "Gooseberry Wine",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Coon's Berry Farm & Winery",
+    "region": "Central Michigan",
+    "type": "Farm Winery",
+    "city": "Coleman",
+    "hours": "Seasonal hours",
+    "known": [
+      "Blueberry Wine",
+      "Fruit Wines",
+      "Berry Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Howell's MainStreet Winery",
+    "region": "Central Michigan",
+    "type": "Urban Winery & Pizzeria",
+    "city": "Howell",
+    "hours": "Tue–Sat 11am–9pm",
+    "known": [
+      "Michigan Wines",
+      "Artisan Pizza",
+      "Wine Flights"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Lone Oak Vineyard Estate",
+    "region": "Central Michigan",
+    "type": "Vineyard & Estate Winery",
+    "city": "Grass Lake",
+    "hours": "Fri–Sun 12–6pm",
+    "known": [
+      "Estate Wines",
+      "Cold-Hardy Varieties",
+      "Event Venue"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Meckley's Flavor Fruit Farm",
+    "region": "Central Michigan",
+    "type": "Farm Winery & Cidery",
+    "city": "Somerset Center",
+    "hours": "Seasonal hours",
+    "known": [
+      "Fruit Wines",
+      "Hard Cider",
+      "Farm Market"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "707 Winery and Brewery",
+    "region": "West Michigan",
+    "type": "Winery & Brewery",
+    "city": "Caledonia",
+    "hours": "Wed–Sat 12–8pm · Sun 12–6pm",
+    "known": [
+      "Red Blends",
+      "Craft Beer",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Cascade Winery",
+    "region": "West Michigan",
+    "type": "Urban Winery",
+    "city": "Grand Rapids",
+    "hours": "Thu–Sat 4–9pm",
+    "known": [
+      "Small-Batch Wines",
+      "Red Blends"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Hudsonville Winery",
+    "region": "West Michigan",
+    "type": "Winery & Brewery",
+    "city": "Hudsonville",
+    "hours": "Mon–Sat 11am–9pm",
+    "known": [
+      "Riesling",
+      "Red Blends",
+      "Hard Cider"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Farm House Cider Co.",
+    "region": "West Michigan",
+    "type": "Cidery",
+    "city": "Hudsonville",
+    "hours": "Seasonal hours",
+    "known": [
+      "Hard Cider",
+      "Apple Wine"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Pour Michigan Wine Barn",
+    "region": "West Michigan",
+    "type": "Wine Bar & Tasting Room",
+    "city": "Cedar Springs",
+    "hours": "Fri–Sat 12–7pm · Sun 12–5pm",
+    "known": [
+      "Michigan Wines",
+      "Wine Flights"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Glass Creek Winery",
+    "region": "West Michigan",
+    "type": "Boutique Winery",
+    "city": "Hastings",
+    "hours": "Fri–Sat 12–6pm",
+    "known": [
+      "Red Blends",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Heavenly Vineyards",
+    "region": "West Michigan",
+    "type": "Vineyard & Winery",
+    "city": "Morley",
+    "hours": "Seasonal hours",
+    "known": [
+      "Estate Wines",
+      "Cold-Hardy Varieties"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Henderson Castle Winery",
+    "region": "West Michigan",
+    "type": "Castle Winery & B&B",
+    "city": "Kalamazoo",
+    "hours": "By appointment",
+    "known": [
+      "Riesling",
+      "Red Blends",
+      "Castle Tours"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Sit and Stay Winery",
+    "region": "West Michigan",
+    "type": "Boutique Winery",
+    "city": "Kalamazoo",
+    "hours": "Wed–Sat 12–8pm",
+    "known": [
+      "Small-Batch Wines",
+      "Red Blends"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Vineyard 2121",
+    "region": "West Michigan",
+    "type": "Vineyard & Tasting Room",
+    "city": "Kalamazoo",
+    "hours": "Wed–Sun 12–8pm",
+    "known": [
+      "Estate Wines",
+      "Wine & Food Pairings",
+      "Pizza"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Cadillac Winery",
+    "region": "West Michigan",
+    "type": "Winery & Tasting Room",
+    "city": "Le Roy",
+    "hours": "Thu–Sat 12–7pm",
+    "known": [
+      "Cold-Hardy Varieties",
+      "Fruit Wines",
+      "Marquette"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Love Wines of Ludington",
+    "region": "West Michigan",
+    "type": "Boutique Winery",
+    "city": "Ludington",
+    "hours": "Seasonal hours",
+    "known": [
+      "Small-Batch Wines",
+      "Lake Michigan Shore Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Jomagrha Winery",
+    "region": "West Michigan",
+    "type": "Boutique Winery",
+    "city": "Pentwater",
+    "hours": "Seasonal hours",
+    "known": [
+      "Small-Batch Wines",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Oceana Winery & Vineyard",
+    "region": "West Michigan",
+    "type": "Vineyard & Winery",
+    "city": "New Era",
+    "hours": "Fri–Sun 12–6pm",
+    "known": [
+      "Estate Wines",
+      "Cold-Hardy Grapes"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Pleasant Valley Farm and Vineyard",
+    "region": "West Michigan",
+    "type": "Farm Vineyard & Winery",
+    "city": "Hart",
+    "hours": "Seasonal hours",
+    "known": [
+      "Estate Wines",
+      "Farm Market"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Fox Barn Market and Winery",
+    "region": "West Michigan",
+    "type": "Farm Market & Winery",
+    "city": "Shelby",
+    "hours": "Mon–Sat 9am–6pm",
+    "known": [
+      "Fruit Wines",
+      "Farm Market",
+      "Hard Cider"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Blue Water Winery",
+    "region": "Thumb & Sunrise Coast",
+    "type": "Vineyard & Winery",
+    "city": "Carsonville",
+    "hours": "Thu–Sun 12–6pm",
+    "known": [
+      "Marquette",
+      "Frontenac",
+      "La Crescent",
+      "Estate Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Sage Creek Winery",
+    "region": "Thumb & Sunrise Coast",
+    "type": "Family Winery",
+    "city": "Memphis",
+    "hours": "Thu–Sun 12–6pm",
+    "known": [
+      "Fruit Wines",
+      "Grape Wines",
+      "Hard Cider"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "The Agitated Grape",
+    "region": "Thumb & Sunrise Coast",
+    "type": "Wine Bar & Tasting Room",
+    "city": "Davison",
+    "hours": "Wed–Sat 3–9pm",
+    "known": [
+      "Michigan Wines",
+      "Wine Flights",
+      "Small Plates"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Modern Craft Winery",
+    "region": "Thumb & Sunrise Coast",
+    "type": "Craft Winery & Restaurant",
+    "city": "Au Gres",
+    "hours": "Daily 11am–8pm",
+    "known": [
+      "Fruit Wines",
+      "Sweet Wines",
+      "Lake Huron Views"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Young Farms",
+    "region": "Thumb & Sunrise Coast",
+    "type": "Farm Winery",
+    "city": "Au Gres",
+    "hours": "Seasonal hours",
+    "known": [
+      "Fruit Wines",
+      "Farm Market"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Chill Hill Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Boutique Winery",
+    "city": "Baroda",
+    "hours": "Fri–Sun 12–6pm",
+    "known": [
+      "Estate Wines",
+      "Small-Batch Reds"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Gravity Wine",
+    "region": "Lake Michigan Shore",
+    "type": "Boutique Winery",
+    "city": "Baroda",
+    "hours": "Thu–Sun 12–6pm",
+    "known": [
+      "Pinot Noir",
+      "Cabernet Franc",
+      "Natural Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Local Pour",
+    "region": "Lake Michigan Shore",
+    "type": "Tasting Room & Wine Bar",
+    "city": "Sawyer",
+    "hours": "Daily 12–8pm",
+    "known": [
+      "Michigan Wines",
+      "Wine Flights",
+      "Small Plates"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Lehman's Orchard",
+    "region": "Lake Michigan Shore",
+    "type": "Orchard Winery & Cidery",
+    "city": "Niles",
+    "hours": "Mon–Sat 9am–6pm · Sun 12–6pm",
+    "known": [
+      "Hard Cider",
+      "Fruit Wines",
+      "Apple Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Henry's Heritage Blueberry Winery",
+    "region": "Lake Michigan Shore",
+    "type": "Blueberry Winery",
+    "city": "Grand Junction",
+    "hours": "Seasonal hours",
+    "known": [
+      "Blueberry Wine",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Northville Winery",
+    "region": "Southeast Michigan",
+    "type": "Urban Winery & Tasting Room",
+    "city": "Northville",
+    "hours": "Thu–Sat 12–8pm · Sun 12–6pm",
+    "known": [
+      "Michigan Wines",
+      "Wine Flights",
+      "Small Plates"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Filipo Marc Winery",
+    "region": "Southeast Michigan",
+    "type": "Urban Winery",
+    "city": "Clinton Township",
+    "hours": "Wed–Sat 12–8pm",
+    "known": [
+      "Italian-Style Wines",
+      "Red Blends",
+      "Sangiovese"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Whole Hearted Winery",
+    "region": "Southeast Michigan",
+    "type": "Boutique Winery",
+    "city": "Davison",
+    "hours": "Fri–Sun 12–7pm",
+    "known": [
+      "Small-Batch Wines",
+      "Fruit Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Fenton Winery and Brewery",
+    "region": "Southeast Michigan",
+    "type": "Winery & Brewery",
+    "city": "Fenton",
+    "hours": "Mon–Sat 11am–10pm · Sun 12–8pm",
+    "known": [
+      "Michigan Wines",
+      "Craft Beer",
+      "Wood-Fired Pizza"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Glen Arbor Wines",
+    "region": "Leelanau",
+    "type": "Wine Bar & Tasting Room",
+    "city": "Glen Arbor",
+    "hours": "Daily 12–8pm (seasonal)",
+    "known": [
+      "Michigan Wines",
+      "Wine Flights"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "French Valley Vineyard",
+    "region": "Leelanau",
+    "type": "Vineyard & Event Barn",
+    "city": "Cedar",
+    "hours": "By appointment",
+    "known": [
+      "Estate Wines",
+      "Event Venue"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Hawkins Farm Cellars",
+    "region": "Leelanau",
+    "type": "Boutique Farm Winery",
+    "city": "Suttons Bay",
+    "hours": "Seasonal hours",
+    "known": [
+      "Small-Batch Wines",
+      "Estate Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Leelanau Wine Cellars",
+    "region": "Leelanau",
+    "type": "Wine Bar & Tasting Room",
+    "city": "Beulah",
+    "hours": "Daily 11am–6pm",
+    "known": [
+      "Riesling",
+      "Pinot Grigio",
+      "Cherry Wine"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Cellar 1914 Winery",
+    "region": "Tip of the Mitt",
+    "type": "Historic Winery",
+    "city": "Central Lake",
+    "hours": "Seasonal hours",
+    "known": [
+      "Cold-Hardy Varieties",
+      "Estate Wines"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Lost Cellars",
+    "region": "Tip of the Mitt",
+    "type": "Boutique Winery",
+    "city": "Charlevoix",
+    "hours": "Thu–Sun 12–7pm",
+    "known": [
+      "Small-Batch Wines",
+      "Cold-Hardy Hybrids"
+    ],
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "name": "Mackinac Trail Winery - Manistique",
+    "region": "Upper Peninsula",
+    "type": "Winery & Tasting Room",
+    "city": "Manistique",
+    "hours": "Mon–Sat 10am–6pm",
+    "known": [
+      "Fruit Wines",
+      "Sweet Wines",
+      "Cherry Wine"
+    ],
+    "featured": false,
+    "badge": ""
+  }
+]

@@ -13,7 +13,10 @@
     ],
     "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
     "city": "Traverse City",
-    "badge": "Pioneer · Est. 1974"
+    "badge": "Pioneer · Est. 1974",
+    "lat": 44.90688,
+    "lng": -85.51734,
+    "slug": "chateau-grand-traverse"
   },
   {
     "name": "Chateau Chantal",
@@ -29,7 +32,10 @@
     ],
     "hours": "Mon–Sat 11am–7pm · Sun 12–6pm",
     "city": "Traverse City",
-    "badge": "Featured"
+    "badge": "Featured",
+    "lat": 44.90957,
+    "lng": -85.51437,
+    "slug": "chateau-chantal"
   },
   {
     "name": "Peninsula Cellars",
@@ -45,7 +51,10 @@
     ],
     "hours": "Mon–Sat 10am–6pm · Sun 12–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.9111,
+    "lng": -85.5303,
+    "slug": "peninsula-cellars"
   },
   {
     "name": "Brys Estate Vineyard & Winery",
@@ -60,7 +69,10 @@
     ],
     "hours": "Mon–Sat 11am–6pm · Sun 12–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.8821,
+    "lng": -85.52086,
+    "slug": "brys-estate-vineyard-and-winery"
   },
   {
     "name": "Bowers Harbor Vineyards",
@@ -75,7 +87,10 @@
     ],
     "hours": "Mon–Sat 10:30am–6pm · Sun 12–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.92753,
+    "lng": -85.52682,
+    "slug": "bowers-harbor-vineyards"
   },
   {
     "name": "2 Lads Winery",
@@ -90,7 +105,10 @@
     ],
     "hours": "Daily 12–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.89049,
+    "lng": -85.54042,
+    "slug": "2-lads-winery"
   },
   {
     "name": "Mari Vineyards",
@@ -105,7 +123,10 @@
     ],
     "hours": "Mon–Sat 11am–6pm · Sun 12–5pm",
     "city": "Traverse City",
-    "badge": "Editors' Pick"
+    "badge": "Editors' Pick",
+    "lat": 44.93831,
+    "lng": -85.52584,
+    "slug": "mari-vineyards"
   },
   {
     "name": "Bonobo Winery",
@@ -120,7 +141,10 @@
     ],
     "hours": "Daily 12–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.92298,
+    "lng": -85.4955,
+    "slug": "bonobo-winery"
   },
   {
     "name": "Black Star Farms — Old Mission",
@@ -135,7 +159,10 @@
     ],
     "hours": "Daily 11am–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.85755,
+    "lng": -85.52508,
+    "slug": "black-star-farms-old-mission"
   },
   {
     "name": "Ciccone Vineyard & Winery",
@@ -150,7 +177,10 @@
     ],
     "hours": "Mon–Sat 12–5pm · Sun 12–5pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 44.90598,
+    "lng": -85.54037,
+    "slug": "ciccone-vineyard-and-winery"
   },
   {
     "name": "Verterra Winery",
@@ -165,7 +195,10 @@
     ],
     "hours": "Fri–Sun 12–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.91886,
+    "lng": -85.48665,
+    "slug": "verterra-winery"
   },
   {
     "name": "Black Star Farms — Leelanau",
@@ -180,7 +213,10 @@
     ],
     "hours": "Daily 11am–6pm",
     "city": "Suttons Bay",
-    "badge": "Editors' Pick"
+    "badge": "Editors' Pick",
+    "lat": 44.98753,
+    "lng": -85.65194,
+    "slug": "black-star-farms-leelanau"
   },
   {
     "name": "L. Mawby | Mawby Sparkling",
@@ -195,7 +231,10 @@
     ],
     "hours": "Daily 12–6pm",
     "city": "Suttons Bay",
-    "badge": "Featured"
+    "badge": "Featured",
+    "lat": 44.96328,
+    "lng": -85.6445,
+    "slug": "l-mawby-mawby-sparkling"
   },
   {
     "name": "Leelanau Cellars",
@@ -209,7 +248,10 @@
     ],
     "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
     "city": "Omena",
-    "badge": ""
+    "badge": "",
+    "lat": 45.04954,
+    "lng": -85.58681,
+    "slug": "leelanau-cellars"
   },
   {
     "name": "Good Harbor Vineyards",
@@ -224,7 +266,10 @@
     ],
     "hours": "Mon–Sat 11am–5pm · Sun 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 44.98616,
+    "lng": -85.71013,
+    "slug": "good-harbor-vineyards"
   },
   {
     "name": "Shady Lane Cellars",
@@ -239,7 +284,10 @@
     ],
     "hours": "Daily 11am–6pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 44.95723,
+    "lng": -85.65611,
+    "slug": "shady-lane-cellars"
   },
   {
     "name": "45 North Vineyard & Winery",
@@ -254,7 +302,10 @@
     ],
     "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 44.99123,
+    "lng": -85.71369,
+    "slug": "45-north-vineyard-and-winery"
   },
   {
     "name": "Bel Lago Vineyards & Winery",
@@ -269,7 +320,10 @@
     ],
     "hours": "Daily 12–5pm",
     "city": "Cedar",
-    "badge": ""
+    "badge": "",
+    "lat": 44.8519,
+    "lng": -85.79845,
+    "slug": "bel-lago-vineyards-and-winery"
   },
   {
     "name": "Left Foot Charley",
@@ -284,7 +338,10 @@
     ],
     "hours": "Daily 12–6pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.76603,
+    "lng": -85.65975,
+    "slug": "left-foot-charley"
   },
   {
     "name": "Aurora Cellars",
@@ -299,7 +356,10 @@
     ],
     "hours": "Mon–Sat 11am–6pm · Sun 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 44.96538,
+    "lng": -85.71516,
+    "slug": "aurora-cellars"
   },
   {
     "name": "Gill's Pier Vineyard & Winery",
@@ -314,7 +374,10 @@
     ],
     "hours": "Thu–Mon 12–5pm",
     "city": "Northport",
-    "badge": ""
+    "badge": "",
+    "lat": 45.13936,
+    "lng": -85.61591,
+    "slug": "gills-pier-vineyard-and-winery"
   },
   {
     "name": "Rove Estate",
@@ -328,7 +391,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.78595,
+    "lng": -85.66019,
+    "slug": "rove-estate"
   },
   {
     "name": "Raftshol Vineyards",
@@ -343,7 +409,10 @@
     ],
     "hours": "Daily 11am–5pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 44.99124,
+    "lng": -85.63551,
+    "slug": "raftshol-vineyards"
   },
   {
     "name": "Blustone Vineyards",
@@ -358,7 +427,10 @@
     ],
     "hours": "Daily 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 45.00121,
+    "lng": -85.7145,
+    "slug": "blustone-vineyards"
   },
   {
     "name": "Chateau Fontaine",
@@ -372,7 +444,10 @@
     ],
     "hours": "Mon–Sat 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 44.95466,
+    "lng": -85.71297,
+    "slug": "chateau-fontaine"
   },
   {
     "name": "Chateau de Leelanau",
@@ -386,7 +461,10 @@
     ],
     "hours": "Mon–Sat 12–5pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 44.94884,
+    "lng": -85.66011,
+    "slug": "chateau-de-leelanau"
   },
   {
     "name": "Good Neighbor Organic Vineyard",
@@ -400,7 +478,10 @@
     ],
     "hours": "Sat–Sun 12–5pm",
     "city": "Northport",
-    "badge": "Organic"
+    "badge": "Organic",
+    "lat": 45.12633,
+    "lng": -85.62411,
+    "slug": "good-neighbor-organic-vineyard"
   },
   {
     "name": "Boathouse Vineyards",
@@ -415,7 +496,10 @@
     ],
     "hours": "Daily 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 44.97898,
+    "lng": -85.69003,
+    "slug": "boathouse-vineyards"
   },
   {
     "name": "Laurentide Winery",
@@ -429,7 +513,10 @@
     ],
     "hours": "Daily 12–6pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 45.00515,
+    "lng": -85.73013,
+    "slug": "laurentide-winery"
   },
   {
     "name": "Tandem Ciders",
@@ -444,7 +531,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 45.00984,
+    "lng": -85.66045,
+    "slug": "tandem-ciders"
   },
   {
     "name": "Brengman Family Wines",
@@ -459,7 +549,10 @@
     ],
     "hours": "Mon–Sat 11am–6pm · Sun 12–5pm",
     "city": "Traverse City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.76515,
+    "lng": -85.61665,
+    "slug": "brengman-family-wines"
   },
   {
     "name": "Amoritas Vineyards",
@@ -474,7 +567,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 45.01419,
+    "lng": -85.72816,
+    "slug": "amoritas-vineyards"
   },
   {
     "name": "Bos Farmhouse",
@@ -488,7 +584,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Elk Rapids",
-    "badge": ""
+    "badge": "",
+    "lat": 44.90354,
+    "lng": -85.41718,
+    "slug": "bos-farmhouse"
   },
   {
     "name": "Tabone Vineyards",
@@ -502,7 +601,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 44.98311,
+    "lng": -85.67895,
+    "slug": "tabone-vineyards"
   },
   {
     "name": "Willow Vineyard",
@@ -516,7 +618,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 45.02045,
+    "lng": -85.64065,
+    "slug": "willow-vineyard"
   },
   {
     "name": "Silver Leaf Vineyard & Winery",
@@ -530,7 +635,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Suttons Bay",
-    "badge": ""
+    "badge": "",
+    "lat": 44.92701,
+    "lng": -85.64257,
+    "slug": "silver-leaf-vineyard-and-winery"
   },
   {
     "name": "Hawthorne Vineyards",
@@ -544,7 +652,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Lake Leelanau",
-    "badge": ""
+    "badge": "",
+    "lat": 44.97819,
+    "lng": -85.67954,
+    "slug": "hawthorne-vineyards"
   },
   {
     "name": "Gilchrist Farm Winery",
@@ -558,7 +669,10 @@
     ],
     "hours": "Seasonal",
     "city": "Suttons Bay",
-    "badge": "New"
+    "badge": "New",
+    "lat": 44.92192,
+    "lng": -85.64245,
+    "slug": "gilchrist-farm-winery"
   },
   {
     "name": "St. Julian Winery",
@@ -572,7 +686,10 @@
     ],
     "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
     "city": "Paw Paw",
-    "badge": "Est. 1921"
+    "badge": "Est. 1921",
+    "lat": 42.2099,
+    "lng": -85.89198,
+    "slug": "st-julian-winery"
   },
   {
     "name": "Round Barn Winery",
@@ -586,7 +703,10 @@
     ],
     "hours": "Daily 11am–6pm",
     "city": "Baroda",
-    "badge": "Featured"
+    "badge": "Featured",
+    "lat": 41.9509,
+    "lng": -86.49013,
+    "slug": "round-barn-winery"
   },
   {
     "name": "Tabor Hill Winery & Restaurant",
@@ -600,7 +720,10 @@
     ],
     "hours": "Daily 11am–5pm",
     "city": "Buchanan",
-    "badge": "Pioneer · 1971"
+    "badge": "Pioneer · 1971",
+    "lat": 41.82174,
+    "lng": -86.35707,
+    "slug": "tabor-hill-winery-and-restaurant"
   },
   {
     "name": "Domaine Berrien Cellars",
@@ -615,7 +738,10 @@
     ],
     "hours": "Wed–Sun 12–5pm",
     "city": "Berrien Springs",
-    "badge": "Editors' Pick"
+    "badge": "Editors' Pick",
+    "lat": 41.94977,
+    "lng": -86.34423,
+    "slug": "domaine-berrien-cellars"
   },
   {
     "name": "Hickory Creek Winery",
@@ -630,7 +756,10 @@
     ],
     "hours": "Wed–Sun 12–6pm",
     "city": "Buchanan",
-    "badge": ""
+    "badge": "",
+    "lat": 41.8246,
+    "lng": -86.35292,
+    "slug": "hickory-creek-winery"
   },
   {
     "name": "12 Corners Vineyards",
@@ -645,7 +774,10 @@
     ],
     "hours": "Thu–Mon 12–5pm",
     "city": "Benton Harbor",
-    "badge": ""
+    "badge": "",
+    "lat": 42.11156,
+    "lng": -86.45849,
+    "slug": "12-corners-vineyards"
   },
   {
     "name": "White Pine Winery",
@@ -660,7 +792,10 @@
     ],
     "hours": "Daily 11am–5pm",
     "city": "St. Joseph",
-    "badge": ""
+    "badge": "",
+    "lat": 42.10315,
+    "lng": -86.47679,
+    "slug": "white-pine-winery"
   },
   {
     "name": "Contessa Wine Cellars",
@@ -675,7 +810,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Coloma",
-    "badge": ""
+    "badge": "",
+    "lat": 42.18297,
+    "lng": -86.31345,
+    "slug": "contessa-wine-cellars"
   },
   {
     "name": "Lemon Creek Winery",
@@ -690,7 +828,10 @@
     ],
     "hours": "Mon–Sat 10am–6pm · Sun 12–5pm",
     "city": "Berrien Springs",
-    "badge": ""
+    "badge": "",
+    "lat": 41.93595,
+    "lng": -86.33617,
+    "slug": "lemon-creek-winery"
   },
   {
     "name": "Baroda Founders Wine Cellar",
@@ -704,7 +845,10 @@
     ],
     "hours": "Daily 11am–5pm",
     "city": "Baroda",
-    "badge": ""
+    "badge": "",
+    "lat": 41.94757,
+    "lng": -86.49184,
+    "slug": "baroda-founders-wine-cellar"
   },
   {
     "name": "Cody Kresta Vineyard & Winery",
@@ -718,7 +862,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Mattawan",
-    "badge": ""
+    "badge": "",
+    "lat": 42.20295,
+    "lng": -85.78129,
+    "slug": "cody-kresta-vineyard-and-winery"
   },
   {
     "name": "Filkins Vineyards",
@@ -732,7 +879,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Mattawan",
-    "badge": ""
+    "badge": "",
+    "lat": 42.20804,
+    "lng": -85.79284,
+    "slug": "filkins-vineyards"
   },
   {
     "name": "Golden Muse Winery",
@@ -746,7 +896,10 @@
     ],
     "hours": "Thu–Sun 12–6pm",
     "city": "Baroda",
-    "badge": ""
+    "badge": "",
+    "lat": 41.96973,
+    "lng": -86.49086,
+    "slug": "golden-muse-winery"
   },
   {
     "name": "Lake Michigan Vintners",
@@ -760,7 +913,10 @@
     ],
     "hours": "Wed–Sun 12–5pm",
     "city": "Benton Harbor",
-    "badge": ""
+    "badge": "",
+    "lat": 42.10591,
+    "lng": -86.45788,
+    "slug": "lake-michigan-vintners"
   },
   {
     "name": "Lawton Ridge Winery",
@@ -773,7 +929,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Lawton",
-    "badge": ""
+    "badge": "",
+    "lat": 42.17255,
+    "lng": -85.84983,
+    "slug": "lawton-ridge-winery"
   },
   {
     "name": "Solasta Winery",
@@ -787,7 +946,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Baroda",
-    "badge": ""
+    "badge": "",
+    "lat": 41.96178,
+    "lng": -86.49891,
+    "slug": "solasta-winery"
   },
   {
     "name": "Dablon Vineyards & Winery",
@@ -802,7 +964,10 @@
     ],
     "hours": "Wed–Sun 12–5pm",
     "city": "Baroda",
-    "badge": ""
+    "badge": "",
+    "lat": 41.97937,
+    "lng": -86.48326,
+    "slug": "dablon-vineyards-and-winery"
   },
   {
     "name": "Karma Vista Vineyards",
@@ -817,7 +982,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Coloma",
-    "badge": ""
+    "badge": "",
+    "lat": 42.18568,
+    "lng": -86.31669,
+    "slug": "karma-vista-vineyards"
   },
   {
     "name": "Free Run Cellars",
@@ -832,7 +1000,10 @@
     ],
     "hours": "Wed–Sun 12–5pm",
     "city": "Berrien Springs",
-    "badge": ""
+    "badge": "",
+    "lat": 41.93487,
+    "lng": -86.34595,
+    "slug": "free-run-cellars"
   },
   {
     "name": "Lazy Ballerina Winery",
@@ -846,7 +1017,10 @@
     ],
     "hours": "Thu–Mon 12–6pm",
     "city": "St. Joseph",
-    "badge": ""
+    "badge": "",
+    "lat": 42.0985,
+    "lng": -86.47699,
+    "slug": "lazy-ballerina-winery"
   },
   {
     "name": "Stranger Wine Company",
@@ -859,7 +1033,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Niles",
-    "badge": ""
+    "badge": "",
+    "lat": 41.82442,
+    "lng": -86.25834,
+    "slug": "stranger-wine-company"
   },
   {
     "name": "Fenn Valley Vineyards",
@@ -874,7 +1051,10 @@
     ],
     "hours": "Mon–Sat 10am–5pm · Sun 12–5pm",
     "city": "Fennville",
-    "badge": "Est. 1973"
+    "badge": "Est. 1973",
+    "lat": 42.59501,
+    "lng": -86.09615,
+    "slug": "fenn-valley-vineyards"
   },
   {
     "name": "Virtue Cider",
@@ -888,7 +1068,10 @@
     ],
     "hours": "Wed–Sun 12–8pm",
     "city": "Fennville",
-    "badge": "Featured"
+    "badge": "Featured",
+    "lat": 42.591,
+    "lng": -86.09355,
+    "slug": "virtue-cider"
   },
   {
     "name": "Modales Wines",
@@ -903,7 +1086,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Fennville",
-    "badge": ""
+    "badge": "",
+    "lat": 42.57794,
+    "lng": -86.10092,
+    "slug": "modales-wines"
   },
   {
     "name": "Crane's Winery",
@@ -918,7 +1104,10 @@
     ],
     "hours": "Daily 10am–5pm",
     "city": "Fennville",
-    "badge": ""
+    "badge": "",
+    "lat": 42.57772,
+    "lng": -86.10993,
+    "slug": "cranes-winery"
   },
   {
     "name": "Cogdal Vineyards",
@@ -932,7 +1121,10 @@
     ],
     "hours": "Sat–Sun 12–5pm",
     "city": "Fennville",
-    "badge": ""
+    "badge": "",
+    "lat": 42.61174,
+    "lng": -86.11294,
+    "slug": "cogdal-vineyards"
   },
   {
     "name": "Fox and Hen Winery",
@@ -945,7 +1137,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Grand Haven",
-    "badge": "New"
+    "badge": "New",
+    "lat": 43.0584,
+    "lng": -86.22387,
+    "slug": "fox-and-hen-winery"
   },
   {
     "name": "J. Petter Wine Gallery",
@@ -958,7 +1153,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Douglas",
-    "badge": ""
+    "badge": "",
+    "lat": 42.65016,
+    "lng": -86.20091,
+    "slug": "j-petter-wine-gallery"
   },
   {
     "name": "468 Urban Winery",
@@ -971,7 +1169,10 @@
     ],
     "hours": "Thu–Sun 12–7pm",
     "city": "Portage",
-    "badge": "New"
+    "badge": "New",
+    "lat": 42.20862,
+    "lng": -85.57808,
+    "slug": "468-urban-winery"
   },
   {
     "name": "Blu Dot Farm & Vineyard",
@@ -984,7 +1185,10 @@
     ],
     "hours": "Seasonal",
     "city": "Fennville",
-    "badge": "New"
+    "badge": "New",
+    "lat": 42.57628,
+    "lng": -86.08647,
+    "slug": "blu-dot-farm-and-vineyard"
   },
   {
     "name": "Red Barn Market & Winery",
@@ -998,7 +1202,10 @@
     ],
     "hours": "Daily 9am–6pm",
     "city": "Fennville",
-    "badge": ""
+    "badge": "",
+    "lat": 42.59669,
+    "lng": -86.12401,
+    "slug": "red-barn-market-and-winery"
   },
   {
     "name": "Mackinaw Trail Winery",
@@ -1013,7 +1220,10 @@
     ],
     "hours": "Daily 10am–6pm",
     "city": "Petoskey",
-    "badge": "Featured"
+    "badge": "Featured",
+    "lat": 45.37205,
+    "lng": -84.96083,
+    "slug": "mackinaw-trail-winery"
   },
   {
     "name": "Petoskey Farms Vineyard & Winery",
@@ -1028,7 +1238,10 @@
     ],
     "hours": "Wed–Sun 12–6pm",
     "city": "Petoskey",
-    "badge": ""
+    "badge": "",
+    "lat": 45.37875,
+    "lng": -84.96278,
+    "slug": "petoskey-farms-vineyard-and-winery"
   },
   {
     "name": "Walloon Lake Winery",
@@ -1042,7 +1255,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Walloon Lake",
-    "badge": ""
+    "badge": "",
+    "lat": 45.25816,
+    "lng": -84.93307,
+    "slug": "walloon-lake-winery"
   },
   {
     "name": "Maple Moon Sugarbush & Winery",
@@ -1056,7 +1272,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Petoskey",
-    "badge": ""
+    "badge": "",
+    "lat": 45.38315,
+    "lng": -84.96413,
+    "slug": "maple-moon-sugarbush-and-winery"
   },
   {
     "name": "Pond Hill Farm",
@@ -1070,7 +1289,10 @@
     ],
     "hours": "Daily 10am–6pm",
     "city": "Harbor Springs",
-    "badge": ""
+    "badge": "",
+    "lat": 45.43198,
+    "lng": -84.9863,
+    "slug": "pond-hill-farm"
   },
   {
     "name": "Crooked Vine Winery",
@@ -1084,7 +1306,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Alanson",
-    "badge": ""
+    "badge": "",
+    "lat": 45.4403,
+    "lng": -84.78181,
+    "slug": "crooked-vine-winery"
   },
   {
     "name": "Royal Farms",
@@ -1098,7 +1323,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Ellsworth",
-    "badge": ""
+    "badge": "",
+    "lat": 45.17458,
+    "lng": -85.24513,
+    "slug": "royal-farms"
   },
   {
     "name": "Rudbeckia Winery",
@@ -1112,7 +1340,10 @@
     ],
     "hours": "Thu–Sun 12–7pm",
     "city": "Petoskey",
-    "badge": ""
+    "badge": "",
+    "lat": 45.39197,
+    "lng": -84.96032,
+    "slug": "rudbeckia-winery"
   },
   {
     "name": "Seasons of the North",
@@ -1126,7 +1357,10 @@
     ],
     "hours": "Seasonal",
     "city": "Petoskey",
-    "badge": ""
+    "badge": "",
+    "lat": 45.36628,
+    "lng": -84.93923,
+    "slug": "seasons-of-the-north"
   },
   {
     "name": "Bee Well Meadery",
@@ -1140,7 +1374,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Bellaire",
-    "badge": ""
+    "badge": "",
+    "lat": 44.96864,
+    "lng": -85.21297,
+    "slug": "bee-well-meadery"
   },
   {
     "name": "Nicholas Black River Vineyard",
@@ -1153,7 +1390,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Cheboygan",
-    "badge": ""
+    "badge": "",
+    "lat": 45.43383,
+    "lng": -84.47607,
+    "slug": "nicholas-black-river-vineyard"
   },
   {
     "name": "Boyne Valley Vineyards",
@@ -1167,7 +1407,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Boyne City",
-    "badge": ""
+    "badge": "",
+    "lat": 45.20872,
+    "lng": -85.01351,
+    "slug": "boyne-valley-vineyards"
   },
   {
     "name": "End of the Road Winery",
@@ -1180,7 +1423,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Petoskey",
-    "badge": ""
+    "badge": "",
+    "lat": 45.35973,
+    "lng": -84.93816,
+    "slug": "end-of-the-road-winery"
   },
   {
     "name": "Burrone Family Vineyards",
@@ -1193,7 +1439,10 @@
     ],
     "hours": "Seasonal",
     "city": "Lachine",
-    "badge": "New"
+    "badge": "New",
+    "lat": 45.0753,
+    "lng": -83.72148,
+    "slug": "burrone-family-vineyards"
   },
   {
     "name": "Detroit Vineyards",
@@ -1206,7 +1455,10 @@
     ],
     "hours": "Wed–Sun 12–7pm",
     "city": "Detroit",
-    "badge": ""
+    "badge": "",
+    "lat": 42.33633,
+    "lng": -83.05021,
+    "slug": "detroit-vineyards"
   },
   {
     "name": "B. Nektar Meadery",
@@ -1220,7 +1472,10 @@
     ],
     "hours": "Wed–Sun 12–8pm",
     "city": "Ferndale",
-    "badge": ""
+    "badge": "",
+    "lat": 42.45313,
+    "lng": -83.13259,
+    "slug": "b-nektar-meadery"
   },
   {
     "name": "Bløm Meadworks",
@@ -1234,7 +1489,10 @@
     ],
     "hours": "Wed–Sun 12–8pm",
     "city": "Ann Arbor",
-    "badge": ""
+    "badge": "",
+    "lat": 42.27374,
+    "lng": -83.74563,
+    "slug": "bl-m-meadworks"
   },
   {
     "name": "Black Fire Winery",
@@ -1247,7 +1505,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Tecumseh",
-    "badge": ""
+    "badge": "",
+    "lat": 41.99868,
+    "lng": -83.94917,
+    "slug": "black-fire-winery"
   },
   {
     "name": "Cherry Creek Cellars",
@@ -1260,7 +1521,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Brooklyn",
-    "badge": ""
+    "badge": "",
+    "lat": 42.11023,
+    "lng": -84.24358,
+    "slug": "cherry-creek-cellars"
   },
   {
     "name": "Chateau Aeronautique Winery",
@@ -1273,7 +1537,10 @@
     ],
     "hours": "Sat–Sun 12–5pm",
     "city": "Onsted",
-    "badge": ""
+    "badge": "",
+    "lat": 42.01162,
+    "lng": -84.19404,
+    "slug": "chateau-aeronautique-winery"
   },
   {
     "name": "Pentamere Winery",
@@ -1286,7 +1553,10 @@
     ],
     "hours": "Thu–Sun 12–7pm",
     "city": "Tecumseh",
-    "badge": ""
+    "badge": "",
+    "lat": 42.00456,
+    "lng": -83.93655,
+    "slug": "pentamere-winery"
   },
   {
     "name": "Flying Otter Winery",
@@ -1299,7 +1569,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Adrian",
-    "badge": ""
+    "badge": "",
+    "lat": 41.90544,
+    "lng": -84.03809,
+    "slug": "flying-otter-winery"
   },
   {
     "name": "Blake's Hard Cider",
@@ -1313,7 +1586,10 @@
     ],
     "hours": "Daily 10am–6pm",
     "city": "Armada",
-    "badge": ""
+    "badge": "",
+    "lat": 42.85133,
+    "lng": -82.88186,
+    "slug": "blakes-hard-cider"
   },
   {
     "name": "Superior Lakes Winery",
@@ -1327,7 +1603,10 @@
     ],
     "hours": "Wed–Sun 12–6pm",
     "city": "Harrison Township",
-    "badge": ""
+    "badge": "",
+    "lat": 42.57698,
+    "lng": -82.82182,
+    "slug": "superior-lakes-winery"
   },
   {
     "name": "Michigan by the Bottle",
@@ -1340,7 +1619,10 @@
     ],
     "hours": "Tue–Sun 12–8pm",
     "city": "Royal Oak",
-    "badge": ""
+    "badge": "",
+    "lat": 42.49397,
+    "lng": -83.14924,
+    "slug": "michigan-by-the-bottle"
   },
   {
     "name": "3 North Vines",
@@ -1353,7 +1635,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Croswell",
-    "badge": ""
+    "badge": "",
+    "lat": 43.28313,
+    "lng": -82.62216,
+    "slug": "3-north-vines"
   },
   {
     "name": "B&B Wines",
@@ -1367,7 +1652,10 @@
     ],
     "hours": "Sat–Sun 12–5pm",
     "city": "Sanilac County",
-    "badge": ""
+    "badge": "",
+    "lat": 43.40765,
+    "lng": -82.82137,
+    "slug": "bandb-wines"
   },
   {
     "name": "Dizzy Daisy Winery & Vineyard",
@@ -1380,7 +1668,10 @@
     ],
     "hours": "Seasonal",
     "city": "Bad Axe",
-    "badge": ""
+    "badge": "",
+    "lat": 43.79414,
+    "lng": -82.99969,
+    "slug": "dizzy-daisy-winery-and-vineyard"
   },
   {
     "name": "Green Barn Winery",
@@ -1393,7 +1684,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Smith's Creek",
-    "badge": ""
+    "badge": "",
+    "lat": 42.90384,
+    "lng": -82.60154,
+    "slug": "green-barn-winery"
   },
   {
     "name": "The Winery North of 12",
@@ -1406,7 +1700,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Brooklyn",
-    "badge": ""
+    "badge": "",
+    "lat": 42.11784,
+    "lng": -84.24769,
+    "slug": "the-winery-north-of-12"
   },
   {
     "name": "Sandhill Crane Vineyards",
@@ -1420,7 +1717,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Jackson",
-    "badge": ""
+    "badge": "",
+    "lat": 42.23817,
+    "lng": -84.40275,
+    "slug": "sandhill-crane-vineyards"
   },
   {
     "name": "1668 Winery & Soo Brewing",
@@ -1434,7 +1734,10 @@
     ],
     "hours": "Daily 11am–9pm",
     "city": "Sault Ste. Marie",
-    "badge": ""
+    "badge": "",
+    "lat": 46.50266,
+    "lng": -84.34311,
+    "slug": "1668-winery-and-soo-brewing"
   },
   {
     "name": "Yooper Winery",
@@ -1447,7 +1750,10 @@
     ],
     "hours": "Thu–Sun 12–5pm",
     "city": "Menominee",
-    "badge": ""
+    "badge": "",
+    "lat": 45.57291,
+    "lng": -87.5582,
+    "slug": "yooper-winery"
   },
   {
     "name": "Northern Sun Winery",
@@ -1460,7 +1766,10 @@
     ],
     "hours": "Seasonal",
     "city": "Bark River",
-    "badge": ""
+    "badge": "",
+    "lat": 45.71545,
+    "lng": -87.30111,
+    "slug": "northern-sun-winery"
   },
   {
     "name": "Leigh's Garden Winery",
@@ -1473,7 +1782,10 @@
     ],
     "hours": "Seasonal",
     "city": "Escanaba",
-    "badge": ""
+    "badge": "",
+    "lat": 45.74194,
+    "lng": -87.06973,
+    "slug": "leighs-garden-winery"
   },
   {
     "name": "Threefold Vine Winery",
@@ -1486,7 +1798,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Garden",
-    "badge": ""
+    "badge": "",
+    "lat": 45.77906,
+    "lng": -86.5554,
+    "slug": "threefold-vine-winery"
   },
   {
     "name": "Mackinac Trail Winery — St. Ignace",
@@ -1500,7 +1815,10 @@
     ],
     "hours": "Daily 10am–6pm",
     "city": "St. Ignace",
-    "badge": ""
+    "badge": "",
+    "lat": 45.87603,
+    "lng": -84.72562,
+    "slug": "mackinac-trail-winery-st-ignace"
   },
   {
     "name": "Lume Cannabis & Pere Marquette Winery",
@@ -1513,7 +1831,10 @@
     ],
     "hours": "Seasonal",
     "city": "Ludington",
-    "badge": ""
+    "badge": "",
+    "lat": 43.96076,
+    "lng": -86.4485,
+    "slug": "lume-cannabis-and-pere-marquette-winery"
   },
   {
     "name": "Nathaniel Rose Wines",
@@ -1528,7 +1849,10 @@
     ],
     "hours": "Mon–Sat 10am–5pm",
     "city": "Frankenmuth",
-    "badge": ""
+    "badge": "",
+    "lat": 43.32472,
+    "lng": -83.74087,
+    "slug": "nathaniel-rose-wines"
   },
   {
     "name": "Country Corner Winery",
@@ -1542,7 +1866,10 @@
     ],
     "hours": "Seasonal",
     "city": "Rose City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.41409,
+    "lng": -84.1142,
+    "slug": "country-corner-winery"
   },
   {
     "name": "Rose Valley Winery",
@@ -1556,7 +1883,10 @@
     ],
     "hours": "Seasonal",
     "city": "Rose City",
-    "badge": ""
+    "badge": "",
+    "lat": 44.43163,
+    "lng": -84.12084,
+    "slug": "rose-valley-winery"
   },
   {
     "name": "Northern Natural Winery",
@@ -1569,7 +1899,10 @@
     ],
     "hours": "Seasonal",
     "city": "Omena",
-    "badge": ""
+    "badge": "",
+    "lat": 45.04903,
+    "lng": -85.59534,
+    "slug": "northern-natural-winery"
   },
   {
     "name": "Verterra Cellars",
@@ -1583,7 +1916,10 @@
     ],
     "hours": "Fri–Sun 12–5pm",
     "city": "Leland",
-    "badge": ""
+    "badge": "",
+    "lat": 45.02548,
+    "lng": -85.75483,
+    "slug": "verterra-cellars"
   },
   {
     "name": "Pink Barrel Cellars",
@@ -1596,7 +1932,10 @@
     ],
     "hours": "Daily 9am–5pm",
     "city": "Grand Rapids",
-    "badge": ""
+    "badge": "",
+    "lat": 42.95548,
+    "lng": -85.66732,
+    "slug": "pink-barrel-cellars"
   },
   {
     "name": "Peat's Cider Social",
@@ -1609,7 +1948,10 @@
     ],
     "hours": "Wed–Sun 12–8pm",
     "city": "Grand Rapids",
-    "badge": ""
+    "badge": "",
+    "lat": 42.96319,
+    "lng": -85.6597,
+    "slug": "peats-cider-social"
   },
   {
     "name": "Robinette's Apple Haus & Winery",
@@ -1623,7 +1965,10 @@
     ],
     "hours": "Daily 9am–5pm",
     "city": "Grand Rapids",
-    "badge": ""
+    "badge": "",
+    "lat": 42.96991,
+    "lng": -85.65787,
+    "slug": "robinettes-apple-haus-and-winery"
   },
   {
     "name": "Wyncroft",
@@ -1636,7 +1981,10 @@
     ],
     "hours": "By appointment",
     "city": "Buchanan",
-    "badge": ""
+    "badge": "",
+    "lat": 41.81359,
+    "lng": -86.35533,
+    "slug": "wyncroft"
   },
   {
     "name": "Vertical Detroit",
@@ -1649,7 +1997,10 @@
     ],
     "hours": "Tue–Sun 4pm–11pm",
     "city": "Detroit",
-    "badge": ""
+    "badge": "",
+    "lat": 42.3271,
+    "lng": -83.05364,
+    "slug": "vertical-detroit"
   },
   {
     "name": "Burgdorf's Winery",
@@ -1665,7 +2016,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.66048,
+    "lng": -84.17772,
+    "slug": "burgdorfs-winery"
   },
   {
     "name": "Graham Vineyard and Winery",
@@ -1680,7 +2034,10 @@
       "Cold-Hardy Hybrids"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.89226,
+    "lng": -84.35525,
+    "slug": "graham-vineyard-and-winery"
   },
   {
     "name": "Country Mill Orchard & Cider Mill",
@@ -1694,7 +2051,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.5614,
+    "lng": -84.84094,
+    "slug": "country-mill-orchard-and-cider-mill"
   },
   {
     "name": "Boss Cider Company",
@@ -1708,7 +2068,10 @@
       "Fruit Ciders"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.44318,
+    "lng": -84.43165,
+    "slug": "boss-cider-company"
   },
   {
     "name": "Currant Mist Winery",
@@ -1722,7 +2085,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.52601,
+    "lng": -84.68923,
+    "slug": "currant-mist-winery"
   },
   {
     "name": "Coon's Berry Farm & Winery",
@@ -1736,7 +2102,10 @@
       "Berry Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.74914,
+    "lng": -84.58766,
+    "slug": "coons-berry-farm-and-winery"
   },
   {
     "name": "Howell's MainStreet Winery",
@@ -1750,7 +2119,10 @@
       "Wine Flights"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.60879,
+    "lng": -83.9239,
+    "slug": "howells-mainstreet-winery"
   },
   {
     "name": "Lone Oak Vineyard Estate",
@@ -1764,7 +2136,10 @@
       "Event Venue"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.2558,
+    "lng": -84.2086,
+    "slug": "lone-oak-vineyard-estate"
   },
   {
     "name": "Meckley's Flavor Fruit Farm",
@@ -1778,7 +2153,10 @@
       "Farm Market"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.05663,
+    "lng": -84.41357,
+    "slug": "meckleys-flavor-fruit-farm"
   },
   {
     "name": "707 Winery and Brewery",
@@ -1792,7 +2170,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.78155,
+    "lng": -85.51554,
+    "slug": "707-winery-and-brewery"
   },
   {
     "name": "Cascade Winery",
@@ -1805,7 +2186,10 @@
       "Red Blends"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.94764,
+    "lng": -85.67672,
+    "slug": "cascade-winery"
   },
   {
     "name": "Hudsonville Winery",
@@ -1819,7 +2203,10 @@
       "Hard Cider"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.87736,
+    "lng": -85.86194,
+    "slug": "hudsonville-winery"
   },
   {
     "name": "Farm House Cider Co.",
@@ -1832,7 +2219,10 @@
       "Apple Wine"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.87152,
+    "lng": -85.85684,
+    "slug": "farm-house-cider-co"
   },
   {
     "name": "Pour Michigan Wine Barn",
@@ -1845,7 +2235,10 @@
       "Wine Flights"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.22298,
+    "lng": -85.54581,
+    "slug": "pour-michigan-wine-barn"
   },
   {
     "name": "Glass Creek Winery",
@@ -1858,7 +2251,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.64145,
+    "lng": -85.29223,
+    "slug": "glass-creek-winery"
   },
   {
     "name": "Heavenly Vineyards",
@@ -1871,7 +2267,10 @@
       "Cold-Hardy Varieties"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.48296,
+    "lng": -85.44481,
+    "slug": "heavenly-vineyards"
   },
   {
     "name": "Henderson Castle Winery",
@@ -1885,7 +2284,10 @@
       "Castle Tours"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.29967,
+    "lng": -85.58769,
+    "slug": "henderson-castle-winery"
   },
   {
     "name": "Sit and Stay Winery",
@@ -1898,7 +2300,10 @@
       "Red Blends"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.30355,
+    "lng": -85.58589,
+    "slug": "sit-and-stay-winery"
   },
   {
     "name": "Vineyard 2121",
@@ -1912,7 +2317,10 @@
       "Pizza"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.28623,
+    "lng": -85.57668,
+    "slug": "vineyard-2121"
   },
   {
     "name": "Cadillac Winery",
@@ -1926,7 +2334,10 @@
       "Marquette"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 44.03907,
+    "lng": -85.45946,
+    "slug": "cadillac-winery"
   },
   {
     "name": "Love Wines of Ludington",
@@ -1939,7 +2350,10 @@
       "Lake Michigan Shore Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.96708,
+    "lng": -86.451,
+    "slug": "love-wines-of-ludington"
   },
   {
     "name": "Jomagrha Winery",
@@ -1952,7 +2366,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.78859,
+    "lng": -86.43023,
+    "slug": "jomagrha-winery"
   },
   {
     "name": "Oceana Winery & Vineyard",
@@ -1965,7 +2382,10 @@
       "Cold-Hardy Grapes"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.56269,
+    "lng": -86.3406,
+    "slug": "oceana-winery-and-vineyard"
   },
   {
     "name": "Pleasant Valley Farm and Vineyard",
@@ -1978,7 +2398,10 @@
       "Farm Market"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.69586,
+    "lng": -86.35864,
+    "slug": "pleasant-valley-farm-and-vineyard"
   },
   {
     "name": "Fox Barn Market and Winery",
@@ -1992,7 +2415,10 @@
       "Hard Cider"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.61466,
+    "lng": -86.36763,
+    "slug": "fox-barn-market-and-winery"
   },
   {
     "name": "Blue Water Winery",
@@ -2007,7 +2433,10 @@
       "Estate Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.43489,
+    "lng": -82.6721,
+    "slug": "blue-water-winery"
   },
   {
     "name": "Sage Creek Winery",
@@ -2021,7 +2450,10 @@
       "Hard Cider"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.90003,
+    "lng": -82.77379,
+    "slug": "sage-creek-winery"
   },
   {
     "name": "The Agitated Grape",
@@ -2035,7 +2467,10 @@
       "Small Plates"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.04245,
+    "lng": -83.51937,
+    "slug": "the-agitated-grape"
   },
   {
     "name": "Modern Craft Winery",
@@ -2049,7 +2484,10 @@
       "Lake Huron Views"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 44.04107,
+    "lng": -83.694,
+    "slug": "modern-craft-winery"
   },
   {
     "name": "Young Farms",
@@ -2062,7 +2500,10 @@
       "Farm Market"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 44.04245,
+    "lng": -83.68862,
+    "slug": "young-farms"
   },
   {
     "name": "Chill Hill Winery",
@@ -2075,7 +2516,10 @@
       "Small-Batch Reds"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 41.97641,
+    "lng": -86.49871,
+    "slug": "chill-hill-winery"
   },
   {
     "name": "Gravity Wine",
@@ -2089,7 +2533,10 @@
       "Natural Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 41.92876,
+    "lng": -86.4734,
+    "slug": "gravity-wine"
   },
   {
     "name": "Local Pour",
@@ -2103,7 +2550,10 @@
       "Small Plates"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 41.88991,
+    "lng": -86.58488,
+    "slug": "local-pour"
   },
   {
     "name": "Lehman's Orchard",
@@ -2117,7 +2567,10 @@
       "Apple Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 41.82451,
+    "lng": -86.26173,
+    "slug": "lehmans-orchard"
   },
   {
     "name": "Henry's Heritage Blueberry Winery",
@@ -2130,7 +2583,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.39623,
+    "lng": -86.07357,
+    "slug": "henrys-heritage-blueberry-winery"
   },
   {
     "name": "Northville Winery",
@@ -2144,7 +2600,10 @@
       "Small Plates"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.43622,
+    "lng": -83.47894,
+    "slug": "northville-winery"
   },
   {
     "name": "Filipo Marc Winery",
@@ -2158,7 +2617,10 @@
       "Sangiovese"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.58163,
+    "lng": -82.91584,
+    "slug": "filipo-marc-winery"
   },
   {
     "name": "Whole Hearted Winery",
@@ -2171,7 +2633,10 @@
       "Fruit Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 43.02474,
+    "lng": -83.51332,
+    "slug": "whole-hearted-winery"
   },
   {
     "name": "Fenton Winery and Brewery",
@@ -2185,7 +2650,10 @@
       "Wood-Fired Pizza"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 42.8024,
+    "lng": -83.70954,
+    "slug": "fenton-winery-and-brewery"
   },
   {
     "name": "Glen Arbor Wines",
@@ -2198,7 +2666,10 @@
       "Wine Flights"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 44.89018,
+    "lng": -86.03232,
+    "slug": "glen-arbor-wines"
   },
   {
     "name": "French Valley Vineyard",
@@ -2211,7 +2682,10 @@
       "Event Venue"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 44.85086,
+    "lng": -85.80255,
+    "slug": "french-valley-vineyard"
   },
   {
     "name": "Hawkins Farm Cellars",
@@ -2224,7 +2698,10 @@
       "Estate Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 44.93831,
+    "lng": -85.68378,
+    "slug": "hawkins-farm-cellars"
   },
   {
     "name": "Leelanau Wine Cellars",
@@ -2238,7 +2715,10 @@
       "Cherry Wine"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 44.63388,
+    "lng": -86.08549,
+    "slug": "leelanau-wine-cellars"
   },
   {
     "name": "Cellar 1914 Winery",
@@ -2251,7 +2731,10 @@
       "Estate Wines"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 45.07701,
+    "lng": -85.26588,
+    "slug": "cellar-1914-winery"
   },
   {
     "name": "Lost Cellars",
@@ -2264,7 +2747,10 @@
       "Cold-Hardy Hybrids"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 45.31133,
+    "lng": -85.26169,
+    "slug": "lost-cellars"
   },
   {
     "name": "Mackinac Trail Winery - Manistique",
@@ -2278,6 +2764,9 @@
       "Cherry Wine"
     ],
     "featured": false,
-    "badge": ""
+    "badge": "",
+    "lat": 45.95132,
+    "lng": -86.24971,
+    "slug": "mackinac-trail-winery-manistique"
   }
 ]

@@ -1,0 +1,450 @@
+{
+  "Adrian": {
+    "lat": 41.89752,
+    "lng": -84.03731
+  },
+  "Alanson": {
+    "lat": 45.44418,
+    "lng": -84.78671
+  },
+  "Ann Arbor": {
+    "lat": 42.2808,
+    "lng": -83.743
+  },
+  "Armada": {
+    "lat": 42.8442,
+    "lng": -82.8844
+  },
+  "Au Gres": {
+    "lat": 44.04863,
+    "lng": -83.69582
+  },
+  "Bad Axe": {
+    "lat": 43.80206,
+    "lng": -83.00047
+  },
+  "Bangor": {
+    "lat": 42.31254,
+    "lng": -86.11308
+  },
+  "Bark River": {
+    "lat": 45.70999,
+    "lng": -87.30521
+  },
+  "Baroda": {
+    "lat": 41.9556,
+    "lng": -86.4856
+  },
+  "Bellaire": {
+    "lat": 44.97542,
+    "lng": -85.21
+  },
+  "Benton Harbor": {
+    "lat": 42.1167,
+    "lng": -86.4542
+  },
+  "Berrien Springs": {
+    "lat": 41.9473,
+    "lng": -86.3389
+  },
+  "Beulah": {
+    "lat": 44.63194,
+    "lng": -86.09092
+  },
+  "Boyne City": {
+    "lat": 45.2167,
+    "lng": -85.0139
+  },
+  "Brooklyn": {
+    "lat": 42.10587,
+    "lng": -84.24828
+  },
+  "Buchanan": {
+    "lat": 41.8273,
+    "lng": -86.3611
+  },
+  "Caledonia": {
+    "lat": 42.7892,
+    "lng": -85.5139
+  },
+  "Carsonville": {
+    "lat": 43.42697,
+    "lng": -82.67132
+  },
+  "Cedar": {
+    "lat": 44.8456,
+    "lng": -85.795
+  },
+  "Cedar Springs": {
+    "lat": 43.2234,
+    "lng": -85.5514
+  },
+  "Central Lake": {
+    "lat": 45.0697,
+    "lng": -85.2636
+  },
+  "Charlevoix": {
+    "lat": 45.3178,
+    "lng": -85.2584
+  },
+  "Charlotte": {
+    "lat": 42.56374,
+    "lng": -84.83558
+  },
+  "Cheboygan": {
+    "lat": 45.44175,
+    "lng": -84.47685
+  },
+  "Clinton Township": {
+    "lat": 42.58698,
+    "lng": -82.92
+  },
+  "Coleman": {
+    "lat": 43.7567,
+    "lng": -84.58584
+  },
+  "Coloma": {
+    "lat": 42.1861,
+    "lng": -86.3083
+  },
+  "Croswell": {
+    "lat": 43.2753,
+    "lng": -82.621
+  },
+  "Davison": {
+    "lat": 43.03469,
+    "lng": -83.51802
+  },
+  "Detroit": {
+    "lat": 42.3314,
+    "lng": -83.0458
+  },
+  "Douglas": {
+    "lat": 42.6428,
+    "lng": -86.2031
+  },
+  "East Jordan": {
+    "lat": 45.1581,
+    "lng": -85.1281
+  },
+  "Elk Rapids": {
+    "lat": 44.8956,
+    "lng": -85.4165
+  },
+  "Ellsworth": {
+    "lat": 45.1667,
+    "lng": -85.2461
+  },
+  "Empire": {
+    "lat": 44.8111,
+    "lng": -86.06
+  },
+  "Escanaba": {
+    "lat": 45.74557,
+    "lng": -87.06474
+  },
+  "Fennville": {
+    "lat": 42.5939,
+    "lng": -86.1017
+  },
+  "Fenton": {
+    "lat": 42.79781,
+    "lng": -83.70495
+  },
+  "Ferndale": {
+    "lat": 42.4606,
+    "lng": -83.1346
+  },
+  "Flushing": {
+    "lat": 43.06308,
+    "lng": -83.85107
+  },
+  "Frankenmuth": {
+    "lat": 43.33237,
+    "lng": -83.73923
+  },
+  "Garden": {
+    "lat": 45.7747,
+    "lng": -86.5507
+  },
+  "Gladwin": {
+    "lat": 43.97478,
+    "lng": -84.38732
+  },
+  "Glen Arbor": {
+    "lat": 44.8981,
+    "lng": -86.0331
+  },
+  "Grand Haven": {
+    "lat": 43.0631,
+    "lng": -86.2284
+  },
+  "Grand Junction": {
+    "lat": 42.4042,
+    "lng": -86.07308
+  },
+  "Grand Rapids": {
+    "lat": 42.9634,
+    "lng": -85.6681
+  },
+  "Grass Lake": {
+    "lat": 42.25087,
+    "lng": -84.21301
+  },
+  "Harbor Springs": {
+    "lat": 45.4317,
+    "lng": -84.9919
+  },
+  "Harrison Township": {
+    "lat": 42.5845,
+    "lng": -82.8199
+  },
+  "Hart": {
+    "lat": 43.6986,
+    "lng": -86.3639
+  },
+  "Hastings": {
+    "lat": 42.64845,
+    "lng": -85.28952
+  },
+  "Highland": {
+    "lat": 44.14557,
+    "lng": -85.26643
+  },
+  "Holland": {
+    "lat": 42.7875,
+    "lng": -86.1089
+  },
+  "Howell": {
+    "lat": 42.60726,
+    "lng": -83.9294
+  },
+  "Hudsonville": {
+    "lat": 42.87089,
+    "lng": -85.86523
+  },
+  "Jackson": {
+    "lat": 42.2459,
+    "lng": -84.4013
+  },
+  "Kalamazoo": {
+    "lat": 42.2917,
+    "lng": -85.5872
+  },
+  "Lachine": {
+    "lat": 45.07751,
+    "lng": -83.7161
+  },
+  "Laingsburg": {
+    "lat": 42.89156,
+    "lng": -84.34967
+  },
+  "Lake Leelanau": {
+    "lat": 44.9806,
+    "lng": -85.7117
+  },
+  "Lake Orion": {
+    "lat": 42.78448,
+    "lng": -83.23966
+  },
+  "Lansing": {
+    "lat": 42.7325,
+    "lng": -84.5555
+  },
+  "Lapeer": {
+    "lat": 43.09048,
+    "lng": -83.23337
+  },
+  "Lawton": {
+    "lat": 42.1673,
+    "lng": -85.8456
+  },
+  "Le Roy": {
+    "lat": 44.0381,
+    "lng": -85.4539
+  },
+  "Leland": {
+    "lat": 45.02288,
+    "lng": -85.76012
+  },
+  "Leslie": {
+    "lat": 42.45117,
+    "lng": -84.43194
+  },
+  "Lowell": {
+    "lat": 42.9336,
+    "lng": -85.34186
+  },
+  "Ludington": {
+    "lat": 43.9553,
+    "lng": -86.4526
+  },
+  "Manistique": {
+    "lat": 45.95779,
+    "lng": -86.24642
+  },
+  "Marquette": {
+    "lat": 46.5436,
+    "lng": -87.3954
+  },
+  "Mattawan": {
+    "lat": 42.2095,
+    "lng": -85.7845
+  },
+  "Memphis": {
+    "lat": 42.8964,
+    "lng": -82.7688
+  },
+  "Menominee": {
+    "lat": 45.57857,
+    "lng": -87.56216
+  },
+  "Midland": {
+    "lat": 43.61558,
+    "lng": -84.24721
+  },
+  "Morley": {
+    "lat": 43.49086,
+    "lng": -85.44393
+  },
+  "New Era": {
+    "lat": 43.55918,
+    "lng": -86.34563
+  },
+  "Niles": {
+    "lat": 41.82977,
+    "lng": -86.25418
+  },
+  "Northport": {
+    "lat": 45.1314,
+    "lng": -85.6165
+  },
+  "Northville": {
+    "lat": 42.43108,
+    "lng": -83.48323
+  },
+  "Omena": {
+    "lat": 45.0569,
+    "lng": -85.589
+  },
+  "Onsted": {
+    "lat": 42.00616,
+    "lng": -84.18994
+  },
+  "Paw Paw": {
+    "lat": 42.2178,
+    "lng": -85.8911
+  },
+  "Pentwater": {
+    "lat": 43.78173,
+    "lng": -86.43311
+  },
+  "Petoskey": {
+    "lat": 45.3733,
+    "lng": -84.9553
+  },
+  "Portage": {
+    "lat": 42.2011,
+    "lng": -85.58
+  },
+  "Remus": {
+    "lat": 43.5967,
+    "lng": -85.14475
+  },
+  "Rockford": {
+    "lat": 43.11972,
+    "lng": -85.5596
+  },
+  "Rose City": {
+    "lat": 44.42145,
+    "lng": -84.11639
+  },
+  "Royal Oak": {
+    "lat": 42.4895,
+    "lng": -83.1446
+  },
+  "Sanilac County": {
+    "lat": 43.41507,
+    "lng": -82.82347
+  },
+  "Saugatuck": {
+    "lat": 42.6547,
+    "lng": -86.2019
+  },
+  "Sault Ste. Marie": {
+    "lat": 46.4953,
+    "lng": -84.3453
+  },
+  "Sawyer": {
+    "lat": 41.88532,
+    "lng": -86.58947
+  },
+  "Scottville": {
+    "lat": 43.95473,
+    "lng": -86.28008
+  },
+  "Shelby": {
+    "lat": 43.60862,
+    "lng": -86.36396
+  },
+  "Shepherd": {
+    "lat": 43.52448,
+    "lng": -84.69473
+  },
+  "Smith's Creek": {
+    "lat": 42.9095,
+    "lng": -82.6055
+  },
+  "Somerset Center": {
+    "lat": 42.05,
+    "lng": -84.4167
+  },
+  "South Haven": {
+    "lat": 42.4031,
+    "lng": -86.2736
+  },
+  "Spring Lake": {
+    "lat": 43.07696,
+    "lng": -86.197
+  },
+  "St. Ignace": {
+    "lat": 45.86867,
+    "lng": -84.72781
+  },
+  "St. Joseph": {
+    "lat": 42.1097,
+    "lng": -86.48
+  },
+  "Suttons Bay": {
+    "lat": 44.9767,
+    "lng": -85.6506
+  },
+  "Tecumseh": {
+    "lat": 42.00393,
+    "lng": -83.94494
+  },
+  "Three Rivers": {
+    "lat": 41.94427,
+    "lng": -85.63462
+  },
+  "Traverse City": {
+    "lat": 44.7631,
+    "lng": -85.6206
+  },
+  "Troy": {
+    "lat": 42.60559,
+    "lng": -83.14993
+  },
+  "Walloon Lake": {
+    "lat": 45.26612,
+    "lng": -84.93366
+  },
+  "Watervliet": {
+    "lat": 42.18671,
+    "lng": -86.26058
+  },
+  "Webberville": {
+    "lat": 42.6667,
+    "lng": -84.1742
+  }
+}

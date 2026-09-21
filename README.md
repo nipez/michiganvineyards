@@ -15,14 +15,16 @@ Then open the URL `serve` prints (usually http://localhost:3000).
 ## Layout
 
 - `index.html` — homepage
-- `directory.html` — filterable winery directory
+- `directory.html` — filterable winery directory (grid / list / **map** via `?view=map`)
 - `regions.html`, `wine-trails.html`, `plan-your-visit.html` — planning pages
 - `the-vine.html` — editorial / blog template
 - `events.html`, `about.html`, `advertise.html`, `contact.html`
 - `winery-detail.html` — winery detail template
 - `wineries/` — 163 individual winery pages
 - `winery-detail-images/` — 8 placeholder photos
-- `wineries_data.json` — winery dataset (name, region, type, hours, city)
+- `wineries_data.json` — winery dataset (name, region, type, hours, city, lat/lng)
+- `city_coords.json` — city-level coordinate lookup used for the directory map
+- `scripts/geocode-wineries.py` — regenerate lat/lng from city coords
 - `sitemap.xml`, `sitemap.html`, `robots.txt`
 
 ## Design system

@@ -96,7 +96,7 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 .itin-section{background:var(--cream);padding:70px 0;}
 .itin-inner{max-width:1340px;margin:0 auto;padding:0 40px;}
 .itin-tabs{display:flex;gap:6px;margin-bottom:36px;flex-wrap:wrap;}
-.itin-tab{padding:10px 22px;border-radius:30px;font-size:.84rem;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:all .25s;border:1.5px solid rgba(27,58,45,0.1);background:var(--white);color:var(--text);}
+.itin-tab{padding:10px 22px;border-radius:30px;font-family:'Outfit',sans-serif;font-size:.84rem;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:all .25s;border:1.5px solid rgba(27,58,45,0.1);background:var(--white);color:var(--text);}
 .itin-tab:hover{border-color:var(--forest);}
 .itin-tab.active{background:var(--forest);color:var(--cream);border-color:var(--forest);}
 .itin-panel{display:none;}.itin-panel.active{display:block;}
@@ -115,7 +115,13 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 .itin-stop-time{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-light);min-width:80px;padding-top:2px;}
 .itin-stop-detail{}
 .itin-stop-name{font-weight:600;color:var(--forest);font-size:.94rem;margin-bottom:2px;}
+.itin-stop-name a{color:var(--forest);text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.5);transition:color .25s,border-color .25s;}
+.itin-stop-name a:hover{color:var(--burgundy);border-color:var(--gold);}
 .itin-stop-note{font-size:.86rem;color:var(--text-light);line-height:1.55;}
+.itin-stop-note a{color:var(--forest);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.35);}
+.itin-stop-note a:hover{border-color:var(--gold);color:var(--burgundy);}
+.itin-day-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-warm);margin:18px 0 4px;padding-top:8px;border-top:1px solid rgba(27,58,45,0.08);}
+.itin-day-label:first-child{margin-top:0;padding-top:0;border-top:none;}
 
 .itin-meta{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:20px;}
 .itin-meta-item{display:flex;align-items:center;gap:6px;font-size:.86rem;color:var(--text-light);}
@@ -223,6 +229,8 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
   .section{padding:40px 20px;}
   .page-hero-content{padding:50px 20px 40px;}.breadcrumbs{padding:10px 20px;}
   .itin-section{padding:50px 0;}.itin-inner{padding:0 20px;}.itin-content{padding:20px;}
+  .itin-tab{padding:9px 14px;font-size:.78rem;}
+  .itin-stop{flex-direction:column;gap:4px;}.itin-stop-time{min-width:0;}
   .season-grid{grid-template-columns:1fr;}.season-card{min-height:200px;}
   .logistics-grid{grid-template-columns:1fr;}
   .tips-section{padding:50px 0;}.tips-inner{padding:0 20px;}
@@ -320,121 +328,156 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 <div class="itin-section">
 <div class="itin-inner">
 <div class="section-header">
-<div class="section-tag">Curated Itineraries</div>
-<div class="section-title">Ready-Made Routes for Every Kind of Trip</div>
-<div class="section-subtitle">Pick a trip length and we'll map out the rest — including where to taste, eat, and stay.</div>
+<div class="section-tag">Weekend Itinerary Builder</div>
+<div class="section-title">Sample Routes You Can Follow Stop by Stop</div>
+<div class="section-subtitle">Pick a trip style, tap any winery stop for hours and details, then customize from there.</div>
 </div>
-<div class="itin-tabs">
-<div class="itin-tab active" onclick="showItin('afternoon')">Afternoon Escape</div>
-<div class="itin-tab" onclick="showItin('weekend')">Weekend Getaway</div>
-<div class="itin-tab" onclick="showItin('weeklong')">Week-Long Tour</div>
-<div class="itin-tab" onclick="showItin('chicago')">Chicago Day Trip</div>
+<div class="itin-tabs" role="tablist">
+<button type="button" class="itin-tab active" data-itin="afternoon" onclick="showItin('afternoon', this)">Afternoon Escape</button>
+<button type="button" class="itin-tab" data-itin="weekend" onclick="showItin('weekend', this)">TC Weekend</button>
+<button type="button" class="itin-tab" data-itin="fennville" onclick="showItin('fennville', this)">Fennville Day Trip</button>
+<button type="button" class="itin-tab" data-itin="chicago" onclick="showItin('chicago', this)">Chicago Day Trip</button>
+<button type="button" class="itin-tab" data-itin="weeklong" onclick="showItin('weeklong', this)">Week-Long Tour</button>
 </div>
 
-<!-- Afternoon -->
-<div class="itin-panel active" id="itin-afternoon">
+<!-- Afternoon — Old Mission -->
+<div class="itin-panel active" id="itin-afternoon" role="tabpanel">
 <div class="itin-card">
 <div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/7.jpg');"></div><div class="itin-img-badge">Half Day</div></div>
 <div class="itin-content">
 <div class="itin-label">Old Mission Peninsula</div>
 <div class="itin-name">The Classic Afternoon Tasting</div>
-<div class="itin-desc">The quintessential Traverse City wine experience. Four wineries along M-37, each with bay views and world-class cool-climate wines. Perfect for visitors already in the TC area who have a free afternoon.</div>
+<div class="itin-desc">The quintessential Traverse City wine experience. Start downtown, then drive M-37 for bay-view tastings. Perfect if you're already in TC with a free afternoon.</div>
 <div class="itin-meta">
 <div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> 4–5 hours</div>
-<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> 19 miles</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> ~19 miles</div>
 <div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 4 wineries</div>
 </div>
 <div class="itin-stops">
-<div class="itin-stop"><div class="itin-stop-time">12:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Left Foot Charley (downtown TC)</div><div class="itin-stop-note">Urban winery in The Village. Casual vibe, excellent Riesling and pétillant naturel.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Brys Estate</div><div class="itin-stop-note">Hilltop tasting room with panoramic bay views. Try the Naked Chardonnay and Signature Red.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">3:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Mari Vineyards</div><div class="itin-stop-note">Underground cellar tour if time allows. Nebbiolo and Cab Franc are the stars.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">5:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Chateau Grand Traverse</div><div class="itin-stop-note">End at the granddaddy of Michigan wine. Grab a bottle of their Ice Wine as a souvenir.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">12:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/left-foot-charley.html">Left Foot Charley</a></div><div class="itin-stop-note">Urban winery in The Village (downtown TC). Casual vibe, excellent Riesling and pétillant naturel.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/brys-estate-vineyard-and-winery.html">Brys Estate Vineyard &amp; Winery</a></div><div class="itin-stop-note">Hilltop tasting room with panoramic bay views. Try the Naked Chardonnay and Signature Red.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">3:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/mari-vineyards.html">Mari Vineyards</a></div><div class="itin-stop-note">Underground cellar tour if time allows. Nebbiolo and Cab Franc are the stars.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">5:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/chateau-grand-traverse.html">Chateau Grand Traverse</a></div><div class="itin-stop-note">End at the pioneer of Michigan wine. Grab a bottle of Ice Wine as a souvenir.</div></div></div>
 </div>
 <div class="itin-actions">
 <a href="https://traversecitywinetour.com" class="itin-btn primary" target="_blank" rel="noopener">Book This Tour in TC</a>
-<a href="winery-detail.html?w=?region=old-mission" class="itin-btn secondary">View All Old Mission Wineries</a>
+<a href="regions.html#old-mission" class="itin-btn secondary">Explore Old Mission Region</a>
 </div>
 </div>
 </div>
 </div>
 
-<!-- Weekend -->
-<div class="itin-panel" id="itin-weekend">
+<!-- Weekend — Old Mission + Leelanau -->
+<div class="itin-panel" id="itin-weekend" role="tabpanel">
 <div class="itin-card">
 <div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/1.jpg');"></div><div class="itin-img-badge">2 Days</div></div>
 <div class="itin-content">
 <div class="itin-label">Old Mission + Leelanau</div>
 <div class="itin-name">The Traverse City Weekend</div>
-<div class="itin-desc">Two full days exploring both peninsulas — Michigan's two premier wine regions. Stay in Traverse City and take a different direction each morning. Covers 8–10 wineries, plus dining and Sleeping Bear Dunes.</div>
+<div class="itin-desc">Two full days on Michigan's premier peninsulas. Stay in Traverse City — Old Mission on day one, Leelanau on day two — with dinner downtown and an optional Sleeping Bear detour.</div>
 <div class="itin-meta">
 <div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> 2 days</div>
 <div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> ~80 miles total</div>
-<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 8–10 wineries</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 8 wineries</div>
 </div>
 <div class="itin-stops">
-<div class="itin-stop"><div class="itin-stop-time">Day 1 AM</div><div class="itin-stop-detail"><div class="itin-stop-name">Old Mission Peninsula</div><div class="itin-stop-note">Drive M-37 north — Brys Estate, Mari Vineyards, 2 Lads, Chateau Chantal. Lunch at the Jolly Pumpkin.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">Day 1 PM</div><div class="itin-stop-detail"><div class="itin-stop-name">Downtown Traverse City</div><div class="itin-stop-note">Walk Front Street. Dinner at The Cook's House or Trattoria Stella.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">Day 2 AM</div><div class="itin-stop-detail"><div class="itin-stop-name">Leelanau Peninsula (south)</div><div class="itin-stop-note">Black Star Farms, Shady Lane Cellars, Left Foot Charley's Leelanau tasting room.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">Day 2 PM</div><div class="itin-stop-detail"><div class="itin-stop-name">Leelanau Peninsula (north)</div><div class="itin-stop-note">L. Mawby for sparkling, Good Harbor Vineyards. Detour to Sleeping Bear Dunes if time allows.</div></div></div>
+<div class="itin-day-label">Day 1 — Old Mission Peninsula</div>
+<div class="itin-stop"><div class="itin-stop-time">10:30 am</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/brys-estate-vineyard-and-winery.html">Brys Estate Vineyard &amp; Winery</a></div><div class="itin-stop-note">Open the peninsula with bay views and a solid flight of cool-climate whites and reds.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">12:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/mari-vineyards.html">Mari Vineyards</a></div><div class="itin-stop-note">Cellar architecture and Italian-inspired plantings — Nebbiolo and Cab Franc shine here.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">1:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/2-lads-winery.html">2 Lads Winery</a></div><div class="itin-stop-note">Modern tasting room overlooking East Bay. Strong Cabernet Franc and sparkling options.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">3:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/chateau-chantal.html">Chateau Chantal</a></div><div class="itin-stop-note">Hilltop chateau with lodging and sunset views — a classic Old Mission closer.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Evening</div><div class="itin-stop-detail"><div class="itin-stop-name">Downtown Traverse City</div><div class="itin-stop-note">Walk Front Street. Dinner at The Cook's House or Trattoria Stella.</div></div></div>
+<div class="itin-day-label">Day 2 — Leelanau Peninsula</div>
+<div class="itin-stop"><div class="itin-stop-time">10:30 am</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/black-star-farms-leelanau.html">Black Star Farms — Leelanau</a></div><div class="itin-stop-note">Estate tasting room with cider and spirits alongside the wine portfolio.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">12:15 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/shady-lane-cellars.html">Shady Lane Cellars</a></div><div class="itin-stop-note">Quiet driveway stop known for thoughtful whites and a relaxed patio pace.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/l-mawby-mawby-sparkling.html">L. Mawby | Mawby Sparkling</a></div><div class="itin-stop-note">Michigan's sparkling specialist — pour a flight of Méthode Champenoise and pét-nats.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">3:45 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/good-harbor-vineyards.html">Good Harbor Vineyards</a></div><div class="itin-stop-note">Family estate near Glen Arbor. Detour to Sleeping Bear Dunes if daylight remains.</div></div></div>
 </div>
 <div class="itin-actions">
 <a href="https://traversecitywinetour.com" class="itin-btn primary" target="_blank" rel="noopener">Book This Tour in TC</a>
-<a href="wine-trails.html#leelanau" class="itin-btn secondary">View Leelanau Trail</a>
+<a href="regions.html#leelanau" class="itin-btn secondary">Explore Leelanau Region</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Fennville Day Trip -->
+<div class="itin-panel" id="itin-fennville" role="tabpanel">
+<div class="itin-card">
+<div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/4.jpg');"></div><div class="itin-img-badge">Day Trip</div></div>
+<div class="itin-content">
+<div class="itin-label">Fennville / Saugatuck</div>
+<div class="itin-name">The Southwest Orchard Loop</div>
+<div class="itin-desc">A compact Fennville circuit between Saugatuck and Holland — estate vinifera, orchard fruit wines, pét-nat, and a cidery closer. Ideal from Grand Rapids or as a Chicago-weekend add-on north of Lake Michigan Shore.</div>
+<div class="itin-meta">
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> Full day</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> Compact loop</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 4 stops</div>
+</div>
+<div class="itin-stops">
+<div class="itin-stop"><div class="itin-stop-time">10:30 am</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/fenn-valley-vineyards.html">Fenn Valley Vineyards</a></div><div class="itin-stop-note">Open at the region's longtime estate winery. Confirm hours and tasting options before you go.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">12:15 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/cranes-winery.html">Crane's Winery</a></div><div class="itin-stop-note">Orchard winery energy — apple and cherry wines, hard cider, and sangria for fruit-forward pours.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/modales-wines.html">Modales Wines</a></div><div class="itin-stop-note">Boutique tasting room for Cabernet Franc, Pinot Noir, Chardonnay, and pétillant naturel.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">3:45 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/virtue-cider.html">Virtue Cider</a></div><div class="itin-stop-note">Farm cidery closer — Michigan Brut, Lapinette, and Percheron if someone prefers cider over another flight.</div></div></div>
+</div>
+<div class="itin-actions">
+<a href="regions.html#fennville" class="itin-btn primary">Explore Fennville Region</a>
+<a href="wine-trails.html" class="itin-btn secondary">Browse Wine Trails</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Chicago Day Trip — Lake Michigan Shore -->
+<div class="itin-panel" id="itin-chicago" role="tabpanel">
+<div class="itin-card">
+<div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/2.jpg');"></div><div class="itin-img-badge">Day Trip</div></div>
+<div class="itin-content">
+<div class="itin-label">Lake Michigan Shore</div>
+<div class="itin-name">The Chicago Escape</div>
+<div class="itin-desc">Southwest Michigan wine country is about 90 minutes from downtown Chicago. This Lake Michigan Shore route hits Baroda–Buchanan highlights with time for a St. Joseph beach stop before the drive home.</div>
+<div class="itin-meta">
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> Full day</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> ~90 min from Chicago</div>
+<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 4 wineries</div>
+</div>
+<div class="itin-stops">
+<div class="itin-stop"><div class="itin-stop-time">10:30 am</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/round-barn-winery.html">Round Barn Winery</a></div><div class="itin-stop-note">Arrive after the drive. Iconic round barn — wine, spirits, and brewery under one roof.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">12:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/tabor-hill-winery-and-restaurant.html">Tabor Hill Winery &amp; Restaurant</a></div><div class="itin-stop-note">Lunch with vineyard views. Try the Grand Mark Brut sparkling.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/hickory-creek-winery.html">Hickory Creek Winery</a></div><div class="itin-stop-note">Small-batch estate wines — Cab Franc and Pinot Noir are standouts.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">3:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name"><a href="wineries/domaine-berrien-cellars.html">Domaine Berrien Cellars</a></div><div class="itin-stop-note">Intimate tasting room focused on dry reds, especially Cabernet Franc.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">5:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Silver Beach, St. Joseph</div><div class="itin-stop-note">Sunset on the beach before the drive back. Dinner at Clementine's if you're staying late.</div></div></div>
+</div>
+<div class="itin-actions">
+<a href="wine-trails.html#lake-michigan-shore" class="itin-btn primary">View Lake Michigan Shore Trail</a>
+<a href="regions.html#lake-michigan-shore" class="itin-btn secondary">Explore Lake Michigan Shore</a>
 </div>
 </div>
 </div>
 </div>
 
 <!-- Week-Long -->
-<div class="itin-panel" id="itin-weeklong">
+<div class="itin-panel" id="itin-weeklong" role="tabpanel">
 <div class="itin-card">
 <div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/3.jpg');"></div><div class="itin-img-badge">5–7 Days</div></div>
 <div class="itin-content">
 <div class="itin-label">Multi-Region Road Trip</div>
 <div class="itin-name">The Grand Michigan Wine Tour</div>
-<div class="itin-desc">The ultimate Michigan wine road trip. Start in the southwest, work your way north through Fennville and Lake Michigan Shore, spend two days in Traverse City, then push up to Petoskey. Ambitious but unforgettable.</div>
+<div class="itin-desc">The ultimate Michigan wine road trip. Start on Lake Michigan Shore, swing through Fennville, spend two days in Traverse City, then push north to Petoskey. Ambitious but unforgettable.</div>
 <div class="itin-meta">
 <div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> 5–7 days</div>
 <div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> ~450 miles</div>
 <div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 20–25 wineries</div>
 </div>
 <div class="itin-stops">
-<div class="itin-stop"><div class="itin-stop-time">Days 1–2</div><div class="itin-stop-detail"><div class="itin-stop-name">Lake Michigan Shore & Fennville</div><div class="itin-stop-note">St. Julian, Round Barn, Tabor Hill, Hickory Creek, then north to Fenn Valley and Virtue Cider. Stay in St. Joseph or Saugatuck.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">Days 3–4</div><div class="itin-stop-detail"><div class="itin-stop-name">Traverse City — Both Peninsulas</div><div class="itin-stop-note">Old Mission one day, Leelanau the next. This is the heart of Michigan wine country. Stay in TC.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">Day 5</div><div class="itin-stop-detail"><div class="itin-stop-name">Sleeping Bear Dunes + Northport</div><div class="itin-stop-note">Morning at the dunes, afternoon tastings at Tandem Ciders and the northern Leelanau wineries.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">Days 6–7</div><div class="itin-stop-detail"><div class="itin-stop-name">Petoskey Wine Region</div><div class="itin-stop-note">Drive the Tunnel of Trees. Hit Mackinaw Trail, Petoskey Farms, Pond Hill Farm. Finish in Harbor Springs.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Days 1–2</div><div class="itin-stop-detail"><div class="itin-stop-name">Lake Michigan Shore &amp; Fennville</div><div class="itin-stop-note"><a href="wineries/st-julian-winery.html">St. Julian</a>, <a href="wineries/round-barn-winery.html">Round Barn</a>, <a href="wineries/tabor-hill-winery-and-restaurant.html">Tabor Hill</a>, <a href="wineries/hickory-creek-winery.html">Hickory Creek</a>, then north to <a href="wineries/fenn-valley-vineyards.html">Fenn Valley</a> and <a href="wineries/virtue-cider.html">Virtue Cider</a>. Stay in St. Joseph or Saugatuck.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Days 3–4</div><div class="itin-stop-detail"><div class="itin-stop-name">Traverse City — Both Peninsulas</div><div class="itin-stop-note">Follow the <a href="#itin-weekend" onclick="showItin('weekend');return false;">TC Weekend</a> sample — Old Mission one day (<a href="wineries/brys-estate-vineyard-and-winery.html">Brys</a>, <a href="wineries/mari-vineyards.html">Mari</a>, <a href="wineries/chateau-chantal.html">Chantal</a>), Leelanau the next (<a href="wineries/black-star-farms-leelanau.html">Black Star</a>, <a href="wineries/l-mawby-mawby-sparkling.html">L. Mawby</a>). Stay in TC.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Day 5</div><div class="itin-stop-detail"><div class="itin-stop-name">Sleeping Bear Dunes + Northport</div><div class="itin-stop-note">Morning at the dunes, afternoon at <a href="wineries/tandem-ciders.html">Tandem Ciders</a> and northern Leelanau tasting rooms.</div></div></div>
+<div class="itin-stop"><div class="itin-stop-time">Days 6–7</div><div class="itin-stop-detail"><div class="itin-stop-name">Petoskey Wine Region</div><div class="itin-stop-note">Drive the Tunnel of Trees. Hit <a href="wineries/mackinaw-trail-winery.html">Mackinaw Trail</a>, <a href="wineries/petoskey-farms-vineyard-and-winery.html">Petoskey Farms</a>, and <a href="wineries/pond-hill-farm.html">Pond Hill Farm</a>. Finish in Harbor Springs.</div></div></div>
 </div>
 <div class="itin-actions">
 <a href="wine-trails.html" class="itin-btn primary">Explore All 7 Trails</a>
-<a href="directory.html" class="itin-btn secondary">Browse All 192 Wineries</a>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Chicago Day Trip -->
-<div class="itin-panel" id="itin-chicago">
-<div class="itin-card">
-<div class="itin-img"><div class="itin-img-inner" style="background-image:url('winery-detail-images/2.jpg');"></div><div class="itin-img-badge">Day Trip</div></div>
-<div class="itin-content">
-<div class="itin-label">Lake Michigan Shore</div>
-<div class="itin-name">The Chicago Escape</div>
-<div class="itin-desc">Southwest Michigan's wine country is just 90 minutes from downtown Chicago — making it the closest wine region to the Windy City. This route hits the highlights of the Lake Michigan Shore trail with time for a beach stop in St. Joseph.</div>
-<div class="itin-meta">
-<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 1.5"/></svg> Full day</div>
-<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M4 4l-3 3 3 3"/></svg> 90 min from Chicago</div>
-<div class="itin-meta-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7" transform="scale(0.58) translate(0,2)"/></svg> 4–5 wineries</div>
-</div>
-<div class="itin-stops">
-<div class="itin-stop"><div class="itin-stop-time">10:30 am</div><div class="itin-stop-detail"><div class="itin-stop-name">Round Barn Winery</div><div class="itin-stop-note">Arrive after the drive. Iconic round barn, wine + spirits + brewery under one roof.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">12:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Tabor Hill</div><div class="itin-stop-note">Lunch at the restaurant with vineyard views. Try the Grand Mark Brut sparkling.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">2:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Hickory Creek Winery</div><div class="itin-stop-note">Small-batch, estate wines. Award-winning Cab Franc and Pinot Noir.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">3:30 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Domaine Berrien Cellars</div><div class="itin-stop-note">Intimate tasting room with a focus on dry reds. Great Cabernet Franc.</div></div></div>
-<div class="itin-stop"><div class="itin-stop-time">5:00 pm</div><div class="itin-stop-detail"><div class="itin-stop-name">Silver Beach, St. Joseph</div><div class="itin-stop-note">Sunset on the beach before the drive back. Grab dinner at Clementine's.</div></div></div>
-</div>
-<div class="itin-actions">
-<a href="wine-trails.html#lake-michigan-shore" class="itin-btn primary">View Lake Michigan Shore Trail</a>
-<a href="winery-detail.html?w=?region=lake-michigan-shore" class="itin-btn secondary">All Southwest Wineries</a>
+<a href="directory.html" class="itin-btn secondary">Browse the Winery Directory</a>
 </div>
 </div>
 </div>
@@ -613,7 +656,7 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 <div class="footer-grid">
 <div class="footer-brand"><div style="display:flex;flex-direction:column;"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--cream);">Michigan Vineyards</span><span style="font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:2px;">Wine Country Guide</span></div><p>Your complete guide to Michigan wine country. Discover 192 wineries across 7 wine trails, plan vineyard tours, and explore the Great Lakes State.</p></div>
 <div class="footer-col"><h4>Explore</h4><ul><li><a href="regions.html">Regions</a></li><li><a href="directory.html">All Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="plan-your-visit.html">Plan Your Visit</a></li></ul></div>
-<div class="footer-col"><h4>Itineraries</h4><ul><li><a href="#" onclick="showItin('afternoon');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Afternoon Escape</a></li><li><a href="#" onclick="showItin('weekend');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Weekend Getaway</a></li><li><a href="#" onclick="showItin('weeklong');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Week-Long Tour</a></li><li><a href="#" onclick="showItin('chicago');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Chicago Day Trip</a></li></ul></div>
+<div class="footer-col"><h4>Itineraries</h4><ul><li><a href="#" onclick="showItin('afternoon');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Afternoon Escape</a></li><li><a href="#" onclick="showItin('weekend');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">TC Weekend</a></li><li><a href="#" onclick="showItin('fennville');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Fennville Day Trip</a></li><li><a href="#" onclick="showItin('chicago');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Chicago Day Trip</a></li><li><a href="#" onclick="showItin('weeklong');window.scrollTo({top:document.querySelector('.itin-section').offsetTop-80,behavior:'smooth'});return false;">Week-Long Tour</a></li></ul></div>
 <div class="footer-col"><h4>Resources</h4><ul><li><a href="about.html">About</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="contact.html">Contact</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
 </div>
 <div class="footer-bottom"><span>© 2026 MichiganVineyards.com · All Rights Reserved</span><div style="display:flex;gap:20px;"><a href="sitemap.html">Sitemap</a><a href="https://traversecitywinetour.com">Traverse City Wine Tours</a></div></div>
@@ -624,11 +667,13 @@ const nav=document.getElementById('mainNav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>10);});
 
 /* Itinerary tabs */
-function showItin(id) {
+function showItin(id, el) {
   document.querySelectorAll('.itin-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.itin-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('itin-' + id).classList.add('active');
-  event.target.classList.add('active');
+  const panel = document.getElementById('itin-' + id);
+  if (panel) panel.classList.add('active');
+  const tab = el || document.querySelector('.itin-tab[data-itin="' + id + '"]');
+  if (tab) tab.classList.add('active');
 }
 
 /* Scroll animations */

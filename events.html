@@ -101,7 +101,7 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 
 /* FEATURED EVENT */
 .featured-event{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--forest);border-radius:16px;overflow:hidden;margin-bottom:40px;position:relative;}
-.featured-event.hidden{display:none;}
+.featured-event[hidden],.featured-event.hidden{display:none!important;}
 .featured-event::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,169,110,0.06) 0%,transparent 50%);pointer-events:none;z-index:1;}
 .featured-event-img{position:relative;min-height:340px;overflow:hidden;}
 .featured-event-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}

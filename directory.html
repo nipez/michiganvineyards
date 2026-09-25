@@ -13,7 +13,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <title>All Michigan Wineries — Directory | MichiganVineyards.com</title>
-<meta content="Browse 192 wineries across Michigan's 11 regions and beyond. Filter by region, search by name or grape, and find your next tasting room." name="description"/>
+<meta content="Browse 192 Michigan wineries. Filter by region or city, search by name or grape, or find tasting rooms near you." name="description"/>
 <link rel="canonical" href="https://michiganvineyards.com/wineries/"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -87,8 +87,16 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 .search-input::placeholder{color:var(--text-light);}
 .search-icon{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--text-light);pointer-events:none;}
 .search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--text-light);background:none;border:none;cursor:pointer;display:none;font-size:1rem;line-height:1;padding:2px;font-family:'Outfit',sans-serif;}
-.sort-select{padding:7px 28px 7px 10px;border:1px solid rgba(27,58,45,0.12);border-radius:5px;background:var(--white);font-family:'Outfit',sans-serif;font-size:.74rem;color:var(--text);cursor:pointer;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237A7068' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;}
-.sort-select:focus{border-color:var(--gold);}
+.sort-select,.city-select{padding:7px 28px 7px 10px;border:1px solid rgba(27,58,45,0.12);border-radius:5px;background:var(--white);font-family:'Outfit',sans-serif;font-size:.74rem;color:var(--text);cursor:pointer;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237A7068' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;}
+.sort-select:focus,.city-select:focus{border-color:var(--gold);}
+.city-select{max-width:168px;}
+.near-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 11px;border:1px solid rgba(27,58,45,0.12);border-radius:5px;background:var(--white);font-family:'Outfit',sans-serif;font-size:.74rem;font-weight:500;color:var(--text);cursor:pointer;outline:none;white-space:nowrap;transition:all .2s;}
+.near-btn:hover{border-color:var(--gold);color:var(--forest);}
+.near-btn.active{background:var(--forest);color:var(--cream);border-color:var(--forest);}
+.near-btn.locating{opacity:.7;cursor:wait;}
+.near-status{font-size:.72rem;color:var(--text-light);width:100%;}
+.near-status.error{color:var(--burgundy);}
+.winery-distance{font-size:.7rem;font-weight:500;color:var(--gold-warm);margin-left:4px;}
 .view-toggle{display:flex;border:1px solid rgba(27,58,45,0.12);border-radius:5px;overflow:hidden;}
 .view-btn{padding:6px 9px;background:var(--white);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-light);transition:all .2s;}
 .view-btn.active{background:var(--forest);color:var(--cream);}.view-btn:not(:last-child){border-right:1px solid rgba(27,58,45,0.12);}
@@ -185,7 +193,7 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
   .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px 40px;gap:14px;border-bottom:1px solid rgba(27,58,45,0.08);box-shadow:0 8px 30px rgba(27,58,45,0.08);}.nav-links.show{display:flex;}.nav-toggle{display:block;}
   .toolbar{top:72px;padding:0 12px;}.toolbar-inner{flex-wrap:wrap;gap:0;}
   .toolbar-right{width:100%;padding:8px 0 10px;gap:6px;border-top:1px solid rgba(27,58,45,0.06);flex-wrap:wrap;}.search-input{width:100%;}.search-wrap{flex:1;min-width:140px;}.view-toggle{display:flex;flex-shrink:0;}
-  .sort-select{flex:1;min-width:120px;}
+  .sort-select,.city-select{flex:1;min-width:120px;max-width:none;}.near-btn{flex-shrink:0;}
   .winery-grid{grid-template-columns:1fr;}
   .directory-map{height:min(68vh,560px);min-height:360px;border-radius:8px;}
   .results-bar{padding:12px 16px 0;flex-direction:column;align-items:flex-start;}
@@ -199,14 +207,14 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="MichiganVineyards.com"/>
 <meta property="og:title" content="All 192 Michigan Wineries — Complete Directory | MichiganVineyards.com"/>
-<meta property="og:description" content="Browse 192 wineries across Michigan's wine regions. Filter by region, search by name or grape variety, and find your next tasting room."/>
+<meta property="og:description" content="Browse 192 Michigan wineries. Filter by region or city, search by name or grape, or find tasting rooms near you."/>
 <meta property="og:url" content="https://michiganvineyards.com/wineries/"/>
 <meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="All 192 Michigan Wineries — Complete Directory | MichiganVineyards.com"/>
-<meta name="twitter:description" content="Browse 192 wineries across Michigan's wine regions. Filter by region, search by name or grape variety, and find your next tasting room."/>
+<meta name="twitter:description" content="Browse 192 Michigan wineries. Filter by region or city, search by name or grape, or find tasting rooms near you."/>
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
 <script type="application/ld+json">
 {
@@ -250,7 +258,7 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 <div class="page-hero-content">
 <div class="page-hero-tag">Complete Winery Directory</div>
 <h1>Michigan <em>Wineries</em></h1>
-<p class="page-hero-desc">Every tasting room, every grape, every region — your complete guide to 192 wineries across the Great Lakes State.</p>
+<p class="page-hero-desc">Filter by region or city, search by name or grape, or find tasting rooms near you — 192 wineries across the Great Lakes State.</p>
 </div></section>
 
 <div class="breadcrumbs"><a href="/">Home</a><span class="sep">›</span><span class="current">All Wineries</span></div>
@@ -270,15 +278,23 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 </div>
 <div class="toolbar-right">
 <div class="search-wrap">
-<input class="search-input" id="winerySearch" type="text" placeholder="Search wineries or grapes…" autocomplete="off" oninput="onSearch(this.value)"/>
+<input class="search-input" id="winerySearch" type="text" placeholder="Search name or grape…" autocomplete="off" oninput="onSearch(this.value)"/>
 <svg class="search-icon" id="searchIcon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="4.5"/><path d="M10 10l2.5 2.5"/></svg>
 <button class="search-clear" id="searchClear" onclick="clearSearch()">×</button>
 </div>
+<select class="city-select" id="citySelect" onchange="setCity(this.value)" aria-label="Filter by city">
+<option value="all">All cities</option>
+</select>
+<button type="button" class="near-btn" id="nearBtn" onclick="toggleNearMe()" title="Sort by distance from your location" aria-pressed="false">
+<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 11S2 7.6 2 4.5a4 4 0 018 0C10 7.6 6 11 6 11z"/><circle cx="6" cy="4.5" r="1.4"/></svg>
+<span id="nearBtnLabel">Near me</span>
+</button>
 <select class="sort-select" id="sortSelect" onchange="onSort(this.value)">
 <option value="featured">Featured First</option>
 <option value="az">A → Z</option>
 <option value="za">Z → A</option>
 <option value="region">By Region</option>
+<option value="nearest" id="nearestSortOpt" hidden>Nearest</option>
 </select>
 <div class="view-toggle">
 <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid view" aria-label="Grid view"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="5" height="5" rx="1"/><rect x="9" y="1" width="5" height="5" rx="1"/><rect x="1" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg></button>
@@ -288,10 +304,10 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 </div>
 </div></div>
 
-<div class="results-bar"><div class="results-count" id="resultsCount"></div><div class="active-filters" id="activeFilters"></div></div>
+<div class="results-bar"><div class="results-count" id="resultsCount"></div><div class="active-filters" id="activeFilters"></div><div class="near-status" id="nearStatus" hidden></div></div>
 
 <div class="directory" id="directoryRoot">
-<p class="map-hint">Tap a pin for winery details. Region filters and search update the map.</p>
+<p class="map-hint">Tap a pin for winery details. Region, city, and search filters update the map.</p>
 <div class="winery-grid" id="wineryGrid"></div>
 <div class="directory-map" id="directoryMap" role="region" aria-label="Interactive map of Michigan wineries"></div>
 <div class="no-results" id="noResults"><h3>No wineries found</h3><p>Try adjusting your search or filters.</p><button onclick="resetAll()">Clear All Filters</button></div>
@@ -514,7 +530,8 @@ const palettes=['linear-gradient(135deg,#3A5A3E 0%,#2A4A2E 40%,#4A5A3E 100%)','l
 const regionColors={'Old Mission':'var(--old-mission)','Leelanau':'var(--leelanau)','Lake Michigan Shore':'var(--lake-shore)','Fennville':'var(--fennville)','Tip of the Mitt':'var(--tip-mitt)','Southeast Michigan':'var(--southeast)','Upper Peninsula':'var(--up)','Central Michigan':'var(--central)','Northeast Michigan':'var(--central)'};
 function rcClass(r){return 'rc-'+r.toLowerCase().replace(/ /g,'-');}
 
-let currentRegion='all',currentSearch='',currentSort='featured',currentView='grid';
+let currentRegion='all',currentCity='all',currentSearch='',currentSort='featured',currentView='grid';
+let nearMeActive=false,userLocation=null,nearMeStatus='',sortBeforeNear='featured';
 let mapInstance=null,markerLayer=null,markersBySlug={};
 
 const pinColors={
@@ -523,6 +540,131 @@ const pinColors={
   'Central Michigan':'#5A5A3A','Northeast Michigan':'#5A5A3A','West Michigan':'#4A6A5A',
   'Thumb & Sunrise Coast':'#6A5A4A'
 };
+
+/* Normalize accents/punctuation for grape + name matching */
+function normalizeText(s){
+  return String(s||'').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^\w\s]/g,' ')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+
+const GRAPE_ALIAS_GROUPS=[
+  ['pinot gris','pinot grigio'],
+  ['cabernet franc','cab franc','blue franc'],
+  ['cabernet sauvignon','cab sauv'],
+  ['gewurztraminer','gewuerztraminer'],
+  ['gruner veltliner','gruener veltliner','gruner'],
+  ['blaufrankisch','lemberger'],
+  ['petillant naturel','pet nat'],
+  ['chardonnay','chard'],
+  ['sauvignon blanc','sauvy'],
+  ['pinot noir'],
+  ['riesling'],
+  ['pinot blanc'],
+  ['merlot'],
+  ['rose','rosé']
+];
+const grapeAliasMap=(()=>{
+  const map={};
+  GRAPE_ALIAS_GROUPS.forEach(group=>{
+    const norms=group.map(normalizeText);
+    norms.forEach(a=>{ if(a) map[a]=norms; });
+  });
+  return map;
+})();
+const grapeHints=new Set([
+  'riesling','pinot','pinot noir','pinot gris','pinot grigio','pinot blanc','cabernet','cabernet franc',
+  'cab franc','chardonnay','chard','merlot','gewurztraminer','marquette','frontenac','traminette',
+  'sangiovese','nebbiolo','tempranillo','gruner','gruner veltliner','blaufrankisch','auxerrois',
+  'rose','ice wine','icewine','cherry wine','hard cider','cider','sparkling','pet nat','vidal',
+  'la crescent','brianna','marechal foch','foch','vignoles','seyval','chambourcin','noir'
+].map(normalizeText));
+
+function expandGrapeQuery(q){
+  const n=normalizeText(q);
+  if(!n) return [];
+  const variants=new Set([n]);
+  if(grapeAliasMap[n]) grapeAliasMap[n].forEach(v=>variants.add(v));
+  Object.keys(grapeAliasMap).forEach(key=>{
+    if(n.length>=4&&(key.includes(n)||n.includes(key))) grapeAliasMap[key].forEach(v=>variants.add(v));
+  });
+  return [...variants];
+}
+function knownMatches(knownList, variants){
+  return knownList.some(k=>{
+    const nk=normalizeText(k);
+    return variants.some(v=>{
+      if(!v||v.length<3) return false;
+      if(nk===v||nk.includes(v)) return true;
+      const tokens=nk.split(' ');
+      const vt=v.split(' ').filter(Boolean);
+      return tokens.includes(v)||(vt.length>1&&vt.every(t=>tokens.includes(t)||nk.includes(t)));
+    });
+  });
+}
+function isLikelyGrapeQuery(q){
+  const n=normalizeText(q);
+  if(!n) return false;
+  if(grapeHints.has(n)||grapeAliasMap[n]) return true;
+  return [...grapeHints].some(h=>h.length>=4&&(h.includes(n)||n.includes(h)));
+}
+function matchesSearch(w, rawQ){
+  const q=normalizeText(rawQ);
+  if(!q) return true;
+  const nameN=normalizeText(w.name);
+  const variants=expandGrapeQuery(q);
+  const nameHit=nameN.includes(q)||q.split(' ').filter(Boolean).every(t=>nameN.includes(t));
+  const grapeHit=knownMatches(w.known,variants);
+  if(isLikelyGrapeQuery(q)) return grapeHit||nameHit;
+  if(nameHit||grapeHit) return true;
+  /* Avoid matching type/region indiscriminately; city only for place-like queries */
+  const cityN=normalizeText(w.city);
+  if(q.length>=4&&(cityN===q||cityN.startsWith(q)||q.startsWith(cityN))) return true;
+  return false;
+}
+
+function haversineMiles(lat1,lng1,lat2,lng2){
+  const toRad=d=>d*Math.PI/180;
+  const R=3958.8;
+  const dLat=toRad(lat2-lat1),dLng=toRad(lng2-lng1);
+  const a=Math.sin(dLat/2)**2+Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLng/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+function distanceMiles(w){
+  if(!userLocation||typeof w.lat!=='number'||typeof w.lng!=='number') return null;
+  return haversineMiles(userLocation.lat,userLocation.lng,w.lat,w.lng);
+}
+function formatDistance(mi){
+  if(mi==null||!isFinite(mi)) return '';
+  if(mi<10) return mi.toFixed(1)+' mi';
+  return Math.round(mi)+' mi';
+}
+
+function buildCitySelect(){
+  const sel=document.getElementById('citySelect');
+  if(!sel) return;
+  const counts={};
+  wineries.forEach(w=>{counts[w.city]=(counts[w.city]||0)+1;});
+  const cities=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]||a.localeCompare(b));
+  const popular=cities.filter(c=>counts[c]>=3);
+  const rest=cities.filter(c=>counts[c]<3).sort((a,b)=>a.localeCompare(b));
+  let html='<option value="all">All cities</option>';
+  if(popular.length){
+    html+='<optgroup label="Popular cities">';
+    popular.forEach(c=>{html+=`<option value="${c.replace(/"/g,'&quot;')}">${c} (${counts[c]})</option>`;});
+    html+='</optgroup>';
+  }
+  if(rest.length){
+    html+='<optgroup label="More cities">';
+    rest.forEach(c=>{html+=`<option value="${c.replace(/"/g,'&quot;')}">${c} (${counts[c]})</option>`;});
+    html+='</optgroup>';
+  }
+  sel.innerHTML=html;
+  if(currentCity!=='all'&&counts[currentCity]) sel.value=currentCity;
+  else{currentCity='all';sel.value='all';}
+}
 
 function pinIcon(w, active){
   const color=pinColors[w.region]||'#1B3A2D';
@@ -550,7 +692,9 @@ function ensureMap(){
 
 function popupHtml(w){
   const known=w.known.slice(0,3).join(', ');
-  return `<div class="map-popup"><div class="map-popup-region">${w.region}</div><div class="map-popup-name">${w.name}</div><div class="map-popup-meta">${w.city}${known?' · '+known:''}</div><a class="map-popup-link" href="wineries/${w.slug}.html">View winery <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 5.5h7M6 2.5l3 3-3 3"/></svg></a></div>`;
+  const dist=nearMeActive&&userLocation?distanceMiles(w):null;
+  const distLabel=dist!=null?` · ${formatDistance(dist)}`:'';
+  return `<div class="map-popup"><div class="map-popup-region">${w.region}</div><div class="map-popup-name">${w.name}</div><div class="map-popup-meta">${w.city}${distLabel}${known?' · '+known:''}</div><a class="map-popup-link" href="wineries/${w.slug}.html">View winery <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 5.5h7M6 2.5l3 3-3 3"/></svg></a></div>`;
 }
 
 function renderMap(list){
@@ -576,11 +720,17 @@ function renderMap(list){
   });
 }
 
-function syncViewUrl(){
+function syncUrlParams(){
   try{
     const url=new URL(window.location.href);
-    if(currentView==='map') url.searchParams.set('view','map');
+    if(currentView==='map'||currentView==='list') url.searchParams.set('view',currentView);
     else url.searchParams.delete('view');
+    if(currentCity&&currentCity!=='all') url.searchParams.set('city',currentCity);
+    else url.searchParams.delete('city');
+    if(currentSearch) url.searchParams.set('q',currentSearch);
+    else url.searchParams.delete('q');
+    if(nearMeActive) url.searchParams.set('near','1');
+    else url.searchParams.delete('near');
     history.replaceState(null,'',url.pathname+url.search+url.hash);
   }catch(e){}
 }
@@ -591,18 +741,55 @@ function getFiltered(){
     if(Array.isArray(currentRegion)) list=list.filter(w=>currentRegion.includes(w.region));
     else list=list.filter(w=>w.region===currentRegion);
   }
-  if(currentSearch){
-    const q=currentSearch.toLowerCase();
-    list=list.filter(w=>w.name.toLowerCase().includes(q)||w.type.toLowerCase().includes(q)||w.region.toLowerCase().includes(q)||w.city.toLowerCase().includes(q)||w.known.some(k=>k.toLowerCase().includes(q)));
-  }
-  if(currentSort==='featured') list.sort((a,b)=>(b.featured?1:0)-(a.featured?1:0)||a.name.localeCompare(b.name));
+  if(currentCity&&currentCity!=='all') list=list.filter(w=>w.city===currentCity);
+  if(currentSearch) list=list.filter(w=>matchesSearch(w,currentSearch));
+  const sortMode=(nearMeActive&&userLocation&&(currentSort==='nearest'||currentSort==='featured'))?'nearest':currentSort;
+  if(sortMode==='nearest'&&userLocation){
+    list.sort((a,b)=>{
+      const da=distanceMiles(a),db=distanceMiles(b);
+      if(da==null&&db==null) return a.name.localeCompare(b.name);
+      if(da==null) return 1;
+      if(db==null) return -1;
+      return da-db||a.name.localeCompare(b.name);
+    });
+  }else if(currentSort==='featured') list.sort((a,b)=>(b.featured?1:0)-(a.featured?1:0)||a.name.localeCompare(b.name));
   else if(currentSort==='az') list.sort((a,b)=>a.name.localeCompare(b.name));
   else if(currentSort==='za') list.sort((a,b)=>b.name.localeCompare(a.name));
   else if(currentSort==='region'){
-    const ro=['Old Mission','Leelanau','Lake Michigan Shore','Fennville','Tip of the Mitt','Southeast Michigan','Upper Peninsula','Central Michigan','Northeast Michigan'];
-    list.sort((a,b)=>ro.indexOf(a.region)-ro.indexOf(b.region)||a.name.localeCompare(b.name));
+    const ro=['Old Mission','Leelanau','Lake Michigan Shore','Fennville','Tip of the Mitt','Southeast Michigan','Upper Peninsula','Central Michigan','Northeast Michigan','West Michigan','Thumb & Sunrise Coast'];
+    list.sort((a,b)=>{
+      const ia=ro.indexOf(a.region),ib=ro.indexOf(b.region);
+      return (ia<0?999:ia)-(ib<0?999:ib)||a.name.localeCompare(b.name);
+    });
   }
   return list;
+}
+
+function updateNearUi(){
+  const btn=document.getElementById('nearBtn');
+  const label=document.getElementById('nearBtnLabel');
+  const status=document.getElementById('nearStatus');
+  const nearestOpt=document.getElementById('nearestSortOpt');
+  if(!btn) return;
+  btn.classList.toggle('active',nearMeActive&&!!userLocation);
+  btn.classList.toggle('locating',nearMeStatus==='locating');
+  btn.setAttribute('aria-pressed',nearMeActive&&!!userLocation?'true':'false');
+  if(label) label.textContent=nearMeStatus==='locating'?'Locating…':'Near me';
+  if(nearestOpt) nearestOpt.hidden=!(nearMeActive&&userLocation);
+  if(nearMeActive&&userLocation&&currentSort==='nearest') document.getElementById('sortSelect').value='nearest';
+  if(!status) return;
+  if(!nearMeStatus||nearMeStatus==='ready'){
+    status.hidden=true;status.textContent='';status.classList.remove('error');
+  }else if(nearMeStatus==='denied'){
+    status.hidden=false;status.classList.add('error');
+    status.textContent='Location permission denied — browse by region, city, or search instead.';
+  }else if(nearMeStatus==='unavailable'){
+    status.hidden=false;status.classList.add('error');
+    status.textContent='Location unavailable — browse by region, city, or search instead.';
+  }else if(nearMeStatus==='locating'){
+    status.hidden=false;status.classList.remove('error');
+    status.textContent='Requesting your location to sort nearby wineries…';
+  }
 }
 
 function render(){
@@ -613,15 +800,20 @@ function render(){
   document.getElementById('gridBtn').classList.toggle('active',currentView==='grid');
   document.getElementById('listBtn').classList.toggle('active',currentView==='list');
   document.getElementById('mapBtn').classList.toggle('active',isMap);
+  updateNearUi();
   const total=wineries.length,showing=f.length;
-  countEl.innerHTML=currentRegion==='all'&&!currentSearch?`Showing <strong>all ${total}</strong> wineries`:`Showing <strong>${showing}</strong> of ${total} wineries`;
+  const filtered=currentRegion!=='all'||(currentCity&&currentCity!=='all')||!!currentSearch||(nearMeActive&&!!userLocation);
+  countEl.innerHTML=!filtered?`Showing <strong>all ${total}</strong> wineries`:`Showing <strong>${showing}</strong> of ${total} wineries`;
   let tags='';
   if(currentRegion!=='all'){
     const label=Array.isArray(currentRegion)?currentRegion.join(' & '):currentRegion;
-    tags+=`<span class="active-filter-tag">${label} <button onclick="setRegion('all',null)">×</button></span>`;
+    tags+=`<span class="active-filter-tag">${label} <button type="button" onclick="setRegion('all',null)" aria-label="Clear region">×</button></span>`;
   }
-  if(currentSearch) tags+=`<span class="active-filter-tag">"${currentSearch}" <button onclick="clearSearch()">×</button></span>`;
+  if(currentCity&&currentCity!=='all') tags+=`<span class="active-filter-tag">${currentCity} <button type="button" onclick="setCity('all')" aria-label="Clear city">×</button></span>`;
+  if(currentSearch) tags+=`<span class="active-filter-tag">"${currentSearch}" <button type="button" onclick="clearSearch()" aria-label="Clear search">×</button></span>`;
+  if(nearMeActive&&userLocation) tags+=`<span class="active-filter-tag">Near me <button type="button" onclick="clearNearMe()" aria-label="Clear near me">×</button></span>`;
   filtersEl.innerHTML=tags;
+  syncUrlParams();
   if(!f.length){
     grid.innerHTML='';
     if(markerLayer) markerLayer.clearLayers();
@@ -636,7 +828,9 @@ function render(){
     grid.innerHTML=f.map(w=>{
       const bg=palettes[(w.img-1)%palettes.length];
       const rc=regionColors[w.region]||'var(--forest)';
-      return `<a class="winery-card" href="wineries/${w.slug}.html"><div class="winery-img"><div class="winery-img-inner" style="background:${bg};"></div>${w.badge?`<span class="winery-badge">${w.badge}</span>`:''}<span class="winery-region-tag ${rcClass(w.region)}" style="color:${rc};">${w.region}</span></div><div class="winery-info"><h3 class="winery-name">${w.name}</h3><div class="winery-type">${w.type}</div><div class="winery-city"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.5 10S1 6.5 1 4a4.5 4.5 0 019 0c0 2.5-4.5 6-4.5 6z"/><circle cx="5.5" cy="4" r="1.5"/></svg>${w.city}</div><div class="winery-known">Known for: <strong>${w.known.slice(0,4).join(', ')}</strong></div><div class="winery-hours"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M6 3.5v2.5l2 1.5"/></svg>${w.hours}</div><span class="winery-link">View Details <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5.5h6M6 2.5l3 3-3 3"/></svg></span></div></a>`;
+      const dist=nearMeActive&&userLocation?distanceMiles(w):null;
+      const distHtml=dist!=null?`<span class="winery-distance">· ${formatDistance(dist)}</span>`:'';
+      return `<a class="winery-card" href="wineries/${w.slug}.html"><div class="winery-img"><div class="winery-img-inner" style="background:${bg};"></div>${w.badge?`<span class="winery-badge">${w.badge}</span>`:''}<span class="winery-region-tag ${rcClass(w.region)}" style="color:${rc};">${w.region}</span></div><div class="winery-info"><h3 class="winery-name">${w.name}</h3><div class="winery-type">${w.type}</div><div class="winery-city"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.5 10S1 6.5 1 4a4.5 4.5 0 019 0c0 2.5-4.5 6-4.5 6z"/><circle cx="5.5" cy="4" r="1.5"/></svg>${w.city}${distHtml}</div><div class="winery-known">Known for: <strong>${w.known.slice(0,4).join(', ')}</strong></div><div class="winery-hours"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M6 3.5v2.5l2 1.5"/></svg>${w.hours}</div><span class="winery-link">View Details <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5.5h6M6 2.5l3 3-3 3"/></svg></span></div></a>`;
     }).join('');
     requestAnimationFrame(()=>{grid.querySelectorAll('.winery-card').forEach((el,i)=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition=`opacity .35s ease ${Math.min(i*.02,.5)}s,transform .35s ease ${Math.min(i*.02,.5)}s`;requestAnimationFrame(()=>{el.style.opacity='1';el.style.transform='translateY(0)';});});});
   }
@@ -650,6 +844,13 @@ function setRegion(region,btn){
   render();
 }
 
+function setCity(city){
+  currentCity=city||'all';
+  const sel=document.getElementById('citySelect');
+  if(sel) sel.value=currentCity;
+  render();
+}
+
 function onSearch(val){
   currentSearch=val.trim();
   document.getElementById('searchClear').style.display=val?'block':'none';
@@ -657,28 +858,100 @@ function onSearch(val){
   render();
 }
 function clearSearch(){const i=document.getElementById('winerySearch');i.value='';i.focus();currentSearch='';document.getElementById('searchClear').style.display='none';document.getElementById('searchIcon').style.display='block';render();}
-function onSort(v){currentSort=v;render();}
-function setView(v){
-  currentView=v;
-  syncViewUrl();
+function onSort(v){
+  currentSort=v;
+  if(v!=='nearest') sortBeforeNear=v;
   render();
 }
-function resetAll(){currentRegion='all';currentSearch='';currentSort='featured';document.getElementById('winerySearch').value='';document.getElementById('sortSelect').value='featured';document.getElementById('searchClear').style.display='none';document.getElementById('searchIcon').style.display='block';document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));document.querySelector('.filter-btn[data-region="all"]').classList.add('active');render();}
+function setView(v){
+  currentView=v;
+  render();
+}
+
+function clearNearMe(){
+  nearMeActive=false;
+  userLocation=null;
+  nearMeStatus='';
+  if(currentSort==='nearest'){
+    currentSort=sortBeforeNear||'featured';
+    document.getElementById('sortSelect').value=currentSort;
+  }
+  render();
+}
+
+function toggleNearMe(){
+  if(nearMeActive&&userLocation){clearNearMe();return;}
+  if(!navigator.geolocation){
+    nearMeStatus='unavailable';
+    nearMeActive=false;
+    userLocation=null;
+    render();
+    return;
+  }
+  nearMeStatus='locating';
+  nearMeActive=true;
+  updateNearUi();
+  navigator.geolocation.getCurrentPosition(pos=>{
+    userLocation={lat:pos.coords.latitude,lng:pos.coords.longitude};
+    nearMeStatus='ready';
+    nearMeActive=true;
+    if(currentSort!=='az'&&currentSort!=='za'&&currentSort!=='region'){
+      sortBeforeNear=currentSort==='nearest'?sortBeforeNear:currentSort;
+      currentSort='nearest';
+      document.getElementById('sortSelect').value='nearest';
+    }
+    render();
+  },err=>{
+    userLocation=null;
+    nearMeActive=false;
+    nearMeStatus=(err&&err.code===1)?'denied':'unavailable';
+    render();
+  },{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+}
+
+function resetAll(){
+  currentRegion='all';currentCity='all';currentSearch='';currentSort='featured';
+  nearMeActive=false;userLocation=null;nearMeStatus='';sortBeforeNear='featured';
+  document.getElementById('winerySearch').value='';
+  document.getElementById('sortSelect').value='featured';
+  const citySel=document.getElementById('citySelect');
+  if(citySel) citySel.value='all';
+  document.getElementById('searchClear').style.display='none';
+  document.getElementById('searchIcon').style.display='block';
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.filter-btn[data-region="all"]').classList.add('active');
+  render();
+}
 
 const nav=document.getElementById('mainNav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>10);});
 window.addEventListener('resize',()=>{if(mapInstance&&currentView==='map') mapInstance.invalidateSize();});
 
-(function initViewFromUrl(){
+(function initFromUrl(){
+  let wantNear=false;
   try{
     const params=new URLSearchParams(window.location.search);
     const v=(params.get('view')||'').toLowerCase();
     if(v==='map'||v==='list'||v==='grid') currentView=v;
     else if(window.location.hash==='#map') currentView='map';
+    const city=params.get('city');
+    if(city) currentCity=city;
+    const q=params.get('q');
+    if(q){
+      currentSearch=q.trim();
+      const input=document.getElementById('winerySearch');
+      if(input){
+        input.value=currentSearch;
+        document.getElementById('searchClear').style.display=currentSearch?'block':'none';
+        document.getElementById('searchIcon').style.display=currentSearch?'none':'block';
+      }
+    }
+    wantNear=params.get('near')==='1'||params.get('near')==='true';
   }catch(e){}
+  buildCitySelect();
+  render();
+  if(wantNear) toggleNearMe();
 })();
-
-render();
 </script>
 </body>
 </html>

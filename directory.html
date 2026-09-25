@@ -836,7 +836,14 @@ function render(){
   }
 }
 
+
+function dismissNearStatusIfIdle(){
+  if(!nearMeActive && nearMeStatus && nearMeStatus!=='locating' && nearMeStatus!=='ready'){
+    nearMeStatus='';
+  }
+}
 function setRegion(region,btn){
+  dismissNearStatusIfIdle();
   currentRegion=region;
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   if(btn) btn.classList.add('active');
@@ -845,6 +852,7 @@ function setRegion(region,btn){
 }
 
 function setCity(city){
+  dismissNearStatusIfIdle();
   currentCity=city||'all';
   const sel=document.getElementById('citySelect');
   if(sel) sel.value=currentCity;
@@ -852,6 +860,7 @@ function setCity(city){
 }
 
 function onSearch(val){
+  dismissNearStatusIfIdle();
   currentSearch=val.trim();
   document.getElementById('searchClear').style.display=val?'block':'none';
   document.getElementById('searchIcon').style.display=val?'none':'block';
@@ -859,11 +868,13 @@ function onSearch(val){
 }
 function clearSearch(){const i=document.getElementById('winerySearch');i.value='';i.focus();currentSearch='';document.getElementById('searchClear').style.display='none';document.getElementById('searchIcon').style.display='block';render();}
 function onSort(v){
+  dismissNearStatusIfIdle();
   currentSort=v;
   if(v!=='nearest') sortBeforeNear=v;
   render();
 }
 function setView(v){
+  dismissNearStatusIfIdle();
   currentView=v;
   render();
 }

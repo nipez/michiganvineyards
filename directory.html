@@ -725,6 +725,8 @@ function syncUrlParams(){
     const url=new URL(window.location.href);
     if(currentView==='map'||currentView==='list') url.searchParams.set('view',currentView);
     else url.searchParams.delete('view');
+    if(currentRegion&&currentRegion!=='all'&&!Array.isArray(currentRegion)) url.searchParams.set('region',currentRegion);
+    else url.searchParams.delete('region');
     if(currentCity&&currentCity!=='all') url.searchParams.set('city',currentCity);
     else url.searchParams.delete('city');
     if(currentSearch) url.searchParams.set('q',currentSearch);
@@ -733,6 +735,52 @@ function syncUrlParams(){
     else url.searchParams.delete('near');
     history.replaceState(null,'',url.pathname+url.search+url.hash);
   }catch(e){}
+}
+
+function normalizeRegionParam(raw){
+  if(!raw) return null;
+  const trimmed=String(raw).trim();
+  if(!trimmed||trimmed.toLowerCase()==='all') return 'all';
+  const aliases={
+    'fennville':'Fennville',
+    'lake michigan shore':'Lake Michigan Shore',
+    'lake-michigan-shore':'Lake Michigan Shore',
+    'lms':'Lake Michigan Shore',
+    'old mission':'Old Mission',
+    'old-mission':'Old Mission',
+    'leelanau':'Leelanau',
+    'tip of the mitt':'Tip of the Mitt',
+    'tip-of-the-mitt':'Tip of the Mitt',
+    'southeast michigan':'Southeast Michigan',
+    'southeast':'Southeast Michigan',
+    'west michigan':'West Michigan',
+    'west-michigan':'West Michigan',
+    'upper peninsula':'Upper Peninsula',
+    'upper':'Upper Peninsula'
+  };
+  const key=trimmed.toLowerCase();
+  if(aliases[key]) return aliases[key];
+  const known=['Old Mission','Leelanau','Lake Michigan Shore','Fennville','Tip of the Mitt','Southeast Michigan','West Michigan','Upper Peninsula','Central Michigan','Northeast Michigan'];
+  const exact=known.find(r=>r.toLowerCase()===key);
+  return exact||null;
+}
+
+function activateRegionButton(region){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  if(!region||region==='all'){
+    const allBtn=document.querySelector('.filter-btn[data-region="all"]');
+    if(allBtn) allBtn.classList.add('active');
+    return;
+  }
+  const match=[...document.querySelectorAll('.filter-btn[data-region]')].find(b=>{
+    const val=b.getAttribute('data-region');
+    return val===region;
+  });
+  if(match) match.classList.add('active');
+  else{
+    const allBtn=document.querySelector('.filter-btn[data-region="all"]');
+    if(allBtn) allBtn.classList.add('active');
+  }
 }
 
 function getFiltered(){
@@ -845,9 +893,12 @@ function dismissNearStatusIfIdle(){
 function setRegion(region,btn){
   dismissNearStatusIfIdle();
   currentRegion=region;
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
-  else document.querySelector('.filter-btn[data-region="all"]').classList.add('active');
+  if(btn){
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  }else{
+    activateRegionButton(region);
+  }
   render();
 }
 
@@ -945,6 +996,11 @@ window.addEventListener('resize',()=>{if(mapInstance&&currentView==='map') mapIn
     const v=(params.get('view')||'').toLowerCase();
     if(v==='map'||v==='list'||v==='grid') currentView=v;
     else if(window.location.hash==='#map') currentView='map';
+    const region=normalizeRegionParam(params.get('region'));
+    if(region){
+      currentRegion=region;
+      activateRegionButton(region);
+    }
     const city=params.get('city');
     if(city) currentCity=city;
     const q=params.get('q');

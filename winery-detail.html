@@ -150,6 +150,11 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 .action-btn{display:block;width:100%;padding:14px;text-align:center;border-radius:5px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .3s;margin-bottom:10px;}
 .action-btn.gold{background:var(--gold);color:var(--forest-deep);}.action-btn.gold:hover{background:var(--gold-light);}
 .action-btn.outline{border:1.5px solid rgba(201,169,110,0.3);color:var(--gold-light);background:transparent;}.action-btn.outline:hover{border-color:var(--gold);}
+.visit-hours{margin:0 0 18px;padding:14px 16px;background:rgba(245,240,232,0.08);border:1px solid rgba(201,169,110,0.28);border-radius:6px;text-align:left;}
+.visit-hours-label{display:block;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.visit-hours-value{display:block;font-size:.9rem;color:var(--cream);line-height:1.5;font-weight:500;}
+.visit-hours-note{display:block;margin-top:6px;font-size:.78rem;color:rgba(245,240,232,0.55);line-height:1.45;}
+.visit-hours.is-fallback .visit-hours-value{color:rgba(245,240,232,0.9);}
 
 /* Map Card */
 .map-card{border-radius:12px;overflow:hidden;border:1px solid rgba(27,58,45,0.08);margin-bottom:20px;}
@@ -485,12 +490,16 @@ Open today · 11am–6pm
 <!-- RIGHT: SIDEBAR -->
 <div class="detail-sidebar">
 
-<!-- CTA -->
+<!-- CTA: tasting / hours / directions -->
 <div class="action-card">
-<h3>Visit Mari Vineyards</h3>
-<p>Experience the underground cellar and estate wines on Old Mission Peninsula.</p>
-<a href="https://marivineyards.com/visit" class="action-btn gold" target="_blank" rel="noopener">Book a Tasting</a>
-<a href="https://marivineyards.com" class="action-btn outline" target="_blank" rel="noopener">Visit Website</a>
+<h3>Plan Your Visit</h3>
+<p>Find tasting details and confirm hours before you go.</p>
+<div class="visit-hours" id="visitHours">
+<span class="visit-hours-label">Hours</span>
+<span class="visit-hours-value">Mon–Sat 11am–6pm · Sun 12–5pm</span>
+</div>
+<a href="https://marivineyards.com/visit" class="action-btn gold" id="visitPrimaryCta" target="_blank" rel="noopener">Book a Tasting</a>
+<a href="https://maps.google.com/maps?q=Mari+Vineyards+Traverse+City" class="action-btn outline" id="visitDirectionsCta" target="_blank" rel="noopener">Get Directions</a>
 </div>
 
 <!-- Map -->
@@ -500,18 +509,6 @@ Open today · 11am–6pm
 <div class="map-address">8175 Center Rd<br/>Traverse City, MI 49686</div>
 <a href="https://maps.google.com/maps?q=Mari+Vineyards+Traverse+City" class="map-link" target="_blank" rel="noopener">Get Directions <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h5M5.5 2.5l3 2.5-3 2.5"/></svg></a>
 </div>
-</div>
-
-<!-- Hours -->
-<div class="hours-card">
-<h4>Hours</h4>
-<div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">11am – 6pm</span></div>
-<div class="hours-row today"><span class="hours-day">Tuesday ✦ Today</span><span class="hours-time">11am – 6pm</span></div>
-<div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">11am – 6pm</span></div>
-<div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">11am – 6pm</span></div>
-<div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">11am – 6pm</span></div>
-<div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">11am – 6pm</span></div>
-<div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">12pm – 5pm</span></div>
 </div>
 
 <!-- Contact -->
@@ -757,12 +754,44 @@ const WINERIES = [{"name":"Chateau Grand Traverse","region":"Old Mission","type"
       ).join('');
     }
 
-    // Sidebar heading
+    // Sidebar visit CTA (hours + tasting + directions)
     const sideH3 = document.querySelector('.action-card h3');
-    if (sideH3) sideH3.textContent = 'Visit ' + w.name;
+    if (sideH3) sideH3.textContent = 'Plan Your Visit';
+    const sideP = document.querySelector('.action-card p');
+    if (sideP) sideP.textContent = 'Find the winery’s official site for tasting details and reservations.';
+
+    const vague = /^(seasonal( hours)?|by appointment|call for hours|varies|n\/a|—|-)?$/i;
+    const visitHours = document.getElementById('visitHours');
+    if (visitHours) {
+      const hours = (w.hours || '').trim();
+      if (!hours || vague.test(hours)) {
+        let note = 'Hours aren’t listed yet — confirm before you go.';
+        if (/^by appointment$/i.test(hours)) note = 'By appointment — contact the winery to schedule a tasting.';
+        else if (/^seasonal/i.test(hours)) note = 'Seasonal — check the winery’s site for current tasting times.';
+        visitHours.className = 'visit-hours is-fallback';
+        visitHours.innerHTML =
+          '<span class="visit-hours-label">Hours</span>' +
+          '<span class="visit-hours-value">Confirm hours before you go</span>' +
+          '<span class="visit-hours-note">' + note + '</span>';
+      } else {
+        visitHours.className = 'visit-hours';
+        visitHours.innerHTML =
+          '<span class="visit-hours-label">Hours</span>' +
+          '<span class="visit-hours-value">' + hours + '</span>';
+      }
+    }
+
+    const mapQuery = encodeURIComponent(w.name + ' ' + w.city + ' Michigan');
+    const searchQuery = encodeURIComponent(w.name + ' ' + w.city + ' Michigan website');
+    const primaryCta = document.getElementById('visitPrimaryCta');
+    if (primaryCta) {
+      primaryCta.href = 'https://www.google.com/search?q=' + searchQuery;
+      primaryCta.textContent = 'Find Tasting Info';
+    }
+    const directionsCta = document.getElementById('visitDirectionsCta');
+    if (directionsCta) directionsCta.href = 'https://maps.google.com/maps?q=' + mapQuery;
 
     // Map - update to search for this winery
-    const mapQuery = encodeURIComponent(w.name + ' ' + w.city + ' Michigan');
     const mapIframe = document.querySelector('.map-card iframe');
     if (mapIframe) mapIframe.src = 'https://maps.google.com/maps?q=' + mapQuery + '&t=&z=14&ie=UTF8&iwloc=&output=embed';
     const mapAddr = document.querySelector('.map-address');
@@ -790,13 +819,6 @@ const WINERIES = [{"name":"Chateau Grand Traverse","region":"Old Mission","type"
     // Nearby section title
     const nearbyTitle = document.querySelector('.nearby-section .section-label');
     if (nearbyTitle) nearbyTitle.textContent = 'More in ' + w.region;
-
-    // Hours - update sidebar
-    const hoursCard = document.querySelector('.hours-card');
-    if (hoursCard && w.hours) {
-      const rows = hoursCard.querySelectorAll('.hours-time');
-      rows.forEach(r => r.textContent = w.hours.includes('\u00b7') ? w.hours.split('\u00b7')[0].replace(/Mon.Sat|Daily/,'').trim() : w.hours);
-    }
 
 })();
 </script>

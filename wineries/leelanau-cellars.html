@@ -101,6 +101,11 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 .action-btn{display:block;padding:13px;border-radius:5px;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .3s;margin-bottom:8px;text-align:center;}
 .action-btn.gold{background:var(--gold);color:var(--forest-deep);}.action-btn.gold:hover{background:var(--gold-light);}
 .action-btn.outline{border:1.5px solid rgba(201,169,110,0.3);color:var(--gold-light);}.action-btn.outline:hover{border-color:var(--gold);}
+.visit-hours{margin:0 0 18px;padding:14px 16px;background:rgba(245,240,232,0.08);border:1px solid rgba(201,169,110,0.28);border-radius:6px;text-align:left;}
+.visit-hours-label{display:block;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.visit-hours-value{display:block;font-size:.9rem;color:var(--cream);line-height:1.5;font-weight:500;}
+.visit-hours-note{display:block;margin-top:6px;font-size:.78rem;color:rgba(245,240,232,0.55);line-height:1.45;}
+.visit-hours.is-fallback .visit-hours-value{color:rgba(245,240,232,0.9);}
 
 .map-card{border-radius:10px;overflow:hidden;margin-bottom:16px;border:1px solid rgba(27,58,45,0.08);}
 .map-info{padding:14px 16px;}
@@ -277,9 +282,10 @@ footer{background:var(--charcoal);padding:50px 40px 30px;color:rgba(245,240,232,
 
 <aside class="detail-sidebar"><div class="sidebar-sticky">
 <div class="action-card">
-<h3>Visit Leelanau Cellars</h3>
-<p>Pioneer Estate Winery in Omena, Michigan.</p>
-<a href="https://www.google.com/search?q=Leelanau+Cellars+Omena+Michigan+website" class="action-btn gold" target="_blank" rel="noopener">Find Website</a>
+<h3>Plan Your Visit</h3>
+<p>Find the winery’s official site for tasting details and reservations.</p>
+<div class="visit-hours"><span class="visit-hours-label">Hours</span><span class="visit-hours-value">Mon–Sat 10am–6pm · Sun 12–5pm</span></div>
+<a href="https://www.google.com/search?q=Leelanau+Cellars+Omena+Michigan+website" class="action-btn gold" target="_blank" rel="noopener">Find Tasting Info</a>
 <a href="https://maps.google.com/maps?q=Leelanau+Cellars+Omena+Michigan" class="action-btn outline" target="_blank" rel="noopener">Get Directions</a>
 </div>
 <div class="map-card">
@@ -289,10 +295,7 @@ footer{background:var(--charcoal);padding:50px 40px 30px;color:rgba(245,240,232,
 <a class="map-link" href="https://maps.google.com/maps?q=Leelanau+Cellars+Omena+Michigan" target="_blank" rel="noopener">Get Directions →</a>
 </div>
 </div>
-<div class="hours-card">
-<h4>Hours</h4>
-<div class="hours-text">Mon–Sat 10am–6pm · Sun 12–5pm</div>
-</div>
+
 </div></aside>
 </div>
 

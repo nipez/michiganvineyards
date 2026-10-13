@@ -1,0 +1,18 @@
+# Cloudflare Pages redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# Platform defaults (already applied by Cloudflare Pages — do not duplicate):
+#   /page.html  → /page          (308)
+#   /page/      → /page          (308)  for *.html pages (not directories)
+#
+# Preferred canonical form: https://michiganvineyards.com/<path>  (no trailing slash, no .html)
+# Homepage remains https://michiganvineyards.com/
+
+# Old sitemap / canonical alias: /wineries had no page (soft-404 → homepage).
+# The real directory lives at /directory. Exact-path only — does not affect /wineries/<slug>.
+/wineries /directory 301
+/wineries/ /directory 301
+
+# Note: query-string redirects (winery-detail?w=<slug>) are NOT supported in _redirects.
+# Those are handled by functions/winery-detail.js (301 301) with an HTML fallback
+# (noindex + client redirect) in winery-detail.html.

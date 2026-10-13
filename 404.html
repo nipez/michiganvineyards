@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<title>Page Not Found — MichiganVineyards.com</title>
+<meta name="robots" content="noindex, follow"/>
+<meta content="That page isn’t on MichiganVineyards.com. Browse the winery directory, regions, or events calendar instead." name="description"/>
+<link rel="canonical" href="https://michiganvineyards.com/404"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --forest:#1B3A2D;--forest-deep:#0F2419;--gold:#C9A96E;--gold-light:#D4BC8B;
+  --cream:#F5F0E8;--cream-dark:#EDE6D8;--text:#3A3330;--text-light:#7A7068;--white:#FEFCF9;
+}
+html{font-size:17px;}
+body{
+  font-family:'Outfit',sans-serif;color:var(--text);background:var(--cream);
+  min-height:100vh;display:flex;flex-direction:column;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(201,169,110,.18), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(27,58,45,.08), transparent 50%);
+}
+a{color:inherit;text-decoration:none;}
+.top-bar{
+  background:var(--forest-deep);color:rgba(245,240,232,.75);
+  font-size:.72rem;letter-spacing:.04em;text-align:center;padding:8px 16px;
+}
+.top-bar a{color:var(--gold-light);}
+.top-bar a:hover{text-decoration:underline;}
+nav{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:18px 28px;max-width:1100px;margin:0 auto;width:100%;
+}
+.logo-main{font-family:'Playfair Display',serif;font-weight:600;font-size:1.35rem;color:var(--forest);}
+.logo-sub{display:block;font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:2px;}
+.nav-links{display:flex;gap:22px;list-style:none;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{font-size:.84rem;color:var(--text-light);font-weight:500;}
+.nav-links a:hover{color:var(--forest);}
+main{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  padding:48px 24px 72px;text-align:center;
+}
+.panel{max-width:560px;}
+.kicker{
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:14px;
+}
+h1{
+  font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.2rem);
+  color:var(--forest);line-height:1.15;margin-bottom:16px;font-weight:600;
+}
+.lead{font-size:1.05rem;line-height:1.65;color:var(--text-light);margin-bottom:36px;}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:28px;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 22px;border-radius:4px;font-size:.88rem;font-weight:500;
+  transition:background .2s,color .2s,border-color .2s;
+}
+.btn-primary{background:var(--forest);color:var(--cream);}
+.btn-primary:hover{background:var(--forest-deep);}
+.btn-outline{border:1.5px solid var(--forest);color:var(--forest);background:transparent;}
+.btn-outline:hover{background:var(--forest);color:var(--cream);}
+.more{font-size:.9rem;color:var(--text-light);}
+.more a{color:var(--forest);font-weight:500;border-bottom:1px solid rgba(27,58,45,.25);}
+.more a:hover{border-bottom-color:var(--gold);color:var(--forest-deep);}
+footer{
+  background:var(--forest-deep);color:rgba(245,240,232,.7);
+  padding:22px 28px;text-align:center;font-size:.8rem;
+}
+footer a{color:var(--gold-light);}
+@media (max-width:640px){
+  .nav-links{display:none;}
+  nav{justify-content:center;}
+}
+</style>
+</head>
+<body>
+<div class="top-bar">Looking for a winery? <a href="/directory">Browse the full directory →</a></div>
+<nav>
+  <a class="logo" href="/">
+    <span class="logo-main">Michigan Vineyards</span>
+    <span class="logo-sub">Wine Country Guide</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/regions">Regions</a></li>
+    <li><a href="/directory">Wineries</a></li>
+    <li><a href="/events">Events</a></li>
+    <li><a href="/plan-your-visit">Plan Your Visit</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="panel">
+    <div class="kicker">404 — Not found</div>
+    <h1>This page isn’t on the map.</h1>
+    <p class="lead">The link may be outdated, or the winery page moved. Try the directory, a region guide, or upcoming events.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/directory">Winery directory</a>
+      <a class="btn btn-outline" href="/regions">Wine regions</a>
+      <a class="btn btn-outline" href="/events">Events</a>
+    </div>
+    <p class="more">Or start at the <a href="/">homepage</a> · <a href="/fennville">Fennville</a> · <a href="/plan-your-visit">Plan your visit</a></p>
+  </div>
+</main>
+<footer>
+  <span>© 2026 MichiganVineyards.com · <a href="/sitemap">Sitemap</a></span>
+</footer>
+</body>
+</html>

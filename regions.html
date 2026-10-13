@@ -13,7 +13,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <title>Michigan Wine Regions & AVAs | MichiganVineyards.com</title>
-<link rel="canonical" href="https://michiganvineyards.com/regions/"/>
+<link rel="canonical" href="https://michiganvineyards.com/regions"/>
 <meta content="Explore Michigan's 11 wine regions including Old Mission Peninsula, Leelanau Peninsula, Lake Michigan Shore, Fennville, Tip of the Mitt, and more. Compare regions, plan your visit." name="description"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -753,7 +753,7 @@ footer {
 <meta property="og:site_name" content="MichiganVineyards.com"/>
 <meta property="og:title" content="Michigan Wine Regions & AVAs — 11 Wine Regions | MichiganVineyards.com"/>
 <meta property="og:description" content="Explore Michigan's 11 wine regions: Old Mission Peninsula, Leelanau, Lake Michigan Shore, Fennville, and more. Compare regions, discover wineries, plan your visit."/>
-<meta property="og:url" content="https://michiganvineyards.com/regions/"/>
+<meta property="og:url" content="https://michiganvineyards.com/regions"/>
 <meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -767,7 +767,7 @@ footer {
   "@type": "CollectionPage",
   "name": "Michigan Wine Regions",
   "description": "Explore all 11 Michigan wine regions and AVAs",
-  "url": "https://michiganvineyards.com/regions/",
+  "url": "https://michiganvineyards.com/regions",
   "isPartOf": {
     "@id": "https://michiganvineyards.com/#website"
   },
@@ -794,7 +794,7 @@ footer {
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  7 Wine Trails · 192 Wineries · <a href="directory.html">Explore the Full Directory →</a>
+  7 Wine Trails · 192 Wineries · <a href="/directory">Explore the Full Directory →</a>
 </div>
 
 <!-- NAV -->
@@ -808,12 +808,12 @@ footer {
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="regions.html" class="active">Regions</a></li>
-    <li><a href="directory.html">Wineries</a></li>
-    <li><a href="wine-trails.html">Wine Trails</a></li>
-    <li><a href="the-vine.html">The Vine</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a class="nav-cta" href="plan-your-visit.html">Plan Your Visit</a></li>
+    <li><a href="/regions" class="active">Regions</a></li>
+    <li><a href="/directory">Wineries</a></li>
+    <li><a href="/wine-trails">Wine Trails</a></li>
+    <li><a href="/the-vine">The Vine</a></li>
+    <li><a href="/events">Events</a></li>
+    <li><a class="nav-cta" href="/plan-your-visit">Plan Your Visit</a></li>
   </ul>
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
@@ -903,7 +903,7 @@ footer {
   </div>
 
   <!-- 1. OLD MISSION PENINSULA -->
-  <a class="region-deep-card" id="old-mission" href="regions.html#old-mission">
+  <a class="region-deep-card" id="old-mission" href="/regions#old-mission">
     <div class="region-deep-visual">
       <div class="region-deep-bg" style="background-image: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=900&h=600&fit=crop&q=80'); background-color: #5A4030;"></div>
       <span class="region-deep-ava-badge" style="color: var(--old-mission);">Official AVA · Est. 1987</span>
@@ -967,7 +967,7 @@ footer {
   </a>
 
   <!-- 2. LEELANAU PENINSULA -->
-  <a class="region-deep-card" id="leelanau" href="regions.html#leelanau">
+  <a class="region-deep-card" id="leelanau" href="/regions#leelanau">
     <div class="region-deep-visual">
       <div class="region-deep-bg" style="background-image: url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=900&h=600&fit=crop&q=80'); background-color: #1A3020;"></div>
       <span class="region-deep-ava-badge" style="color: var(--leelanau);">Official AVA · Est. 1982</span>
@@ -1031,7 +1031,7 @@ footer {
   </a>
 
   <!-- 3. LAKE MICHIGAN SHORE -->
-  <a class="region-deep-card" id="lake-michigan-shore" href="fennville.html#lake-michigan-shore">
+  <a class="region-deep-card" id="lake-michigan-shore" href="/fennville#lake-michigan-shore">
     <div class="region-deep-visual">
       <div class="region-deep-bg" style="background-image: url('https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?w=900&h=600&fit=crop&q=80'); background-color: #1E2A3A;"></div>
       <span class="region-deep-ava-badge" style="color: var(--lake-shore);">Official AVA · Est. 1983</span>
@@ -1095,7 +1095,7 @@ footer {
   </a>
 
   <!-- 4. FENNVILLE -->
-  <a class="region-deep-card" id="fennville" href="fennville.html">
+  <a class="region-deep-card" id="fennville" href="/fennville">
     <div class="region-deep-visual">
       <div class="region-deep-bg" style="background-image: url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=900&h=600&fit=crop&q=80'); background-color: #3A2A3E;"></div>
       <span class="region-deep-ava-badge" style="color: var(--fennville);">Official AVA · Est. 1981</span>
@@ -1158,7 +1158,7 @@ footer {
   </a>
 
   <!-- 5. TIP OF THE MITT -->
-  <a class="region-deep-card" id="tip-of-the-mitt" href="regions.html#tip-of-the-mitt">
+  <a class="region-deep-card" id="tip-of-the-mitt" href="/regions#tip-of-the-mitt">
     <div class="region-deep-visual">
       <div class="region-deep-bg" style="background-image: url('https://images.unsplash.com/photo-1464638681273-0962e9b53566?w=900&h=600&fit=crop&q=80'); background-color: #2A3A28;"></div>
       <span class="region-deep-ava-badge" style="color: var(--tip-mitt);">Official AVA · Est. 2016</span>
@@ -1360,32 +1360,32 @@ footer {
     <p class="section-desc">Michigan's wine scene reaches well beyond its five official AVAs — from urban tasting rooms to cold-climate pioneers and farmhouse cideries.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;max-width:1100px;margin:44px auto 0;">
-    <a id="southeast-michigan" href="directory.html" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
+    <a id="southeast-michigan" href="/directory" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
       <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-warm);font-weight:600;margin-bottom:8px;">22 Wineries</div>
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.5rem;font-weight:600;margin-bottom:10px;">Southeast Michigan</h3>
       <p style="color:var(--text-light);font-size:.94rem;line-height:1.6;">Urban wineries and tasting rooms near Detroit and Ann Arbor bringing wine country closer to the city.</p>
     </a>
-    <a id="west-michigan" href="directory.html" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
+    <a id="west-michigan" href="/directory" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
       <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-warm);font-weight:600;margin-bottom:8px;">16 Wineries</div>
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.5rem;font-weight:600;margin-bottom:10px;">West Michigan</h3>
       <p style="color:var(--text-light);font-size:.94rem;line-height:1.6;">From Grand Rapids to Ludington — craft wineries, cideries, and farm markets along the lakeshore.</p>
     </a>
-    <a id="central-michigan" href="directory.html" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
+    <a id="central-michigan" href="/directory" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
       <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-warm);font-weight:600;margin-bottom:8px;">14 Wineries</div>
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.5rem;font-weight:600;margin-bottom:10px;">Central Michigan</h3>
       <p style="color:var(--text-light);font-size:.94rem;line-height:1.6;">Boutique wineries, farmhouse cideries, and craft producers scattered across Michigan's heartland.</p>
     </a>
-    <a id="upper-peninsula" href="directory.html" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
+    <a id="upper-peninsula" href="/directory" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
       <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-warm);font-weight:600;margin-bottom:8px;">8 Wineries</div>
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.5rem;font-weight:600;margin-bottom:10px;">Upper Peninsula</h3>
       <p style="color:var(--text-light);font-size:.94rem;line-height:1.6;">Remote and rugged winemaking in one of the most unique wine regions in the country.</p>
     </a>
-    <a id="northeast-michigan" href="directory.html" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
+    <a id="northeast-michigan" href="/directory" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
       <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-warm);font-weight:600;margin-bottom:8px;">3 Wineries</div>
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.5rem;font-weight:600;margin-bottom:10px;">Northeast Michigan</h3>
       <p style="color:var(--text-light);font-size:.94rem;line-height:1.6;">Small farm wineries and fruit-wine makers along Lake Huron's Sunrise Coast.</p>
     </a>
-    <a id="thumb-sunrise-coast" href="directory.html" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
+    <a id="thumb-sunrise-coast" href="/directory" class="more-region-card" style="display:block;text-decoration:none;color:var(--text);background:var(--cream);border-radius:12px;border-left:4px solid var(--gold);padding:26px 28px;transition:transform .25s,box-shadow .25s;scroll-margin-top:96px;">
       <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-warm);font-weight:600;margin-bottom:8px;">5 Wineries</div>
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest);font-size:1.5rem;font-weight:600;margin-bottom:10px;">Thumb &amp; Sunrise Coast</h3>
       <p style="color:var(--text-light);font-size:.94rem;line-height:1.6;">Emerging vineyards and cideries across the Thumb and the Lake Huron shoreline.</p>
@@ -1468,8 +1468,8 @@ footer {
     <h2>Ready to Explore Michigan Wine Country?</h2>
     <p>Browse all 192 wineries, plan multi-region itineraries, or dive into our guides on The Vine for insider tips.</p>
     <div class="cta-buttons">
-      <a class="btn-primary" href="directory.html">Browse All Wineries</a>
-      <a class="btn-outline" href="plan-your-visit.html">Plan Your Visit</a>
+      <a class="btn-primary" href="/directory">Browse All Wineries</a>
+      <a class="btn-outline" href="/plan-your-visit">Plan Your Visit</a>
     </div>
   </div>
 </div>
@@ -1501,37 +1501,37 @@ footer {
     <div class="footer-col">
       <h4>Regions</h4>
       <ul>
-        <li><a href="regions.html#old-mission">Old Mission Peninsula</a></li>
-        <li><a href="regions.html#leelanau">Leelanau Peninsula</a></li>
-        <li><a href="fennville.html#lake-michigan-shore">Lake Michigan Shore</a></li>
-        <li><a href="fennville.html">Fennville</a></li>
-        <li><a href="regions.html#tip-of-the-mitt">Tip of the Mitt</a></li>
+        <li><a href="/regions#old-mission">Old Mission Peninsula</a></li>
+        <li><a href="/regions#leelanau">Leelanau Peninsula</a></li>
+        <li><a href="/fennville#lake-michigan-shore">Lake Michigan Shore</a></li>
+        <li><a href="/fennville">Fennville</a></li>
+        <li><a href="/regions#tip-of-the-mitt">Tip of the Mitt</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
       <ul>
-        <li><a href="directory.html">All Wineries</a></li>
-        <li><a href="wine-trails.html">Wine Trails</a></li>
-        <li><a href="the-vine.html">The Vine</a></li>
-        <li><a href="events.html">Events Calendar</a></li>
-        <li><a href="plan-your-visit.html">Plan Your Visit</a></li>
+        <li><a href="/directory">All Wineries</a></li>
+        <li><a href="/wine-trails">Wine Trails</a></li>
+        <li><a href="/the-vine">The Vine</a></li>
+        <li><a href="/events">Events Calendar</a></li>
+        <li><a href="/plan-your-visit">Plan Your Visit</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Resources</h4>
       <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="advertise.html">Advertise</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/advertise">Advertise</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/sitemap">Sitemap</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 MichiganVineyards.com · All Rights Reserved</span>
     <div style="display: flex; gap: 24px;">
-      <a href="sitemap.html">Sitemap</a>
+      <a href="/sitemap">Sitemap</a>
       <a href="https://traversecitywinetour.com">Traverse City Wine Tours</a>
     </div>
   </div>

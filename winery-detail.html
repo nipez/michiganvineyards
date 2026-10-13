@@ -14,7 +14,24 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <title>Mari Vineyards — Old Mission Peninsula | MichiganVineyards.com</title>
 <meta content="Visit Mari Vineyards on Old Mission Peninsula. Known for Cabernet Franc, Nebbiolo, Sangiovese & Riesling. Underground cellar, estate wines, and panoramic Grand Traverse Bay views." name="description"/>
-<link rel="canonical" href="https://michiganvineyards.com/wineries/mari-vineyards/"/>
+<meta name="robots" content="noindex, follow"/>
+<link rel="canonical" href="https://michiganvineyards.com/directory"/>
+<script>
+/* Fallback when Pages Functions are not active: send ?w=<slug> to the static winery URL. */
+(function () {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var slug = (params.get('w') || '').trim().toLowerCase();
+    if (slug && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+      window.location.replace('/wineries/' + slug);
+      return;
+    }
+    if (!slug) {
+      window.location.replace('/directory');
+    }
+  } catch (e) {}
+})();
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -313,7 +330,7 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 <meta property="og:site_name" content="MichiganVineyards.com"/>
 <meta property="og:title" content="Mari Vineyards — Old Mission Peninsula | MichiganVineyards.com"/>
 <meta property="og:description" content="Visit Mari Vineyards on Old Mission Peninsula. Known for Cabernet Franc, Nebbiolo, Sangiovese & Riesling. Hours, directions, wines, and more."/>
-<meta property="og:url" content="https://michiganvineyards.com/wineries/mari-vineyards/"/>
+<meta property="og:url" content="https://michiganvineyards.com/directory"/>
 <meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Mari Vineyards — Old Mission Peninsula | MichiganVineyards.com"/>
@@ -325,7 +342,7 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
   "@type": "Winery",
   "name": "Mari Vineyards",
   "description": "Estate vineyard and winery on Old Mission Peninsula, Traverse City, Michigan",
-  "url": "https://michiganvineyards.com/wineries/mari-vineyards/",
+  "url": "https://michiganvineyards.com/directory",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Traverse City",
@@ -337,11 +354,11 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 </head>
 <body>
 
-<div class="top-bar">7 Wine Trails · 192 Wineries · <a href="directory.html">Explore the Full Directory →</a></div>
+<div class="top-bar">7 Wine Trails · 192 Wineries · <a href="/directory">Explore the Full Directory →</a></div>
 
 <nav id="mainNav"><div class="nav-inner">
 <a class="logo" href="/"><div class="logo-icon"></div><div class="logo-text"><span class="logo-main">Michigan Vineyards</span><span class="logo-sub">Wine Country Guide</span></div></a>
-<ul class="nav-links"><li><a href="regions.html">Regions</a></li><li><a href="directory.html" class="active">Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="the-vine.html">The Vine</a></li><li><a href="events.html">Events</a></li><li><a class="nav-cta" href="plan-your-visit.html">Plan Your Visit</a></li></ul>
+<ul class="nav-links"><li><a href="/regions">Regions</a></li><li><a href="/directory" class="active">Wineries</a></li><li><a href="/wine-trails">Wine Trails</a></li><li><a href="/the-vine">The Vine</a></li><li><a href="/events">Events</a></li><li><a class="nav-cta" href="/plan-your-visit">Plan Your Visit</a></li></ul>
 <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
 </div></nav>
 
@@ -361,8 +378,8 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 
 <div class="breadcrumbs">
 <a href="/">Home</a><span class="sep">›</span>
-<a href="directory.html">Wineries</a><span class="sep">›</span>
-<a href="winery-detail.html?w=?region=old-mission">Old Mission</a><span class="sep">›</span>
+<a href="/directory">Wineries</a><span class="sep">›</span>
+<a href="/directory?region=old-mission">Old Mission</a><span class="sep">›</span>
 <span class="current">Mari Vineyards</span>
 </div>
 
@@ -546,22 +563,22 @@ Open today · 11am–6pm
 <div class="nearby-section">
 <div class="nearby-header">
 <h2>More on Old Mission Peninsula</h2>
-<a href="winery-detail.html?w=?region=old-mission">View All 11 → <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h5M5.5 2.5l3 2.5-3 2.5"/></svg></a>
+<a href="/directory?region=old-mission">View All 11 → <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h5M5.5 2.5l3 2.5-3 2.5"/></svg></a>
 </div>
 <div class="nearby-grid">
-<a class="nearby-card" href="winery-detail.html?w=chateau-grand-traverse">
+<a class="nearby-card" href="/wineries/chateau-grand-traverse">
 <div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/8.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
 <div class="nearby-info"><h3 class="nearby-name">Chateau Grand Traverse</h3><div class="nearby-type">Estate Winery & Tasting Room</div><div class="nearby-known">Known for: <strong>Riesling, Ice Wine</strong></div></div>
 </a>
-<a class="nearby-card" href="winery-detail.html?w=brys-estate-vineyard-and-winery">
+<a class="nearby-card" href="/wineries/brys-estate-vineyard-and-winery">
 <div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/6.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
 <div class="nearby-info"><h3 class="nearby-name">Brys Estate</h3><div class="nearby-type">Estate Vineyard & Winery</div><div class="nearby-known">Known for: <strong>Red Blend, Chardonnay</strong></div></div>
 </a>
-<a class="nearby-card" href="winery-detail.html?w=chateau-chantal">
+<a class="nearby-card" href="/wineries/chateau-chantal">
 <div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/1.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
 <div class="nearby-info"><h3 class="nearby-name">Chateau Chantal</h3><div class="nearby-type">Winery & B&B Inn</div><div class="nearby-known">Known for: <strong>Sparkling, Cerise</strong></div></div>
 </a>
-<a class="nearby-card" href="winery-detail.html?w=2-lads-winery">
+<a class="nearby-card" href="/wineries/2-lads-winery">
 <div class="nearby-img"><div class="nearby-img-inner" style="background:url('winery-detail-images/3.jpg') center/cover;"></div><span class="nearby-tag" style="color:#8B5E3C;">Old Mission</span></div>
 <div class="nearby-info"><h3 class="nearby-name">2 Lads Winery</h3><div class="nearby-type">Modern Estate Winery</div><div class="nearby-known">Known for: <strong>Cab Franc, Pinot Noir</strong></div></div>
 </a>
@@ -578,11 +595,11 @@ Open today · 11am–6pm
 <footer><div class="footer-inner">
 <div class="footer-grid">
 <div class="footer-brand"><div style="display:flex;flex-direction:column;"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--cream);">Michigan Vineyards</span><span style="font-size:1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:2px;">Wine Country Guide</span></div><p>Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the Great Lakes State.</p></div>
-<div class="footer-col"><h4>Regions</h4><ul><li><a href="regions.html#old-mission">Old Mission Peninsula</a></li><li><a href="regions.html#leelanau">Leelanau Peninsula</a></li><li><a href="regions.html#lake-michigan-shore">Lake Michigan Shore</a></li><li><a href="regions.html#fennville">Fennville</a></li><li><a href="regions.html#tip-of-the-mitt">Tip of the Mitt</a></li></ul></div>
-<div class="footer-col"><h4>Explore</h4><ul><li><a href="directory.html">All Wineries</a></li><li><a href="wine-trails.html">Wine Trails</a></li><li><a href="the-vine.html">The Vine</a></li><li><a href="events.html">Events</a></li><li><a href="plan-your-visit.html">Plan Your Visit</a></li></ul></div>
-<div class="footer-col"><h4>Resources</h4><ul><li><a href="about.html">About</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="contact.html">Contact</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+<div class="footer-col"><h4>Regions</h4><ul><li><a href="/regions#old-mission">Old Mission Peninsula</a></li><li><a href="/regions#leelanau">Leelanau Peninsula</a></li><li><a href="/regions#lake-michigan-shore">Lake Michigan Shore</a></li><li><a href="/regions#fennville">Fennville</a></li><li><a href="/regions#tip-of-the-mitt">Tip of the Mitt</a></li></ul></div>
+<div class="footer-col"><h4>Explore</h4><ul><li><a href="/directory">All Wineries</a></li><li><a href="/wine-trails">Wine Trails</a></li><li><a href="/the-vine">The Vine</a></li><li><a href="/events">Events</a></li><li><a href="/plan-your-visit">Plan Your Visit</a></li></ul></div>
+<div class="footer-col"><h4>Resources</h4><ul><li><a href="/about">About</a></li><li><a href="/advertise">Advertise</a></li><li><a href="/contact">Contact</a></li><li><a href="/sitemap">Sitemap</a></li></ul></div>
 </div>
-<div class="footer-bottom"><span>© 2026 MichiganVineyards.com · All Rights Reserved</span><div style="display:flex;gap:20px;"><a href="sitemap.html">Sitemap</a><a href="https://traversecitywinetour.com">Traverse City Wine Tours</a></div></div>
+<div class="footer-bottom"><span>© 2026 MichiganVineyards.com · All Rights Reserved</span><div style="display:flex;gap:20px;"><a href="/sitemap">Sitemap</a><a href="https://traversecitywinetour.com">Traverse City Wine Tours</a></div></div>
 </div></footer>
 
 <!-- Claim Modal -->
@@ -714,13 +731,16 @@ const WINERIES = [{"name":"Chateau Grand Traverse","region":"Old Mission","type"
       .replace(/[\u2019\u02BC'"]/g, '')
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/(^-|-$)/g, '');
-    const wineryUrl = 'https://michiganvineyards.com/wineries/' + seoSlug + '/';
+    const wineryUrl = 'https://michiganvineyards.com/wineries/' + seoSlug;
     const seoDesc = 'Visit ' + w.name + ' in ' + w.region + ', Michigan.' +
       (w.known && w.known.length ? ' Known for ' + w.known.slice(0, 4).join(', ') + '.' : '') +
       ' Hours, directions, wines, and more.';
     const setMeta = (sel, val) => { const el = document.querySelector(sel); if (el) el.setAttribute('content', val); };
     const canon = document.querySelector('link[rel="canonical"]');
     if (canon) canon.setAttribute('href', wineryUrl);
+    // Prefer the static page; keep noindex on this template if redirect is blocked.
+    window.location.replace('/wineries/' + seoSlug);
+    return;
     setMeta('meta[name="description"]', seoDesc);
     setMeta('meta[property="og:url"]', wineryUrl);
     setMeta('meta[property="og:title"]', document.title);

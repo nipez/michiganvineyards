@@ -85,6 +85,42 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://michiganvineyards.com/wine-trails/lake-michigan-shore</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wine-trails/leelanau</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wine-trails/old-mission</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wine-trails/petoskey</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wine-trails/river-raisin</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://michiganvineyards.com/wine-trails/upper-peninsula</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://michiganvineyards.com/wineries/12-corners-vineyards</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>

@@ -16,7 +16,7 @@ Then open the URL `serve` prints (usually http://localhost:3000).
 
 - `index.html` — homepage
 - `directory.html` — filterable winery directory (grid / list / **map** via `?view=map`)
-- `regions.html`, `wine-trails.html`, `plan-your-visit.html` — planning pages
+- `regions.html`, `wine-trails.html`, `wine-tours.html`, `plan-your-visit.html` — planning pages
 - `the-vine.html` — editorial / blog template
 - `events.html`, `about.html`, `advertise.html`, `contact.html`
 - `winery-detail.html` — winery detail template

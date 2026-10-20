@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGRE0QBWPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JGRE0QBWPF');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<title>Michigan Wine Tours — Self-Guided Routes by Region | MichiganVineyards.com</title>
+<meta content="Plan Michigan wine tours by region: Old Mission, Leelanau, Lake Michigan Shore &amp; Fennville, Petoskey / Tip of the Mitt. Self-guided tips, trail links, and tasting-room pages — no fabricated operator listings." name="description"/>
+<link rel="canonical" href="https://michiganvineyards.com/wine-tours"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --forest:#1B3A2D;--forest-deep:#0F2419;--forest-light:#2A5040;
+  --burgundy:#6B2D3E;--wine:#8B3A4A;
+  --gold:#C9A96E;--gold-light:#D4BC8B;--gold-warm:#B8943F;
+  --cream:#F5F0E8;--cream-dark:#EDE6D8;
+  --sage:#8FA68F;--sage-light:#B8CCB0;
+  --charcoal:#2C2420;--text:#3A3330;--text-light:#7A7068;--white:#FEFCF9;
+  --omp:#8B5E3C;--lee:#3A6B4A;--lms:#3A5A7A;--fenn:#6A4A7A;--pet:#5A7A5A;
+}
+html{scroll-behavior:smooth;font-size:17px;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+svg{flex-shrink:0;}
+[id]{scroll-margin-top:96px;}
+
+.top-bar{background:var(--forest-deep);color:var(--sage-light);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:9px 0;text-align:center;}
+.top-bar a{color:var(--gold-light);text-decoration:none;}.top-bar a:hover{text-decoration:underline;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(254,252,249,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,58,45,0.06);transition:box-shadow 0.3s;}
+nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
+.nav-inner{max-width:1340px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:36px;height:36px;background:var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.logo-icon::after{content:'🍇';font-size:17px;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-main{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--forest);letter-spacing:-0.01em;}
+.logo-sub{font-family:'Outfit',sans-serif;font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-warm);margin-top:2px;}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);position:relative;padding:4px 0;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover{color:var(--forest);}.nav-links a:hover::after{width:100%;}
+.nav-links a.active{color:var(--forest);}.nav-links a.active::after{width:100%;}
+.nav-cta{background:var(--forest)!important;color:var(--cream)!important;padding:10px 22px!important;border-radius:4px;font-size:0.74rem!important;letter-spacing:0.06em!important;transition:background 0.3s!important;}
+.nav-cta:hover{background:var(--forest-light)!important;}.nav-cta::after{display:none!important;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+
+.page-hero{position:relative;min-height:58vh;display:flex;align-items:flex-end;overflow:hidden;}
+.page-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&h=900&fit=crop&q=80') center/cover no-repeat;background-color:#1B3A2D;transform:scale(1.02);animation:heroDrift 18s ease-in-out infinite alternate;}
+.page-hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,36,25,0.4) 0%,rgba(15,36,25,0.58) 40%,rgba(15,36,25,0.94) 100%);}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 50% at 75% 20%,rgba(201,169,110,0.18) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 15% 75%,rgba(107,45,62,0.2) 0%,transparent 50%);}
+.page-hero-content{position:relative;z-index:2;max-width:1340px;width:100%;margin:0 auto;padding:90px 40px 56px;}
+.page-hero-brand{font-family:'Outfit',sans-serif;font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px;opacity:0;animation:fadeUp .7s .1s forwards;}
+.page-hero-tag{display:inline-flex;align-items:center;gap:12px;font-size:0.66rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;opacity:0;animation:fadeUp .7s .2s forwards;}
+.page-hero-tag::before,.page-hero-tag::after{content:'';width:28px;height:1px;background:var(--gold);opacity:.5;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.3rem,5vw,3.6rem);font-weight:500;line-height:1.1;color:var(--cream);max-width:820px;opacity:0;animation:fadeUp .7s .35s forwards;}
+.page-hero h1 em{font-style:italic;color:var(--gold-light);}
+.page-hero-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,1.8vw,1.25rem);line-height:1.65;color:rgba(245,240,232,0.72);margin-top:16px;max-width:580px;opacity:0;animation:fadeUp .7s .5s forwards;}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;opacity:0;animation:fadeUp .7s .65s forwards;}
+.btn-primary,.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:4px;font-family:'Outfit',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all .25s;}
+.btn-primary{background:var(--gold);color:var(--forest-deep);}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px);}
+.btn-secondary{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,0.35);}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold-light);}
+
+.breadcrumbs{max-width:1340px;margin:0 auto;padding:14px 40px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:0.76rem;color:var(--text-light);}
+.breadcrumbs a{color:var(--text-light);text-decoration:none;transition:color .3s;}.breadcrumbs a:hover{color:var(--forest);}
+.breadcrumbs .sep{opacity:.4;}.breadcrumbs .current{color:var(--forest);font-weight:500;}
+
+.section{max-width:1340px;margin:0 auto;padding:64px 40px;}
+.section-tag{font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-warm);margin-bottom:10px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.55rem,2.6vw,2.15rem);font-weight:500;color:var(--forest);line-height:1.2;margin-bottom:10px;}
+.section-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--text-light);line-height:1.65;max-width:680px;}
+.section-header{margin-bottom:36px;}
+
+.intro-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:start;}
+.intro-copy p{font-size:0.98rem;line-height:1.8;color:var(--text);margin-bottom:16px;}
+.intro-copy p:last-child{margin-bottom:0;}
+.intro-copy a{color:var(--forest);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(27,58,45,0.2);}
+.intro-copy a:hover{border-bottom-color:var(--gold);}
+.mode-panel{background:linear-gradient(160deg,rgba(27,58,45,0.06) 0%,rgba(201,169,110,0.08) 100%);border:1px solid rgba(27,58,45,0.08);padding:28px;}
+.mode-panel .nest-label{font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest);font-weight:600;margin-bottom:14px;}
+.mode-list{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.mode-list li{display:flex;gap:12px;align-items:flex-start;font-size:0.9rem;line-height:1.55;color:var(--text);}
+.mode-list .dot{width:8px;height:8px;border-radius:50%;margin-top:6px;flex-shrink:0;background:var(--gold);}
+
+.tips-band{background:var(--cream);padding:64px 0;}
+.tips-inner{max-width:1340px;margin:0 auto;padding:0 40px;}
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.tip-item{padding:26px 24px;background:var(--white);border-top:2px solid var(--gold);}
+.tip-item h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--forest);margin-bottom:10px;line-height:1.3;}
+.tip-item p{font-size:0.9rem;line-height:1.65;color:var(--text-light);}
+.tip-item a{color:var(--forest);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(27,58,45,0.2);}
+.tip-item a:hover{border-bottom-color:var(--gold);}
+
+.region-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.region-card{display:flex;flex-direction:column;gap:12px;padding:28px 26px;text-decoration:none;color:inherit;border-bottom:2px solid rgba(27,58,45,0.1);background:linear-gradient(180deg,rgba(27,58,45,0.02) 0%,transparent 100%);transition:transform .25s,border-color .25s,background .25s;}
+.region-card:hover{transform:translateY(-2px);border-bottom-color:var(--accent,var(--gold));background:rgba(27,58,45,0.03);}
+.region-card .rc-tag{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;color:var(--accent,var(--gold-warm));}
+.region-card h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--forest);line-height:1.25;}
+.region-card p{font-size:0.9rem;line-height:1.65;color:var(--text-light);flex:1;}
+.region-card .rc-links{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:4px;}
+.region-card .rc-links a{font-size:0.74rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--forest);text-decoration:none;border-bottom:1px solid rgba(27,58,45,0.2);}
+.region-card .rc-links a:hover{border-bottom-color:var(--gold);}
+
+.stops-band{background:linear-gradient(180deg,#F8F6F1 0%,var(--white) 100%);border-top:1px solid rgba(27,58,45,0.06);}
+.winery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.winery-tile{display:flex;flex-direction:column;gap:8px;padding:22px 22px 20px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(27,58,45,0.1);transition:background .25s,transform .25s,border-color .25s;}
+.winery-tile:hover{background:rgba(27,58,45,0.03);transform:translateY(-2px);border-bottom-color:var(--gold);}
+.winery-tile .wt-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;}
+.winery-tile .wt-badge{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-warm);font-weight:600;}
+.winery-tile .wt-city{font-size:0.72rem;color:var(--text-light);letter-spacing:0.04em;}
+.winery-tile h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:var(--forest);line-height:1.25;}
+.winery-tile .wt-type{font-size:0.82rem;color:var(--text-light);}
+.winery-tile .wt-go{font-size:0.74rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--forest);display:inline-flex;align-items:center;gap:6px;margin-top:10px;}
+.winery-tile:hover .wt-go{color:var(--gold-warm);}
+.more-link-row{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;}
+
+.guided-band{background:var(--forest-deep);color:var(--cream);padding:70px 0;}
+.guided-inner{max-width:1340px;margin:0 auto;padding:0 40px;}
+.guided-band .section-tag{color:var(--gold);}
+.guided-band .section-title{color:var(--cream);}
+.guided-band .section-subtitle{color:rgba(245,240,232,0.55);}
+.guided-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:start;}
+.guided-copy p{font-size:0.95rem;line-height:1.75;color:rgba(245,240,232,0.6);margin-bottom:16px;}
+.guided-copy a{color:var(--gold-light);text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.35);}
+.guided-copy a:hover{border-bottom-color:var(--gold);}
+.partner-box{background:rgba(254,252,249,0.05);border:1px solid rgba(245,240,232,0.12);padding:28px;}
+.partner-box .pb-tag{font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;}
+.partner-box h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--cream);margin-bottom:10px;}
+.partner-box p{font-size:0.9rem;line-height:1.65;color:rgba(245,240,232,0.55);margin-bottom:18px;}
+.partner-box .pb-actions{display:flex;flex-wrap:wrap;gap:12px;}
+.partner-box .btn-primary{background:var(--gold);color:var(--forest-deep);}
+.partner-box .btn-secondary{color:var(--cream);border-color:rgba(245,240,232,0.3);}
+
+.cta-band{padding:70px 40px;background:linear-gradient(135deg,rgba(27,58,45,0.08) 0%,rgba(201,169,110,0.12) 50%,rgba(58,90,122,0.08) 100%);}
+.cta-inner{max-width:900px;margin:0 auto;text-align:center;}
+.cta-inner h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.3rem);color:var(--forest);margin-bottom:12px;}
+.cta-inner p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text-light);line-height:1.65;margin-bottom:28px;}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.cta-actions .btn-primary{background:var(--forest);color:var(--cream);}
+.cta-actions .btn-primary:hover{background:var(--forest-light);}
+.cta-actions .btn-secondary{color:var(--forest);border-color:rgba(27,58,45,0.25);}
+.cta-actions .btn-secondary:hover{border-color:var(--forest);color:var(--forest);}
+
+footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,0.6);}
+.footer-inner{max-width:1340px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+.footer-brand p{font-size:.92rem;line-height:1.7;margin-top:14px;color:rgba(245,240,232,0.4);}
+.footer-col h4{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.footer-col ul{list-style:none;}.footer-col li{margin-bottom:9px;}
+.footer-col a{font-size:.92rem;color:rgba(245,240,232,0.4);text-decoration:none;transition:color .3s;}.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{border-top:1px solid rgba(245,240,232,0.07);padding-top:28px;display:flex;justify-content:space-between;align-items:center;font-size:.76rem;}
+.footer-bottom a{color:rgba(245,240,232,0.35);text-decoration:none;transition:color .3s;}.footer-bottom a:hover{color:var(--gold-light);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+@keyframes heroDrift{from{transform:scale(1.02) translateY(0);}to{transform:scale(1.06) translateY(-1.5%);}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+@media(max-width:1024px){
+  .intro-grid,.guided-grid,.region-grid{grid-template-columns:1fr;}
+  .tips-grid{grid-template-columns:repeat(2,1fr);}
+  .winery-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px 40px;gap:14px;border-bottom:1px solid rgba(27,58,45,0.08);box-shadow:0 8px 30px rgba(27,58,45,0.08);}
+  .nav-links.show{display:flex;}.nav-toggle{display:block;}
+  .page-hero{min-height:70vh;}
+  .page-hero-content{padding:70px 20px 44px;}
+  .section,.tips-inner,.guided-inner{padding-left:20px;padding-right:20px;}
+  .breadcrumbs{padding:10px 20px;}
+  .tips-grid,.winery-grid{grid-template-columns:1fr;}
+  .cta-band{padding:50px 20px;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}
+  .footer-bottom{flex-direction:column;gap:10px;text-align:center;}
+}
+@media(prefers-reduced-motion:reduce){
+  .page-hero-bg{animation:none;}
+  .page-hero-brand,.page-hero-tag,.page-hero h1,.page-hero-desc,.hero-cta{opacity:1;animation:none;}
+  .reveal{opacity:1;transform:none;transition:none;}
+}
+</style>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="MichiganVineyards.com"/>
+<meta property="og:title" content="Michigan Wine Tours — Self-Guided Routes by Region | MichiganVineyards.com"/>
+<meta property="og:description" content="Plan Michigan wine tours by region: Old Mission, Leelanau, Lake Michigan Shore &amp; Fennville, Petoskey. Self-guided tips, trail links, and tasting-room pages."/>
+<meta property="og:url" content="https://michiganvineyards.com/wine-tours"/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&h=630&fit=crop&q=80"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Michigan Wine Tours — Self-Guided Routes by Region | MichiganVineyards.com"/>
+<meta name="twitter:description" content="Plan Michigan wine tours by region: Old Mission, Leelanau, Lake Michigan Shore &amp; Fennville, Petoskey. Self-guided tips, trail links, and tasting-room pages."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&h=630&fit=crop&q=80"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Michigan Wine Tours",
+  "description": "Plan Michigan wine tours by region: Old Mission, Leelanau, Lake Michigan Shore and Fennville, Petoskey / Tip of the Mitt. Self-guided tips, trail links, and tasting-room pages.",
+  "url": "https://michiganvineyards.com/wine-tours",
+  "isPartOf": {"@id": "https://michiganvineyards.com/#website"},
+  "about": [
+    {"@type": "Place", "name": "Old Mission Peninsula"},
+    {"@type": "Place", "name": "Leelanau Peninsula"},
+    {"@type": "Place", "name": "Lake Michigan Shore AVA"},
+    {"@type": "Place", "name": "Fennville AVA"},
+    {"@type": "Place", "name": "Petoskey Wine Region"}
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://michiganvineyards.com"},
+      {"@type": "ListItem", "position": 2, "name": "Plan Your Visit", "item": "https://michiganvineyards.com/plan-your-visit"},
+      {"@type": "ListItem", "position": 3, "name": "Michigan Wine Tours"}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="top-bar">
+  Michigan wine tours by region · <a href="/wine-trails">Wine trails</a> · <a href="/plan-your-visit">Plan your visit</a>
+</div>
+
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a class="logo" href="/">
+      <div class="logo-icon"></div>
+      <div class="logo-text">
+        <span class="logo-main">Michigan Vineyards</span>
+        <span class="logo-sub">Wine Country Guide</span>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      <svg width="22" height="22" fill="none" stroke="#1B3A2D" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/regions">Regions</a></li>
+      <li><a href="/directory">Wineries</a></li>
+      <li><a href="/wine-trails">Wine Trails</a></li>
+      <li><a href="/the-vine">The Vine</a></li>
+      <li><a href="/events">Events</a></li>
+      <li><a class="nav-cta" href="/plan-your-visit">Plan Your Visit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-brand">Michigan Vineyards</div>
+    <div class="page-hero-tag">Wine Country Touring Guide</div>
+    <h1>Michigan <em>wine tours</em>, planned by region</h1>
+    <p class="page-hero-desc">Self-guided routes across Old Mission, Leelanau, Lake Michigan Shore &amp; Fennville, and Petoskey — with practical tips and links to trails, itineraries, and real tasting-room pages.</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#by-region">Tour by region</a>
+      <a class="btn-secondary" href="/plan-your-visit">Open trip planner</a>
+    </div>
+  </div>
+</section>
+
+<div class="breadcrumbs">
+  <a href="/">Home</a><span class="sep">›</span>
+  <a href="/plan-your-visit">Plan Your Visit</a><span class="sep">›</span>
+  <span class="current">Michigan Wine Tours</span>
+</div>
+
+<section class="section" id="how-to-tour">
+  <div class="section-header reveal">
+    <div class="section-tag">How Michigan Wine Tours Work</div>
+    <h2 class="section-title">Pick a region, then build a short loop</h2>
+    <p class="section-subtitle">Most successful Michigan wine tours stay inside one peninsula or AVA for the day. Crossing half the state between tastings burns the afternoon.</p>
+  </div>
+  <div class="intro-grid reveal">
+    <div class="intro-copy">
+      <p>Michigan wine country stretches from Traverse City’s twin peninsulas to southwest lakeshore towns and the Tip of the Mitt. A “Michigan wine tour” is usually a self-guided string of tasting rooms along a <a href="/wine-trails">wine trail</a> — not a single statewide bus route.</p>
+      <p>Start with the region that matches your base: Traverse City for Old Mission or Leelanau, Saugatuck / Fennville / St. Joseph for Lake Michigan Shore, Petoskey for Tip of the Mitt. Then open the matching trail page and the <a href="/directory?view=map">directory map</a> to cluster stops.</p>
+      <p>Ready-made day and weekend outlines live on <a href="/plan-your-visit">Plan Your Visit</a>. This page focuses on touring strategy: how many stops, when to reserve, and which trail guides to open next.</p>
+    </div>
+    <aside class="mode-panel">
+      <div class="nest-label">Two ways to tour</div>
+      <ul class="mode-list">
+        <li><span class="dot"></span><div><strong>Self-guided</strong> — Drive (or rideshare where available), follow a trail page, and book tasting appointments yourself. Best flexibility across every Michigan region.</div></li>
+        <li><span class="dot"></span><div><strong>Guided (where available)</strong> — A local operator handles transport and pacing. We only list partners we actually host on this site — see <a href="#guided">guided options</a> below.</div></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="tips-band" id="tips">
+  <div class="tips-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Practical Tips</div>
+      <h2 class="section-title">Before you pour</h2>
+      <p class="section-subtitle">Small logistics choices decide whether a Michigan wine tour feels relaxed or rushed.</p>
+    </div>
+    <div class="tips-grid reveal">
+      <div class="tip-item">
+        <h3>Designated driver first</h3>
+        <p>Three tasting rooms can mean a dozen pours. Assign a sober driver, book a guided tour where one exists, or use rideshare only where coverage is real — rural peninsulas are spotty.</p>
+      </div>
+      <div class="tip-item">
+        <h3>Tour vs. self-drive</h3>
+        <p>Guided tours shine for groups and Traverse City weekends. Self-drive wins when you want specific estates, cideries, or a Fennville / LMS loop on your own timetable.</p>
+      </div>
+      <div class="tip-item">
+        <h3>Reservations</h3>
+        <p>Summer Saturdays and fall color weekends fill tasting rooms. Check each winery page for hours, then confirm on the winery’s own site or by phone before you go.</p>
+      </div>
+      <div class="tip-item">
+        <h3>How many stops</h3>
+        <p>Plan 3–4 tasting rooms for a full day, or 2–3 if you want lunch and a long patio stop. Compact trails like Old Mission make four stops realistic; spread-out regions need fewer.</p>
+      </div>
+      <div class="tip-item">
+        <h3>Best seasons</h3>
+        <p>May–October is peak. Shoulder months are quieter. Many Traverse City and southwest rooms stay open year-round — confirm winter hours on each listing.</p>
+      </div>
+      <div class="tip-item">
+        <h3>Stay on one map</h3>
+        <p>Use <a href="/directory?view=map">directory map view</a> filtered by region so you are not zigzagging. Pair it with the matching <a href="/wine-trails">wine trail</a> page for context.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="by-region">
+  <div class="section-header reveal">
+    <div class="section-tag">Tour by Region</div>
+    <h2 class="section-title">Where to run a Michigan wine tour</h2>
+    <p class="section-subtitle">Each block links to a trail or region guide already on this site — plus the directory filter for that area.</p>
+  </div>
+  <div class="region-grid reveal">
+    <article class="region-card" style="--accent:var(--omp);">
+      <div class="rc-tag">Traverse City · Old Mission</div>
+      <h3>Old Mission Peninsula wine tours</h3>
+      <p>A compact M-37 spine between Grand Traverse Bay’s arms — ideal first-timers’ loop of 3–4 stops with bay views and Riesling-forward flights. Base in Traverse City.</p>
+      <div class="rc-links">
+        <a href="/wine-trails/old-mission">Old Mission trail</a>
+        <a href="/directory?region=old-mission&amp;view=map">Directory map</a>
+        <a href="/the-vine/old-mission-vs-leelanau">vs. Leelanau</a>
+      </div>
+    </article>
+    <article class="region-card" style="--accent:var(--lee);">
+      <div class="rc-tag">Traverse City · Leelanau</div>
+      <h3>Leelanau Peninsula wine tours</h3>
+      <p>Michigan’s densest trail — sparkling specialists, estate rooms, and Sleeping Bear nearby. Pick a north or south cluster rather than trying the whole peninsula in one day.</p>
+      <div class="rc-links">
+        <a href="/wine-trails/leelanau">Leelanau trail</a>
+        <a href="/directory?region=leelanau&amp;view=map">Directory map</a>
+        <a href="/plan-your-visit">TC weekend itinerary</a>
+      </div>
+    </article>
+    <article class="region-card" style="--accent:var(--lms);">
+      <div class="rc-tag">Southwest Michigan</div>
+      <h3>Lake Michigan Shore wine tours</h3>
+      <p>Warmer lakeshore AVA for Cabernet Franc and longer-season reds — Baroda, Buchanan, Berrien Springs, Paw Paw. Strong Chicago or Grand Rapids weekend base.</p>
+      <div class="rc-links">
+        <a href="/wine-trails/lake-michigan-shore">LMS trail</a>
+        <a href="/fennville#lake-michigan-shore">LMS guide</a>
+        <a href="/directory?region=lake-michigan-shore&amp;view=map">Directory map</a>
+      </div>
+    </article>
+    <article class="region-card" style="--accent:var(--fenn);">
+      <div class="rc-tag">Fennville AVA</div>
+      <h3>Fennville &amp; Saugatuck-area tours</h3>
+      <p>Nested AVA north of the broader LMS — sandy soils, whites, sparkling, and cider. Easy day from Holland or Saugatuck; continue south if you want LMS reds.</p>
+      <div class="rc-links">
+        <a href="/fennville">Fennville page</a>
+        <a href="/directory?region=Fennville&amp;view=map">Directory map</a>
+        <a href="/plan-your-visit">Fennville day trip</a>
+      </div>
+    </article>
+    <article class="region-card" style="--accent:var(--pet);">
+      <div class="rc-tag">Tip of the Mitt</div>
+      <h3>Petoskey wine region tours</h3>
+      <p>Northern frontier tasting — cold-hardy hybrids, meaderies, and Up North scenery around Petoskey and Harbor Springs. Best as a vacation add-on, not a rushed day trip from Detroit.</p>
+      <div class="rc-links">
+        <a href="/wine-trails/petoskey">Petoskey trail</a>
+        <a href="/directory?region=tip-of-the-mitt&amp;view=map">Directory map</a>
+        <a href="/regions#tip-of-the-mitt">Region overview</a>
+      </div>
+    </article>
+    <article class="region-card" style="--accent:var(--forest);">
+      <div class="rc-tag">More routes</div>
+      <h3>River Raisin &amp; Upper Peninsula</h3>
+      <p>Southeast’s River Raisin trail suits Detroit / Ann Arbor day trips. The U.P. trail is a multi-day road trip, not a single afternoon — plan accordingly.</p>
+      <div class="rc-links">
+        <a href="/wine-trails/river-raisin">River Raisin</a>
+        <a href="/wine-trails/upper-peninsula">U.P. trail</a>
+        <a href="/wine-trails">All wine trails</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="stops-band" id="sample-stops">
+  <div class="section">
+    <div class="section-header reveal">
+      <div class="section-tag">Sample Stops</div>
+      <h2 class="section-title">Tasting rooms that anchor a tour day</h2>
+      <p class="section-subtitle">Every link below is a live winery page in this directory — use them as anchors, then fill the loop from the trail map.</p>
+    </div>
+    <div class="winery-grid reveal">
+      <a class="winery-tile" href="/wineries/chateau-grand-traverse">
+        <div class="wt-meta"><span class="wt-badge">Old Mission</span><span class="wt-city">Traverse City</span></div>
+        <h3>Chateau Grand Traverse</h3>
+        <div class="wt-type">Peninsula pioneer · Riesling landmark</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/brys-estate-vineyard-and-winery">
+        <div class="wt-meta"><span class="wt-badge">Old Mission</span><span class="wt-city">Traverse City</span></div>
+        <h3>Brys Estate Vineyard &amp; Winery</h3>
+        <div class="wt-type">Bay-view patio · Estate flights</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/black-star-farms-leelanau">
+        <div class="wt-meta"><span class="wt-badge">Leelanau</span><span class="wt-city">Suttons Bay</span></div>
+        <h3>Black Star Farms — Leelanau</h3>
+        <div class="wt-type">Estate campus · Wine &amp; spirits</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/45-north-vineyard-and-winery">
+        <div class="wt-meta"><span class="wt-badge">Leelanau</span><span class="wt-city">Lake Leelanau</span></div>
+        <h3>45 North Vineyard &amp; Winery</h3>
+        <div class="wt-type">45th-parallel estate · Cool-climate pours</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/fenn-valley-vineyards">
+        <div class="wt-meta"><span class="wt-badge">Fennville</span><span class="wt-city">Fennville</span></div>
+        <h3>Fenn Valley Vineyards</h3>
+        <div class="wt-type">Southwest pioneer · Whites &amp; sparkling</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/domaine-berrien-cellars">
+        <div class="wt-meta"><span class="wt-badge">Lake Michigan Shore</span><span class="wt-city">Berrien Springs</span></div>
+        <h3>Domaine Berrien Cellars</h3>
+        <div class="wt-type">Estate reds · LMS tasting room</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/tabor-hill-winery-and-restaurant">
+        <div class="wt-meta"><span class="wt-badge">Lake Michigan Shore</span><span class="wt-city">Buchanan</span></div>
+        <h3>Tabor Hill Winery &amp; Restaurant</h3>
+        <div class="wt-type">Pioneer estate · Lunch-friendly stop</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/walloon-lake-winery">
+        <div class="wt-meta"><span class="wt-badge">Petoskey</span><span class="wt-city">Walloon Lake</span></div>
+        <h3>Walloon Lake Winery</h3>
+        <div class="wt-type">Tip of the Mitt · Northern stop</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="winery-tile" href="/wineries/mari-vineyards">
+        <div class="wt-meta"><span class="wt-badge">Old Mission</span><span class="wt-city">Traverse City</span></div>
+        <h3>Mari Vineyards</h3>
+        <div class="wt-type">Cellar experience · Estate reds</div>
+        <span class="wt-go">Winery page <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+    </div>
+    <div class="more-link-row reveal">
+      <a class="btn-primary" href="/directory" style="background:var(--forest);color:var(--cream);">Browse full directory</a>
+      <a class="btn-secondary" href="/directory?view=map" style="color:var(--forest);border-color:rgba(27,58,45,0.25);">Open map view</a>
+      <a class="btn-secondary" href="/wine-trails" style="color:var(--forest);border-color:rgba(27,58,45,0.25);">All wine trails</a>
+    </div>
+  </div>
+</section>
+
+<section class="guided-band" id="guided">
+  <div class="guided-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Guided Option</div>
+      <h2 class="section-title">When you do not want to drive</h2>
+      <p class="section-subtitle">We do not invent tour companies. Only verified partners appear here; southwest and northern guided listings are still open for partners.</p>
+    </div>
+    <div class="guided-grid reveal">
+      <div class="guided-copy">
+        <p>For Old Mission and Leelanau, <a href="https://traversecitywinetour.com" target="_blank" rel="noopener">Traverse City Wine Tours</a> is the guided partner already featured across this site — hotel pickup, paced tastings, and private options for groups.</p>
+        <p>Elsewhere in Michigan, plan a self-guided day with a designated driver using the trail pages and <a href="/plan-your-visit">itineraries</a>. Tour operators interested in partnering can reach us through <a href="/advertise">Advertise</a>.</p>
+      </div>
+      <aside class="partner-box">
+        <div class="pb-tag">Featured partner · Traverse City</div>
+        <h3>Traverse City Wine Tours</h3>
+        <p>Guided Old Mission &amp; Leelanau experiences with transport handled. Details, availability, and booking live on their site — not invented here.</p>
+        <div class="pb-actions">
+          <a class="btn-primary" href="https://traversecitywinetour.com" target="_blank" rel="noopener">Visit partner site</a>
+          <a class="btn-secondary" href="/plan-your-visit#tours">Trip planner tours section</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-inner reveal">
+    <h2>Ready to lock the route?</h2>
+    <p>Jump from this tour overview into a ready itinerary, a trail deep-dive, or the filtered winery map.</p>
+    <div class="cta-actions">
+      <a class="btn-primary" href="/plan-your-visit">Plan your visit</a>
+      <a class="btn-secondary" href="/wine-trails">Wine trails index</a>
+      <a class="btn-secondary" href="/directory?view=map">Directory map</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;flex-direction:column;">
+          <span class="logo-main" style="font-family:'Playfair Display',serif;font-weight:600;color:var(--cream);">Michigan Vineyards</span>
+          <span class="logo-sub" style="font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;margin-top:2px;color:var(--gold);">Wine Country Guide</span>
+        </div>
+        <p>Your complete guide to Michigan wine country. Discover 192 wineries across 7 wine trails, plan vineyard tours, and explore the Great Lakes State.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Wine Trails</h4>
+        <ul>
+          <li><a href="/wine-trails/old-mission">Old Mission Peninsula</a></li>
+          <li><a href="/wine-trails/leelanau">Leelanau Peninsula</a></li>
+          <li><a href="/wine-trails/lake-michigan-shore">Lake Michigan Shore</a></li>
+          <li><a href="/fennville">Fennville</a></li>
+          <li><a href="/wine-trails/petoskey">Petoskey Wine Region</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/regions">Regions</a></li>
+          <li><a href="/directory">All Wineries</a></li>
+          <li><a href="/wine-trails">Wine Trails</a></li>
+          <li><a href="/wine-tours">Wine Tours</a></li>
+          <li><a href="/plan-your-visit">Plan Your Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/advertise">Advertise</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/sitemap">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MichiganVineyards.com · All Rights Reserved</span>
+      <div style="display:flex;gap:20px;">
+        <a href="/sitemap">Sitemap</a>
+        <a href="https://traversecitywinetour.com">Traverse City Wine Tours</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>10);});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

@@ -43,7 +43,7 @@ TRAILS = [
             "flying-otter-winery",
             "pentamere-winery",
         ],
-        "member_note": "Official River Raisin Wine Trail members with pages on this site (Visit Lenawee / member winery listings).",
+        "member_note": "Official River Raisin Wine Trail members (Visit Lenawee / member winery listings).",
         "extra_links": [
             ("All Southeast Michigan wineries", "/directory?region=southeast"),
             ("Plan your visit", "/plan-your-visit"),
@@ -68,7 +68,7 @@ TRAILS = [
         "intro_subtitle": "The Lake Michigan Shore Wine Trail is the organized route often searched as the Southwest Michigan wine trail — member wineries dedicated to locally grown fruit in the LMS AVA.",
         "intro_paras": [
             "Sitting near the 42nd parallel along Michigan’s southwest shore, this trail runs through the Lake Michigan Shore American Viticultural Area, where Lake Michigan’s lake effect lengthens the growing season. It is the state’s densest vineyard country and a natural weekend from Chicago or Grand Rapids.",
-            "Official trail members below are listed on the Lake Michigan Shore Wine Trail (miwinetrail.com) and already have winery pages here. Fenn Valley sits in the nested Fennville AVA — pair this page with our Fennville region guide when you want Saugatuck–Holland lodging.",
+            "Official trail members below are listed on the Lake Michigan Shore Wine Trail (miwinetrail.com). Fenn Valley sits in the nested Fennville AVA — pair this page with our Fennville region guide when you want Saugatuck–Holland lodging.",
         ],
         "best_for": "Red wine weekends, Chicago day trips, food-and-wine loops",
         "base_city": "St. Joseph / Baroda / Paw Paw",
@@ -89,7 +89,7 @@ TRAILS = [
             "solasta-winery",
             "white-pine-winery",
         ],
-        "member_note": "Current Lake Michigan Shore Wine Trail members with pages on this site (miwinetrail.com member directory).",
+        "member_note": "Current Lake Michigan Shore Wine Trail members (miwinetrail.com member directory).",
         "extra_links": [
             ("Fennville region guide", "/fennville"),
             ("All Lake Michigan Shore wineries", "/directory?region=Lake%20Michigan%20Shore"),
@@ -115,7 +115,7 @@ TRAILS = [
         "intro_subtitle": "Old Mission Peninsula splits Grand Traverse Bay. Chateau Grand Traverse planted early Riesling vines here in 1974; today the official wine trail lists ten tasting rooms along the peninsula.",
         "intro_paras": [
             "The trail is short enough that many visitors taste four or five rooms in one day, then return for the rest. Base downtown Traverse City or overnight on the peninsula — Mission Point Lighthouse marks the north tip.",
-            "Member list below follows the Old Mission Peninsula Wine Trail (ompwinetrail.com). Hours come from our directory data; always confirm before you drive.",
+            "The list below follows the Old Mission Peninsula Wine Trail (ompwinetrail.com). Always confirm hours before you drive.",
         ],
         "best_for": "First-time Traverse City visitors, couples weekends, Riesling lovers",
         "base_city": "Traverse City",
@@ -132,7 +132,7 @@ TRAILS = [
             "peninsula-cellars",
             "tabone-vineyards",
         ],
-        "member_note": "Old Mission Peninsula Wine Trail members with pages on this site (ompwinetrail.com).",
+        "member_note": "Old Mission Peninsula Wine Trail members (ompwinetrail.com).",
         "extra_links": [
             ("All Old Mission wineries", "/directory?region=old-mission"),
             ("Old Mission vs Leelanau guide", "/the-vine/old-mission-vs-leelanau"),
@@ -158,7 +158,7 @@ TRAILS = [
         "intro_subtitle": "The Leelanau Peninsula Wine Trail gathers member tasting rooms across a peninsula moderated by Lake Michigan — the same latitude band as Bordeaux’s 45th parallel.",
         "intro_paras": [
             "Plan at least two days if you want more than a highlight reel. Base in Traverse City, Suttons Bay, or Glen Arbor, and leave room for Sleeping Bear Dunes National Lakeshore between flights.",
-            "Members listed here appear on the Leelanau Peninsula Wine Trail site (lpwines.com) and have winery pages in our directory. The peninsula has additional tasting rooms beyond formal trail membership — use the Leelanau directory filter for the full map.",
+            "Members listed here appear on the Leelanau Peninsula Wine Trail site (lpwines.com). The peninsula has more tasting rooms beyond formal trail membership — open the Leelanau directory for the full map.",
         ],
         "best_for": "Multi-day wine trips, groups, dune-and-vineyard weekends",
         "base_city": "Traverse City / Suttons Bay",
@@ -183,7 +183,7 @@ TRAILS = [
             "silver-leaf-vineyard-and-winery",
             "verterra-winery",
         ],
-        "member_note": "Leelanau Peninsula Wine Trail members with pages on this site (lpwines.com/wineries). Not every Leelanau tasting room is a formal trail member.",
+        "member_note": "Leelanau Peninsula Wine Trail members (lpwines.com/wineries). Not every Leelanau tasting room is a formal trail member.",
         "extra_links": [
             ("All Leelanau wineries", "/directory?region=leelanau"),
             ("Old Mission vs Leelanau guide", "/the-vine/old-mission-vs-leelanau"),
@@ -209,7 +209,7 @@ TRAILS = [
         "intro_subtitle": "The Petoskey Wine Region sits inside the Tip of the Mitt AVA (est. 2016). Hybrids like Marquette and La Crescent thrive where many vinifera vines struggle.",
         "intro_paras": [
             "Spread tasting stops across Petoskey, Harbor Springs, Alanson, Boyne City, and nearby lake towns. Between pours, add Little Traverse Bay, the Tunnel of Trees, or a downtown Petoskey walk.",
-            "Wineries below appear on the Petoskey Wine Region site (petoskey.wine) and have pages here. Some Tip of the Mitt directory listings are nearby but not current Petoskey Wine Region members — use the region filter for the wider map.",
+            "Wineries below appear on the Petoskey Wine Region site (petoskey.wine). Some nearby Tip of the Mitt tasting rooms are not current Petoskey Wine Region members — open the Tip of the Mitt directory for the wider map.",
         ],
         "best_for": "Up North vacations, adventurous palates, unique cold-climate wines",
         "base_city": "Petoskey / Harbor Springs",
@@ -226,7 +226,7 @@ TRAILS = [
             "royal-farms",
             "cellar-1914-winery",
         ],
-        "member_note": "Petoskey Wine Region wineries with pages on this site (petoskey.wine). Other Tip of the Mitt AVA tasting rooms may appear in the directory without formal region membership.",
+        "member_note": "Petoskey Wine Region wineries (petoskey.wine). Other Tip of the Mitt AVA tasting rooms may appear in the directory without formal region membership.",
         "extra_links": [
             ("All Tip of the Mitt wineries", "/directory?region=tip-of-the-mitt"),
             ("Plan your visit", "/plan-your-visit?trail=petoskey"),
@@ -251,7 +251,7 @@ TRAILS = [
         "intro_subtitle": "The U.P. Wine Trail connects tasting rooms across the Upper Peninsula. Distances are large — plan overnight stays and check seasonal hours carefully.",
         "intro_paras": [
             "Expect cold-climate grape wines, fruit wines, and brewery-winery hybrids more often than classic vinifera portfolios. Pair the trail with Lake Superior or Lake Michigan shore drives, waterfalls, and small U.P. towns.",
-            "Stops below are Upper Peninsula tasting rooms in our directory that align with published U.P. Wine Trail coverage (Michigan Wine Country / Up North Wineries). We only list pages we can verify in our dataset — confirm current trail participation with each winery.",
+            "Stops below are Upper Peninsula tasting rooms that align with published U.P. Wine Trail coverage (Michigan Wine Country / Up North Wineries). Confirm current trail participation with each winery before you go.",
         ],
         "best_for": "Road-trip adventurers, U.P. vacationers, unique cold-climate pours",
         "base_city": "Sault Ste. Marie / Escanaba / Menominee",
@@ -265,7 +265,7 @@ TRAILS = [
             "mackinac-trail-winery-st-ignace",
             "mackinac-trail-winery-manistique",
         ],
-        "member_note": "Upper Peninsula tasting rooms on this site associated with U.P. Wine Trail coverage. Membership can change — verify before traveling.",
+        "member_note": "Upper Peninsula tasting rooms associated with U.P. Wine Trail coverage. Membership can change — confirm before you go.",
         "extra_links": [
             ("All Upper Peninsula wineries", "/directory?region=upper-peninsula"),
             ("Plan your visit", "/plan-your-visit?trail=upper-peninsula"),
@@ -567,12 +567,12 @@ footer{{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232
   <div class="story-grid reveal">
     <div class="story-copy">
       {''.join(f'<p>{esc(p)}</p>' for p in trail['intro_paras'])}
-      <p>Ready for logistics? Jump to <a href="{esc(trail['plan_href'])}">Plan Your Visit</a> or open the <a href="{esc(trail['directory_href'])}">directory filtered to this region</a>.</p>
+      <p>Ready for logistics? Jump to <a href="{esc(trail['plan_href'])}">Plan Your Visit</a> or open the <a href="{esc(trail['directory_href'])}">wineries in this region</a>.</p>
     </div>
     <aside class="meta-panel">
       <div class="nest-label">Trail snapshot</div>
       <ul class="meta-list">
-        <li><span class="ml">Member pages here</span><span class="mv">{count} tasting rooms</span></li>
+        <li><span class="ml">Stops listed</span><span class="mv">{count} tasting rooms</span></li>
         <li><span class="ml">Best for</span><span class="mv">{esc(trail['best_for'])}</span></li>
         <li><span class="ml">Base city</span><span class="mv">{esc(trail['base_city'])}</span></li>
         <li><span class="ml">Known for</span><span class="mv">{esc(trail['known_for'])}</span></li>
@@ -585,7 +585,7 @@ footer{{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232
   <div class="section-header reveal">
     <div class="section-tag">Tasting Rooms</div>
     <h2 class="section-title">Wineries on this trail</h2>
-    <p class="section-subtitle">Every stop links to a live winery page on MichiganVineyards.com. Hours and known-for notes come from our directory data.</p>
+    <p class="section-subtitle">Tap any stop for hours, what they're known for, and directions to the tasting room.</p>
   </div>
   <p class="member-note reveal">{esc(trail['member_note'])}</p>
   <div class="winery-grid reveal">

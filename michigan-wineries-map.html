@@ -262,7 +262,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
     <div class="intro-copy">
       <div class="section-tag">How to Use This Map</div>
       <h2 class="section-title">A map of Michigan wineries built for trip planning</h2>
-      <p>Searching for a Michigan wineries map usually means you want to see where tasting rooms cluster — not scroll a long list. This page opens straight into the same interactive Leaflet map used in our <a href="/directory">winery directory</a>, with every pin linking to a real winery page.</p>
+      <p>Looking for where Michigan tasting rooms cluster? This map shows every stop in our <a href="/directory">winery directory</a> — tap a pin for hours, tastings, and directions.</p>
       <p>Start statewide, then filter by region to match a weekend base: Traverse City for <a href="/regions#old-mission">Old Mission</a> and <a href="/regions#leelanau">Leelanau</a>, southwest Michigan for <a href="/fennville">Fennville</a> and <a href="/regions#lake-michigan-shore">Lake Michigan Shore</a>, or Petoskey for <a href="/regions#tip-of-the-mitt">Tip of the Mitt</a>.</p>
       <p>Once you pick a cluster, open the matching <a href="/wine-trails">wine trail</a>, skim <a href="/wine-tours">self-guided wine tours</a>, or build a day on <a href="/plan-your-visit">Plan Your Visit</a>. Prefer filters and search? The full <a href="/directory?view=map">directory map view</a> still supports city, grape, and near-me tools.</p>
     </div>
@@ -286,7 +286,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
 
 <section class="region-jump">
   <h2>Jump to a region on the map</h2>
-  <p>These shortcuts filter the interactive map above. Text listings for crawlers and no-JS browsers are below.</p>
+  <p>These shortcuts zoom the map to a wine region. Prefer a list? Every winery is grouped by region just below.</p>
   <div class="region-chips" id="regionChips">
     <button type="button" data-region="all" class="active">All Michigan</button>
     <button type="button" data-region="Old Mission">Old Mission</button>
@@ -302,14 +302,14 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
 <section class="fallback-section" id="wineries-by-region">
   <div class="fallback-inner">
     <div class="fallback-header">
-      <div class="section-tag">Text Map · All Wineries</div>
-      <h2>Michigan wineries by region</h2>
-      <p>A crawlable list of every winery on the map, grouped by region, with links to each tasting-room page. Use this when JavaScript is off or when you want a printable checklist.</p>
+      <div class="section-tag">Winery List</div>
+      <h2>All Michigan wineries by region</h2>
+      <p>Prefer a list? Here's every winery on the map, sorted by region. Tap any name to see hours, tastings, and directions.</p>
     </div>
     <div class="fallback-regions">
   <div class="fallback-region" id="list-old-mission">
     <h3>Old Mission <span class="fallback-count">(11)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#old-mission">Region guide</a> · <a href="/wine-trails/old-mission">Wine trail</a> · <a href="/directory?region=Old%20Mission">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#old-mission">Region guide</a> · <a href="/wine-trails/old-mission">Wine trail</a> · <a href="/directory?region=Old%20Mission">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/2-lads-winery">2 Lads Winery</a> <span class="fallback-city">Traverse City</span></li>
       <li><a href="/wineries/black-star-farms-old-mission">Black Star Farms — Old Mission</a> <span class="fallback-city">Traverse City</span></li>
@@ -326,7 +326,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-leelanau">
     <h3>Leelanau <span class="fallback-count">(33)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#leelanau">Region guide</a> · <a href="/wine-trails/leelanau">Wine trail</a> · <a href="/directory?region=Leelanau">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#leelanau">Region guide</a> · <a href="/wine-trails/leelanau">Wine trail</a> · <a href="/directory?region=Leelanau">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/45-north-vineyard-and-winery">45 North Vineyard & Winery</a> <span class="fallback-city">Lake Leelanau</span></li>
       <li><a href="/wineries/amoritas-vineyards">Amoritas Vineyards</a> <span class="fallback-city">Lake Leelanau</span></li>
@@ -365,7 +365,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-lake-michigan-shore">
     <h3>Lake Michigan Shore <span class="fallback-count">(31)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#lake-michigan-shore">Region guide</a> · <a href="/wine-trails/lake-michigan-shore">Wine trail</a> · <a href="/directory?region=Lake%20Michigan%20Shore">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#lake-michigan-shore">Region guide</a> · <a href="/wine-trails/lake-michigan-shore">Wine trail</a> · <a href="/directory?region=Lake%20Michigan%20Shore">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/12-corners-vineyards">12 Corners Vineyards</a> <span class="fallback-city">Benton Harbor</span></li>
       <li><a href="/wineries/baroda-founders-wine-cellar">Baroda Founders Wine Cellar</a> <span class="fallback-city">Baroda</span></li>
@@ -402,7 +402,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-fennville">
     <h3>Fennville <span class="fallback-count">(11)</span></h3>
-    <p class="fallback-region-links"><a href="/fennville">Region guide</a> · <a href="/fennville">Wine trail</a> · <a href="/directory?region=Fennville">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/fennville">Region guide</a> · <a href="/fennville">Wine trail</a> · <a href="/directory?region=Fennville">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/468-urban-winery">468 Urban Winery</a> <span class="fallback-city">Portage</span></li>
       <li><a href="/wineries/blu-dot-farm-and-vineyard">Blu Dot Farm & Vineyard</a> <span class="fallback-city">Fennville</span></li>
@@ -419,7 +419,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-tip-of-the-mitt">
     <h3>Tip of the Mitt <span class="fallback-count">(19)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#tip-of-the-mitt">Region guide</a> · <a href="/wine-trails/petoskey">Wine trail</a> · <a href="/directory?region=Tip%20of%20the%20Mitt">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#tip-of-the-mitt">Region guide</a> · <a href="/wine-trails/petoskey">Wine trail</a> · <a href="/directory?region=Tip%20of%20the%20Mitt">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/bee-well-meadery">Bee Well Meadery</a> <span class="fallback-city">Bellaire</span></li>
       <li><a href="/wineries/boyne-valley-vineyards">Boyne Valley Vineyards</a> <span class="fallback-city">Boyne City</span></li>
@@ -444,7 +444,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-southeast-michigan">
     <h3>Southeast Michigan <span class="fallback-count">(30)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#southeast-michigan">Region guide</a> · <a href="/wine-trails/river-raisin">Wine trail</a> · <a href="/directory?region=Southeast%20Michigan">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#southeast-michigan">Region guide</a> · <a href="/wine-trails/river-raisin">Wine trail</a> · <a href="/directory?region=Southeast%20Michigan">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/3-north-vines">3 North Vines</a> <span class="fallback-city">Croswell</span></li>
       <li><a href="/wineries/bandb-wines">B&B Wines</a> <span class="fallback-city">Sanilac County</span></li>
@@ -480,7 +480,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-west-michigan">
     <h3>West Michigan <span class="fallback-count">(16)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#west-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=West%20Michigan">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#west-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=West%20Michigan">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/707-winery-and-brewery">707 Winery and Brewery</a> <span class="fallback-city">Caledonia</span></li>
       <li><a href="/wineries/cadillac-winery">Cadillac Winery</a> <span class="fallback-city">Le Roy</span></li>
@@ -502,7 +502,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-central-michigan">
     <h3>Central Michigan <span class="fallback-count">(25)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#central-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Central%20Michigan">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#central-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Central%20Michigan">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/boss-cider-company">Boss Cider Company</a> <span class="fallback-city">Leslie</span></li>
       <li><a href="/wineries/burgdorfs-winery">Burgdorf's Winery</a> <span class="fallback-city">Webberville</span></li>
@@ -533,7 +533,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-northeast-michigan">
     <h3>Northeast Michigan <span class="fallback-count">(3)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#northeast-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Northeast%20Michigan">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#northeast-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Northeast%20Michigan">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/country-corner-winery">Country Corner Winery</a> <span class="fallback-city">Rose City</span></li>
       <li><a href="/wineries/northern-natural-winery">Northern Natural Winery</a> <span class="fallback-city">Omena</span></li>
@@ -542,7 +542,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-thumb-and-sunrise-coast">
     <h3>Thumb & Sunrise Coast <span class="fallback-count">(5)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#thumb-sunrise-coast">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Thumb%20&%20Sunrise%20Coast">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#thumb-sunrise-coast">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Thumb%20&%20Sunrise%20Coast">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/blue-water-winery">Blue Water Winery</a> <span class="fallback-city">Carsonville</span></li>
       <li><a href="/wineries/modern-craft-winery">Modern Craft Winery</a> <span class="fallback-city">Au Gres</span></li>
@@ -553,7 +553,7 @@ footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,
   </div>
   <div class="fallback-region" id="list-upper-peninsula">
     <h3>Upper Peninsula <span class="fallback-count">(8)</span></h3>
-    <p class="fallback-region-links"><a href="/regions#upper-peninsula">Region guide</a> · <a href="/wine-trails/upper-peninsula">Wine trail</a> · <a href="/directory?region=Upper%20Peninsula">Directory filter</a></p>
+    <p class="fallback-region-links"><a href="/regions#upper-peninsula">Region guide</a> · <a href="/wine-trails/upper-peninsula">Wine trail</a> · <a href="/directory?region=Upper%20Peninsula">Browse directory</a></p>
     <ul class="fallback-list">
       <li><a href="/wineries/1668-winery-and-soo-brewing">1668 Winery & Soo Brewing</a> <span class="fallback-city">Sault Ste. Marie</span></li>
       <li><a href="/wineries/leighs-garden-winery">Leigh's Garden Winery</a> <span class="fallback-city">Escanaba</span></li>

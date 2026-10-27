@@ -508,7 +508,10 @@ nav.scrolled { box-shadow: 0 2px 30px rgba(27,58,45,0.08); }
 .map-illustration {
   position: relative;
   display: flex; align-items: center; justify-content: center;
+  text-decoration: none; color: inherit;
+  transition: transform 0.35s ease;
 }
+.map-illustration:hover { transform: translateY(-4px); }
 .michigan-map-wrap {
   width: 100%; max-width: 440px;
   position: relative;
@@ -516,6 +519,10 @@ nav.scrolled { box-shadow: 0 2px 30px rgba(27,58,45,0.08); }
 .michigan-map-wrap svg {
   width: 100%; height: auto;
   filter: drop-shadow(0 8px 30px rgba(27,58,45,0.15));
+  transition: filter 0.35s ease;
+}
+.map-illustration:hover .michigan-map-wrap svg {
+  filter: drop-shadow(0 12px 36px rgba(27,58,45,0.22));
 }
 
 /* ===================== EXPERIENCE SECTION ===================== */
@@ -1127,6 +1134,53 @@ footer {
 </div>
 </section>
 
+<!-- MICHIGAN WINERIES MAP -->
+<section class="map-section" id="michigan-map">
+<div class="map-inner">
+  <div class="map-content">
+    <div class="section-tag">Interactive Map</div>
+    <h2 class="section-title">Michigan Wineries Map</h2>
+    <p class="map-text">See every tasting room on one statewide map — Old Mission, Leelanau, Lake Michigan Shore, Fennville, Tip of the Mitt, and more. Tap a pin for hours, grapes, and the full winery page.</p>
+    <ul class="map-regions-list">
+      <li><span class="dot" style="background:#8B5E3C;"></span> Old Mission Peninsula <span class="count">11</span></li>
+      <li><span class="dot" style="background:#3A6B4A;"></span> Leelanau Peninsula <span class="count">33</span></li>
+      <li><span class="dot" style="background:#3A5A7A;"></span> Lake Michigan Shore <span class="count">31</span></li>
+      <li><span class="dot" style="background:#6A4A7A;"></span> Fennville <span class="count">11</span></li>
+      <li><span class="dot" style="background:#5A7A5A;"></span> Tip of the Mitt &amp; beyond <span class="count">100+</span></li>
+    </ul>
+    <a class="btn-primary" href="/michigan-wineries-map">
+      Open Michigan wineries map
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <a class="map-illustration" href="/michigan-wineries-map" aria-label="Open interactive Michigan wineries map">
+    <div class="michigan-map-wrap">
+      <svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized map of Michigan wine regions">
+        <defs>
+          <linearGradient id="miLand" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1B3A2D"/>
+            <stop offset="100%" stop-color="#2A5040"/>
+          </linearGradient>
+        </defs>
+        <rect width="320" height="360" rx="16" fill="#EDE6D8"/>
+        <!-- Upper Peninsula -->
+        <path d="M40 78h168l22 18-18 22H78l-28-14z" fill="url(#miLand)" opacity="0.9"/>
+        <!-- Lower Peninsula -->
+        <path d="M118 128c28-8 78-10 102 8 18 14 28 42 26 78-2 40-18 78-42 108-10 12-28 22-48 18-26-4-42-28-52-52-14-34-18-72-12-108 4-22 12-42 26-52z" fill="url(#miLand)"/>
+        <!-- Region pins -->
+        <circle cx="168" cy="168" r="7" fill="#C9A96E"/><!-- Old Mission -->
+        <circle cx="148" cy="178" r="7" fill="#C9A96E"/><!-- Leelanau -->
+        <circle cx="178" cy="198" r="5.5" fill="#D4BC8B"/><!-- Tip of Mitt area north-ish -->
+        <circle cx="152" cy="268" r="7" fill="#C9A96E"/><!-- Fennville / LMS -->
+        <circle cx="198" cy="288" r="5.5" fill="#D4BC8B"/><!-- Southeast -->
+        <circle cx="98" cy="98" r="5" fill="#D4BC8B"/><!-- UP -->
+        <text x="160" y="338" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" letter-spacing="0.12em" fill="#1B3A2D" opacity="0.7">OPEN INTERACTIVE MAP</text>
+      </svg>
+    </div>
+  </a>
+</div>
+</section>
+
 <!-- EXPERIENCE -->
 <section class="experience">
 <div class="exp-inner">
@@ -1322,6 +1376,7 @@ footer {
       <h4>Explore</h4>
       <ul>
         <li><a href="/directory">All Wineries</a></li>
+        <li><a href="/michigan-wineries-map">Michigan Wineries Map</a></li>
         <li><a href="/wine-trails">Wine Trails</a></li>
         <li><a href="/the-vine">The Vine</a></li>
         <li><a href="/events">Events Calendar</a></li>

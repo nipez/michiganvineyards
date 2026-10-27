@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGRE0QBWPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JGRE0QBWPF');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<title>Michigan Wineries Map — Interactive Map of All Wineries | MichiganVineyards.com</title>
+<meta content="Interactive Michigan wineries map with pins for 192 tasting rooms statewide. Explore Old Mission, Leelanau, Lake Michigan Shore, Fennville, and more — tap a pin for winery details." name="description"/>
+<link rel="canonical" href="https://michiganvineyards.com/michigan-wineries-map"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --forest:#1B3A2D;--forest-deep:#0F2419;--forest-light:#2A5040;
+  --burgundy:#6B2D3E;--wine:#8B3A4A;
+  --gold:#C9A96E;--gold-light:#D4BC8B;--gold-warm:#B8943F;
+  --cream:#F5F0E8;--cream-dark:#EDE6D8;
+  --sage:#8FA68F;--sage-light:#B8CCB0;
+  --charcoal:#2C2420;--text:#3A3330;--text-light:#7A7068;--white:#FEFCF9;
+}
+html{scroll-behavior:smooth;font-size:17px;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+svg{flex-shrink:0;}
+
+.top-bar{background:var(--forest-deep);color:var(--sage-light);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:9px 0;text-align:center;}
+.top-bar a{color:var(--gold-light);text-decoration:none;}.top-bar a:hover{text-decoration:underline;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(254,252,249,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,58,45,0.06);transition:box-shadow 0.3s;}
+nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
+.nav-inner{max-width:1340px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:36px;height:36px;background:var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.logo-icon::after{content:'🍇';font-size:17px;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-main{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--forest);letter-spacing:-0.01em;}
+.logo-sub{font-family:'Outfit',sans-serif;font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-warm);margin-top:2px;}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);position:relative;padding:4px 0;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover{color:var(--forest);}.nav-links a:hover::after{width:100%;}
+.nav-links a.active{color:var(--forest);}.nav-links a.active::after{width:100%;}
+.nav-cta{background:var(--forest)!important;color:var(--cream)!important;padding:10px 22px!important;border-radius:4px;font-size:0.74rem!important;letter-spacing:0.06em!important;transition:background 0.3s!important;}
+.nav-cta:hover{background:var(--forest-light)!important;}.nav-cta::after{display:none!important;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+
+.map-page-hero{background:linear-gradient(160deg,#0F2419 0%,#1B3A2D 40%,#2A3B2D 70%,#2C2420 100%);padding:36px 40px 28px;position:relative;overflow:hidden;}
+.map-page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 85% 0%,rgba(201,169,110,0.12) 0%,transparent 55%),radial-gradient(ellipse 50% 50% at 10% 100%,rgba(107,45,62,0.18) 0%,transparent 50%);pointer-events:none;}
+.map-page-hero-inner{max-width:1340px;margin:0 auto;position:relative;z-index:2;}
+.map-page-brand{font-size:0.66rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;}
+.map-page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.75rem);font-weight:500;line-height:1.15;color:var(--cream);}
+.map-page-hero h1 em{font-style:italic;color:var(--gold-light);}
+.map-page-hero-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(1.02rem,1.6vw,1.18rem);line-height:1.65;color:rgba(245,240,232,0.7);margin-top:10px;max-width:640px;}
+.map-page-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.map-page-actions a{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:4px;font-size:0.74rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;transition:all .2s;}
+.btn-gold{background:var(--gold);color:var(--forest-deep);}.btn-gold:hover{background:var(--gold-light);}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,0.3);}.btn-ghost:hover{border-color:var(--gold);color:var(--gold-light);}
+
+.breadcrumbs{max-width:1340px;margin:0 auto;padding:12px 40px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:0.76rem;color:var(--text-light);}
+.breadcrumbs a{color:var(--text-light);text-decoration:none;transition:color .3s;}.breadcrumbs a:hover{color:var(--forest);}
+.breadcrumbs .sep{opacity:.4;}.breadcrumbs .current{color:var(--forest);font-weight:500;}
+
+.map-stage{max-width:1340px;margin:0 auto;padding:0 40px 12px;}
+.map-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px;}
+.map-toolbar label{font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-light);}
+.map-toolbar select{padding:8px 32px 8px 12px;border:1px solid rgba(27,58,45,0.12);border-radius:5px;background:var(--white);font-family:'Outfit',sans-serif;font-size:.78rem;color:var(--text);cursor:pointer;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237A7068' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;}
+.map-toolbar select:focus{border-color:var(--gold);}
+.map-status{font-size:.78rem;color:var(--text-light);margin-left:auto;}
+.map-status strong{color:var(--forest);font-weight:600;}
+.map-hint{font-size:.72rem;color:var(--text-light);margin:0 0 10px;}
+#statewideMap{height:min(70vh,680px);min-height:380px;border-radius:10px;overflow:hidden;border:1px solid rgba(27,58,45,0.1);box-shadow:0 8px 28px rgba(27,58,45,0.08);background:var(--cream-dark);}
+.map-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(245,240,232,0.85);z-index:400;font-size:.9rem;color:var(--text-light);}
+.map-wrap{position:relative;}
+
+.winery-pin{width:28px;height:28px;margin-left:-14px;margin-top:-28px;background:transparent;border:none;}
+.winery-pin span{display:block;width:18px;height:18px;margin:0 auto;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--forest);border:2px solid var(--cream);box-shadow:0 2px 8px rgba(15,36,25,0.35);}
+.winery-pin.featured span{background:var(--burgundy);}
+.winery-pin.pin-active span{background:var(--gold-warm);border-color:var(--white);transform:rotate(-45deg) scale(1.15);}
+.leaflet-popup-content-wrapper{border-radius:8px;padding:0;box-shadow:0 10px 30px rgba(27,58,45,0.16);font-family:'Outfit',sans-serif;}
+.leaflet-popup-content{margin:0;min-width:200px;}
+.leaflet-popup-tip{background:var(--white);}
+.leaflet-container a.leaflet-popup-close-button{color:var(--text-light);top:6px;right:6px;}
+.map-popup{padding:14px 16px 16px;}
+.map-popup-region{font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--gold-warm);margin-bottom:4px;}
+.map-popup-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--forest);margin-bottom:4px;line-height:1.25;}
+.map-popup-meta{font-size:.74rem;color:var(--text-light);margin-bottom:10px;line-height:1.4;}
+.map-popup-link{display:inline-flex;align-items:center;gap:4px;font-size:.74rem;font-weight:600;color:var(--forest);text-decoration:none;letter-spacing:.02em;}
+.map-popup-link:hover{color:var(--gold-warm);}
+.leaflet-control-attribution{font-size:9px!important;background:rgba(254,252,249,0.85)!important;}
+
+.intro-section{max-width:1340px;margin:0 auto;padding:48px 40px 24px;}
+.intro-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start;}
+.section-tag{font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-warm);margin-bottom:10px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:500;color:var(--forest);line-height:1.2;margin-bottom:14px;}
+.intro-copy p{font-family:'Cormorant Garamond',serif;font-size:1.12rem;line-height:1.7;color:var(--text);margin-bottom:14px;}
+.intro-copy a{color:var(--forest);font-weight:500;}
+.intro-copy a:hover{color:var(--gold-warm);}
+.plan-links{background:var(--cream);border:1px solid rgba(27,58,45,0.06);border-radius:10px;padding:24px 26px;}
+.plan-links h2{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--forest);margin-bottom:14px;}
+.plan-links ul{list-style:none;}
+.plan-links li{margin-bottom:10px;}
+.plan-links a{font-size:.9rem;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;}
+.plan-links a::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.plan-links a:hover{color:var(--forest);}
+
+.region-jump{max-width:1340px;margin:0 auto;padding:12px 40px 40px;}
+.region-jump h2{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--forest);margin-bottom:8px;}
+.region-jump > p{font-size:.9rem;color:var(--text-light);margin-bottom:18px;max-width:640px;line-height:1.55;}
+.region-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.region-chips a,.region-chips button{display:inline-flex;align-items:center;padding:8px 14px;border-radius:4px;border:1px solid rgba(27,58,45,0.12);background:var(--white);font-family:'Outfit',sans-serif;font-size:.76rem;font-weight:500;color:var(--text);text-decoration:none;cursor:pointer;transition:all .2s;}
+.region-chips a:hover,.region-chips button:hover,.region-chips button.active{background:var(--forest);color:var(--cream);border-color:var(--forest);}
+
+.fallback-section{background:var(--cream);border-top:1px solid rgba(27,58,45,0.06);padding:56px 40px 72px;}
+.fallback-inner{max-width:1340px;margin:0 auto;}
+.fallback-header{margin-bottom:32px;max-width:720px;}
+.fallback-header h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2rem);color:var(--forest);margin-bottom:10px;}
+.fallback-header p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;line-height:1.65;color:var(--text);}
+.fallback-regions{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px 32px;}
+.fallback-region h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--forest);margin-bottom:6px;padding-bottom:8px;border-bottom:1px solid rgba(27,58,45,0.1);}
+.fallback-count{font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:500;color:var(--text-light);margin-left:4px;}
+.fallback-region-links{font-size:.74rem;color:var(--text-light);margin-bottom:10px;}
+.fallback-region-links a{color:var(--forest);text-decoration:none;}.fallback-region-links a:hover{color:var(--gold-warm);}
+.fallback-list{list-style:none;}
+.fallback-list li{font-size:.86rem;padding:5px 0;border-bottom:1px solid rgba(27,58,45,0.05);display:flex;justify-content:space-between;gap:12px;align-items:baseline;}
+.fallback-list a{color:var(--text);text-decoration:none;}.fallback-list a:hover{color:var(--gold-warm);}
+.fallback-city{font-size:.72rem;color:var(--text-light);white-space:nowrap;}
+
+.newsletter{background:var(--forest);padding:64px 40px;text-align:center;}
+.newsletter-inner{max-width:640px;margin:0 auto;}
+.newsletter h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2rem);color:var(--cream);margin-bottom:10px;}
+.newsletter p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(245,240,232,0.65);margin-bottom:24px;}
+.newsletter-form{display:flex;gap:8px;max-width:440px;margin:0 auto;}
+.newsletter-form input{flex:1;padding:12px 16px;border:none;border-radius:4px;font-family:'Outfit',sans-serif;font-size:.88rem;}
+.newsletter-form button{padding:12px 20px;background:var(--gold);color:var(--forest-deep);border:none;border-radius:4px;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;}
+
+footer{background:var(--charcoal);padding:72px 40px 36px;color:rgba(245,240,232,0.6);}
+.footer-inner{max-width:1340px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand p{font-size:.88rem;line-height:1.7;margin-top:14px;color:rgba(245,240,232,0.45);}
+.footer-col h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.footer-col ul{list-style:none;}.footer-col li{margin-bottom:9px;}
+.footer-col a{font-size:.88rem;color:rgba(245,240,232,0.45);text-decoration:none;transition:color .3s;}.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{border-top:1px solid rgba(245,240,232,0.08);padding-top:28px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;flex-wrap:wrap;gap:12px;}
+.footer-bottom a{color:rgba(245,240,232,0.4);text-decoration:none;}.footer-bottom a:hover{color:var(--gold-light);}
+
+@media(max-width:900px){
+  .intro-grid{grid-template-columns:1fr;gap:28px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .map-status{margin-left:0;width:100%;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:20px 40px;gap:16px;border-bottom:1px solid rgba(27,58,45,0.08);}
+  .nav-links.show{display:flex;}.nav-toggle{display:block;}
+  .map-page-hero,.map-stage,.intro-section,.region-jump,.fallback-section,.breadcrumbs{padding-left:20px;padding-right:20px;}
+  #statewideMap{min-height:320px;height:55vh;border-radius:8px;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}
+  .newsletter-form{flex-direction:column;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+}
+</style>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="MichiganVineyards.com"/>
+<meta property="og:title" content="Michigan Wineries Map — Interactive Map of All Wineries"/>
+<meta property="og:description" content="Interactive Michigan wineries map with pins for 192 tasting rooms statewide. Tap a pin for winery details, hours, and regions."/>
+<meta property="og:url" content="https://michiganvineyards.com/michigan-wineries-map"/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Michigan Wineries Map — Interactive Map of All Wineries"/>
+<meta name="twitter:description" content="Interactive Michigan wineries map with pins for 192 tasting rooms statewide. Tap a pin for winery details."/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop&q=80"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Michigan Wineries Map",
+  "description": "Interactive Michigan wineries map with pins for 192 tasting rooms statewide across Old Mission, Leelanau, Lake Michigan Shore, Fennville, and more.",
+  "url": "https://michiganvineyards.com/michigan-wineries-map",
+  "isPartOf": {"@id": "https://michiganvineyards.com/#website"},
+  "about": {"@type": "Place", "name": "Michigan wine country"},
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://michiganvineyards.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Winery Directory", "item": "https://michiganvineyards.com/directory"},
+      {"@type": "ListItem", "position": 3, "name": "Michigan Wineries Map", "item": "https://michiganvineyards.com/michigan-wineries-map"}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="top-bar">Interactive map of 192 Michigan wineries · <a href="/directory">Browse the directory</a></div>
+
+<nav id="mainNav"><div class="nav-inner">
+<a class="logo" href="/"><div class="logo-icon"></div><div class="logo-text"><span class="logo-main">Michigan Vineyards</span><span class="logo-sub">Wine Country Guide</span></div></a>
+<ul class="nav-links">
+  <li><a href="/regions">Regions</a></li>
+  <li><a href="/directory" class="active">Wineries</a></li>
+  <li><a href="/wine-trails">Wine Trails</a></li>
+  <li><a href="/the-vine">The Vine</a></li>
+  <li><a href="/events">Events</a></li>
+  <li><a class="nav-cta" href="/plan-your-visit">Plan Your Visit</a></li>
+</ul>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<section class="map-page-hero">
+  <div class="map-page-hero-inner">
+    <div class="map-page-brand">Michigan Vineyards</div>
+    <h1>Michigan <em>Wineries Map</em></h1>
+    <p class="map-page-hero-desc">An interactive map of Michigan wineries — 192 tasting rooms from Old Mission and Leelanau to Lake Michigan Shore, Fennville, and beyond. Tap a pin for details and directions to each listing.</p>
+    <div class="map-page-actions">
+      <a class="btn-gold" href="#statewideMap">Explore the map</a>
+      <a class="btn-ghost" href="#wineries-by-region">Wineries by region</a>
+    </div>
+  </div>
+</section>
+
+<div class="breadcrumbs">
+  <a href="/">Home</a><span class="sep">›</span>
+  <a href="/directory">Directory</a><span class="sep">›</span>
+  <span class="current">Michigan Wineries Map</span>
+</div>
+
+<section class="map-stage" aria-label="Interactive Michigan wineries map">
+  <div class="map-toolbar">
+    <label for="regionFilter">Region</label>
+    <select id="regionFilter" aria-label="Filter map by region">
+      <option value="all">All regions (192)</option>
+      <option value="Old Mission">Old Mission</option>
+      <option value="Leelanau">Leelanau</option>
+      <option value="Lake Michigan Shore">Lake Michigan Shore</option>
+      <option value="Fennville">Fennville</option>
+      <option value="Tip of the Mitt">Tip of the Mitt</option>
+      <option value="Southeast Michigan">Southeast Michigan</option>
+      <option value="West Michigan">West Michigan</option>
+      <option value="Central Michigan">Central / Northeast / Thumb</option>
+      <option value="Upper Peninsula">Upper Peninsula</option>
+    </select>
+    <div class="map-status" id="mapStatus">Loading map…</div>
+  </div>
+  <p class="map-hint">Tap a pin for winery details. Use the region filter to zoom into a wine trail cluster.</p>
+  <div class="map-wrap">
+    <div id="statewideMap" role="region" aria-label="Map of Michigan wineries with clickable pins"></div>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="intro-grid">
+    <div class="intro-copy">
+      <div class="section-tag">How to Use This Map</div>
+      <h2 class="section-title">A map of Michigan wineries built for trip planning</h2>
+      <p>Searching for a Michigan wineries map usually means you want to see where tasting rooms cluster — not scroll a long list. This page opens straight into the same interactive Leaflet map used in our <a href="/directory">winery directory</a>, with every pin linking to a real winery page.</p>
+      <p>Start statewide, then filter by region to match a weekend base: Traverse City for <a href="/regions#old-mission">Old Mission</a> and <a href="/regions#leelanau">Leelanau</a>, southwest Michigan for <a href="/fennville">Fennville</a> and <a href="/regions#lake-michigan-shore">Lake Michigan Shore</a>, or Petoskey for <a href="/regions#tip-of-the-mitt">Tip of the Mitt</a>.</p>
+      <p>Once you pick a cluster, open the matching <a href="/wine-trails">wine trail</a>, skim <a href="/wine-tours">self-guided wine tours</a>, or build a day on <a href="/plan-your-visit">Plan Your Visit</a>. Prefer filters and search? The full <a href="/directory?view=map">directory map view</a> still supports city, grape, and near-me tools.</p>
+    </div>
+    <aside class="plan-links">
+      <h2>Plan from the map</h2>
+      <ul>
+        <li><a href="/regions">Michigan wine regions</a></li>
+        <li><a href="/wine-trails">Wine trails overview</a></li>
+        <li><a href="/wine-trails/old-mission">Old Mission Peninsula Wine Trail</a></li>
+        <li><a href="/wine-trails/leelanau">Leelanau Peninsula Wine Trail</a></li>
+        <li><a href="/wine-trails/lake-michigan-shore">Lake Michigan Shore Wine Trail</a></li>
+        <li><a href="/wine-trails/petoskey">Petoskey / Tip of the Mitt</a></li>
+        <li><a href="/wine-tours">Michigan wine tours by region</a></li>
+        <li><a href="/plan-your-visit">Plan your visit itineraries</a></li>
+        <li><a href="/directory">Full winery directory</a></li>
+        <li><a href="/the-vine/michigan-wineries-map">Trail-planning guide (The Vine)</a></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="region-jump">
+  <h2>Jump to a region on the map</h2>
+  <p>These shortcuts filter the interactive map above. Text listings for crawlers and no-JS browsers are below.</p>
+  <div class="region-chips" id="regionChips">
+    <button type="button" data-region="all" class="active">All Michigan</button>
+    <button type="button" data-region="Old Mission">Old Mission</button>
+    <button type="button" data-region="Leelanau">Leelanau</button>
+    <button type="button" data-region="Lake Michigan Shore">Lake MI Shore</button>
+    <button type="button" data-region="Fennville">Fennville</button>
+    <button type="button" data-region="Tip of the Mitt">Tip of the Mitt</button>
+    <button type="button" data-region="Southeast Michigan">Southeast</button>
+    <button type="button" data-region="Upper Peninsula">Upper Peninsula</button>
+  </div>
+</section>
+
+<section class="fallback-section" id="wineries-by-region">
+  <div class="fallback-inner">
+    <div class="fallback-header">
+      <div class="section-tag">Text Map · All Wineries</div>
+      <h2>Michigan wineries by region</h2>
+      <p>A crawlable list of every winery on the map, grouped by region, with links to each tasting-room page. Use this when JavaScript is off or when you want a printable checklist.</p>
+    </div>
+    <div class="fallback-regions">
+  <div class="fallback-region" id="list-old-mission">
+    <h3>Old Mission <span class="fallback-count">(11)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#old-mission">Region guide</a> · <a href="/wine-trails/old-mission">Wine trail</a> · <a href="/directory?region=Old%20Mission">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/2-lads-winery">2 Lads Winery</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/black-star-farms-old-mission">Black Star Farms — Old Mission</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/bonobo-winery">Bonobo Winery</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/bowers-harbor-vineyards">Bowers Harbor Vineyards</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/brys-estate-vineyard-and-winery">Brys Estate Vineyard & Winery</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/chateau-chantal">Chateau Chantal</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/chateau-grand-traverse">Chateau Grand Traverse</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/ciccone-vineyard-and-winery">Ciccone Vineyard & Winery</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/mari-vineyards">Mari Vineyards</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/peninsula-cellars">Peninsula Cellars</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/verterra-winery">Verterra Winery</a> <span class="fallback-city">Traverse City</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-leelanau">
+    <h3>Leelanau <span class="fallback-count">(33)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#leelanau">Region guide</a> · <a href="/wine-trails/leelanau">Wine trail</a> · <a href="/directory?region=Leelanau">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/45-north-vineyard-and-winery">45 North Vineyard & Winery</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/amoritas-vineyards">Amoritas Vineyards</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/aurora-cellars">Aurora Cellars</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/bel-lago-vineyards-and-winery">Bel Lago Vineyards & Winery</a> <span class="fallback-city">Cedar</span></li>
+      <li><a href="/wineries/black-star-farms-leelanau">Black Star Farms — Leelanau</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/blustone-vineyards">Blustone Vineyards</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/boathouse-vineyards">Boathouse Vineyards</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/bos-farmhouse">Bos Farmhouse</a> <span class="fallback-city">Elk Rapids</span></li>
+      <li><a href="/wineries/brengman-family-wines">Brengman Family Wines</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/chateau-fontaine">Chateau Fontaine</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/chateau-de-leelanau">Chateau de Leelanau</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/cherry-republic-winery">Cherry Republic Winery</a> <span class="fallback-city">Glen Arbor</span></li>
+      <li><a href="/wineries/french-valley-vineyard">French Valley Vineyard</a> <span class="fallback-city">Cedar</span></li>
+      <li><a href="/wineries/gilchrist-farm-winery">Gilchrist Farm Winery</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/gills-pier-vineyard-and-winery">Gill's Pier Vineyard & Winery</a> <span class="fallback-city">Northport</span></li>
+      <li><a href="/wineries/glen-arbor-wines">Glen Arbor Wines</a> <span class="fallback-city">Glen Arbor</span></li>
+      <li><a href="/wineries/good-harbor-vineyards">Good Harbor Vineyards</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/good-neighbor-organic-vineyard">Good Neighbor Organic Vineyard</a> <span class="fallback-city">Northport</span></li>
+      <li><a href="/wineries/green-bird-cellars">Green Bird Cellars</a> <span class="fallback-city">Northport</span></li>
+      <li><a href="/wineries/hawkins-farm-cellars">Hawkins Farm Cellars</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/hawthorne-vineyards">Hawthorne Vineyards</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/l-mawby-mawby-sparkling">L. Mawby | Mawby Sparkling</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/laurentide-winery">Laurentide Winery</a> <span class="fallback-city">Lake Leelanau</span></li>
+      <li><a href="/wineries/leelanau-cellars">Leelanau Cellars</a> <span class="fallback-city">Omena</span></li>
+      <li><a href="/wineries/leelanau-wine-cellars">Leelanau Wine Cellars</a> <span class="fallback-city">Beulah</span></li>
+      <li><a href="/wineries/left-foot-charley">Left Foot Charley</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/raftshol-vineyards">Raftshol Vineyards</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/rove-estate">Rove Estate</a> <span class="fallback-city">Traverse City</span></li>
+      <li><a href="/wineries/shady-lane-cellars">Shady Lane Cellars</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/silver-leaf-vineyard-and-winery">Silver Leaf Vineyard & Winery</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/tabone-vineyards">Tabone Vineyards</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/tandem-ciders">Tandem Ciders</a> <span class="fallback-city">Suttons Bay</span></li>
+      <li><a href="/wineries/willow-vineyard">Willow Vineyard</a> <span class="fallback-city">Suttons Bay</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-lake-michigan-shore">
+    <h3>Lake Michigan Shore <span class="fallback-count">(31)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#lake-michigan-shore">Region guide</a> · <a href="/wine-trails/lake-michigan-shore">Wine trail</a> · <a href="/directory?region=Lake%20Michigan%20Shore">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/12-corners-vineyards">12 Corners Vineyards</a> <span class="fallback-city">Benton Harbor</span></li>
+      <li><a href="/wineries/baroda-founders-wine-cellar">Baroda Founders Wine Cellar</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/chill-hill-winery">Chill Hill Winery</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/cody-kresta-vineyard-and-winery">Cody Kresta Vineyard & Winery</a> <span class="fallback-city">Mattawan</span></li>
+      <li><a href="/wineries/contessa-wine-cellars">Contessa Wine Cellars</a> <span class="fallback-city">Coloma</span></li>
+      <li><a href="/wineries/dablon-vineyards-and-winery">Dablon Vineyards & Winery</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/domaine-berrien-cellars">Domaine Berrien Cellars</a> <span class="fallback-city">Berrien Springs</span></li>
+      <li><a href="/wineries/filkins-vineyards">Filkins Vineyards</a> <span class="fallback-city">Mattawan</span></li>
+      <li><a href="/wineries/free-run-cellars">Free Run Cellars</a> <span class="fallback-city">Berrien Springs</span></li>
+      <li><a href="/wineries/golden-muse-winery">Golden Muse Winery</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/gravity-wine">Gravity Wine</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/great-mead-hall">Great Mead Hall</a> <span class="fallback-city">Bangor</span></li>
+      <li><a href="/wineries/henrys-heritage-blueberry-winery">Henry's Heritage Blueberry Winery</a> <span class="fallback-city">Grand Junction</span></li>
+      <li><a href="/wineries/hickory-creek-winery">Hickory Creek Winery</a> <span class="fallback-city">Buchanan</span></li>
+      <li><a href="/wineries/karma-vista-vineyards">Karma Vista Vineyards</a> <span class="fallback-city">Coloma</span></li>
+      <li><a href="/wineries/lake-michigan-vintners">Lake Michigan Vintners</a> <span class="fallback-city">Benton Harbor</span></li>
+      <li><a href="/wineries/lawton-ridge-winery">Lawton Ridge Winery</a> <span class="fallback-city">Lawton</span></li>
+      <li><a href="/wineries/lazy-ballerina-winery">Lazy Ballerina Winery</a> <span class="fallback-city">St. Joseph</span></li>
+      <li><a href="/wineries/lehmans-orchard">Lehman's Orchard</a> <span class="fallback-city">Niles</span></li>
+      <li><a href="/wineries/lemon-creek-winery">Lemon Creek Winery</a> <span class="fallback-city">Berrien Springs</span></li>
+      <li><a href="/wineries/local-pour">Local Pour</a> <span class="fallback-city">Sawyer</span></li>
+      <li><a href="/wineries/mcintosh-apple-orchard-and-winery">McIntosh Apple Orchard & Winery</a> <span class="fallback-city">South Haven</span></li>
+      <li><a href="/wineries/moonrise-winery">Moonrise Winery</a> <span class="fallback-city">Watervliet</span></li>
+      <li><a href="/wineries/red-top-winery">Red Top Winery</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/round-barn-winery">Round Barn Winery</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/solasta-winery">Solasta Winery</a> <span class="fallback-city">Baroda</span></li>
+      <li><a href="/wineries/st-julian-winery">St. Julian Winery</a> <span class="fallback-city">Paw Paw</span></li>
+      <li><a href="/wineries/stranger-wine-company">Stranger Wine Company</a> <span class="fallback-city">Niles</span></li>
+      <li><a href="/wineries/tabor-hill-winery-and-restaurant">Tabor Hill Winery & Restaurant</a> <span class="fallback-city">Buchanan</span></li>
+      <li><a href="/wineries/white-pine-winery">White Pine Winery</a> <span class="fallback-city">St. Joseph</span></li>
+      <li><a href="/wineries/wyncroft">Wyncroft</a> <span class="fallback-city">Buchanan</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-fennville">
+    <h3>Fennville <span class="fallback-count">(11)</span></h3>
+    <p class="fallback-region-links"><a href="/fennville">Region guide</a> · <a href="/fennville">Wine trail</a> · <a href="/directory?region=Fennville">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/468-urban-winery">468 Urban Winery</a> <span class="fallback-city">Portage</span></li>
+      <li><a href="/wineries/blu-dot-farm-and-vineyard">Blu Dot Farm & Vineyard</a> <span class="fallback-city">Fennville</span></li>
+      <li><a href="/wineries/cogdal-vineyards">Cogdal Vineyards</a> <span class="fallback-city">Fennville</span></li>
+      <li><a href="/wineries/cranes-winery">Crane's Winery</a> <span class="fallback-city">Fennville</span></li>
+      <li><a href="/wineries/fenn-valley-vineyards">Fenn Valley Vineyards</a> <span class="fallback-city">Fennville</span></li>
+      <li><a href="/wineries/fox-and-hen-winery">Fox and Hen Winery</a> <span class="fallback-city">Grand Haven</span></li>
+      <li><a href="/wineries/j-petter-wine-gallery">J. Petter Wine Gallery</a> <span class="fallback-city">Douglas</span></li>
+      <li><a href="/wineries/michigan-wine-company">Michigan Wine Company</a> <span class="fallback-city">Fennville</span></li>
+      <li><a href="/wineries/modales-wines">Modales Wines</a> <span class="fallback-city">Fennville</span></li>
+      <li><a href="/wineries/red-barn-market-and-winery">Red Barn Market & Winery</a> <span class="fallback-city">Fennville</span></li>
+      <li><a href="/wineries/virtue-cider">Virtue Cider</a> <span class="fallback-city">Fennville</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-tip-of-the-mitt">
+    <h3>Tip of the Mitt <span class="fallback-count">(19)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#tip-of-the-mitt">Region guide</a> · <a href="/wine-trails/petoskey">Wine trail</a> · <a href="/directory?region=Tip%20of%20the%20Mitt">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/bee-well-meadery">Bee Well Meadery</a> <span class="fallback-city">Bellaire</span></li>
+      <li><a href="/wineries/boyne-valley-vineyards">Boyne Valley Vineyards</a> <span class="fallback-city">Boyne City</span></li>
+      <li><a href="/wineries/burrone-family-vineyards">Burrone Family Vineyards</a> <span class="fallback-city">Lachine</span></li>
+      <li><a href="/wineries/cellar-1914-winery">Cellar 1914 Winery</a> <span class="fallback-city">Central Lake</span></li>
+      <li><a href="/wineries/chateau-lake-charlevoix">Chateau Lake Charlevoix</a> <span class="fallback-city">Boyne City</span></li>
+      <li><a href="/wineries/crooked-vine-winery">Crooked Vine Winery</a> <span class="fallback-city">Alanson</span></li>
+      <li><a href="/wineries/end-of-the-road-winery">End of the Road Winery</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/farmhouse-vineyards">FarmHouse Vineyards</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/lost-cellars">Lost Cellars</a> <span class="fallback-city">Charlevoix</span></li>
+      <li><a href="/wineries/mackinaw-trail-winery">Mackinaw Trail Winery</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/maple-moon-sugarbush-and-winery">Maple Moon Sugarbush & Winery</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/nicholas-black-river-vineyard">Nicholas Black River Vineyard</a> <span class="fallback-city">Cheboygan</span></li>
+      <li><a href="/wineries/petoskey-farms-vineyard-and-winery">Petoskey Farms Vineyard & Winery</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/pond-hill-farm">Pond Hill Farm</a> <span class="fallback-city">Harbor Springs</span></li>
+      <li><a href="/wineries/resort-pike-cidery-and-winery">Resort Pike Cidery & Winery</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/royal-farms">Royal Farms</a> <span class="fallback-city">Ellsworth</span></li>
+      <li><a href="/wineries/rudbeckia-winery">Rudbeckia Winery</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/seasons-of-the-north">Seasons of the North</a> <span class="fallback-city">Petoskey</span></li>
+      <li><a href="/wineries/walloon-lake-winery">Walloon Lake Winery</a> <span class="fallback-city">Walloon Lake</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-southeast-michigan">
+    <h3>Southeast Michigan <span class="fallback-count">(30)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#southeast-michigan">Region guide</a> · <a href="/wine-trails/river-raisin">Wine trail</a> · <a href="/directory?region=Southeast%20Michigan">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/3-north-vines">3 North Vines</a> <span class="fallback-city">Croswell</span></li>
+      <li><a href="/wineries/bandb-wines">B&B Wines</a> <span class="fallback-city">Sanilac County</span></li>
+      <li><a href="/wineries/b-nektar-meadery">B. Nektar Meadery</a> <span class="fallback-city">Ferndale</span></li>
+      <li><a href="/wineries/black-fire-winery">Black Fire Winery</a> <span class="fallback-city">Tecumseh</span></li>
+      <li><a href="/wineries/blakes-hard-cider">Blake's Hard Cider</a> <span class="fallback-city">Armada</span></li>
+      <li><a href="/wineries/bl-m-meadworks">Bløm Meadworks</a> <span class="fallback-city">Ann Arbor</span></li>
+      <li><a href="/wineries/cellar-104">Cellar 104</a> <span class="fallback-city">Troy</span></li>
+      <li><a href="/wineries/chateau-aeronautique-winery">Chateau Aeronautique Winery</a> <span class="fallback-city">Onsted</span></li>
+      <li><a href="/wineries/cherry-creek-cellars">Cherry Creek Cellars</a> <span class="fallback-city">Brooklyn</span></li>
+      <li><a href="/wineries/detroit-vineyards">Detroit Vineyards</a> <span class="fallback-city">Detroit</span></li>
+      <li><a href="/wineries/dizzy-daisy-winery-and-vineyard">Dizzy Daisy Winery & Vineyard</a> <span class="fallback-city">Bad Axe</span></li>
+      <li><a href="/wineries/dune-bird-winery">Dune Bird Winery</a> <span class="fallback-city">Troy</span></li>
+      <li><a href="/wineries/fenton-winery-and-brewery">Fenton Winery and Brewery</a> <span class="fallback-city">Fenton</span></li>
+      <li><a href="/wineries/filipo-marc-winery">Filipo Marc Winery</a> <span class="fallback-city">Clinton Township</span></li>
+      <li><a href="/wineries/flying-otter-winery">Flying Otter Winery</a> <span class="fallback-city">Adrian</span></li>
+      <li><a href="/wineries/fourth-coast-ciderworks">Fourth Coast Ciderworks</a> <span class="fallback-city">Lake Orion</span></li>
+      <li><a href="/wineries/green-barn-winery">Green Barn Winery</a> <span class="fallback-city">Smith's Creek</span></li>
+      <li><a href="/wineries/hoffman-farms-winery">Hoffman Farms Winery</a> <span class="fallback-city">Highland</span></li>
+      <li><a href="/wineries/howells-main-street-winery">Howell's Main Street Winery</a> <span class="fallback-city">Howell</span></li>
+      <li><a href="/wineries/meckleys-cidery">Meckley's Cidery</a> <span class="fallback-city">Somerset Center</span></li>
+      <li><a href="/wineries/michigan-by-the-bottle">Michigan by the Bottle</a> <span class="fallback-city">Royal Oak</span></li>
+      <li><a href="/wineries/northville-winery">Northville Winery</a> <span class="fallback-city">Northville</span></li>
+      <li><a href="/wineries/obstbaum-orchards">Obstbaum Orchards</a> <span class="fallback-city">Northville</span></li>
+      <li><a href="/wineries/pentamere-winery">Pentamere Winery</a> <span class="fallback-city">Tecumseh</span></li>
+      <li><a href="/wineries/russel-b-gregory-winery">Russel B. Gregory Winery</a> <span class="fallback-city">Lapeer</span></li>
+      <li><a href="/wineries/sandhill-crane-vineyards">Sandhill Crane Vineyards</a> <span class="fallback-city">Jackson</span></li>
+      <li><a href="/wineries/superior-lakes-winery">Superior Lakes Winery</a> <span class="fallback-city">Harrison Township</span></li>
+      <li><a href="/wineries/the-winery-north-of-12">The Winery North of 12</a> <span class="fallback-city">Brooklyn</span></li>
+      <li><a href="/wineries/vertical-detroit">Vertical Detroit</a> <span class="fallback-city">Detroit</span></li>
+      <li><a href="/wineries/whole-hearted-winery">Whole Hearted Winery</a> <span class="fallback-city">Davison</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-west-michigan">
+    <h3>West Michigan <span class="fallback-count">(16)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#west-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=West%20Michigan">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/707-winery-and-brewery">707 Winery and Brewery</a> <span class="fallback-city">Caledonia</span></li>
+      <li><a href="/wineries/cadillac-winery">Cadillac Winery</a> <span class="fallback-city">Le Roy</span></li>
+      <li><a href="/wineries/cascade-winery">Cascade Winery</a> <span class="fallback-city">Grand Rapids</span></li>
+      <li><a href="/wineries/farm-house-cider-co">Farm House Cider Co.</a> <span class="fallback-city">Hudsonville</span></li>
+      <li><a href="/wineries/fox-barn-market-and-winery">Fox Barn Market and Winery</a> <span class="fallback-city">Shelby</span></li>
+      <li><a href="/wineries/glass-creek-winery">Glass Creek Winery</a> <span class="fallback-city">Hastings</span></li>
+      <li><a href="/wineries/heavenly-vineyards">Heavenly Vineyards</a> <span class="fallback-city">Morley</span></li>
+      <li><a href="/wineries/henderson-castle-winery">Henderson Castle Winery</a> <span class="fallback-city">Kalamazoo</span></li>
+      <li><a href="/wineries/hudsonville-winery">Hudsonville Winery</a> <span class="fallback-city">Hudsonville</span></li>
+      <li><a href="/wineries/jomagrha-winery">Jomagrha Winery</a> <span class="fallback-city">Pentwater</span></li>
+      <li><a href="/wineries/love-wines-of-ludington">Love Wines of Ludington</a> <span class="fallback-city">Ludington</span></li>
+      <li><a href="/wineries/oceana-winery-and-vineyard">Oceana Winery & Vineyard</a> <span class="fallback-city">New Era</span></li>
+      <li><a href="/wineries/pleasant-valley-farm-and-vineyard">Pleasant Valley Farm and Vineyard</a> <span class="fallback-city">Hart</span></li>
+      <li><a href="/wineries/pour-michigan-wine-barn">Pour Michigan Wine Barn</a> <span class="fallback-city">Cedar Springs</span></li>
+      <li><a href="/wineries/sit-and-stay-winery">Sit and Stay Winery</a> <span class="fallback-city">Kalamazoo</span></li>
+      <li><a href="/wineries/vineyard-2121">Vineyard 2121</a> <span class="fallback-city">Kalamazoo</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-central-michigan">
+    <h3>Central Michigan <span class="fallback-count">(25)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#central-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Central%20Michigan">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/boss-cider-company">Boss Cider Company</a> <span class="fallback-city">Leslie</span></li>
+      <li><a href="/wineries/burgdorfs-winery">Burgdorf's Winery</a> <span class="fallback-city">Webberville</span></li>
+      <li><a href="/wineries/coons-berry-farm-and-winery">Coon's Berry Farm & Winery</a> <span class="fallback-city">Coleman</span></li>
+      <li><a href="/wineries/corey-lake-orchards">Corey Lake Orchards</a> <span class="fallback-city">Three Rivers</span></li>
+      <li><a href="/wineries/country-mill-orchard-and-cider-mill">Country Mill Orchard & Cider Mill</a> <span class="fallback-city">Charlotte</span></li>
+      <li><a href="/wineries/crazy-vines-winery">Crazy Vines Winery</a> <span class="fallback-city">Midland</span></li>
+      <li><a href="/wineries/currant-mist-winery">Currant Mist Winery</a> <span class="fallback-city">Shepherd</span></li>
+      <li><a href="/wineries/farmhaus-cider-co">Farmhaus Cider Co.</a> <span class="fallback-city">Hudsonville</span></li>
+      <li><a href="/wineries/graham-vineyard-and-winery">Graham Vineyard and Winery</a> <span class="fallback-city">Laingsburg</span></li>
+      <li><a href="/wineries/gwin-girls-winery">Gwin Girls Winery</a> <span class="fallback-city">Remus</span></li>
+      <li><a href="/wineries/howells-mainstreet-winery">Howell's MainStreet Winery</a> <span class="fallback-city">Howell</span></li>
+      <li><a href="/wineries/jks-farmhouse-ciders">JK's Farmhouse Ciders</a> <span class="fallback-city">Flushing</span></li>
+      <li><a href="/wineries/jomagrha-vineyards">Jomagrha Vineyards</a> <span class="fallback-city">Pentwater</span></li>
+      <li><a href="/wineries/kayla-rae-cellars">Kayla Rae Cellars</a> <span class="fallback-city">Rockford</span></li>
+      <li><a href="/wineries/lone-oak-vineyard-estate">Lone Oak Vineyard Estate</a> <span class="fallback-city">Grass Lake</span></li>
+      <li><a href="/wineries/meckleys-flavor-fruit-farm">Meckley's Flavor Fruit Farm</a> <span class="fallback-city">Somerset Center</span></li>
+      <li><a href="/wineries/merry-hearted-cidery">Merry-Hearted Cidery</a> <span class="fallback-city">Gladwin</span></li>
+      <li><a href="/wineries/nathaniel-rose-wines">Nathaniel Rose Wines</a> <span class="fallback-city">Frankenmuth</span></li>
+      <li><a href="/wineries/north-branch-winery">North Branch Winery</a> <span class="fallback-city">Scottville</span></li>
+      <li><a href="/wineries/painted-turtle-hard-cider">Painted Turtle Hard Cider</a> <span class="fallback-city">Lowell</span></li>
+      <li><a href="/wineries/peats-cider-social">Peat's Cider Social</a> <span class="fallback-city">Grand Rapids</span></li>
+      <li><a href="/wineries/pink-barrel-cellars">Pink Barrel Cellars</a> <span class="fallback-city">Grand Rapids</span></li>
+      <li><a href="/wineries/pux-cider">Pux Cider</a> <span class="fallback-city">Spring Lake</span></li>
+      <li><a href="/wineries/robinettes-apple-haus-and-winery">Robinette's Apple Haus & Winery</a> <span class="fallback-city">Grand Rapids</span></li>
+      <li><a href="/wineries/verterra-cellars">Verterra Cellars</a> <span class="fallback-city">Leland</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-northeast-michigan">
+    <h3>Northeast Michigan <span class="fallback-count">(3)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#northeast-michigan">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Northeast%20Michigan">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/country-corner-winery">Country Corner Winery</a> <span class="fallback-city">Rose City</span></li>
+      <li><a href="/wineries/northern-natural-winery">Northern Natural Winery</a> <span class="fallback-city">Omena</span></li>
+      <li><a href="/wineries/rose-valley-winery">Rose Valley Winery</a> <span class="fallback-city">Rose City</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-thumb-and-sunrise-coast">
+    <h3>Thumb & Sunrise Coast <span class="fallback-count">(5)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#thumb-sunrise-coast">Region guide</a> · <a href="/wine-trails">Wine trail</a> · <a href="/directory?region=Thumb%20&%20Sunrise%20Coast">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/blue-water-winery">Blue Water Winery</a> <span class="fallback-city">Carsonville</span></li>
+      <li><a href="/wineries/modern-craft-winery">Modern Craft Winery</a> <span class="fallback-city">Au Gres</span></li>
+      <li><a href="/wineries/sage-creek-winery">Sage Creek Winery</a> <span class="fallback-city">Memphis</span></li>
+      <li><a href="/wineries/the-agitated-grape">The Agitated Grape</a> <span class="fallback-city">Davison</span></li>
+      <li><a href="/wineries/young-farms">Young Farms</a> <span class="fallback-city">Au Gres</span></li>
+    </ul>
+  </div>
+  <div class="fallback-region" id="list-upper-peninsula">
+    <h3>Upper Peninsula <span class="fallback-count">(8)</span></h3>
+    <p class="fallback-region-links"><a href="/regions#upper-peninsula">Region guide</a> · <a href="/wine-trails/upper-peninsula">Wine trail</a> · <a href="/directory?region=Upper%20Peninsula">Directory filter</a></p>
+    <ul class="fallback-list">
+      <li><a href="/wineries/1668-winery-and-soo-brewing">1668 Winery & Soo Brewing</a> <span class="fallback-city">Sault Ste. Marie</span></li>
+      <li><a href="/wineries/leighs-garden-winery">Leigh's Garden Winery</a> <span class="fallback-city">Escanaba</span></li>
+      <li><a href="/wineries/lume-cannabis-and-pere-marquette-winery">Lume Cannabis & Pere Marquette Winery</a> <span class="fallback-city">Ludington</span></li>
+      <li><a href="/wineries/mackinac-trail-winery-manistique">Mackinac Trail Winery - Manistique</a> <span class="fallback-city">Manistique</span></li>
+      <li><a href="/wineries/mackinac-trail-winery-st-ignace">Mackinac Trail Winery — St. Ignace</a> <span class="fallback-city">St. Ignace</span></li>
+      <li><a href="/wineries/northern-sun-winery">Northern Sun Winery</a> <span class="fallback-city">Bark River</span></li>
+      <li><a href="/wineries/threefold-vine-winery">Threefold Vine Winery</a> <span class="fallback-city">Garden</span></li>
+      <li><a href="/wineries/yooper-winery">Yooper Winery</a> <span class="fallback-city">Menominee</span></li>
+    </ul>
+  </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter"><div class="newsletter-inner">
+  <h2>Michigan Wine Country Updates</h2>
+  <p>Seasonal guides, new winery openings, events, and curated itineraries.</p>
+  <form class="newsletter-form" onsubmit="return false;"><input type="email" placeholder="Enter your email address"/><button type="submit">Subscribe</button></form>
+</div></section>
+
+<footer><div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand"><div style="display:flex;flex-direction:column;"><span style="font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--cream);">Michigan Vineyards</span><span style="font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:2px;">Wine Country Guide</span></div><p>Your complete guide to Michigan wine country. Discover 192 wineries across 11 regions, plan vineyard tours, and explore the Great Lakes State.</p></div>
+<div class="footer-col"><h4>Regions</h4><ul><li><a href="/regions#old-mission">Old Mission Peninsula</a></li><li><a href="/regions#leelanau">Leelanau Peninsula</a></li><li><a href="/regions#lake-michigan-shore">Lake Michigan Shore</a></li><li><a href="/fennville">Fennville</a></li><li><a href="/regions#tip-of-the-mitt">Tip of the Mitt</a></li></ul></div>
+<div class="footer-col"><h4>Explore</h4><ul><li><a href="/directory">All Wineries</a></li><li><a href="/michigan-wineries-map">Michigan Wineries Map</a></li><li><a href="/wine-trails">Wine Trails</a></li><li><a href="/wine-tours">Wine Tours</a></li><li><a href="/plan-your-visit">Plan Your Visit</a></li></ul></div>
+<div class="footer-col"><h4>Resources</h4><ul><li><a href="/about">About</a></li><li><a href="/advertise">Advertise</a></li><li><a href="/contact">Contact</a></li><li><a href="/sitemap">Sitemap</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© 2026 MichiganVineyards.com · All Rights Reserved</span><div style="display:flex;gap:20px;"><a href="/sitemap">Sitemap</a><a href="https://traversecitywinetour.com">Traverse City Wine Tours</a></div></div>
+</div></footer>
+
+<script src="/scripts/wineries-data.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const wineries = window.MICHIGAN_WINERIES || [];
+const pinColors = {
+  'Old Mission':'#8B5E3C','Leelanau':'#3A6B4A','Lake Michigan Shore':'#3A5A7A','Fennville':'#6A4A7A',
+  'Tip of the Mitt':'#5A7A5A','Southeast Michigan':'#7A5A3A','Upper Peninsula':'#4A6A6A',
+  'Central Michigan':'#5A5A3A','Northeast Michigan':'#5A5A3A','West Michigan':'#4A6A5A',
+  'Thumb & Sunrise Coast':'#6A5A4A'
+};
+const CENTRAL_GROUP = ['Central Michigan','Northeast Michigan','Thumb & Sunrise Coast'];
+let mapInstance = null, markerLayer = null, currentRegion = 'all';
+
+function pinIcon(w, active){
+  const color = pinColors[w.region] || '#1B3A2D';
+  const cls = 'winery-pin' + (w.featured ? ' featured' : '') + (active ? ' pin-active' : '');
+  return L.divIcon({
+    className: cls,
+    html: `<span style="background:${active ? '#B8943F' : color};"></span>`,
+    iconSize: [28,28],
+    iconAnchor: [14,28],
+    popupAnchor: [0,-24]
+  });
+}
+
+function popupHtml(w){
+  const known = (w.known || []).slice(0,3).join(', ');
+  return `<div class="map-popup"><div class="map-popup-region">${w.region}</div><div class="map-popup-name">${w.name}</div><div class="map-popup-meta">${w.city}${known ? ' · ' + known : ''}</div><a class="map-popup-link" href="/wineries/${w.slug}">View winery <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 5.5h7M6 2.5l3 3-3 3"/></svg></a></div>`;
+}
+
+function filteredList(){
+  if(currentRegion === 'all') return wineries.slice();
+  if(currentRegion === 'Central Michigan') return wineries.filter(w => CENTRAL_GROUP.includes(w.region));
+  return wineries.filter(w => w.region === currentRegion);
+}
+
+function ensureMap(){
+  if(mapInstance) return mapInstance;
+  mapInstance = L.map('statewideMap', {scrollWheelZoom: true, attributionControl: true});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mapInstance);
+  markerLayer = L.layerGroup().addTo(mapInstance);
+  mapInstance.setView([44.3, -85.5], 7);
+  return mapInstance;
+}
+
+function renderMap(){
+  const list = filteredList();
+  const status = document.getElementById('mapStatus');
+  ensureMap();
+  markerLayer.clearLayers();
+  const bounds = [];
+  list.forEach(w => {
+    if(typeof w.lat !== 'number' || typeof w.lng !== 'number') return;
+    const m = L.marker([w.lat, w.lng], {icon: pinIcon(w, false), title: w.name, keyboard: true, riseOnHover: true});
+    m.bindPopup(popupHtml(w), {maxWidth: 260, className: 'winery-map-popup'});
+    m.on('popupopen', () => m.setIcon(pinIcon(w, true)));
+    m.on('popupclose', () => m.setIcon(pinIcon(w, false)));
+    m.addTo(markerLayer);
+    bounds.push([w.lat, w.lng]);
+  });
+  if(status){
+    status.innerHTML = currentRegion === 'all'
+      ? `Showing <strong>${bounds.length}</strong> wineries statewide`
+      : `Showing <strong>${bounds.length}</strong> wineries in ${currentRegion === 'Central Michigan' ? 'Central / NE / Thumb' : currentRegion}`;
+  }
+  requestAnimationFrame(() => {
+    mapInstance.invalidateSize();
+    if(bounds.length === 1) mapInstance.setView(bounds[0], 11);
+    else if(bounds.length > 1) mapInstance.fitBounds(bounds, {padding: [36,36], maxZoom: currentRegion === 'all' ? 8 : 11});
+    else mapInstance.setView([44.3, -85.5], 7);
+  });
+}
+
+function setRegion(region){
+  currentRegion = region || 'all';
+  const sel = document.getElementById('regionFilter');
+  if(sel) sel.value = currentRegion;
+  document.querySelectorAll('#regionChips button').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-region') === currentRegion);
+  });
+  renderMap();
+  const mapEl = document.getElementById('statewideMap');
+  if(mapEl && window.matchMedia('(max-width: 768px)').matches){
+    mapEl.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+  }
+}
+
+document.getElementById('regionFilter').addEventListener('change', e => setRegion(e.target.value));
+document.getElementById('regionChips').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-region]');
+  if(btn) setRegion(btn.getAttribute('data-region'));
+});
+
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 10); });
+window.addEventListener('resize', () => { if(mapInstance) mapInstance.invalidateSize(); });
+
+if(!wineries.length){
+  document.getElementById('mapStatus').textContent = 'Winery data failed to load.';
+} else {
+  renderMap();
+}
+</script>
+</body>
+</html>

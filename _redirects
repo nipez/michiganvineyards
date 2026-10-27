@@ -13,6 +13,10 @@
 /wineries /directory 301
 /wineries/ /directory 301
 
+# Short map URL → dedicated interactive Michigan wineries map page.
+/map /michigan-wineries-map 301
+/map/ /michigan-wineries-map 301
+
 # Note: query-string redirects (winery-detail?w=<slug>) are NOT supported in _redirects.
 # Those are handled by functions/winery-detail.js (301 301) with an HTML fallback
 # (noindex + client redirect) in winery-detail.html.

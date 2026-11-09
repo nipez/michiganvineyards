@@ -1,0 +1,114 @@
+# After production deploys of main, notify IndexNow of new/updated URLs.
+# Waits until michiganvineyards.com serves this commit's sitemap.xml (and the
+# IndexNow key file), then POSTs to api.indexnow.org. Failures never fail CI.
+
+name: IndexNow submit
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Optional space-separated paths/URLs (default: auto-detect changed, else all)"
+        required: false
+        default: ""
+      all:
+        description: "Submit every sitemap URL"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Resolve IndexNow key
+        id: key
+        run: |
+          set -euo pipefail
+          KEY_FILE=$(find . -maxdepth 1 -type f -regextype posix-extended -regex './[a-f0-9]{32}\.txt' | head -1 | sed 's|^\./||')
+          test -n "$KEY_FILE"
+          KEY=$(tr -d '\n\r' < "$KEY_FILE")
+          echo "file=$KEY_FILE" >> "$GITHUB_OUTPUT"
+          echo "value=$KEY" >> "$GITHUB_OUTPUT"
+          echo "Found key file $KEY_FILE"
+
+      - name: Snapshot previous sitemaps for diff
+        run: |
+          set -euo pipefail
+          if git rev-parse --verify HEAD^ >/dev/null 2>&1 && git cat-file -e HEAD^:sitemap.xml 2>/dev/null; then
+            git show HEAD^:sitemap.xml > /tmp/previous-sitemap.xml
+            echo "Wrote /tmp/previous-sitemap.xml from HEAD^"
+          fi
+          if curl -fsSL --retry 3 --retry-delay 2 -o /tmp/live-sitemap-before.xml "https://michiganvineyards.com/sitemap.xml"; then
+            echo "Fetched live production sitemap ($(wc -c < /tmp/live-sitemap-before.xml) bytes)"
+          else
+            echo "Could not fetch live sitemap (ok on first setup)"
+            rm -f /tmp/live-sitemap-before.xml
+          fi
+
+      - name: Wait for Cloudflare Pages production deploy
+        run: |
+          set -euo pipefail
+          KEY="${{ steps.key.outputs.value }}"
+          KEY_URL="https://michiganvineyards.com/${{ steps.key.outputs.file }}"
+          LOCAL_SUM=$(sha256sum sitemap.xml | awk '{print $1}')
+          echo "Waiting for production sitemap sha256=$LOCAL_SUM and key at $KEY_URL"
+
+          ok=0
+          for i in $(seq 1 80); do
+            key_body=$(curl -fsS "$KEY_URL" 2>/dev/null || true)
+            live_sum=$(curl -fsS "https://michiganvineyards.com/sitemap.xml" 2>/dev/null | sha256sum | awk '{print $1}' || true)
+            key_ok=no
+            map_ok=no
+            [ "$key_body" = "$KEY" ] && key_ok=yes
+            [ "$live_sum" = "$LOCAL_SUM" ] && map_ok=yes
+            echo "attempt $i: key_match=$key_ok sitemap_match=$map_ok"
+            if [ "$key_ok" = yes ] && [ "$map_ok" = yes ]; then
+              echo "Production is live with matching sitemap + IndexNow key"
+              ok=1
+              break
+            fi
+            sleep 15
+          done
+
+          if [ "$ok" -ne 1 ]; then
+            echo "Timed out waiting for production deploy; submitting IndexNow anyway"
+          fi
+
+      - name: Submit to IndexNow
+        run: |
+          set +e
+          ARGS=()
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.all }}" = "true" ]; then
+            ARGS=(--all)
+            unset INDEXNOW_PREVIOUS_SITEMAP
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.urls }}" ]; then
+            # Intentionally unquoted so the input can list multiple paths/URLs.
+            # shellcheck disable=SC2206
+            ARGS=(${{ inputs.urls }})
+            unset INDEXNOW_PREVIOUS_SITEMAP
+          else
+            if [ -f /tmp/previous-sitemap.xml ]; then
+              export INDEXNOW_PREVIOUS_SITEMAP=/tmp/previous-sitemap.xml
+            elif [ -f /tmp/live-sitemap-before.xml ]; then
+              export INDEXNOW_PREVIOUS_SITEMAP=/tmp/live-sitemap-before.xml
+            else
+              unset INDEXNOW_PREVIOUS_SITEMAP
+            fi
+          fi
+          node scripts/indexnow-submit.mjs "${ARGS[@]}"
+          echo "indexnow-submit finished (exit ignored)"
+          exit 0

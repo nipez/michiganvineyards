@@ -9,9 +9,10 @@
 # Homepage remains https://michiganvineyards.com/
 
 # Old sitemap / canonical alias: /wineries had no page (soft-404 → homepage).
-# The real directory lives at /directory. Exact-path only — does not affect /wineries/<slug>.
-/wineries /directory 301
-/wineries/ /directory 301
+# The real directory lives at /directory. Exact-path redirect for /wineries and
+# /wineries/ (plus X-Robots-Tag when ?q= is present) is handled by
+# functions/wineries.js — `_redirects` are skipped for Function-served routes,
+# and cannot match/condition on query strings. Does not affect /wineries/<slug>.
 
 # Short map URL → dedicated interactive Michigan wineries map page.
 /map /michigan-wineries-map 301

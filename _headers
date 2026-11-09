@@ -1,0 +1,7 @@
+# Cloudflare Pages headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# IndexNow ownership key — must be plain text and publicly readable.
+/ee38f26de2dac64dc49bd33f071ce337.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600

@@ -41,3 +41,23 @@ Then open the URL `serve` prints (usually http://localhost:3000).
 - **Pages.dev:** https://michiganvineyards.pages.dev
 
 Direct Upload originally (not Git-connected). Re-deploy from this repo after connecting the project to GitHub if you want Git-based deploys.
+
+## IndexNow
+
+Search engines that support [IndexNow](https://www.indexnow.org/) are notified when production URLs change.
+
+- **Key file:** `https://michiganvineyards.com/ee38f26de2dac64dc49bd33f071ce337.txt` (plain text; body is the key). Served from the site root; `_routes.json` does not route it through Pages Functions.
+- **Submit script:** `node scripts/indexnow-submit.mjs` — reads `sitemap.xml`, diffs against a previous sitemap (`INDEXNOW_PREVIOUS_SITEMAP` or `HEAD^:sitemap.xml`) and/or changed HTML paths (including new `/the-vine/*` articles), and POSTs up to 10,000 URLs per request to `https://api.indexnow.org/indexnow`. IndexNow HTTP errors are logged and do not fail the process.
+- **Automatic:** `.github/workflows/indexnow.yml` runs on every push to `main` (and via **Actions → IndexNow submit → Run workflow**). It waits until production serves this commit’s `sitemap.xml` plus the key file, then submits. No GitHub secrets are required for IndexNow itself.
+- **Manual examples:**
+
+```bash
+# Auto-detect changed/new URLs (falls back to the full sitemap)
+node scripts/indexnow-submit.mjs
+
+# Explicit paths or absolute URLs
+node scripts/indexnow-submit.mjs /the-vine/michigan-wineries-in-winter /directory
+
+# Force the full sitemap
+node scripts/indexnow-submit.mjs --all
+```

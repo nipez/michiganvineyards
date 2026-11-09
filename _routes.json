@@ -1,5 +1,12 @@
 {
   "version": 1,
-  "include": ["/winery-detail", "/winery-detail/"],
+  "include": [
+    "/winery-detail",
+    "/winery-detail/",
+    "/directory",
+    "/directory/",
+    "/wineries",
+    "/wineries/"
+  ],
   "exclude": []
 }

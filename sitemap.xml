@@ -91,6 +91,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://michiganvineyards.com/the-vine/michigan-wine-tasting-guide</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://michiganvineyards.com/wine-tours</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>

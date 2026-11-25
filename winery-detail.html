@@ -722,7 +722,7 @@ const WINERIES = [{"name":"Chateau Grand Traverse","region":"Old Mission","type"
   if (!w) return;
 
     // Title
-    document.title = w.name + ' — ' + w.region + ' | MichiganVineyards.com';
+    document.title = w.name + ' in ' + w.city + ' — Tasting Hours & Visit Info | MichiganVineyards.com';
 
     // SEO: point canonical + social meta at this winery's pre-rendered page
     // (slug strips apostrophes to match the /wineries/<slug>/ filenames)
@@ -732,9 +732,15 @@ const WINERIES = [{"name":"Chateau Grand Traverse","region":"Old Mission","type"
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/(^-|-$)/g, '');
     const wineryUrl = 'https://michiganvineyards.com/wineries/' + seoSlug;
-    const seoDesc = 'Visit ' + w.name + ' in ' + w.region + ', Michigan.' +
-      (w.known && w.known.length ? ' Known for ' + w.known.slice(0, 4).join(', ') + '.' : '') +
-      ' Hours, directions, wines, and more.';
+    const hoursBit = w.hours
+      ? ((/^(seasonal|by appointment)/i.test(String(w.hours).trim())
+          ? (' Hours listed as ' + String(w.hours).toLowerCase() + ' — confirm before you go.')
+          : (' Tasting room hours: ' + w.hours + '.')))
+      : '';
+    const seoDesc = 'Visit ' + w.name + ' in ' + w.city + ', Michigan.' +
+      (w.type ? (' ' + w.type + '.') : '') +
+      hoursBit +
+      (w.known && w.known.length ? ' Known for ' + w.known.slice(0, 3).join(', ') + '.' : '');
     const setMeta = (sel, val) => { const el = document.querySelector(sel); if (el) el.setAttribute('content', val); };
     const canon = document.querySelector('link[rel="canonical"]');
     if (canon) canon.setAttribute('href', wineryUrl);

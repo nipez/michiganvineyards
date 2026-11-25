@@ -50,24 +50,33 @@
       .replace(/(^-|-$)/g, '');
   }
 
-  /** Deterministic scenic photo for a winery's region (varies across neighboring cards). */
-  function regionPhotoFor(region, slug) {
+  /**
+   * Scenic photo for a winery's region.
+   * Pass regionIndex (0-based count of same-region cards so far in render order)
+   * so consecutive cards in a region rotate through the set and do not repeat.
+   * Falls back to slug hash when regionIndex is omitted.
+   */
+  function regionPhotoFor(region, slug, regionIndex) {
     var key = regionKey(region);
     var set = REGION_PHOTOS[key];
     if (!set || !set.length) return null;
-    return set[hashSlug(slug) % set.length];
+    var idx = (typeof regionIndex === 'number' && regionIndex >= 0)
+      ? (regionIndex % set.length)
+      : (hashSlug(slug) % set.length);
+    return set[idx];
   }
 
   /**
    * Prefer winery-specific photo when set; otherwise region scenic photo.
+   * regionIndex: position among already-rendered cards in the same region (optional).
    * Returns { src, isWineryPhoto } or null.
    */
-  function cardPhotoFor(winery) {
+  function cardPhotoFor(winery, regionIndex) {
     if (!winery) return null;
     if (winery.photo) {
       return { src: winery.photo, isWineryPhoto: true, credit: winery.photo_credit || '' };
     }
-    var src = regionPhotoFor(winery.region, winery.slug || winery.name || '');
+    var src = regionPhotoFor(winery.region, winery.slug || winery.name || '', regionIndex);
     if (!src) return null;
     return { src: src, isWineryPhoto: false, credit: '' };
   }

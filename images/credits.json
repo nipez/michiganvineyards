@@ -35,10 +35,10 @@
     "old-mission": [
       {
         "file": "images/regions/old-mission-1.webp",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrand_Traverse_Bay_East_Arm_Looking_West.jpg",
-        "author": "Royalbroil",
-        "license": "CC BY-SA 3.0",
-        "original_title": "Grand Traverse Bay East Arm Looking West.jpg"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed_Grapes_-_Flickr_-_farlane.jpg",
+        "author": "Andrew McFarlane from Traverse City, MI, USA",
+        "license": "CC BY 2.0",
+        "original_title": "Red Grapes - Flickr - farlane.jpg"
       },
       {
         "file": "images/regions/old-mission-2.webp",
@@ -56,10 +56,10 @@
       },
       {
         "file": "images/regions/old-mission-4.webp",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrand_Traverse_Bay_from_Clinch_Marina_Traverse_City.jpg",
-        "author": "Phoenix-Five",
-        "license": "CC BY-SA 4.0",
-        "original_title": "Grand Traverse Bay from Clinch Marina Traverse City.jpg"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Mission_Peninsula.jpg",
+        "author": "stanthejeep",
+        "license": "CC BY-SA 2.5",
+        "original_title": "Old Mission Peninsula.jpg"
       }
     ],
     "lake-michigan-shore": [
@@ -79,10 +79,10 @@
       },
       {
         "file": "images/regions/lake-michigan-shore-3.webp",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAn_orchard_at_its_best%2C_near_Benton_Harbor_and_St._Joseph%2C_Mich_%2866298%29.jpg",
-        "author": "Tichnor Brothers, Publisher",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANRCSMI01045_-_Michigan_%284679%29%28NRCS_Photo_Gallery%29.jpg",
+        "author": "Photo by Lynn Betts, USDA Natural Resources Conservation Service.",
         "license": "Public domain",
-        "original_title": "An orchard at its best, near Benton Harbor and St. Joseph, Mich (66298).jpg"
+        "original_title": "NRCSMI01045 - Michigan (4679)(NRCS Photo Gallery).jpg"
       },
       {
         "file": "images/regions/lake-michigan-shore-4.webp",

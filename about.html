@@ -191,6 +191,7 @@ footer{background:var(--charcoal);padding:80px 40px 40px;color:rgba(245,240,232,
 <div class="content-section">
   <h2>For Wineries &amp; Partners</h2>
   <p>We work with wineries, tour operators, lodging providers, and event organizers across the state. If you'd like to enhance your listing, sponsor a region page, or promote an event, we'd love to hear from you.</p>
+  <p>Own a winery? Send us a photo of your tasting room and we'll add it to your listing. Reach us at <a href="mailto:hello@michiganvineyards.com?subject=Winery%20photo%20for%20listing">hello@michiganvineyards.com</a> or through our <a href="/contact">contact form</a>.</p>
 
   <div class="cta-block">
     <h2>Get Involved</h2>
@@ -198,7 +199,26 @@ footer{background:var(--charcoal);padding:80px 40px 40px;color:rgba(245,240,232,
     <a class="btn btn-forest" href="/plan-your-visit">Plan Your Visit</a>
     <a class="btn btn-outline" href="/advertise">Partner With Us</a>
   </div>
+
+  <h2 id="photo-credits">Photo Credits</h2>
+  <p>Directory cards use scenic photos that show the character of each Michigan wine region — vineyards, lakeshores, orchards, and countryside. They are not photos of any specific winery. Full source, author, and license details for every image are in <a href="/images/credits.json">images/credits.json</a> (Wikimedia Commons Public Domain, CC0, CC BY, and CC BY-SA).</p>
+  <p style="font-size:0.88rem;color:var(--text-light);line-height:1.75;" id="photoCreditsList">Loading credits…</p>
 </div>
+<script>
+fetch('/images/credits.json').then(function(r){return r.json();}).then(function(data){
+  var el=document.getElementById('photoCreditsList');
+  if(!el||!data.regions) return;
+  var parts=[];
+  Object.keys(data.regions).sort().forEach(function(region){
+    var items=data.regions[region].map(function(p){
+      var name=(p.original_title||p.file||'').replace(/\.[^.]+$/,'');
+      return '<a href="'+p.source_url+'" rel="noopener noreferrer">'+name+'</a> — '+p.author+' ('+p.license+')';
+    });
+    parts.push('<strong style="color:var(--forest);text-transform:capitalize;">'+region.replace(/-/g,' ')+':</strong> '+items.join('; '));
+  });
+  el.innerHTML=parts.join('<br/><br/>');
+}).catch(function(){var el=document.getElementById('photoCreditsList');if(el)el.textContent='See images/credits.json for full attribution.';});
+</script>
 
 <footer>
 <div class="footer-inner">

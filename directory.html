@@ -154,8 +154,10 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 .winery-card{background:var(--white);border-radius:8px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid rgba(27,58,45,0.06);text-decoration:none;color:inherit;display:flex;flex-direction:column;}
 .winery-card:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(27,58,45,0.1);}
 .winery-img{height:170px;position:relative;overflow:hidden;flex-shrink:0;}
-.winery-img-inner{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .5s;}
-.winery-card:hover .winery-img-inner{transform:scale(1.04);}
+.winery-img-inner{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .5s;position:relative;}
+.winery-img-inner img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.winery-card:hover .winery-img-inner,.winery-card:hover .winery-img-inner img{transform:scale(1.04);}
+.winery-img-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(15,36,25,0.28) 0%,rgba(15,36,25,0.08) 42%,rgba(15,36,25,0.45) 100%);}
 .winery-badge{position:absolute;top:12px;left:12px;background:var(--forest);color:var(--gold-light);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:3px;z-index:2;font-weight:600;}
 .winery-region-tag{position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.92);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:3px;z-index:2;backdrop-filter:blur(6px);font-weight:600;}
 .winery-info{padding:20px;display:flex;flex-direction:column;flex:1;}
@@ -169,9 +171,11 @@ nav.scrolled{box-shadow:0 2px 30px rgba(27,58,45,0.08);}
 .winery-card:hover .winery-link{gap:9px;}
 
 /* Region colors */
-.rc-old-mission{color:var(--old-mission);}.rc-leelanau{color:var(--leelanau);}.rc-lake-michigan-shore{color:var(--lake-shore);}.rc-fennville{color:var(--fennville);}.rc-tip-of-the-mitt{color:var(--tip-mitt);}.rc-southeast-michigan{color:var(--southeast);}.rc-upper-peninsula{color:var(--up);}.rc-central-michigan,.rc-northeast-michigan{color:var(--central);}
+.rc-old-mission{color:var(--old-mission);}.rc-leelanau{color:var(--leelanau);}.rc-lake-michigan-shore{color:var(--lake-shore);}.rc-fennville{color:var(--fennville);}.rc-tip-of-the-mitt{color:var(--tip-mitt);}.rc-southeast-michigan{color:var(--southeast);}.rc-upper-peninsula{color:var(--up);}.rc-central-michigan,.rc-northeast-michigan{color:var(--central);}.rc-west-michigan{color:#4A6A5A;}.rc-thumb-sunrise-coast,.rc-thumb---sunrise-coast{color:#6A5A4A;}
 
 .list-view .winery-card{flex-direction:row;}.list-view .winery-img{width:220px;height:auto;min-height:160px;}.list-view .winery-info{padding:20px 24px;}
+.list-view .winery-region-tag{top:auto;bottom:12px;right:12px;}
+.list-view .winery-badge{max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 
 .no-results{display:none;text-align:center;padding:70px 40px;}
 .no-results h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--forest);margin-bottom:8px;}
@@ -345,13 +349,21 @@ footer{background:var(--charcoal);padding:70px 40px 36px;color:rgba(245,240,232,
 </div></footer>
 
 <script src="/scripts/wineries-data.js"></script>
+<script src="/scripts/region-photos.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 const wineries = window.MICHIGAN_WINERIES;
 
 const palettes=['linear-gradient(135deg,#3A5A3E 0%,#2A4A2E 40%,#4A5A3E 100%)','linear-gradient(135deg,#4A3A2E 0%,#6A5A4E 50%,#5A4A3E 100%)','linear-gradient(135deg,#2A3A4A 0%,#3A4A5A 50%,#2A3A4A 100%)','linear-gradient(135deg,#5A3A4A 0%,#4A2A3A 50%,#3A1A2A 100%)','linear-gradient(135deg,#3A4A2A 0%,#5A6A4A 50%,#4A5A3A 100%)','linear-gradient(135deg,#4A4A3A 0%,#6A6A5A 50%,#5A5A4A 100%)'];
-const regionColors={'Old Mission':'var(--old-mission)','Leelanau':'var(--leelanau)','Lake Michigan Shore':'var(--lake-shore)','Fennville':'var(--fennville)','Tip of the Mitt':'var(--tip-mitt)','Southeast Michigan':'var(--southeast)','Upper Peninsula':'var(--up)','Central Michigan':'var(--central)','Northeast Michigan':'var(--central)'};
-function rcClass(r){return 'rc-'+r.toLowerCase().replace(/ /g,'-');}
+const regionColors={'Old Mission':'var(--old-mission)','Leelanau':'var(--leelanau)','Lake Michigan Shore':'var(--lake-shore)','Fennville':'var(--fennville)','Tip of the Mitt':'var(--tip-mitt)','Southeast Michigan':'var(--southeast)','Upper Peninsula':'var(--up)','Central Michigan':'var(--central)','Northeast Michigan':'var(--central)','West Michigan':'#4A6A5A','Thumb & Sunrise Coast':'#6A5A4A'};
+function rcClass(r){return 'rc-'+String(r||'').toLowerCase().replace(/&/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');}
+function cardImgHtml(w, regionIndex){
+  const bg=palettes[((w.img||1)-1)%palettes.length];
+  const photo=window.MV_REGION_PHOTOS&&window.MV_REGION_PHOTOS.cardPhotoFor(w, regionIndex);
+  const alt=photo&&photo.isWineryPhoto?(w.name+' photo'):(w.region+' wine country');
+  const img=photo?`<img src="${photo.src}" alt="${alt}" loading="lazy" decoding="async" width="800" height="500"/>`:'';
+  return `<div class="winery-img-inner" style="background:${bg};">${img}</div><div class="winery-img-overlay" aria-hidden="true"></div>`;
+}
 
 let currentRegion='all',currentCity='all',currentSearch='',currentSort='featured',currentView='grid';
 let nearMeActive=false,userLocation=null,nearMeStatus='',sortBeforeNear='featured';
@@ -696,12 +708,15 @@ function render(){
     grid.innerHTML='';
     renderMap(f);
   }else{
+    const regionIdx={};
     grid.innerHTML=f.map(w=>{
-      const bg=palettes[(w.img-1)%palettes.length];
+      const rKey=(window.MV_REGION_PHOTOS&&window.MV_REGION_PHOTOS.regionKey(w.region))||w.region;
+      const rIndex=regionIdx[rKey]||0;
+      regionIdx[rKey]=rIndex+1;
       const rc=regionColors[w.region]||'var(--forest)';
       const dist=nearMeActive&&userLocation?distanceMiles(w):null;
       const distHtml=dist!=null?`<span class="winery-distance">· ${formatDistance(dist)}</span>`:'';
-      return `<a class="winery-card" href="/wineries/${w.slug}"><div class="winery-img"><div class="winery-img-inner" style="background:${bg};"></div>${w.badge?`<span class="winery-badge">${w.badge}</span>`:''}<span class="winery-region-tag ${rcClass(w.region)}" style="color:${rc};">${w.region}</span></div><div class="winery-info"><h3 class="winery-name">${w.name}</h3><div class="winery-type">${w.type}</div><div class="winery-city"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.5 10S1 6.5 1 4a4.5 4.5 0 019 0c0 2.5-4.5 6-4.5 6z"/><circle cx="5.5" cy="4" r="1.5"/></svg>${w.city}${distHtml}</div><div class="winery-known">Known for: <strong>${w.known.slice(0,4).join(', ')}</strong></div><div class="winery-hours"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M6 3.5v2.5l2 1.5"/></svg>${w.hours}</div><span class="winery-link">View Details <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5.5h6M6 2.5l3 3-3 3"/></svg></span></div></a>`;
+      return `<a class="winery-card" href="/wineries/${w.slug}"><div class="winery-img">${cardImgHtml(w,rIndex)}${w.badge?`<span class="winery-badge">${w.badge}</span>`:''}<span class="winery-region-tag ${rcClass(w.region)}" style="color:${rc};">${w.region}</span></div><div class="winery-info"><h3 class="winery-name">${w.name}</h3><div class="winery-type">${w.type}</div><div class="winery-city"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.5 10S1 6.5 1 4a4.5 4.5 0 019 0c0 2.5-4.5 6-4.5 6z"/><circle cx="5.5" cy="4" r="1.5"/></svg>${w.city}${distHtml}</div><div class="winery-known">Known for: <strong>${w.known.slice(0,4).join(', ')}</strong></div><div class="winery-hours"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M6 3.5v2.5l2 1.5"/></svg>${w.hours}</div><span class="winery-link">View Details <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5.5h6M6 2.5l3 3-3 3"/></svg></span></div></a>`;
     }).join('');
     requestAnimationFrame(()=>{grid.querySelectorAll('.winery-card').forEach((el,i)=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition=`opacity .35s ease ${Math.min(i*.02,.5)}s,transform .35s ease ${Math.min(i*.02,.5)}s`;requestAnimationFrame(()=>{el.style.opacity='1';el.style.transform='translateY(0)';});});});
   }

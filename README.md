@@ -22,7 +22,9 @@ Then open the URL `serve` prints (usually http://localhost:3000).
 - `winery-detail.html` — winery detail template
 - `wineries/` — 163 individual winery pages
 - `winery-detail-images/` — 8 placeholder photos
-- `wineries_data.json` — winery dataset (name, region, type, hours, city, lat/lng)
+- `wineries_data.json` — winery dataset (name, region, type, hours, city, lat/lng; optional `photo` / `photo_credit`)
+- `scripts/wineries-data.js` — same dataset for the directory & map (optional `photo` / `photo_credit`)
+- `images/regions/` — scenic WebP region photos for directory cards; credits in `images/credits.json`
 - `city_coords.json` — city-level coordinate lookup used for the directory map
 - `scripts/geocode-wineries.py` — regenerate lat/lng from city coords
 - `sitemap.xml`, `sitemap.html`, `robots.txt`

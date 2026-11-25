@@ -1,5 +1,7 @@
 /** Shared winery directory dataset (name, region, city, lat/lng, slug, …).
  *  Loaded by directory.html and michigan-wineries-map.html — do not duplicate inline.
+ *  Optional per-winery fields: photo (URL/path), photo_credit (string).
+ *  When photo is set, directory cards + detail heroes use it instead of the region scenic photo.
  */
 window.MICHIGAN_WINERIES = [
   {name:"Chateau Grand Traverse",slug:"chateau-grand-traverse",region:"Old Mission",type:"Estate Winery & Tasting Room",featured:true,known:["Riesling", "Ice Wine", "Late Harvest Riesling", "Pinot Grigio", "Merlot"],hours:"Mon–Sat 10am–6pm · Sun 12–5pm",city:"Traverse City",badge:"Pioneer · Est. 1974",img:1,lat:44.90688,lng:-85.51734},
